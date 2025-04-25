@@ -1,0 +1,166 @@
+	  ** TREES **
+T001      Elder, Box           Elder, Box                     Acer negundo                         1          100          0707
+T003      Birch, Gray          Birch, Gray                    Betula populifolia                   1          100          0707
+T005      Beech, Amer.         Beech, American                Fagus grandifolia                    1          100          0707
+T006      Cedar,Mtn            Cedar,Mountain                 Juniperus ashei                      1          100          0707
+T007      Oak, White           Oak, White                     Quercus alba                         1          100          0707
+T008      Elm, Amer.           Elm, American                  Ulmus americana                      1          100          0707
+T009      Olive, E.            Olive, European (Tree)         Olea europaea                        1          100          0707
+T010      Walnut, CA           Walnut, Calif. Black           Juglans californica                  1          100          0707
+T014      Cottonwood,E.        Cottonwood, Eastern            Populus deltoides                    1          100          0707
+T015      Ash, White           Ash, White                     Fraxinus americana                   1          100          0707
+T016      Pine, White          Pine, White                    Pinus strobus                        1          100          0707
+T018      Eucalyptus           Eucalyptus                     Eucalyptus globulus                  1          100          0707
+T019      Acacia               Acacia                         Acacia spp.                          1          100          0707
+T020      Mesquite             Mesquite                       Prosopis glandulosa                  1          100          0707
+T023      Cypress, I.          Cypress, Italian               Cupressus sempervirens               1          100          0707
+T072      Palm, Queen          Palm, Queen                    Arecastrum romanzoffianum            1          100          0707
+T100      Alder, Europ.        Alder, European                Alnus glutinosa                      1          100          0707
+T101      Alder,Red            Alder,Red                      Alnus rubra                          1          100          0707
+T102      Ash, Arizona         Ash, Arizona                   Fraxinus velutina                    1          100          0707
+T103      Ash, Green           Ash, Green                     Fraxinus pennsylvanica               1          100          0707
+T104      Aspen                Aspen                          Populus tremuloides                  1          100          0707
+T105      Cedar, Red           Cedar, Red                     Juniperus virginiana                 1          100          0707
+T106      Cypress, Bald        Cypress, Bald                  Taxodium distichum                   1          100          0707
+T107      Elm, Chinese         Elm, Chinese                   Ulmus pumila                         1          100          0707
+T108      Elm,Scrub            Elm,Scrub                      Ulmus crassifolia                    1          100          0707
+T109      Hickory, Wh.         Hickory, White                 Carya alba                           1          100          0707
+T110      Mango Blms.          Mango Blossoms                 Mangifera spp.                       1          100          0707
+T111      Maple, Red           Maple, Red                     Acer rubrum                          1          100          0707
+T112      Mulberry, R.         Mulberry, Red                  Morus rubra                          1          100          0707
+          ** TREES **
+T114      Oak, Red             Oak, Red                       Quercus rubra                        1          100          0707
+T115      Oak, Water           Oak, Water                     Quercus nigra                        1          100          0707
+T116      Olive, Russian       Olive, Russian                 Elaeagnus angustifolia               1          100          0707
+T117      Orange, Citrus       Orange, Citrus                 Citrus sinensis                      1          100          0707
+T118      Orange, Osage        Orange, Osage                  Malcura pomifera                     1          100          0707
+T119      Palm, Date           Palm, Date                     Phoenix dactylifera                  1          100          0707
+T120      Peppertree           Peppertree                     Schinus molle                        1          100          0707
+T121      Pine, Lob.           Pine, Loblolly                 Pinus taeda                          1          100          0707
+T122      Pine,Longleaf        Pine, Longleaf                 Pinus palustris                      1          100          0707
+T123      Pine, W. W.          Pine, Western White            Pinus monticola                      1          100          0707
+T124      Poplar, Lomb.        Poplar, Lombardy               Populus nigra                        1          100          0707
+T125      Poplar,W/Aspen       Poplar, White /Aspen           Populus alba                         1          100          0707
+T126      Redwood              Redwood                        Sequoia sempervirens                 1          100          0707
+T127      Walnut, Black        Walnut, Black                  Juglans nigra                        1          100          0707
+T128      Willow, Black        Willow, Black                  Salix nigra                          1          100          0707
+T130      Privet               Privet                         Ligustrum vulgare                    1          100          0707
+T131      Gum, Sweet           Gum, Sweet                     Liquidambar styraciflua              1          100          0707
+T132      Cypress, AZ.         Cypress, Arizona               Cupressus arizonica                  1          100          0707
+T133      Hickory, Shag        Hickory, Shagbark              Carya obata                          1          100          0707
+T134      Oak, CA Black        Oak, CA Black                  Quercus kelloggii                    1          100          0707                  
+T136      Wax Myrtle/B         Wax Myrtle/Bayberry            Myrtle cerifera                      1                                  
+T137      Hackberry            Hackberry                      Celtis Occidentalis                  1
+T138      Melaleuca            Melaleuca                      Melaleuca quinquenervia              1
+T139      Oak, VA Live         Oak, Virginia Live 	      Quercus virginiana                   1
+T140      Sycamore, E          Sycamore, American Eastern     Platanus occidentalis                1
+T141      Mulberry, P          Mulberrry, Paper               Broussonetia papyrifera              1
+T142      Pine, Aust.          Pine, Australian/Beefwood      Casuarina equistifolia               1               	
+T143 	  Oak, Arizona         Oak, Arizona/Gambel	      Quercus gambelii	                   1
+T144	  Mulberry, W.         Mulberry, White	              Morus alba	                   1
+        ** TREES **
+T145	  Pecan	(Tree)         Pecan (Tree)                   Carya illoensis	                   1
+T146	  Birch, River         Birch, Red/River 	      Betula nigra	                   1
+T147	  Pine, Ponder.        Pine, Ponderosa                Pinas Ponderosa                      1
+T148	  Juniper, W.          Juniper, Western               Juniperus Occidentalis               1   
+T149	  Hazelnut  	       Hazelnut (Tree)	              Corylus americana                    1
+T150      Tree of Heav.        Tree of Heaven                 Ailanthus altissima                  1
+T151      Oak, Black           Oak, Black                     Quercus velutina                     1
+T152      Walnut, Mex.         Walnut, Mexican                Juglans microcarpa                   1
+T153      Alder, Sitka         Alder, Sitka                   Alnus sinuata                        1
+T154      Fir, Douglas         Fir, Douglas                   Pseudotsuga menziesii                1
+T155      Bayberry             Bayberry                       Morella cerifera                     1
+TZ01	  Pollen Mix           Pollen Mix	              Mezcla de Polen 	                   3                                                                              
+TZ09      Tree Mix #2          Tree Mix #2                    Mezcla de Arboles 2                  3TZ09      Tree Mix#2           Tree Mix#2                     Mezcla de Arboles 2                  3
+TZ13      Tree Mix#1           Tree Mix#1                     Mezcla de Arboles 1                  3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          ** GRASSES ** 
+G002      Bermuda              Bermuda Grass                  Cynodon dactylon                     1          100          0707
+G003      Orchard              Orchard Grass                  Dactylis glomerata                   1          100          0707
+G004      Fescue, Mead.        Fescue, Meadow Grass           Festuca pratensis                    1          100          0707
+G005      Rye, peren.          Rye, perennial Grass           Lolium perenne                       1          100          0707
+G006      Timothy              Timothy Grass                  Phleum pratense                      1          100          0707
+G008      June Grass           June Grass                     Poa pratensis                        1          100          0707
+G009      Bent/Redtop          Bent/Redtop Grass              Agrostis gigantea                    1          100          0707
+G010      Johnson              Johnson Grass                  Sorghum halepense                    1          100          0707
+G013      Velvet               Velvet Grass                   Holcus lanatus                       1          100          0707
+G014      Oat, Cult.           Oat,CultivaRed                 Avena sativa                         1          100          0707
+G015      Wheat, Cult.         Wheat, Cultivated              Triticum aestivum                    1          100          0707
+G017      Bahia                Bahia Grass                    Paspalum notatum                     1          100          0707
+G020      Bluegrass, C.        Bluegrass,Canada               Poa compressa                        1          100          0707
+G021      Brome, Sm.           Brome, Smooth Grass            Bromus Inermis                       1
+G022      Canary/Reed          Canary/Reed Grass              Phalaris arundinacea                 1
+G023      Sweet Vernal         Sweet Vernal Grass             Anthoxanthum odoratum                1
+G024	  Fescue, Red	       Fescue, Red Grass              Festuca rubra                        1   
+G025      Corn Pollen	       Corn Pollen		      Zea maize polen                      1
+G026	  Common Reed 	       Common Reed                    Phragmites australis                 1
+GZ08      Grass Mix #1         Grass Mix #1                   Mezcla de Hierbas                    3  
+
+
+
+
+
+
+
+
+
+          ** WEEDS **
+W001      Ragweed, C.          Ragweed, Common                Ambrosia artemisiifolia              1          100          0707
+W002      Ragweed, W.          Ragweed, Western               Ambrosia psilostachya                1          100          0707
+W003      Ragweed, G.          Ragweed, Giant                 Ambrosia trifida                     1          100          0707
+W005      Wormwood, A.         Wormwood, Annual               Artemisia annua                      1          100          0707
+W006      Mugwort, Com.        Mugwort, Common                Artemisia vulgaris                   1          100          0707
+W009      Engl. Plant.         Plantain, English              Plantago lanceolata                  1          100          0707
+W010      Lambsquarter         Lambsquarter's, Common         Chenopodium album                    1          100          0707
+W011      Thistle, Russ.       Thistle, Russian               Salsola kali                         1          100          0707
+W013      Cocklebur            Cocklebur                      Xanthium strumarium                  1          100          0707
+W014      Pigweed, R.          Pigweed, Redroot/Rough         Amaranthus retroflexux               1          100          0707
+W015      Scales/Salt B        Scales/Saltbush                Atriplex wrightii                    1          100          0707
+W016      Marsh Elder,R.       Marsh Elder, Rough             Iva annua                            1          100          0707
+W018      Sheep Sorrel         Sorrel, Sheep                  Rumex acetosella                     1          100          0707
+W019      Pellitory, W.        Pellitory,Wall                 Parietaria officinalis               1          100          0707
+W020      Nettle               Nettle                         Urtica dioica                        1          100          0707
+W021      Marsh Elder,B.       Marsh Elder, Burweed           Iva Xanthifolia                      1
+W100      Alfalfa              Alfalfa                        Medicago sativa                      1          100          0707
+W101      Carelessweed         Carelessweed                   Amaranthus hybridus                  1          100          0707
+W102      Colza                Colza                          Brassica spp.                        1          100          0707
+W104      Dock, Yellow         Dock, Yellow/Curly             Rumex crispus                        1          100          0707
+W105      Mexican Tea          Mexican Tea                    Chenopodium ambrosioides             1          100          0707
+W106      Oat, Wild            Oat, Wild                      Avena fatua                          1          100          0707
+W107      Bush, Rabit          Bush, Rabbit                   Ambrosia deltoidea                   1          100          0707
+W109      Ragweed, S.          Ragweed, Southern              Ambrosia bidentata                   1          100          0707
+W111      Sagebrush, C.        Sagebrush, Common              Artemisia tridentata                 1          100          0707
+W112      Sugarbeet            Sugarbeet (Pollen)             Beta vulgaris                        1          100          0707
+W113      Waterhemp, W.        Waterhemp, Western             Amaranthus tuberculatus              1          100          0707
+W114      Sunflower            Sunflower                      Helianthus annus                     1          100          0707
+W115      Baccharis, W.        Baccharis, Western             Baccharis Sarothroides               1
+          ** WEEDS **
+W116	  Burrobrush	       Burrobrush                     Hymenoclea salsola	           1
+W117	  Kochia/Fire          Kochia/Firebush	              Kochia scoparia	                   1
+W118	  Bush, Iodine	       Bush, Iodine	              Allenrolfea occidentalis	           1
+W119	  Pigweed Sm           Pigweed, Smooth                Amaranthus Hybridus                  1
+W121	  Goldenrod	       Goldenrod	              Solidago spp.                        1
+W122	  Pigweed, Spin	       Pigweed, Spiny	              Amaranthus spinosus                  1
+W123      Cosmos               Cosmos                         Cosmos bipinnatus                    1             
+W124      False ragweed        False ragweed                  Ambrosia acanthicarpa                1
+W125      Dandelion            Dandelion                      Taraxacum officinale                 1 
+W126      Dog Fennel           Dog Fennel                     Eupatorium capillifolium             1
+WZ10      Weed Mix #1          Weed Mix #1                    Mezcla de Malas Hierbas #1           3
+
+
+
+

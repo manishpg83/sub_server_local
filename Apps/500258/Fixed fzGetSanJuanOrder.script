@@ -1,0 +1,15 @@
+connect sftp://Allermetrix01:All3rm3tr1x#@44.235.72.333/OrdersOutbound/
+cd /OrdersOutbound/
+dir
+lcd C:\\apps\\Orders\\SanJuan\\BackupOrders
+mget --exists s ^allermetrixorders.txt 
+dir
+disconnect
+connect sftp://amx:xD1GkuK7a7DK8!@amxemr.com/home/amx/HL7/500258/Orders
+cd /home/amx/HL7/500258/Orders/
+lcd C:\\apps\\Orders\\SanJuan\\BackupOrders
+mput --exists o ^allermetrixorders.txt 
+ldir ^a
+ldir
+disconnect
+quit

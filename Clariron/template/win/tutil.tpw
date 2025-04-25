@@ -1,0 +1,55 @@
+#CODE(CreatAtFromEmbed,'Create #AT From the Embed'),DESCRIPTION('Create #AT From the Embed ('&%ActiveTemplateInstance&')')
+#DISPLAY ('This template generates the #AT statement to be')
+#DISPLAY ('added into source code')
+#DISPLAY ('To found the code in the editor look for the string')
+#DISPLAY ('!HELP EMBED '&%ActiveTemplateInstance),PROP(PROP:FontStyle,FONT:Bold)
+#!
+#DECLARE(%lParameter)
+#DECLARE(%lParameterIn)
+#DECLARE(%lParameterOut)
+#DECLARE(%lPosition,LONG)
+#DECLARE(%lLastOneInstance)
+#DECLARE(%lSep)
+#SET(%lParameterIn,%EmbedParameters)
+#SET(%lPosition,0)
+#SET(%lLastOneInstance,0)
+#SET(%lPosition,INSTRING(', ',%lParameterIn,1,1))
+#SET(%lParameterOut,'')
+#SET(%lParameter,'')
+#LOOP
+    #IF(%lPosition=0)
+       #IF(%lParameterIn)
+           #SET(%lPosition,LEN(%lParameterIn)+1)
+           #CYCLE
+       #ELSE
+           #BREAK
+       #ENDIF
+    #ELSE
+       #SET(%lParameter,SUB(%lParameterIn,1,%lPosition-1))
+       #IF(SUB(%lParameter,1,1)='(')
+          #SET(%lParameterOut,%lParameterOut&','''&%lParameter&'''')
+          #BREAK
+       #ENDIF
+       #IF(NUMERIC(%lParameter))
+          #SET(%lSep,'')
+          #SET(%lParameter,'%'&'ActiveTemplateInstance')
+       #ELSE
+          #SET(%lSep,'''')
+       #ENDIF
+       #IF(%lParameterOut)
+           #SET(%lParameterOut,%lParameterOut&','&%lSep&%lParameter&%lSep)
+       #ELSE
+           #SET(%lParameterOut,%lSep&%lParameter&%lSep)
+       #ENDIF
+       #SET(%lParameterIn,SUB(%lParameterIn,%lPosition+2,LEN(CLIP(%lParameterIn))-%lPosition))
+       #SET(%lPosition,INSTRING(', ',%lParameterIn,1,1))
+    #ENDIF
+#ENDLOOP
+!HELP EMBED %ActiveTemplateInstance
+#IF(%lParameterOut)
+!#AT(%EmbedID,%lParameterOut),PRIORITY()
+#ELSE
+!#AT(%EmbedID),PRIORITY()
+#ENDIF
+!#ENDAT
+#!

@@ -1,0 +1,195 @@
+          ** FOODS **
+F001      Egg, White           Egg©-White                     Claro del Huevo                      1          100          0707
+F002      Milk, Cow's          Milk, Cows                     Leche de Vaca                        1          100          0707
+F003      Codfish              Codfish                        Bacalao                              1          100          0707
+F004      Wheat                Wheat                          Trigo                                1          100          0707
+F005      Rye                  Rye                            Centeno                              1          100          0707
+F006      Barley               Barley                         Cebada                               1          100          0707
+F007      Oat                  Oat                            Avena                                1          100          0707
+F008      Corn                 Corn                           Maíz                                 1          100          0707
+F009      Rice                 Rice                           Arroz                                1          100          0707
+F010      Seed, Sesame         Seed, Sesame                   Semilla de Ajonjolí                  1          100          0707
+F012      Pea, Green           Pea, Green                     Guisante/Chicharos                   1          100          0707
+F013      Peanut               Peanut                         Maní/Cacahuate                       1          100          0707
+F014      Soybean              Soybean                        Soya                                 1          100          0707
+F015      Bean, Wh/Nvy         Bean, White/Navy               Haba Blanca                          1          100          0707
+F011      Jalapeno             Jalapeno                       Jalapeno                             1
+F016      Turmeric             Turmeric                       Turmeric                             1
+F017      Hazelnut             Hazelnut                       Avellana                             1          100          0707
+F018      Brazil Nut           Brazil Nut                     Nuez de Brazil                       1          100          0707
+F020      Almond               Almond                         Almendra                             1          100          0707
+F024      Shrimp               Shrimp                         Camaron                              1          100          0707
+F025      Tomato               Tomato                         Tomate                               1          100          0707
+F026      Pork                 Pork                           Carne de Cerdo                       1          100          0707
+F027      Beef                 Beef                           Carne de Res/Carne de Vaca           1          100          0707
+F031      Carrot               Carrot                         Zanahoria                            1          100          0707
+F033      Orange               Orange                         Naranja                              1          100          0707
+F035      Potato, W.           Potato, White                  Papa                                 1          100          0707
+F036      Coconut              Coconut                        Coco                                 1          100          0707
+F040      Tuna                 Tuna                           Atún                                 1          100          0707
+F041      Salmon,Atl.          Salmon, Atlantic               Salmón atlántico                     1          100          0707
+          ** FOODS **
+F044      Strawberry           Strawberry                     Fresa                                1          100          0707
+F045      Yeast, Brew.         Yeast, Brewers                 Levadura de Cerveceria               1          100          0707
+F047      Garlic               Garlic                         Ajo                                  1          100          0707
+F048      Onion                Onion                          Cebolla                              1          100          0707
+F049      Apple                Apple                          Manzana                              1          100          0707
+F054      Potato, Sweet        Potato, Sweet                  Batata/Camote                        1          100          0707
+F075      Egg, Yolk            Egg©-Yolk                      Yema del Huevo                       1          100          0707
+F076      Lactalb. A.          Milk,Cow's©-Lactalbumin, Alpha Lactalbumin Alfa                     1          100          0707
+F077      Lactoglob. B.        Milk,Cow's©-Lactoglobulin,Beta Lactoglobulin Beta                   1          100          0707
+F078      Casein               Milk, Cow's©-Casein            Casein                               1          100          0707
+F079      Gluten               Wheat©-Gluten                  Gluten                               1          100          0707
+F080      Lobster, Maine       Lobster, Maine                 Langosta                             1          100          0707
+F081      Cheese, Ched.        Cheese, Cheddar                Queso de Cheddar                     1          100          0707
+F082      Cheese, Mold         Cheese, Mold                   Moho de Queso                        1          100          0707
+F083      Chicken              Chicken                        Carne de Pollo                       1          100          0707
+F085      Celery               Celery                         Apio                                 1          100          0707
+F087      Melon/Honeyd         Melon, Honeydew                Melon Ligamaza                       1          100          0707
+F089      Mustard              Mustard                        Mostaza                              1          100          0707
+F090      Malt                 Malt                           Malta                                1          100          0707
+F092      Banana               Banana                         Platano/Guineo                       1          100          0707
+F093      Cacao/Chocol         Cacao/Chocolate                Chocolate/Cocao                      1          100          0707
+F094      Pear                 Pear                           Pera                                 1          100          0707
+F095      Peach                Peach                          Melecoton                            1          100          0707
+F096      Avocado              Avocado                        Aguacate                             1          100          0707
+F100	  Bing Cherry          Cherry, Bing   	              Cereza                               1
+F101	  Bass, Black          Bass, Black 	              Percha Negra                         1
+F102	  Buckwheat            Buckwheat	              Alforfón                             1
+F103	  Chestnut   	       Chestnut  	              Castaña                              1
+F104	  Cranberry            Cranberry 	              Arándano                             1
+          ** FOODS **
+F105	  Date 	               Date                           Higo                                 1
+F106	  Duck 	               Duck                           Carne De Pato			   1
+F107      Eel                  Eel                            Anguila                              1
+F108	  Eggplant             Eggplant  	              Berenjena				   1
+F109	  Gum, Acacia          Gum, Acacia  	              Savia De Acacia                      1
+F110	  Gum, Karaya          Gum, Karaya	              Savia De Karaya                      1
+F111	  Mackerel             Mackerel	                      Caballa                              1
+F112	  Paprika              Paprika 	                      Pimienton Dulce/Paprika              1
+F114	  Pine Nut             Pine Nut	                      Nuez De Pino                         1
+F115	  Pumpkin              Pumpkin  	              Calabaza                             1
+F116	  Squid 	       Squid 	                      Calamar                              1
+F117	  Cheese,Sw.           Cheese, Swiss  	              Queso Suizo                          1
+F118	  Swordfish            Swordfish  	              Pez De Espada                        1
+F119	  Halibut              Halibut 	                      Hipogloso                            1
+F120	  Perch, Lake          Perch, Lake	              Perca                                1
+F121	  Whitefish            Whitefish                      Prosopium sp.                        1
+F122	  Artichoke            Artichoke                      Alcachofa                            1
+F123	  Red Snapper          Snapper, Red                   Pez Comestible del Golfo de Mex      1
+F124	  Black Olive          Olive, Black                   Aceituna Negra                       1
+F125	  Hops                 Hops                           Lupulo                               1
+F126	  Lentil               Lentil                         Lenteja                              1
+F127	  Papaya               Papaya                         Papaya                               1
+F128	  Plum/Prune           Plum/Prune                     Ciruela                              1
+F129	  Raspberry            Raspberry                      Frambuesa                            1
+F130	  Vanilla              Vanilla                        Vainilla                             1
+F131	  Tapioca              Tapioca                        Tapioca                              1
+F132	  Nectarine            Nectarine                      Nectarina                            1
+F133	  Gelatin              Gelatin                        Gelatina                             1
+F134	  Lime	               Lime	                      Lima/Limón Agrio                     1
+          ** FOODS **
+F135	  Asparagus	       Asparagus	              Esparrago                            1
+F136	  Lobster,Spin	       Lobster, Spiny	              Langosta con Puas                    1
+F137	  Poppy Seed	       Poppy Seed	              Semilla de Amapola                   1
+F138	  Apricot	       Apricot	                      Albaricoque/Chabacano                1
+F139	  Blackberry	       Blackberry	              Zarzamora                            1
+F140	  Cumin	               Cumin	                      Cumino                               1
+F141	  Curry powder	       Curry Powder	              Polvo de Curry                       1
+F142	  Chick pea	       Chick Pea	              Garbanzo                             1
+F143	  Flaxseed	       Flaxseed	                      Linaza	                           1
+F144	  Parsley	       Parsley	                      Perejil	                           1
+F145	  Beet Sugar	       Sugar, Beet 	              Remolacha Azucarera	           1
+F146	  Cloves	       Cloves	                      Clavos	                           1
+F147	  Milk, Goat's	       Goat's Milk	              Leche de Cabra	                   1
+F148	  Nutmeg	       Nutmeg	                      Nuez Moscada	                   1
+F149	  Radish	       Radish	                      Rabano	                           1
+F150	  Pepper,Red	       Pepper, Pepper	              Pimiento Rojo	                   1
+F151	  Sage	               Sage	                      Salvia	                           1
+F152	  Beet	               Beet	                      Remolacha	                           1
+F153	  Kiwi	               Kiwi                           Kiwi	                           1
+F154	  Brussel Sprouts      Brussel Sprouts	              Coles de bruselas	                   1
+F155	  Tangerine	       Tangerine	              Mandarina	                           1
+F156      Thyme                Thyme                          Tomillo                              1
+F157      Millet               Millet                         Mijo                                 1
+F158      Lamb                 Lamb                           Carne de Cordero                     1
+F159      Canola Seed          Canola Seed                    Brassica rapus                       1
+F201      Pecan                Pecan                          Pacana                               1          100          0707
+F202      Cashew               Cashew                         Anarcado                             1          100          0707
+F203      Pistachio            Pistachio                      Pistacho                             1          100          0707
+F204      Trout                Trout                          Trucha                               1          100          0707
+          ** FOODS **
+F207      Clam                 Clam                           Almeja                               1          100          0707
+F208      Lemon                Lemon                          Limòn                                1          100          0707
+F209      Grapefruit           Grapefruit                     Toronja                              1          100          0707         
+F210      Pineapple            Pineapple                      Piña                                 1          100
+F212      Mushroom	       Mushroom                       Champiñones                          1
+F214      Spinach	       Spinach                        Espinaca                             1
+F215      Lettuce              Lettuce                        Lechuga                              1          100          0707
+F216      Cabbage Mix          Cabbage Mix                    Mezcla de Repollo                    1          100          0707
+F221      Coffee               Coffee                         Café                                 1          100          0707
+F236      Whey                 Whey                           Suero de la Leche                    1          100          0707
+F244      Cucumber             Cucumber                       Pepinillo                            1          100          0707
+F245      Egg, Whole           Egg, Whole                     Huevo Completo                       1          100          0707
+F247      Honey                Honey                          Miel                                 1          100          0707
+F256      Walnut, Black        Walnut, Black                  Nuez de Castilla (Negro)             1          100          0707
+F259      Grape/Raisin         Grape/Raisin                   Uva/Pasa                             1          100          0707
+F260      Broccoli             Broccoli                       Bróculi                              1          100          0707
+F263      Pepper, Bell         Pepper, Bell (Green)           Pimiento Verde                       1          100          0707
+F283      Oregano              Oregano                        Oregano                              1          100          0707
+F284      Turkey               Turkey                         Carne de Pavo                        1          100          0707
+F288      Blueberry            Blueberry                      Mora Azul                            1          100          0707
+F290      Oyster               Oyster                         Ostra/Ostion                         1          100          0707
+F291      Cauliflower          Cauliflower                    Coliflor                             1          100          0707
+F300      Bean, Kidney         Bean, Kidney                   Frijol Colorado                      1          100          0707
+F301      Bean, Lima           Bean, Lima                     Haba Lima                            1          100          0707
+F302      Bean, Pinto          Bean, Pinto                    Frijol Pinto                         1          100          0707
+F303      Bean, W. Strg.       Bean, Wax String               Haba Verde                           1          100          0707
+F304      Bran, Wheat          Bran, Wheat                    Trigo del Salvado                    1          100          0707
+F305      Cantalalope          Cantaloupe/Muskmelon           Melon Cantalupo                      1          100          0707
+F306      Catfish              Catfish                        Siluro (pes)                         1          100          0707
+          ** FOODS **
+F307      Cheese, Amer.        Cheese, P. American            Queso Americano                      1          100          0707
+F308      Cinnamon             Cinnamon                       Canela                               1          100          0707
+F309      Cottonseed           Cottonseed                     Semilla de Algodon                   1          100          0707
+F310      Crab, Stone          Crab,Stone                     Cangrejo                             1          100          0707 
+F311      Flounder             Flounder                       Platija                              1          100          0707
+F312      Haddock              Haddock                        Eglefino/Adebejos                    1          100          0707 
+F313      Pepper, B/W          Pepper, Black/White            Pimienta Negra/Blanca                1          100          0707
+F314      Pepper, Chili        Pepper, Chili                  Pimiento Chile                       1          100          0707
+F316      Sunflower Seed       Sunflower Seed                 Semilla de Girasol                   1          100          0707
+F317      Walnut, Eng.         Walnut, English                Nuez de Castilla (Inglés)            1          100          0707
+F318      Yeast, Bakers        Yeast, Bakers                  Levadura de Hornear                  1          100          0707
+F319      Yogurt               Yogurt                         Yogur                                1          100          0707
+F329      Watermelon           Watermelon                     Sandía                               1          100          0707
+F337      Sole                 Sole                           Lenguado                             1          100          0707
+F338      Scallop              Scallop                        Ostión/Vieira                        1          100          0707
+F339      Crab, Alaskan        Crab, Alaskan King             Cangrejo, Alaskan                    1          100          0707
+F340	  Tea, Black	       Tea, Black	              Té	                           1
+F341	  Dill	               Dill	                      Eneldo	                           1
+F342	  Olive, G.	       Olive, Green                   Aceituna, Verde	                   1
+F343	  Basil	               Basil	                      Albahaca	                           1
+F344	  Squash, Zucch.       Squash, Zucchini	              Calabaza de Zuchhini	           1
+F345	  Ginger	       Ginger	                      Jengibre	                           1
+F346	  Squash, S/Yel.       Squash, Summer/Yellow	      Calabaza Amarilla	                   1
+F347	  Bay Leaf	       Bay Leaf	                      Hoja de Laurel	                   1
+F348      Cola Nut	       Cola Nut	                      Nuez de Cola	                   1
+F349	  Safflower Seed       Safflower Seed	              Semilla de Alazor                    1
+F350	  Sugar, Cane	       Sugar, Cane	              Azucar de Caña	                   1
+F351      Mango		       Mango                          Mango                                1
+F352      Rosemary             Rosemary                       Rosemary                             1
+          ** FOODS **
+F353      Salmon, Pacif.       Salmon, Pacific                Salmon, Pacific                      1
+F354      Crab, Dung.          Crab, Dungeness                Crab, Dungeness                      1
+F355	  Black-Eyed Peas      Pea, Black-Eyed		      Chicaros de ojo amoratado            1
+F356  	  Black Beans	       Beans, Black                   Frijol negro                         1
+F357      Ovomucoid            Egg©-White-Ovomucoid           Ovomucoid                            1
+F358      Lactoferrin          Milk, Cow's ©-Lactoferrin      Lactoferrin                          1
+F359      Ara h 1              Peanut©-Ara h 1                Ara h 1                              5
+F360      Ara h 2              Peanut©-Ara h 2                Ara h 2                              5
+F361      Tilapia              Tilapia                        Tilapia                              1
+F363      Macadamia Nut        Macadamia Nut                  Tuerca de Macadamia                  1
+FZ03      Food Mix             Food Mix                       Mezcla de Alimentos                  3 
+FZ11      Grain Mix            Grain Food Mix                 Mezcla de Grano                      3
+FZ13      Nut Mix              Nut Mix                        Mezcla de Nuez                       3
+ 

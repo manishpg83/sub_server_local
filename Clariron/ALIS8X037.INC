@@ -1,0 +1,3 @@
+  MODULE('ALIS8X037.CLW')
+ReadInResults          PROCEDURE
+  END

@@ -1,0 +1,640 @@
+100  |T-IgE (1:1)|T-IgE (1:1)||
+100-1|T-IgE (1:21)|||
+100-2|T-IgE (1:42)|||
+100-3|T-IgE (1:101)|||
+100-4|T-IgE (1:202)|||
+100-5|T-IgE (1:404)|||
+A001 |HSA|HSA||
+A002 |HSA|HSA||
+A099 |rRBD|rRBD||
+A100 |rRBD|rRBD||
+A101 |rN-Protein|rN-Protein||
+A102 |rN-Protein|rN-Protein||
+A103 |rS1-Protein|rS1-Protein||
+A104 |rS1-Protein|rS1-Protein||
+A199 |rRBD-ALPHA|rRBD-ALPHA||
+A200 |rRBD-ALPHA|rRBD-ALPHA||
+A299 |rRBD-BETA|rRBD-BETA||
+A300 |rRBD-BETA|rRBD-BETA||
+A399 |rRBD-GAMMA|rRBD-GAMMA||
+A400 |rRBD-GAMMA|rRBD-GAMMA||
+A499 |rRBD-DELTA|rRBD-DELTA||
+A500 |rRBD-DELTA|rRBD-DELTA||
+A599 |rRBD-Omicron|rRBD-Omicron||
+A600 |rRBD-Omicron|rRBD-Omicron||
+A888 |NOTE: Test discontinued|||
+A999 |HSA|HSA||
+AAA  |Total IgA|Total IgA||
+AAAA |Total IgA|||
+B001 |rACE2 receptor protein|||
+B002 |rACE2 receptor protein|||
+B003 |rNRP1 protein|||
+B004 |rNRP1 protein|||
+B005 |PEG-Amine|||
+B006 |PEG-Amine|||
+B007 |PEG-Acid|||
+B008 |PEG-Acid|||
+B009 |14-3-3 zeta protein|||
+B010 |14-3-3 zeta protein|||
+C001 |Pennicilloyl G-ASR*|Pennicilloyl G-ASR*|Pen G|
+C002 |Pennicilloyl V-ASR*|Pennicilloyl V-ASR*|Pen V|
+C003 |Ampicillin-ASR*|Ampicillin-ASR*|Ampicillin|
+C004 |Amoxicillin-*discontinued*|Amoxicillin-ASR*|Amoxicillin|
+C005 |Papain|Papain||
+C006 |Annatto (Red Dye)|Annatto (Tinte Rojo)||
+C007 |Orris Root|Raíz de Lirio||
+D001 |D. pteronyssinus|D. pteronyssinus|D. pterony.|
+D002 |D. farinae|D. farinae|D. farinae|
+E001 |Cat Hair/Dander-HD*|Pelo de Gato-HD*|Cat Hair/Dand.|
+E004 |Cow Dander|Pelo de Ganado|Cattle Epith.|
+E005 |Dog Hair/Dander|Pelo de Perro|Dog Hair/Dand.|
+E008 |Feathers, Parakeet|Plumas de Perico|Parakeet Feath.|
+E009 |Feathers, Parrot|Plumas de Loro|Parrot Feather.|
+E010 |Horse Epithelia|Pelo de Caballo|Horse Epithel.|
+E011 |Guinea Pig Dander|Pelo de Coinejillo de Indias|Guinea Pig Dander|
+E012 |Hamster Epithelium|Epitelio de Hamster|Hamster Epithium|
+E013 |Goat Epithilium|Epitelio de Cabra|Goat Epithelium|
+E014 |Sheep Epithelium|Epitelio de Oveja||
+E015 |Pig Epithelium|Epitelio de Cerdo||
+E070 |Feathers, Goose|Plumas de Ganso|Goose Feather|
+E071 |Mouse Epithelium|Pelo de Ratón|Mouse Epith.|
+E072 |Mouse Serum Proteins|Proteínas de Suero de Ratón|Mouse Ser. Prot.|
+E073 |Rat Epithelium|Pelo de Rata|Rat Epithelium|
+E082 |Rabbit Epithelium|Pelo de Conejo|Rabbit Epithelium|
+E085 |Feathers, Chicken|Plumas de Gallina|Chick. Feather|
+E086 |Feathers, Duck|Plumas de Pato|Duck Feathers|
+E100 |Feathers, Pigeon|Plumas de Paloma|Pigeon Feather|
+E101 |Feathers, Turkey|Plumas de Pavo||
+E102 |Pigeon droppings|Excremento de Paloma||
+E103 |Cat Fel d 1|Pelo de Gato fel d 1||
+E111 |Mouse Urine|Orina de ratón||
+EZ04 |Epidermal Mix|Mezcla de Epidermicas|Epider MX|
+EZ06 |Dust Mite Mix|Mezcla de Acaros|Mite MX|
+EZ07 |Epidermal Mix|Mezcla de Epidermicas #1|Epid. MX #1|
+EZ12 |Feather Mix|Mezcla de Plumas|Feather Mix|
+F001 |Egg, White|Claro del Huevo|Egg, White|
+F002 |Milk, Cows-HD*|Leche de Vaca-HD*|Milk, Cow's|
+F003 |Codfish|Bacalao||
+F004 |Wheat|Trigo|Wheat|
+F005 |Rye|Centeno|Rye|
+F006 |Barley|Cebada|Barley|
+F007 |Oat|Avena|Oat|
+F008 |Corn|Maíz|Corn|
+F009 |Rice|Arroz|Rice|
+F010 |Seed, Sesame|Semilla de Ajonjolí|Seed, Sesame|
+F011 |Jalapeno pepper|Pimiento Jalapeño||
+F012 |Pea, Green|Guisante/Chicharos|Pea, Green|
+F013 |Peanut-HD*|Maní/Cacahuate-HD*|Peanut|
+F014 |Soybean|Soya|Soybean|
+F015 |Bean, White/Navy|Haba Blanca|Bean, Wh/Nvy|
+F016 |Turmeric|Turmeric||
+F017 |Hazelnut|Avellana|Hazelnut|
+F018 |Brazil Nut|Nuez de Brazil|Brazil Nut|
+F019 |alpha-Gal|alpha-Gal||
+F020 |Almond|Almendra|Almond|
+F021 |Pomegranate|Granada||
+F022 |Carob|Algarroba||
+F023 |Chive|Cebollino||
+F024 |Shrimp|Camaron|Shrimp|
+F025 |Tomato|Tomate|Tomato|
+F026 |Pork|Carne de Cerdo|Pork|
+F027 |Beef|Carne de Res/Carne de Vaca|Beef|
+F028 |Okra|Ocra||
+F029 |Bromelain|Bromelina||
+F030 |Cilantro|Cilantro||
+F031 |Carrot|Zanahoria|Carrot|
+F032 |Anchovy|La Anchoa||
+F033 |Orange|Naranja|Orange|
+F034 |Cheese,  Mozzarella|Queso Mozzarella||
+F035 |Potato, White|Papa|Potato, W.|
+F036 |Coconut|Coco|Coconut|
+F037 |Bison|Bisonte||
+F040 |Tuna|Atún|Tuna|
+F041 |Salmon, Atlantic|Salmón atlántico|Salmon|
+F044 |Strawberry|Fresa|Strawberry|
+F045 |Yeast, Brewers|Levadura de Cerveceria|Yeast, Brew.|
+F047 |Garlic|Ajo|Garlic|
+F048 |Onion|Cebolla|Onion|
+F049 |Apple|Manzana|Apple|
+F054 |Potato, Sweet|Batata/Camote|Potato, Sweet|
+F075 |Egg-Yolk|Yema del Huevo|Egg, Yolk|
+F076 |Milk, Cow's-Lactalbumin, A.|Lactalbumin Alfa|Lactalb. A.|
+F077 |Milk, Cow's-Lactoglobulin, B.|Lactoglobulin Beta|Lactoglob. B.|
+F078 |Milk, Cow's-Casein|Casein|Casein|
+F079 |Wheat-Gluten|Gluten|Gluten|
+F080 |Lobster, Maine|Langosta|Lobster, Maine|
+F081 |Cheese, Cheddar|Queso de Cheddar|Cheese, Ched.|
+F082 |Cheese, Mold|Moho de Queso|Cheese, Mold|
+F083 |Chicken|Carne de Pollo|Chicken|
+F085 |Celery|Apio|Celery|
+F087 |Melon, Honeydew|Melon Ligamaza|Melon/Honeyd|
+F089 |Mustard|Mostaza|Mustard|
+F090 |Malt|Malta|Malt|
+F092 |Banana|Platano/Guineo|Banana|
+F093 |Cacao/Chocolate|Chocolate/Cocao|Cacao/Chocol|
+F094 |Pear|Pera|Pear|
+F095 |Peach|Melecoton|Peach|
+F096 |Avocado|Aguacate|Avocado|
+F100 |Cherry, Bing|Cereza|Bing Cherry|
+F101 |Bass, Black|Percha Negra|Bass, Black|
+F102 |Buckwheat|Alforfón|Buckwheat|
+F103 |Chestnut|Castaña|Chestnut|
+F104 |Cranberry|Arándano|Cranberry|
+F105 |Date|Higo|Date|
+F106 |Duck|Carne De Pato|Duck|
+F107 |Eel|Anguila|Eel|
+F108 |Eggplant|Berenjena|Eggplant|
+F109 |Gum, Acacia|Savia De Acacia|Gum, Acacia|
+F110 |Gum, Karaya|Savia De Karaya|Gum, Karaya|
+F111 |Mackerel|Caballa|Mackerel|
+F112 |Paprika|Pimienton Dulce/Paprika|Paprika|
+F114 |Pine Nut|Nuez De Pino|Pine Nut|
+F115 |Pumpkin|Calabaza|Pumpkin|
+F116 |Squid|Calamar|Squid|
+F117 |Cheese, Swiss|Queso Suizo|Cheese,Sw.|
+F118 |Swordfish|Pez De Espada|Swordfish|
+F119 |Halibut|Hipogloso|Halibut|
+F120 |Perch, Lake|Perca|Perch, Lake|
+F121 |Whitefish|Prosopium spp.|Whitefish|
+F122 |Artichoke|Alcachofa|Artichoke|
+F123 |Snapper, Red|Pez Comestible del Golfo de Mx|Red Snapper|
+F124 |Olive, Black|Aceituna Negra|Black Olive|
+F125 |Hops|Lupulo|Hops|
+F126 |Lentil|Lenteja|Lentil|
+F127 |Papaya|Papaya|Papaya|
+F128 |Plum/Prune|Ciruela|Plum/Prune|
+F129 |Raspberry|Frambuesa|Raspberry|
+F130 |Vanilla|Vainilla|Vanilla|
+F131 |Tapioca|Tapioca|Tapioca|
+F132 |Nectarine|Nectarina|Nectarine|
+F133 |Gelatin|Gelatina|Gelatin|
+F134 |Lime|Lima/Limón Agrio|Lime|
+F135 |Asparagus|Esparrago|Asparagus|
+F136 |Lobster, Spiny|Langosta con Puas|Lobster,Spin|
+F137 |Poppy Seed|Semilla de Amapola|Poppy Seed|
+F138 |Apricot|Albaricoque/Chabacano|Apricot|
+F139 |Blackberry|Zarzamora|Blackberry|
+F140 |Cumin|Cumino|Cumin|
+F141 |Curry Powder|Polvo de Curry|Curry powder|
+F142 |Pea, Chick (Garbonzo)|Garbanzo|Chick pea|
+F143 |Flaxseed|Linaza|Flaxseed|
+F144 |Parsley|Perejil|Parsley|
+F145 |Beet Sugar|Remolacha Azucarera|Beet Sugar|
+F146 |Cloves|Clavos|Cloves|
+F147 |Milk, Goat's|Leche de Cabra|Milk, Goat's|
+F148 |Nutmeg|Nuez Moscada|Nutmeg|
+F149 |Radish|Rabano|Radish|
+F150 |Pepper, Red|Pimiento Rojo|Pepper,Red|
+F151 |Sage|Salvia|Sage|
+F152 |Beet|Remolacha|Beet|
+F153 |Kiwi|Kiwi|Kiwi|
+F154 |Brussel Sprouts|Coles de Bruselas|Brussel Sprouts|
+F155 |Tangerine|Mandarina|Tangerine|
+F156 |Thyme|Tomillo|Thyme|
+F157 |Millet|Mijo|Millet|
+F158 |Lamb|Carne de Cordero|Lamb|
+F159 |Canola seed|Brassica rapus||
+F201 |Pecan|Pacana|Pecan|
+F202 |Cashew|Anarcado|Cashew|
+F203 |Pistachio|Pistacho|Pistachio|
+F204 |Trout|Trucha|Trout|
+F207 |Clam|Almeja|Clam|
+F208 |Lemon|Limòn|Lemon|
+F209 |Grapefruit|Toronja|Grapefruit|
+F210 |Pineapple|Piña|Pineapple|
+F212 |Mushroom|Champiñones|Mushroom|
+F214 |Spinach|Espinaca|Spinach|
+F215 |Lettuce|Lechuga|Lettuce|
+F216 |Cabbage Mix|Mezcla de Repollo|Cabbage Mix|
+F221 |Coffee|Café|Coffee|
+F236 |Milk, Cow's-Whey|Suero de la Leche|Whey|
+F244 |Cucumber|Pepinillo|Cucumber|
+F245 |Egg, Whole|Huevo Completo|Egg, Whole|
+F247 |Honey|Miel|Honey|
+F256 |Walnut, Black|Nuez de Castilla (Negro)|Walnut, Black|
+F259 |Grape/Raisin|Uva/Pasa|Grape/Raisin|
+F260 |Broccoli|Bróculi|Broccoli|
+F263 |Pepper, Bell (Green)|Pimiento Verde|Pepper, Bell|
+F283 |Oregano|Oregano|Oregano|
+F284 |Turkey|Carne de Pavo|Turkey|
+F288 |Blueberry|Mora Azul|Blueberry|
+F290 |Oyster|Ostra/Ostion|Oyster|
+F291 |Cauliflower|Coliflor|Cauliflower|
+F300 |Bean, Kidney|Frijol Colorado|Bean, Kidney|
+F301 |Bean, Lima|Haba Lima|Bean, Lima|
+F302 |Bean, Pinto|Frijol Pinto|Bean, Pinto|
+F303 |Bean, Wax String|Haba Verde|Bean, W. Strg.|
+F304 |Bran, Wheat|Trigo del Salvado|Bran, Wheat|
+F305 |Cantaloupe/Muskmelon|Melon Cantalupo|Cantalalope|
+F306 |Catfish|Siluro (Pes)|Catfish|
+F307 |Cheese, P. American|Queso Americano|Cheese, Amer.|
+F308 |Cinnamon|Canela|Cinnamon|
+F309 |Cottonseed|Semilla de Algodon|Cottonseed|
+F310 |Crab, Blue|Cangrejo|Crab|
+F311 |Flounder|Platija|Flounder|
+F312 |Haddock|Eglefino/Adebejos|Haddock|
+F313 |Pepper, Black/White|Pimienta Negra/Blanca|Pepper, B/W|
+F314 |Pepper, Chili|Pimiento Chile|Pepper, Chili|
+F316 |Sunflower Seed|Semilla de Girasol|Sunflower Seed|
+F317 |Walnut, English|Nuez de Castilla (Inglés)|Walnut, Eng.|
+F318 |Yeast, Bakers|Levadura de Hornear|Yeast, Bakers|
+F319 |Yogurt|Yogur|Yogurt|
+F329 |Watermelon|Sandía|Watermelon|
+F337 |Sole|Lenguado|Sole|
+F338 |Scallop|Ostión/Vieira|Scallop|
+F339 |Crab, Alaskan King|Cangrejo, Alaskan|Crab, Alaskan|
+F340 |Tea, Black|Té negro|Tea, Black|
+F341 |Dill|Eneldo|Dill|
+F342 |Olive, Green|Aceituna, Verde|Olive, G.|
+F343 |Basil|Albahaca|Basil|
+F344 |Squash, Zucchini|Calabaza de Zuchhini|Squash, Zucch.|
+F345 |Ginger|Jengibre|Ginger|
+F346 |Squash, Summer/Yellow|Calabaza Amarilla|Squash, S/Yel.|
+F347 |Bay Leaf|Hoja de Laurel|Bay Leaf|
+F348 |Cola Nut|Nuez de Cola|Cola Nut|
+F349 |Safflower Seed|Semilla de Alazor|Safflower Seed|
+F350 |Sugar, Cane|Azucar de Caña|Sugar, Cane|
+F351 |Mango|Mango||
+F352 |Rosemary|Rosemary||
+F353 |Salmon, Pacific|Salmón pacífico||
+F354 |Crab, Dungeness|Cangrejo de dungeness||
+F355 |Peas, Black-Eyed|Chicaros de ojo amoratado||
+F356 |Bean, Black|Firjol negro||
+F357 |Egg, White-Ovomucoid|Ovomucoid||
+F358 |Milk, Cow's-Lactoferrin|Lactoferrin||
+F359 |Peanut-Ara h 1|Maní/Cacahuate-Ara h 1||
+F360 |Peanut-Ara h 2|Maní/Cacahuate-Ara h 2||
+F361 |Tilapia|Tilapia||
+F363 |Macadamia Nut|Tuerca de macadamia||
+F364 |Carrageenan, iota|Carrageenan, iota||
+F365 |Carrageenan, kappa|Carrageenan, kappa||
+F366 |Carrageenan, lambda|Carrageenan, lambda||
+F369 |Quinoa|Quinua||
+F370 |Kale|Col Rizada||
+F371 |Gliadin|Gliadin||
+F372 |Peanut-Ara h 6|Maní/Cacahuate-Ara h 6||
+F373 |Allspice|Pimienta de Jamaica||
+F374 |Aniseed|Anís||
+F376 |Butter|Mantequilla||
+F378 |Carp|Carpa||
+F379 |Cheese, Gouda|Queso, Gouda||
+F380 |Cheese, Parmesan|Queso, Parmesano||
+F381 |Crayfish|Cangrejo de Río||
+F382 |Fennel|Hinojo||
+F387 |Horseradish|Rábano Picante||
+F388 |Maple Syrup|Miel de Maple||
+F392 |Mint|Menta||
+F393 |Mussel|Mejillón||
+F394 |Octopus|Pulpo||
+F395 |Egg, White-Ovalbumin|Ovalbúmina||
+F396 |Pike|Lucio||
+F398 |Sardine|Sardina||
+F404 |Vinegar, Wine|Vinagre, Vino||
+F406 |Wine, Red|Vino Rojo||
+F407 |Wine, White|Vino, Blanco||
+F408 |Yeast, Wine|Levadura, Vino||
+F409 |Tea, Camomile|Té, manzanilla||
+F410 |Venison|Venado||
+F411 |Cheese, Goat's|Queso de Cabra||
+F414 |Leek|Puerro||
+F415 |Rhubarb|Ruibarbo||
+F416 |Rabbit (food)|Conejo (Comida)||
+F417 |Bean, Green|Frijol verde||
+F418 |Grape, White Seedless|Uva, Blanca Sin Semillas||
+F999 |Chicory (not available)|||
+FZ03 |Food Mix|Mezcla de Alimentos|Food Mix|
+FZ11 |Grain Food Mix|Mezcla de Grano|Grain Mix|
+FZ13 |Nut Mix|Mezcla de Nuez|Nut Mix|
+FZ16 |Walnut SPP|Nuez, SPP||
+G002 |Bermuda Grass|Cynodon dactylon|Bermuda|
+G003 |Orchard Grass|Dactylis glomerata|Orchard|
+G004 |Fescue, Meadow Grass|Festuca pratensis|Fescue, Mead.|
+G005 |Rye, Perennial Grass|Lolium perenne|Rye, peren.|
+G006 |Timothy Grass|Phleum pratense|Timothy|
+G008 |June Grass|Poa pratensis|June Grass|
+G009 |Redtop/Bent Grass|Agrostis gigantea|Bent/Redtop|
+G010 |Johnson Grass|Sorghum halepense|Johnson|
+G013 |Velvet Grass|Holcus lanatus|Velvet|
+G014 |Oat,Cultivated|Avena sativa|Oat, Cult.|
+G015 |Wheat, Cultivated|Triticum aestivum|Wheat, Cult.|
+G017 |Bahia Grass|Paspalum notatum|Bahia|
+G020 |Bluegrass,Canada|Poa compressa|Bluegrass, C.|
+G021 |Brome, Smooth Grass|Bromus Inermis|Brome, Sm.|
+G022 |Canary/Reed Grass|Phalaris arundinacea|Canary/Reed|
+G023 |Sweet Vernal Grass|Anthoxanthum odoratum|Sweet Vernal|
+G024 |Fescue, Red Grass|Festuca rubra|Fescue, Red|
+G025 |Corn Pollen|Zea maize polen|Corn Pollen|
+G026 |Common Reed|Phragmites australis||
+GGG  |Total IgG|Total IgG||
+GZ08 |Grass Mix #1|Mezcla de Hierbas|Grass Mix #1|
+H001 |House Dust (Greer)|Polvo Casero (Greer)|House Dust(G)|
+H002 |House Dust (Holister-Stier)|Polvo Casero (Holister-Stier)||
+H010 |Grain Mill Dust|Polve de Molino|Grain Mill dust|
+HZ05 |Dust Mix|Mezcla de Polvos|Dust Mix|
+I001 |Honey Bee Venom|Apis mellifera|Honey bee|
+I002 |Hornet, White Faced|Dolichovespula maculata|Hornet, W.F.|
+I003 |Yellow Jacket spp.|Vespula spp.|Yellow Jacket|
+I004 |Wasp, Paper spp.|Polistes spp|Wasp, paper|
+I005 |Hornet, Yellow|Dolichovespula arenaria|Hornet, y.|
+I006 |Cockroach, German|Cucaracha, Alemana|Cockroach,G.|
+I007 |Mosquito|Mosquito|Mosquito|
+I010 |Ant, Black (Carpenter)|Hormiga Negra|Ant, Black|
+I011 |Flea|Ctenocephalides canis/C. felis||
+I012 |Horsefly|Tábano||
+I014 |Beetle, Asian|Harmonia axyridis||
+I016 |Bumblebee|Bombus spp||
+I070 |Ant, Fire|Solenopsis invicta (Hormiga)|Fire ant|
+I206 |Cockroach, American|Cucaracha, Americana|Cockroach, A.|
+IVG2 |IVG2|IVG2||
+IVM1 |IVM1|IVM1||
+IVM2 |IVM2|IVM2||
+IZ17 |Cockroach mix|Mezcla de Cucaracha||
+K001 |Ispaghula|Ispaghula|Isphagula|
+K002 |Tobacco|Tobaco||
+K010 |Isocyanate|Isocyanat|Isocyanate TDI|
+K080 |Formaldehyde/Formalin|Formaldehido|Formaldehyde|
+K082 |Latex|Látex|Latex|
+M001 |Penicillium notatum|Penicillium notatum|Penicillium|
+M002 |Cladosporium herbarum|Cladosporium herbarum|Cladosporium|
+M003 |Aspergillus fumigatus|Aspergillus fumigatus|Aspergillus|
+M004 |Mucor racemosus|Mucor racemosus|Mucor|
+M006 |Alternaria alternata/tenuis|Alternaria alternata|Alternaria|
+M008 |Helminthosporium halodes|Helminthosporium halodes|Helminthosp.|
+M009 |Fusarium moniliforme|Fusarium moniliforme|Fusarium|
+M010 |Stemphylium bortyosum|Stemphylium bortyosum|Stemphyllium|
+M011 |Rhizopus nigricans|Rhizopus nigricans|Rhizopus|
+M012 |Aureobasidium/Pullaria pullans|Aureobasidium/Pullaria pullans|Pullularia|
+M013 |Phoma betae|Phoma betae|Phoma betae|
+M014 |Epiccocum purpurascens|Epiccocum purpurascens|Epiccocum|
+M016 |Curvularia lunata|Curvularia lunata|Curvularia|
+M018 |Aspergillus flavus|Aspergillus flavus|Asperg.fla.|
+M019 |Aspergillus niger|Aspergillus niger|Asperg. nig.|
+M020 |Smut, Corn|Hongo De Maiz|Corn Smut|
+M021 |Aspergillus nidulans|Aspergillus nidulans|Asperg. nid.|
+M022 |Aspergillus terreus|Aspergillus terreus|Asperg. ter.|
+M023 |Aspergillus versicolor|Aspergillus versicolor|Asperg. ver.|
+M024 |Stemphyllium solani|Stemphyllium solani|Stemphy sol.|
+M025 |Chaetomium globosum|Chaetomium globosum|Chaetomium g.|
+M026 |Algae|Algae|Algae|
+M027 |Rhodoturula mucilaginosa|Rhodoturula mucilaginosa|Rhodoturula|
+M030 |Fusarium oxysporum|Fusarium oxysporum|Fusarium|
+M031 |Candida albicans|Candida albicans|Candida a|
+M032 |Trichophyton rubrum|Trichophyton rubrum|Trichophyton|
+M033 |Cephalosporium acremonium|Cephalosporium acremonium|Cephalospor.a.|
+M034 |Helminthsporium solani|Helminthsporium solani|Helminth.sola.|
+M035 |Helminthsporium sativum|Bipolaris sorokiniana|Helminth.sati.|
+M036 |Microsporum canis|Microsporum canis|Microsporum c.|
+M037 |Epidermophyton floccosum|Epidermiphyton floccosum|Epidermop.f.|
+M038 |Smut, Bermuda Grass|Ustilago cynodontis|Ustilago cyn.|
+M039 |Curvularia spicifera|Drechslera spicifera|Curvular.spi.|
+M040 |Mucor plumbeus|Mucor plumbeus|Mucor plumb.|
+M041 |Stachybotrys chartarum|Stachybotrys chartarum|Stachybotrys|
+M042 |Botrytis cinerea|Botrytis cinerea|Botrytis cin.|
+M043 |Trichophyton mentagrophytes|Trichophyton mentagrophytes|Trichophy m.|
+M044 |Trichoderma lignorum|Trichoderma lignorum|Trichoderma l.|
+M045 |Cladosporium cladosporoides|Cladosporium cladosporoides||
+M046 |Phoma herbarum|Phoma herbarum||
+M047 |Nigrospora oryzae|Nigrospora oryzae||
+M048 |Absidia spp.|Absidia spp.||
+M049 |Mucor mucedo|Mucor mucedo||
+M050 |Geotrichum candidum|Geotrichum candidum||
+M052 |Hormodendrum hordei|Hormodendrum hordei||
+M061 |Smut, Wheat|Ustilago tritici||
+M062 |Helminthosporium interseminat|Helminthosporium interseminatum||
+M063 |Smut, Johnson Grass|Sphacelotheca cruenta||
+MMM  |Total IgM|Total IgM||
+MZ02 |Mold Mix|Mezcla de Hongos|Mold Mix|
+MZ15 |T.O.E|T.O.E.|T.O.E.|
+MZ17 |Helminthosporium, ssp|Helminthosporium, ssp||
+Q001 |QNS|QNS||
+S001 |Acetyl Salicylic Acid|Acetyl Salicylic Acid||
+S002 |Sulfamethoxazole|Sulfamethoxazole||
+S003 |Ibuprofen|Ibuprofen||
+S004 |Potassium Clavulanate|Potassium Clavulanate||
+S005 |Nickel Chloride|Nickel Chloride||
+S006 |Titanium Chloride|Titanium Chloride||
+S007 |Iodine|Iodine||
+S008 |Diclofenac|Diclofenac||
+S009 |Erythromycin|Erythomycin||
+S010 |Ciprofloxacin|Ciprofloxacin||
+S011 |Naproxen|Naproxen||
+S012 |Piroxicam|Piroxicam||
+S013 |Glutamic Acid (MSG)|Glutamic Acid (MSG)||
+S014 |Clindamycin|Clindamycin||
+S015 |Tartrazine, Yellow Dye (#5)|Tartrazine Tinte Amarillo (#5)||
+S016 |Yellow Orange|Yellow Orange||
+S017 |Quinoline Yellow (#10)|Quinoline Amarillo (#10)||
+S018 |Tetracycline|Tetracycline||
+S019 |Oflaxacin|Olfaxacin||
+S020 |Lactose|Lactose||
+S021 |Amoxicillin|Amoxicillin||
+S022 |Lidocaine|Lidocaine||
+S023 |Cephalosporin Mix|Cephalosporin Mezcla||
+S024 |Cochenile Red (Red Dye)|Cochenille Rojo (Carmine)||
+S025 |Procaine|Procaine||
+S026 |Trimethoprim|Trimethoprim||
+S027 |Penicillin V|Penicillin V||
+S028 |Ampicillin|Ampicillin||
+S029 |Formaldehyde|Formaldehyde||
+S030 |TDI (Isocyanate)|TDI (Isocyanate)||
+S031 |Nystatin|Nystatin||
+S032 |Doxycyclin|Doxycyclin||
+S033 |Acetominophen|Acetominophen||
+S034 |Penicillin G|Penicillin G||
+S035 |Annatto (Red Dye)|Annotto Dye||
+S036 |Gentamycin|Gentamycin||
+S037 |Cotton Linters|Linters de algodón||
+S038 |Silk|Seda||
+S039 |Mint|Casa de la Moneda||
+S041 |Venison|Carne de Venado||
+S042 |Ethylene Oxide|Ethylene Oxide||
+S043 |Phtalic Anhydride|Phtalic Anhydride||
+S045 |Arrowroot|Arrowroot||
+S046 |Wool, Treated|Lana Tratada||
+S047 |Chromium|Chromium||
+S049 |Thimerosal|Thimerosal||
+S050 |Titanium Oxide|Titanium Oxide||
+S051 |Macrolid Mix|Macrolid Mezcla||
+S052 |Codeine|Codeine||
+S053 |Pyrethrum|Pyrethrum||
+S054 |Chicory|Chicory||
+S055 |Insulin, Bovine|Insulina, (Bovino)||
+S056 |Aminoglycoside Mix|Aminoglycoside Mix||
+S057 |Ammonium Persulfate|Ammonium Persulfate||
+S058 |Benzoic Acid|Benzoic Acid||
+S059 |Carbamazepine|Carbamazepine||
+S060 |Cefalexin|Cefalexin||
+S061 |Cefuroxime|Cefuroxime||
+S062 |Chloramin T|Chloramin T||
+S063 |Budgerigar droppings|Budgerigar droppings||
+S064 |Budgerigar serum|Budgerigar serum||
+S065 |Deer Hair|Deer Hair||
+S066 |Feathers, Finch|Feathers, Finch||
+S067 |Feathers, Lovebird|Feathers, Lovebird||
+S068 |Feathers, Pigeon|Feathers, Pigeon||
+S069 |Storage Mite, a. siro|Storage Mite, a. siro||
+S070 |Storage Mite, l. destructor|Storage Mite, l. destructor||
+S071 |Storage Mite, t. purtrescentia|Storage Mite, t. purtrescentia||
+S072 |Indomethacin|Indomethacin||
+S073 |Insulin (Human)|Insulina, (Humano)||
+S074 |Insulin (Pork)|Insulina, (Cerdo)||
+S075 |Ketoprofen|Ketoprofen||
+S076 |D.microceras|D.microceras||
+S077 |Echinococcus|Echinococcus||
+S079 |Methylene Blue|Methylene  Methylene Azul||
+S080 |Methylparaben|Methylparaben||
+S081 |Metronidazole|Metronidazole||
+S082 |Phenol|Phenol||
+S083 |Prednisone|Prednisone||
+S084 |Propyphenazone|Propyphenazone||
+S085 |Saccharin|Saccharin||
+S086 |Sheep Wool (Untreated)|Lana, Sin Tratar||
+S087 |Sodium Nitrite|Sodium Nitrite||
+S088 |Staphylococcus Aureus|Staphylococcus Aureus||
+S089 |Tetanus|Tetanus||
+S090 |Toluene|Toluene||
+S091 |Trimellitic acid, Anhydride|Trimellitic acid, Anhydride||
+S092 |Feathers, Canary|Feathers, Canary||
+S093 |Streptomycin|Streptomycin||
+S114 |Gliadin IgG Ab, Deaminated-*|Gliadin IgG Ab, Deaminated-*||
+S115 |Gliadin IgA Ab, Deaminated-*|Gliadin IgA Ab, Deaminated-*||
+S124 |T. Transglutaminase Ab, IgG-*|T. Transglutaminase Ab, IgG-*||
+S125 |T. Transglutaminase Ab, IgA-*|T. Transglutaminase Ab, IgA-*||
+S130 |Reticulin T. Autoantibody-***|Reticulin T. Autoantibody-***||
+S145 |Gluten IgA-**|Gluten IgA-**||
+S214 |Candida Albicans IgG-*|Candida Albicans IgG-*||
+S215 |Candida Albicans IgA-*|Candida Albicans IgA-*||
+S216 |Candida Albicans IgM-*|Candida Albicans IgM-*||
+SAAA |Total IgA (send out)|||
+T001 |Elder, Box/Maple|Acer negundo|Elder, Box|
+T002 |Alder, Smooth|Alnus rugosa (serrulata)||
+T003 |Birch, Gray/White|Betula populifolia|Birch, White|
+T004 |Locust, Black|Robinia pseudoacacia||
+T005 |Beech, American|Fagus grandifolia|Beech, Amer.|
+T006 |Cedar,Mountain|Juniperus ashei|Cedar,Mtn|
+T007 |Oak, White|Quercus alba|Oak, White|
+T008 |Elm, American|Ulmus americana|Elm, Amer.|
+T009 |Olive, European (Tree)|Olea europaea|Olive, E.|
+T010 |Walnut, Calif. Black|Juglans californica|Walnut, CA|
+T011 |Cedar, Salt|Tamarix gallica||
+T012 |Ironwood|Ostrya virginiana||
+T013 |Walnut, English|Juglans regia||
+T014 |Cottonwood, Eastern|Populus deltoides|Cottonwood,E.|
+T015 |Ash, White|Fraxinus americana|Ash, White|
+T016 |Pine, White|Pinus strobus|Pine, White|
+T017 |Juniper, One-Seed|Juniperis monosperma||
+T018 |Eucalyptus|Eucalyptus globulus|Eucalyptus|
+T019 |Acacia|Acacia spp.|Acacia|
+T020 |Mesquite|Prosopis glandulosa|Mesquite|
+T021 |Birch,Common Silver|Betula verrucosa (alba, pendula)||
+T022 |Alder, Speckled|Alnus incana||
+T023 |Cypress, Italian|Cupressus sempervirens|Cypress, I.|
+T072 |Palm, Queen|Arecastrum romanzoffianum|Palm, Queen|
+T100 |Alder, European|Alnus glutinosa|Alder, Europ.|
+T101 |Alder,Red|Alnus rubra|Alder,Red|
+T102 |Ash, Arizona|Fraxinus velutina|Ash, Arizona|
+T103 |Ash, Green|Fraxinus pennsylvanica|Ash, Green|
+T104 |Aspen|Populus tremuloides|Aspen|
+T105 |Cedar, Red|Juniperus virginiana|Cedar, Red|
+T106 |Cypress, Bald|Taxodium distichum|Cypress, Bald|
+T107 |Elm, Chinese|Ulmus pumila|Elm, Chinese|
+T108 |Elm,Scrub|Ulmus crassifolia|Elm,Scrub|
+T109 |Hickory, White|Carya alba|Hickory, Wh.|
+T110 |Mango Blossoms|Mangifera spp.|Mango Blms.|
+T111 |Maple, Red|Acer rubrum|Maple, Red|
+T112 |Mulberry, Red |Morus rubra|Mulberry, R.|
+T114 |Oak, Red|Quercus rubra|Oak, Red|
+T115 |Oak, Water|Quercus nigra|Oak, Bater|
+T116 |Olive, Russian (Tree)|Elaeagnus angustifolia|Olive, Russian|
+T117 |Orange, Citrus|Citrus sinensis|Orange, Citrus|
+T118 |Orange, Osage|Malcura pomifera|Orange, Osage|
+T119 |Palm, Date|Phoenix dactylifera|Palm, Date|
+T120 |Peppertree|Schinus molle|Peppertree|
+T121 |Pine, Loblolly|Pinus taeda|Pine, Lob.|
+T122 |Pine, Longleaf|Pinus palustris|Pine,Longleaf|
+T123 |Pine, Western White|Pinus monticola|Pine, W. W.|
+T124 |Poplar, Lombardy|Populus nigra|Poplar, Lomb.|
+T125 |Poplar, White /Aspen|Populus alba|Poplar,W/Aspen|
+T126 |Redwood|Sequoia sempervirens|Redwood|
+T127 |Walnut, Black|Juglans nigra|Walnut, Black|
+T128 |Willow, Black|Salix nigra|Willow, Black|
+T130 |Privet|Ligustrum vulgare|Privet|
+T131 |Gum, Sweet|Liquidambar styraciflua|Gum, Sweet|
+T132 |Cypress, Arizona|Cupressus arizonica|Cypress, AZ.|
+T133 |Hickory, Shagbark|Carya obata|Hickory, Shag|
+T134 |Oak, CA Black|Quercus kelloggii|Oak, CA Black|
+T136 |Wax Myrtle/Bayberry|Myrtle cerifera|Wax Myrtle/B|
+T137 |Hackberry|Celtis occidentalis|Hackberry|
+T138 |Melaleuca|Melaleuca quinquenervia|Melaleuca|
+T139 |Oak, Virginia Live|Quercus virginiana|Oak, VA Live|
+T140 |Sycamore, American Eastern|Platanus occidentalis|Sycamore, E|
+T141 |Mulberrry, Paper|Broussonetia papyrifera|Mulberry, P|
+T142 |Pine, Australian/Beefwood|Casuarina equistifolia|Pine, Aust.|
+T143 |Oak, Arizona/Gambel|Quercus gambelii|Oak, Arizona|
+T144 |Mulberry, White|Morus alba|Mulberry, W.|
+T145 |Pecan (Tree)|Carya illoensis|Pecan (Tree)|
+T146 |Birch, Red/River|Betula nigra|Birch, River|
+T147 |Pine, Ponderosa|Pinas ponderosa|Pine, Ponder.|
+T148 |Juniper, Western|Juniperus occidentalis|Juniper, W.|
+T149 |Hazelnut (Tree)|Corylus americana|Hazelnut|
+T150 |Tree of Heaven|Ailanthus altissima|Tree of Heav.|
+T151 |Oak, Black|Quercus velutina||
+T152 |Walnut, Mexican|Juglans microcarpa||
+T153 |Alder, Sitka|Alnus sinuata||
+T154 |Fir, Douglas|Pseudotsuga menziesii||
+T155 |Bayberry|Morella cerifera||
+TZ01 |Pollen Mix|Mezcla de Polen|Pollen Mix|
+TZ09 |Tree Mix #2|Mezcla de Arboles 2|Tree Mix #2|
+TZ13 |Tree Mix #1|Mezcla de Arboles 1|Tree Mix #1|
+TZ18 |Eastern Oak Mix|Mezcla del Este Quercus||
+V001 |VOID|Vacío||
+W001 |Ragweed, Common|Ambrosia artemisiifolia|Ragweed, C.|
+W002 |Ragweed, Western|Ambrosia psilostachya|Ragweed, W.|
+W003 |Ragweed, Giant|Ambrosia trifida|Ragweed, G.|
+W004 |Poverty Weed|Iva axillaris||
+W005 |Wormwood, Annual|Artemisia annua|Wormwood, A.|
+W006 |Mugwort, Common|Artemisia vulgaris|Mugwart, Com.|
+W007 |Wing Scale|Atriplex canescens||
+W009 |Plantain, English| Plantago lanceolata|Engl. Plant.|
+W010 |Lambsquarter's, Common|Chenopodium album|Lambsquarter|
+W011 |Thistle, Russian|Salsola kali|Thistle, Russ.|
+W013 |Cocklebur|Xanthium strumarium|Cocklebur|
+W014 |Pigweed, Redroot/Rough|Amaranthus retroflexux|Pigweed, R.|
+W015 |Scales/Saltbush|Atriplex wrightii|Scales/Salt B|
+W016 |Marsh Elder, Rough|Iva annua|Marsh Elder,R.|
+W018 |Sorrel, Sheep|Rumex acetosella|Sheep Sorrel|
+W019 |Pellitory,Wall|Parietaria officinalis|Pellitory, W.|
+W020 |Nettle|Urtica dioica|Nettle|
+W021 |Marsh Elder, Burweed|Iva Xanthifolia|Marsh Elder,B.|
+W100 |Alfalfa|Medicago sativa|Alfalfa|
+W101 |Carelessweed|Amaranthus hybridus|Carelessweed|
+W102 |Colza|Brassica spp.|Colza|
+W104 |Dock, Yellow/Curly|Rumex crispus|Dock, Yellow|
+W105 |Mexican Tea|Chenopodium ambrosioides|Mexican Tea|
+W106 |Oat, Wild|Avena fatua|Oat, Wild|
+W107 |Bush, Rabbit|Ambrosia deltoidea|Bush, Rabit|
+W109 |Ragweed, Southern|Ambrosia bidentata|Ragweed, S.|
+W111 |Sagebrush, Common|Artemisia tridentata|Sagebrush, C.|
+W112 |Sugarbeet (Pollen)|Beta vulgaris|Sugarbeet|
+W113 |Waterhemp, Western|Amaranthus tuberculatus|Waterhemp, W.|
+W114 |Sunflower|Helianthus annus|Sunflower|
+W115 |Baccharis, Western|Baccharis Sarothroides|Baccharis, W.|
+W116 |Burrobrush|Hymenoclea salsola|Burrobrush|
+W117 |Kochia/Firebush|Kochia scoparia|Kochia/Fire|
+W118 |Bush, Iodine|Allenrolfea occidentalis|Bush, Iodine|
+W119 |Pigweed, Smooth|Amaranthus Hybridus|Pigweed Sm|
+W121 |Goldenrod|Solidago spp.|Goldenrod|
+W122 |Pigweed, Spiny|Amaranthus spinosus|Pigweed, Spin|
+W123 |Cosmos|Cosmos Bipinnatus||
+W124 |Ragweed, False|Ambrosia acanthicarpa||
+W125 |Dandelion|Taraxacum officinale||
+W126 |Dog Fennel|Eupatorium capillifolium||
+WZ10 |Weed Mix #1|Mezcla de Malas Hierbas #1|Weed Mix #1|
+WZ16 |Ragweed Mix|Mezlca de Ambrosia||
+Z002 |Der p 2|Der p 2|Allergen 2|
+Z101 |iota Carrageenan|||
+Z102 |kappa Carrageenan|||
+Z103 |lambda Carrageenan|||
+Z104 |Test allergen 5|||
+Z105 |Test allergen 6|||
+Z999 |Void Accession|Void Accession||

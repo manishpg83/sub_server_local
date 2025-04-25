@@ -1,0 +1,33 @@
+Start Wed 08-24 10:47 am
+Wed 08-24 10:47 am 48 HL7 orders found 
+1 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="CS136715" >CS136715</button></form><div class="name"> BEVERLY</div> W 241469 08-22 Mon CS136715 Fri 08-19 3 days old
+3 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="KT710121" >KT710121</button></form><div class="name"> RAINES</div> W 241470 08-22 Mon KT710121 Fri 08-19 3 days old
+4 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="KT710131" >KT710131</button></form><div class="name"> RAINES</div> W 241468 08-22 Mon KT710131 Fri 08-19 3 days old
+5 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="LV589612" >LV589612</button></form><div class="name"> LOPEZ</div> W 241466 08-22 Mon LV589612 Fri 08-19 3 days old
+6 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="M6785237" >M6785237</button></form><div class="name"> PEDRAZA</div> W 241471 08-22 Mon M6785237 Fri 08-19 3 days old
+8 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="M8557661" >M8557661</button></form><div class="name"> SUSAC</div> W 241472 08-22 Mon M8557661 Fri 08-19 3 days old
+9 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="MG324573" >MG324573</button></form><div class="name"> DUCK</div> W 241464 08-22 Mon MG324573 Fri 08-19 3 days old
+10 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="OY693791" >OY693791</button></form><div class="name"> DAY</div> W 241467 08-22 Mon OY693791 Fri 08-19 3 days old
+11 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="WN499945" >WN499945</button></form><div class="name"> WILSON</div> W 241463 08-22 Mon WN499945 Fri 08-19 3 days old
+12 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="WQ346454" >WQ346454</button></form><div class="name"> MENDOZA</div> W 241465 08-22 Mon WQ346454 Fri 08-19 3 days old
+13 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="J7359347" >J7359347</button></form><div class="name"> NEWMAN</div> W 241505 08-23 Tue J7359347 Sat 08-20 3 days old
+14 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="MK473386" >MK473386</button></form><div class="name"> HOFHERR</div> W 241503 08-23 Tue MK473386 Sat 08-20 3 days old
+15 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="ML420060" >ML420060</button></form><div class="name"> SMITH</div> W 241502 08-23 Tue ML420060 Sat 08-20 3 days old
+16 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="QR742223" >QR742223</button></form><div class="name"> RAMIREZ</div> W 241501 08-23 Tue QR742223 Sat 08-20 3 days old
+18 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="QU075137" >QU075137</button></form><div class="name"> GUERIN</div> W 241504 08-23 Tue QU075137 Sat 08-20 3 days old
+19 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="UN725788" >UN725788</button></form><div class="name"> DIAZ</div> W 241506 08-23 Tue UN725788 Sat 08-20 3 days old
+20 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="VT713052" >VT713052</button></form><div class="name"> HERNANDEZ</div> W 241500 08-23 Tue VT713052 Sat 08-20 3 days old
+21 Login:4, cplTest:4<form action="check.php" method="post"><button name="id" value="LJ696031" >LJ696031</button></form><div class="name"> DOMINGUEZ</div> W 241509 08-23 Tue LJ696031 Mon 08-22 2 days old
+25 Login:4, cplTest:4<form action="check.php" method="post"><button name="id" value="LJ696050" >LJ696050</button></form><div class="name"> CHAVEZ</div> W 241510 08-23 Tue LJ696050 Mon 08-22 2 days old
+29 Login:4, cplTest:4<form action="check.php" method="post"><button name="id" value="LJ696102" >LJ696102</button></form><div class="name"> HERNANDEZ</div> W 241508 08-23 Tue LJ696102 Mon 08-22 2 days old
+33 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="RT424971" >RT424971</button></form><div class="name"> ROGERS</div> W 241507 08-23 Tue RT424971 Mon 08-22 2 days old
+34 BN187142 processed <span> 1 Login records,  1 cplTest records</span>
+35 BY581955 processed <span> 1 Login records,  1 cplTest records</span>
+36 CS077104 processed <span> 5 Login records,  5 cplTest records</span>
+37 DH168183 processed <span> 1 Login records,  1 cplTest records</span>
+38 DH168684 processed <span> 2 Login records,  2 cplTest records</span>
+39 DH169565 processed <span> 1 Login records,  1 cplTest records</span>
+40 IB640152 processed <span> 1 Login records,  1 cplTest records</span>
+41 IB665527 processed <span> 1 Login records,  1 cplTest records</span>
+42 UN741217 processed <span> 1 Login records,  1 cplTest records</span>
+43 WQ347148 processed <span> 1 Login records,  1 cplTest records</span>

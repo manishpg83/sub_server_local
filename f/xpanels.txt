@@ -1,0 +1,28 @@
+SELECT `panel`, `description` FROM `clientPanels` WHERE `client` = 888877
+==========
+
+..........
+array (
+  252 => '252 Mold ID',
+  '501-18' => '501-18',
+  '501-19' => '501-19',
+  '501-26' => '501-26',
+  '501-31' => '501-31',
+  950 => '<span class="pnumber">950</span>Standard Food Panel',
+  '950-1' => '<span class="pnumber">950-1</span>Mini Food Panel',
+  '950-2' => '950-2',
+  'X007' => 'Client Panel',
+  900 => '<span class="pnumber">900</span>Comprehensive Food Panel',
+  '900-5' => '<span class="pnumber">900-5</span>Comprehensive Food IgE',
+  '900-6' => '<span class="pnumber">900-6</span>Comprehensive Food IgG4',
+  '950-3' => '<span class="pnumber">950-3</span>Standard Food Panel IgE',
+  '950-4' => '<span class="pnumber">950-4</span>Standard Food Panel IgG4',
+  '950-5' => '<span class="pnumber">950-5</span>Mini Food Panel IgE',
+  '950-6' => '<span class="pnumber">950-6</span>Mini Food Panel IgG4',
+  255 => '<span class="pnumber">255</span>IBS Panel',
+  '255-2' => '<span class="pnumber">255-2</span>IBS Panel IgE',
+  '255-1' => '<span class="pnumber">255-1</span>IBS Panel IgG4',
+  253 => '<span class="pnumber">253</span>Hidden Foods Panel',
+  '253-1' => '<span class="pnumber">253-1</span>Hidden Foods Panel IgE',
+  '253-2' => '<span class="pnumber">253-2</span>Hidden Foods Panel IgG4',
+)

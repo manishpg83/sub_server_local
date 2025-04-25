@@ -1,0 +1,247 @@
+     AAnimal
+F027 Beef
+F037 Bison
+F083 Chicken
+F106 Duck
+F001 Egg, White
+F395 Egg, White, Ovalbumin
+F357 Egg,White, Ovomucoid
+F245 Egg, Whole
+F075 Egg, Yolk
+F133 Gelatin
+F158 Lamb
+F026 Pork
+F416 Rabbit
+F284 Turkey
+F410 Venison
+     RDairy
+F376 Butter
+F307 Cheese, Amer. Processed
+F081 Cheese, Cheddar
+F411 Cheese, Goat
+F379 Cheese, Gouda
+F082 Cheese, Mold/Blue
+F034 Cheese, Mozzarella
+F380 Cheese, Parmesan
+F117 Cheese, Swiss
+F002 Milk, Cow's-HD
+F078 Milk, Cow's&copy;-Casein
+F076 Milk, Cow's&copy;-Lact., Alpha
+F077 Milk, Cow's&copy;-Lacto., Beta
+F358 Milk, Cow's&copy;-Lactoferrin
+F236 Milk, Cow's&copy;-Whey
+F147 Milk, Goat
+F319 Yogurt
+     FFish
+F032 Anchovy
+F101 Bass, Black
+F378 Carp
+F306 Catfish
+F003 Codfish
+F107 Eel
+F311 Flounder
+F312 Haddock
+F119 Halibut
+F111 Mackerel
+F120 Perch, Lake
+F396 Pike
+F041 Salmon, Atlantic
+F353 Salmon, Pacific
+F398 Sardine
+F123 Snapper, Red
+F337 Sole
+F118 Swordfish
+F361 Tilapia
+F204 Trout
+F040 Tuna
+F121 Whitefish
+     FFood Thickener
+F364 Carrageenan, iota
+F365 Carrageenan, kappa
+F366 Carrageenan, lambda
+F109 Gum, Acacia
+F110 Gum, Karaya
+     UFruit
+F049 Apple-HD
+F138 Apricot
+F092 Banana
+F139 Blackberry
+F288 Blueberry
+F029 Bromelain
+F305 Cantaloupe
+F100 Cherry, Bing
+F104 Cranberry
+F105 Date
+F259 Grape/Raisin
+F418 Grape, White
+F209 Grapefruit
+F087 Honeydew
+F153 Kiwi
+F208 Lemon
+F134 Lime
+F351 Mango
+F132 Nectarine
+F124 Olive, Black
+F342 Olive, Green
+F033 Orange
+F127 Papaya
+F095 Peach
+F094 Pear
+F210 Pineapple
+F128 Plum/Prune
+F021 Pomegranate
+F115 Pumpkin
+F129 Raspberry
+F044 Strawberry
+F155 Tangerine
+F329 Watermelon
+F406 Wine, Red
+F404 Wine, Vinegar
+F407 Wine, White
+     KGrain
+F006 Barley
+F304 Bran, Wheat
+F102 Buckwheat
+F008 Corn
+FZ11 Grain Mix
+F125 Hops
+F090 Malt
+F157 Millet
+F007 Oat
+F369 Quinoa
+F009 Rice
+F005 Rye
+F131 Tapioca
+F004 Wheat
+F079 Wheat, Gluten
+     LLegumes
+F356 Bean, Black
+F417 Bean, Green
+F300 Bean, Kidney
+F301 Bean, Lima
+F302 Bean, Pinto
+F303 Bean, Wax String
+F015 Bean, White/Navy
+F154 Brussel Sprouts
+F022 Carob
+F126 Lentil
+F355 Pea, Black-Eyed
+F142 Pea, Chick
+F012 Pea, Green
+F013 Peanut-HD
+F359 Peanut, Ara h1
+F360 Peanut, Ara h2
+F372 Peanut, Ara h6
+F014 Soybean
+     OMiscellaneous
+F019 alpha-Gal
+FZ03 Food Mix
+     SSeeds & Spices
+F373 Alspice
+F374 Aniseed
+F343 Basil
+F347 Bay leaf
+F159 Canola Seed
+F308 Cinnamon
+F146 Cloves
+F309 Cottonseed
+F140 Cumin
+F141 Curry powder
+F341 Dill
+F143 Flaxseed
+F345 Ginger
+F392 Mint
+F089 Mustard
+F148 Nutmeg
+F283 Oregano
+F112 Paprika
+F144 Parsley
+F263 Pepper, Bell/Green
+F313 Pepper, Black/White
+F314 Pepper, Chili
+F011 Pepper, Jalapeno
+F150 Pepper, Red
+F137 Poppy Seed
+F352 Rosemary
+F349 Safflower Seed
+F151 Sage
+F010 Sesame Seed
+F316 Sunflower Seed
+F340 Tea, Black
+F409 Tea, Camomile
+F156 Thyme
+F016 Turmeric
+     HShellfish
+F207 Clam
+F310 Crab, Blue
+F339 Crab, Alaskan
+F354 Crab,Dungeness
+F381 Crayfish
+F080 Lobster, Maine
+F136 Lobster, Spiny
+F393 Mussel
+F394 Octopus
+F290 Oyster
+F338 Scallop
+F024 Shrimp
+F116 Squid
+     SSugars
+F247 Honey
+F350 Sugar, Cane
+F388 Syrup, Maple
+     NTree Nuts
+F020 Almond
+F018 Brazil Nut
+F202 Cashew
+F103 Chestnut
+F093 Chocolate/Cacao
+F036 Coconut
+F221 Coffee
+F348 Cola nut
+F017 Hazelnut
+F363 Macadamia
+FZ13 Nut Mix
+F201 Pecan
+F114 Pine Nut
+F203 Pistachio
+F130 Vanilla
+F256 Walnut, Black
+F317 Walnut, English
+FZ16 Walnut SPP
+     VVegatables
+F122 Artichoke
+F135 Asparagus
+F096 Avocado
+F152 Beet
+F145 Beet, Sugar
+F260 Broccoli
+F216 Cabbage Mix
+F031 Carrot
+F291 Cauliflower
+F085 Celery
+F023 Chive
+F030 Cilantro
+F244 Cucumber
+F108 Eggplant
+F382 Fennel
+F047 Garlic
+F387 Horseradish
+F370 Kale
+F414 Leek
+F215 Lettuce
+F212 Mushroom
+F028 Okra
+F048 Onion
+F054 Potato, Sweet
+F035 Potato, White
+F115 Pumpkin
+F149 Radish
+F415 Rhubarb
+F214 Spinach
+F346 Squash, Yellow
+F344 Squash, Zucchini
+F025 Tomato
+     YYeast
+F318 Yeast, Bakers
+F045 Yeast, Brewers
+F408 Yeast, Wine

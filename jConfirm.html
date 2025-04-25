@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+        <style>
+.mobile{width:90%;margin:0 auto 0;}
+.tablet{width:80%;margin:0 auto 0;}
+.desk{width:60%;margin:0 auto 0;}
+.row1 {width:40%}
+.row2 {width:30%}
+.row3 {width:20%}
+.center{text-align:center;margin:0 auto 0;}           
+.left {text-align:left;}           
+.small {font-size:small;font-weight:400}
+.max {max-width:400px;margin:0 auto 0}
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js">
+        </script>
+    </head>
+    <body>
+<div data-role="page" data-theme="a" id="page1">
+ <div data-theme="a" data-role="header" data-position="fixed">
+  <h3>Allermetrix</h3>
+  <a data-role="button" data-transition="fade" href="logout.php">
+  Logout
+  </a>
+  <a data-role="button" data-transition="fade" href="#page1" data-icon="gear" data-iconpos="left">
+  Settings
+ </a>
+</div>
+<div data-role="content" class="desk">
+  <div class="center">
+   <hr/>
+   <h2>Client Name</h2>
+   <h3>Address</h3>
+   <div>
+    <h4>Exit this site If you are not an authorized agent of the above enterprise.</h4>
+   </div>
+   <a data-role="button" data-inline="true" data-transition="pop" href="logout.php" data-icon="alert" data-iconpos="left">
+   Exit
+   </a>
+   <hr/>
+  </div>  
+<div data-role="collapsible" data-collapsed="true"><h3>Terms and Conditions</h3>
+<div class="left">
+<p>
+Only Allermetrix Clients and their authorized agents that have explicitly been granted permission in writing by Allermetrix Labortories are permitted to access 
+and are restricted to the sections to which they are authorized  
+</p><p>
+Protected Health Information in this system is subject to Public Law 104-191, 
+the Health Insurance Portability and Accountability Act of 1996 and the 
+Final Privacy Rule and Final Security Rule codified in 45 C.F.R. § 160 and 164 
+Information in this system may only be used and/or disclosed in strict conformance with these authorities. 
+</p><p>
+Allermetrix is required to, and will apply, appropriate sanctions against individuals who fail to comply 
+with its privacy policies and procedures.
+</p><p class="small">               
+This site is intended to be used for viewing and retrieving information only. 
+Unauthorized access attempts or attempts to change information on this service or tamper with this 
+web site are strictly prohibited and may be punishable under the 
+Computer Fraud Act of 1986 and the National Information Infrastructure Protection Act. 
+All information, including personal information, placed on or sent over this system may be monitored. 
+Statistics and other information about your visit will be recorded. Use of this system constitutes consent 
+to monitoring for these purposes. For site security purposes and to ensure that this service remains 
+available to all users, this computer system employs software programs to monitor network 
+traffic to identify unauthorized attempts to access, upload, or change information, or otherwise cause damage. 
+</p>                
+</div></div>
+
+<div data-role="collapsible" data-collapsed="true">
+ <h2>Search</h2>
+ <form action="search.php" method="post" data-ajax="false">
+ <div  class="left">
+  <div data-role="fieldcontain">
+  <fieldset data-role="controlgroup">
+   <label for="textinput3">
+   Patient Last Name
+   </label>
+   <input id="textinput3" placeholder="Leave Blank for All" value="" type="search" />
+  </fieldset>
+ </div>
+ <div data-role="fieldcontain">
+  <fieldset data-role="controlgroup">
+   <label for="textinput4">
+   Patient ID
+   </label>
+   <input id="textinput4" placeholder="" value="" type="search" />
+  </fieldset>
+ </div>
+ <div class="max">
+ <div data-role="fieldcontain">
+  <fieldset data-role="controlgroup">
+   <label for="slider1">
+   Days
+   </label>
+   <input type="range" name="slider" id="slider1" value="7" min="1" max="30" data-highlight="true" data-theme="" data-track-theme="d" />
+  </fieldset>
+ </div>
+ By submitting  
+ <ol> 
+ <li>You confirm that you are an authorized agent of the firm list above  
+ <li>You agree to the terms and conditions
+ </ol>
+ <input type="submit" data-icon="check" data-iconpos="left" value="Submit" />
+ </div>
+</div>
+</form>
+</div> 
+<div data-role="footer" data-position="fixed">
+ <h3>Unauthorized Access Forbidden</h3>
+</div></div></div>
+        <script>
+
+        </script>
+    </body>
+</html>

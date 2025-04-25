@@ -1,0 +1,218 @@
+IgG4 rank,% Pos,Food,Code
+1,86.27%, Banana,F092
+2,78.26%, Goat's Cheese,F411
+3,76.81%," Egg, Whole",F245
+4,75.66%," Egg, Yolk",F075
+5,75.00%, Food Mix,FZ03
+6,70.75%," Egg, White",F001
+7,66.54%," Milk, Cow's",F002
+8,59.09%," Cheese, Gouda",F379
+9,51.67%, Whey,F236
+10,48.55%," Bean, White/Navy",F015
+11,40.24%," Bean, Green",F417
+12,38.97%, Casein,F078
+13,38.91%, Avocado,F096
+14,38.74%," Bean, Kidney",F300
+15,37.57%, Mustard,F089
+16,34.04%," Cheese, Parmesan",F380
+17,33.33%, Bromelain,F029
+18,32.35%, Pineapple,F210
+19,32.09%, Wheat,F004
+20,31.67%, Almond,F020
+21,30.94%, Gluten,F079
+22,30.43%, Butter,F376
+23,30.00%, Nectarine  ,F132
+24,30.00%," Bean, Wax String",F303
+25,27.59%, Date ,F105
+26,27.48%, Cantaloupe/Muskmelon,F305
+27,27.35%, Yogurt,F319
+28,27.10%," Bean, Black",F356
+29,26.95%," Bean, Pinto",F302
+30,25.00%, Nutmeg,F148
+31,24.86%, Garlic,F047
+32,24.80%, Canola Seed,F159
+33,24.39%," Cheese, Swiss   ",F117
+34,23.64%, Papaya ,F127
+35,23.53%," Cheese, Cheddar",F081
+36,23.45%, Rye,F005
+37,23.26%, Lemon,F208
+38,22.73%," Vinegar, Wine",F404
+39,22.50%, Peanut,F013
+40,21.88%," Pepper, Jalapeno",F011
+41,21.28%, Grapefruit,F209
+42,20.88%," Pepper, Chili",F314
+43,20.00%," Bran, Wheat",F304
+44,20.00%, Horseradish,F387
+45,19.05%, Apricot,F138
+46,18.52%, Beet,F152
+47,18.00%, Kiwi,F153
+48,17.61%, Cashew,F202
+49,17.32%," Pepper, Red",F150
+50,16.81%, Honey,F247
+51,16.78%, Curry powder,F141
+52,16.67%," Pepper, Bell/Green",F263
+53,16.64%, Tomato,F025
+54,16.56%, Pear,F094
+55,16.22%," Walnut, Black",F256
+56,14.43%, Blueberry,F288
+57,14.29%, Okra,F028
+58,14.09%, Ginger,F345
+59,13.88%, Orange,F033
+60,13.81%, Strawberry,F044
+61,13.37%, Pistachio,F203
+62,13.33%, Sugar cane,F350
+63,12.50%, Clam,F207
+64,12.50%, Crayfish,F381
+65,12.23%," Squash, Summer/Yellow",F346
+66,12.08%, Soybean,F014
+67,11.11%, Blackberry,F139
+68,10.71%, Cola nut,F348
+69,10.67%, Raspberry  ,F129
+70,10.60%, Beef,F027
+71,10.53%, Lime,F134
+72,10.53%, Tangerine,F155
+73,10.39%," Cheese, P. American",F307
+74,10.17%, Apple,F049
+75,10.10%, Barley,F006
+76,10.00%, Malt,F090
+77,9.68%, Pumpkin  ,F115
+78,9.52%, Artichoke   ,F122
+79,9.38%," Cherry, Bing",F100
+80,9.33%, Peach,F095
+81,9.23%, Nut Mix,FZ13
+82,8.67%, Watermelon,F329
+83,8.33%, Cranberry  ,F104
+84,8.33%, Halibut  ,F119
+85,8.33%," Squash, Zucchini",F344
+86,7.84%, Sunflower Seed,F316
+87,7.69%," Snapper, Red   ",F123
+88,7.47%, Chicken,F083
+89,7.14%, Sage,F151
+90,6.88%, Brazil Nut,F018
+91,6.86%, Pecan,F201
+92,6.67%, Vanilla  ,F130
+93,6.67%, Cauliflower,F291
+94,6.38%, Flaxseed,F143
+95,6.38%," Olive, Green",F342
+96,6.28%, Corn ,F008
+97,6.25%," Gum, Karaya  ",F110
+98,6.25%, Paprika ,F112
+99,6.15%, Lettuce,F215
+100,6.08%, Chocolate/Cacao,F093
+101,6.01%, Oat,F007
+102,6.00%," Melon, Honeydew",F087
+103,5.88%," Bean, Lima",F301
+104,5.85%," Walnut, English",F317
+105,5.66%, Lentil  ,F126
+106,5.56%, Mushroom,F212
+107,5.56%, Grain Food Mix,FZ11
+108,5.32%, Quinoa,F369
+109,5.26%," Yeast, Brewers",F045
+110,5.23%, Onion,F048
+111,5.00%, Brussel Sprouts,F154
+112,5.00%, Catfish,F306
+113,5.00%, Basil,F343
+114,5.00%, Tilapia,F361
+115,4.76%, Lamb ,F158
+116,4.76%, Mint,F392
+117,4.65%, Hazelnut,F017
+118,4.52%, Pork,F026
+119,4.52%, Rice,F009
+120,4.17%, Salmon,F041
+121,4.04%, Celery,F085
+122,3.83%, Spinach,F214
+123,3.77%, Anchovy,F032
+124,3.33%, Parsley,F144
+125,3.23%," Potato, White",F035
+126,3.02%, Coconut,F036
+127,2.70%, Cinnamon,F308
+128,2.69%," Pea, Green",F012
+129,2.48%, Turkey,F284
+130,2.38%, Hops  ,F125
+131,2.17%, Carrot,F031
+132,2.13%, Shrimp,F024
+133,2.00%," Cheese, Mold",F082
+134,1.96%, Cumin,F140
+135,1.95%, Tuna,F040
+136,1.75%, Cabbage Mix,F216
+137,1.69%, Asparagus,F135
+138,1.67%," Potato, Sweet",F054
+139,1.67%, Grape/Raisin,F259
+140,1.43%, Chick pea,F142
+141,1.20%, Turmeric,F016
+142,1.18%, Cucumber,F244
+143,1.18%, Kale,F370
+144,0.98%, Codfish,F003
+145,0.82%, Broccoli,F260
+146,0.75%," Pepper, Black/White",F313
+147,0.63%," Yeast, Bakers  ",F318
+148,0.62%, Coffee,F221
+149,0.00%, Sesame Seed,F010
+150,0.00%, Pomegranate,F021
+151,0.00%, Carob,F022
+152,0.00%, Chive,F023
+153,0.00%, Cilantra,F030
+154,0.00%," Lobster, Maine",F080
+155,0.00%," Bass, Black  ",F101
+156,0.00%, Buckwheat  ,F102
+157,0.00%, Chestnut,F103
+158,0.00%, Duck ,F106
+159,0.00%, Eel  ,F107
+160,0.00%, Eggplant  ,F108
+161,0.00%," Gum, Acacia ",F109
+162,0.00%, Mackerel ,F111
+163,0.00%, Pine Nut ,F114
+164,0.00%, Squid ,F116
+165,0.00%, Swordfish  ,F118
+166,0.00%, Whitefish   ,F121
+167,0.00%," Olive, Black ",F124
+168,0.00%, Plum/Prune  ,F128
+169,0.00%, Tapioca  ,F131
+170,0.00%, Gelatin ,F133
+171,0.00%," Lobster, Spiny",F136
+172,0.00%, Poppy Seed,F137
+173,0.00%, Beet Sugar,F145
+174,0.00%, Cloves,F146
+175,0.00%," Milk, Goat's",F147
+176,0.00%, Radish,F149
+177,0.00%, Thyme,F156
+178,0.00%, Millet,F157
+179,0.00%, Trout,F204
+180,0.00%, Oregano,F283
+181,0.00%, Oyster,F290
+182,0.00%, Cottonseed ,F309
+183,0.00%, Crab,F310
+184,0.00%, Flounder,F311
+185,0.00%, Haddock,F312
+186,0.00%, Sole,F337
+187,0.00%, Scallop,F338
+188,0.00%," Crab, Alaskan",F339
+189,0.00%," Tea, Black",F340
+190,0.00%, Dill,F341
+191,0.00%, Bay leaf,F347
+192,0.00%, Safflower seed,F349
+193,0.00%, Mango,F351
+194,0.00%, Rosemary,F352
+195,0.00%, Pacific Salmon,F353
+196,0.00%, Dungeness Crab,F354
+197,0.00%," Pea,  Black-Eyed ",F355
+198,0.00%, Allspice,F373
+199,0.00%, Aniseed,F374
+200,0.00%, Carp,F378
+201,0.00%, Fennel,F382
+202,0.00%, Maple Syrup,F388
+203,0.00%, Mussel,F393
+204,0.00%, Octopus,F394
+205,0.00%, Pike,F396
+206,0.00%, Sardine,F398
+207,0.00%," Wine, Red",F406
+208,0.00%," Wine, White",F407
+209,0.00%," Yeast, Wine",F408
+210,0.00%," Tea, Camomile",F409
+211,0.00%, Venison,F410
+212,0.00%, Leek,F414
+213,0.00%, Rhubarb,F415
+214,0.00%, Rabbit,F416
+215,0.00%," Walnut, Mixed",FZ16
+216,not tested," Perch, Lake",F120
+217,not tested, Macadamia Nut,F363 

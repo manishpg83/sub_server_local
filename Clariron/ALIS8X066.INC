@@ -1,0 +1,3 @@
+  MODULE('ALIS8X066.CLW')
+PatientLabel           FUNCTION(ULONG,ULONG),BYTE
+  END

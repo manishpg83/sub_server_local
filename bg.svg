@@ -1,0 +1,45 @@
+<svg width="100%" height="100%"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+onload="startup(evt)"><script><![CDATA[var xmlns="http://www.w3.org/2000/svg"
+c=0
+o=0
+id=0
+var AN=null
+var xlinkns = "http://www.w3.org/1999/xlink";function startup(evt){Root = document.documentElement;A=getRect()
+rightedge=A.x
+bottomedge=A.y
+gg = document.getElementById("gg");while((o-1)*xs/2<rightedge)makeNew()}
+function getRect(){try{var rect={x: Root.viewport.width,y:Root.viewport.height}}
+catch(e){var rect={x: window.innerWidth,y:window.innerHeight}}
+return rect}
+xs=200;ys=173.2;scale=.5
+cc=0
+function makeNew(){cc++
+if(ys*c>bottomedge/scale){o++; c=0}
+var clone=gg.cloneNode("true")
+var x=(o -(c%2)/2)*xs
+var y=Math.floor(ys*c)
+clone.setAttributeNS(null,"transform","scale("+scale+")translate("+x+" "+y+")")
+var FP=clone.getElementsByTagName("path")
+//FP.item(0).setAttributeNS(null,"fill",color())
+FP.item(1).setAttributeNS(null,"fill",g())
+FP.item(3).setAttributeNS(null,"fill",g())
+Root.appendChild(clone);c++}
+function r(evt){evt.target.setAttributeNS(null,"fill",color())}
+ang=0
+function m(id){ang+=1
+var T=document.getElementById(id)
+T.setAttributeNS(null,"gradientTransform","r("+ang+" .5 .5)")}
+function color(){var r=parseInt(100+Math.random()*155)
+var g=parseInt(100+Math.random()*155)
+var b=parseInt(100+Math.random()*155)
+return "rgb("+r+","+g+","+b+")";}
+function g(){var c=parseInt(100+Math.random()*155)
+var d=parseInt(100+Math.random()*155)
+return "rgb("+d+","+(d)+","+c+")";}
+//]]></script><defs id="DEF"><linearGradient id="g" fy="0" gradientTransform="r(60 .5 .5)"><animateTransform attributeName="gradientTransform" 
+type="rotate" values="0 .5 .5; 360 .5 .5" dur="7s" repeatCount="indefinite" /><stop id="oa" offset="0" stop-color="#000"></stop><stop id="ob" offset=".25" stop-color="#800"><animate id="AN" attributeName="offset" dur="4s" values="0;1;0"
+repeatCount="indefinite" /></stop><stop id="oc" offset="1" stop-color="black"/></linearGradient></defs><rect x="0" y="0" width="100%" height="100%" fill="url(#g)"/><g id="gg" transform="scale(0.5)"><path id="P" d="M -100 173.2 L 100 173.2 L 0 0 z" fill="url(#g)" onclick="r(evt)"></path><path id="P3" d="M -33.3 173.2 Q 0 110 66.7 113.5 Q 0 110 -33.3 57.5 Q 0 110 -33.3 173.3" fill="url(#g)" onclick="r(evt)"><animateTransform attributeName="transform" 
+type="rotate" values="360 0 110; 0 0 110" dur="8s" repeatCount="indefinite" /></path><path id="P2" d="M 0 0 Q 100 57.5 100 173.2 Q 100 57.5 200 0 Q 100 57.5 0 0" fill="url(#g)" onclick="r(evt)"></path><path id="P4" d="M 66.7 113.5 Q 100 57.5 166.7 57.5 Q 100 57.5 66.7 0 Q 100 57.5 66.7 113.5" fill="url(#g)" onclick="r(evt)"><animateTransform attributeName="transform" 
+type="rotate" values="0 100 57.5; 360 100 57.5" dur="6s" repeatCount="indefinite" /></path></g></svg>

@@ -1,0 +1,114 @@
+<AddIn name        = "SoftVelocity.TextTransform"
+       author      = "SoftVelocity"
+       copyright   = "Copyright SoftVelocity 1986-2010"
+       url         = "http://www.softvelocity.com"
+       description = "Custom tool to process T4 templates">
+
+  <Manifest>
+    <Identity name = "SoftVelocity.TextTransform"/>
+    <Dependency addin = "SoftVelocity.GeneratorX"/>
+  </Manifest>
+
+  <Runtime>
+    <Import assembly = "SoftVelocity.TextTransform.dll"/>
+    <Import assembly = "SoftVelocity.TextTemplating.dll"/>
+    <Import assembly = "CommonSources.dll"/>
+    <Import assembly = "SoftVelocity.GeneratorX.dll"/>
+    <Import assembly = "SoftVelocity.TextTemplating.Design.dll"/>
+    <Import assembly = ":ICSharpCode.SharpDevelop"/>
+  </Runtime>
+
+  <!-- Templates SyntaxMode -->
+  <Path name = "/SharpDevelop/ViewContent/DefaultTextEditor/SyntaxModes">
+    <SyntaxMode id         = "T4 Template Syntax Mode"
+		            name       = "T4 Template"
+		            extensions = ".tt;.ttn"
+		            resource   = "SoftVelocity.TextTransform.Resources.T4Template-Mode.xshd"/>
+  </Path>
+  <Path name = "/SharpDevelop/Workbench/FileFilter">
+    <FileFilter id = "T4 Template"
+		            name = "T4 Templates (*.tt;*.ttn)"
+		            extensions = "*.tt;*.ttn"/>
+  </Path>
+  <Path name = "/Clarion/Generator/FileFilter/App">
+    <FileFilter id = "T4 Template"
+		            name = "T4 Templates (*.tt;*.ttn)"
+		            extensions = "*.tt;*.ttn"/>
+  </Path>
+  <!-- Language description for Templates -->
+  <Path name = "/SharpDevelop/Workbench/LanguageBindings">
+    <LanguageBinding id                   = "T4Templates"
+		                 guid                 = "{418D9F34-9668-4ea7-B141-BF9260E29ABC}"
+		                 supportedextensions  = ".tt;.ttn"
+		                 class                = "SoftVelocity.TextTransform.Binding.T4TemplateLanguageBinding" />
+  </Path>
+  <Path name = "/SharpDevelop/ViewContent/T4TemplateEditor/ContextMenu">
+    <ComplexCondition>
+      <Not>
+        <Condition name = "AddinExists" addin="ClarionWindowsBinding"/>
+      </Not>
+      <MenuItem id    = "EditTemplateRegistry"
+			          label = "Edit Template Registry"
+			          insertafter  = "DriverSeparator"
+			          insertbefore = "BrowserSeparator"
+			          class = "SoftVelocity.GeneratorX.Commands.EditTemplateRegistry"/>
+    </ComplexCondition>
+    <Condition name = "AddinExists" addin="ClarionWindowsBinding">
+      <MenuItem id    = "EditDotNetTemplateRegistry"
+			          label = "Edit Dot Net Template Registry"
+			          insertafter  = "DriverSeparator"
+			          insertbefore = "BrowserSeparator"
+			          class = "SoftVelocity.GeneratorX.Commands.EditTemplateRegistry"/>
+    </Condition>
+    <MenuItem id = "FormatSeparator" type = "Separator" />
+    <Include id = "Cut" item = "/SharpDevelop/Workbench/MainMenu/Edit/Cut"/>
+    <Include id = "Copy" item = "/SharpDevelop/Workbench/MainMenu/Edit/Copy"/>
+    <Include id = "Paste" item = "/SharpDevelop/Workbench/MainMenu/Edit/Paste"/>
+    <Include id = "Delete" item = "/SharpDevelop/Workbench/MainMenu/Edit/Delete"/>
+    <MenuItem id = "Separator1" type = "Separator" />
+    <MenuItem id = "Save"
+		          label = "${res:XML.MainMenu.FileMenu.Save}"
+		          icon = "Icons.16x16.SaveIcon"
+		          shortcut = "Control|S"
+		          class = "ICSharpCode.SharpDevelop.Commands.SaveFile"/>
+    <MenuItem id = "SaveAs"
+		          label = "${res:XML.MainMenu.FileMenu.SaveAs}"
+		          class = "ICSharpCode.SharpDevelop.Commands.SaveFileAs"/>
+    <MenuItem id = "File"
+		          label = "${res:XML.MainMenu.FileMenu.Close}"
+		          class ="ICSharpCode.SharpDevelop.Commands.CloseFile"/>
+    <MenuItem id = "Separator2" type = "Separator" />
+    <MenuItem id = "OpenSelectedViaRedFile"
+		          label = "${res:Clarion.ProjectComponent.ContextMenu.OpenUsingRedirection}"
+		          class = "SoftVelocity.Common.Redirection.OpenSelectedViaRedirectionFile"/>
+  </Path>
+  <Path name = "/SharpDevelop/Workbench/DisplayBindings">
+    <DisplayBinding id    = "T4TemplateEditor"
+                      insertbefore    = "Text"
+                      supportedformats = "T4 Templates"
+                      class = "SoftVelocity.TextTransform.T4TemplateEditorDisplayBinding" />
+  </Path>
+  <Path name = "/Workspace/Parser">
+    <Parser id    = "T4 Templates"
+    supportedextensions  = ".tt;.ttn"
+    class = "SoftVelocity.TextTransform.T4Parser"/>
+  </Path>
+  <Path name = "/AddIns/DefaultTextEditor/CodeCompletion">
+    <CodeCompletionBinding id = "T4 Templates"
+							   extensions = ".tt;.ttn"
+							   class = "SoftVelocity.TextTransform.T4CodeCompletionBinding"/>
+  </Path>
+  <Path name = "/SharpDevelop/CustomTools">
+    <!--
+			Register the custom tool.
+			id: ID used to identify the custom tool. This ID will be used in project files to reference your generator.
+			class: fully qualified name of a class in your assembly that implements ICustomTool
+			fileNamePattern: a regular expression. For file names matched by this regex, SharpDevelop will display
+			                 your custom tool in the drop down box of the property grid when a file with that extension
+			                 is selected.
+		-->
+    <CustomTool id    = "TextTemplatingFileGenerator"
+		            class = "SoftVelocity.TextTransform.CustomTool"
+		            fileNamePattern = "\.tt$"/>
+  </Path>
+</AddIn>

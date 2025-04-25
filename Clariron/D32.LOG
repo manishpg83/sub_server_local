@@ -1,0 +1,71 @@
+Started 
+Heap handle: 00C10000
+start process C:\C6\ALIS\App\Alis8.Exe
+Command line :> "C:\Clarion8.1\bin\Cladb.exe" -s Release "C:\C6\ALIS\App\Alis8.Exe" 
+Command line :> "C:\C6\ALIS\App\Alis8.Exe" 
+Redirection file :> 
+CREATE_PROCESS_DEBUG_EVENT  ! No image name found
+g.debug_name C:\C6\ALIS\App\Alis8.Exe
+BaseOfImage                00400000
+CREATE_PROCESS_DEBUG_EVENT: process main thread tid=00004DEC
+thread handle=00000288
+ntdll.dll Loaded at: 77200000
+No debug information
+KERNEL32.dll Loaded at: 75500000
+No debug information
+KERNELBASE.dll Loaded at: 75FF0000
+No debug information
+apphelp.dll Loaded at: 6FAD0000
+No debug information
+ADVAPI32.dll Loaded at: 75D00000
+No debug information
+msvcrt.dll Loaded at: 75150000
+No debug information
+CREATE_THREAD_DEBUG_EVENT: tid=000056C8
+thread handle=00000498
+SECHOST.dll Loaded at: 76500000
+No debug information
+RPCRT4.dll Loaded at: 770A0000
+No debug information
+CREATE_THREAD_DEBUG_EVENT: tid=00005E2C
+thread handle=000004A8
+CREATE_THREAD_DEBUG_EVENT: tid=000052D8
+thread handle=000004B8
+clalit32.dll Loaded at: 10000000
+No debug information
+COMDLG32.dll Loaded at: 76820000
+No debug information
+USER32.dll Loaded at: 76340000
+No debug information
+COMCTL32.dll Loaded at: 74B00000
+No debug information
+combase.dll Loaded at: 75270000
+No debug information
+win32u.dll Loaded at: 77020000
+No debug information
+GDI32.dll Loaded at: 771C0000
+No debug information
+ucrtbase.dll Loaded at: 76580000
+No debug information
+gdi32full.dll Loaded at: 766A0000
+No debug information
+SHCORE.dll Loaded at: 75C70000
+No debug information
+msvcp_win.dll Loaded at: 750D0000
+No debug information
+SHLWAPI.dll Loaded at: 76780000
+No debug information
+SHELL32.dll Loaded at: 76A60000
+No debug information
+ole32.dll Loaded at: 76970000
+No debug information
+MPR.dll Loaded at: 62630000
+No debug information
+OLEAUT32.dll Loaded at: 768D0000
+No debug information
+oledlg.dll Loaded at: 749F0000
+No debug information
+WINSPOOL.DRV Loaded at: 74A80000
+No debug information
+IMM32.dll Loaded at: 75EF0000
+No debug information

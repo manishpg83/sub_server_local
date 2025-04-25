@@ -1,0 +1,62 @@
+SoftVelocity Software Product License and Warranty Statement
+
+This is a legal agreement between you (either an individual or an entity) and SoftVelocity, Inc.  By continuing to install this software, you agree to be bound by the terms of this Agreement.
+If you do not agree to the terms of this Agreement, terminate this installation and promptly return the software packet(s) and the accompanying items (including printed materials and binders or other containers) to the place from which you obtained them.
+Copyright (c) SoftVelocity, Incorporated 2001-2004 All Rights Reserved.
+
+1. GRANT OF LICENSE
+This License Agreement ("License") permits you to use one copy of the specified version of the software product, which may include "online" or electronic documentation (the "SOFTWARE") on a single computer.  The SOFTWARE is in "use" on a computer when it is loaded into temporary memory (i.e., RAM) or installed onto permanent memory (e.g. hard disk CD-ROM, or other storage device) of that computer except that a copy installed on a network server for the sole purpose of distribution to other computers is not "in use."  If the anticipated number of users of the SOFTWARE will exceed the number of applicable Licenses, then you must have a reasonable mechanism or process in place to ensure that the number of persons using the SOFTWARE concurrently does not exceed the number of Licenses. If the SOFTWARE is permanently installed on the hard disk or other storage devise of a computer (other than a network server) and one person uses that computer more than 80% of the time it is in use, then that person may also use the SOFTWARE on a portable or home computer.
+
+2. UPGRADES
+If the SOFTWARE is an upgrade, you may use or transfer the SOFTWARE only in conjunction with the prior version(s) of the SOFTWARE.
+
+3. COPYRIGHT
+The SOFTWARE (including any images, "applets," photographs, animations, video, audio, music, executables, libraries and text incorporated into the SOFTWARE) is owned by SoftVelocity or its suppliers and is protected by United States copyright laws and international treaty provisions.  Therefore, you must treat the SOFTWARE like any other copyrighted material (e.g., a book or musical recording ) except that you may either (a) make one copy of the SOFTWARE solely for backup or archival purposes, or (b) transfer the SOFTWARE to a single hard disk provided you keep the original solely for backup or archival purposes.  You may not copy the printed materials accompanying the SOFTWARE.
+
+4. OTHER RESTRICTIONS
+You may not rent or lease the SOFTWARE, but you may transfer the SOFTWARE and accompanying written materials on a permanent basis provided you retain no copies and the recipient agrees to the terms of this Agreement.  If the SOFTWARE is an upgrade, any transfer must include the most recent upgrade and all prior versions.  You may not use the SOFTWARE to create an application or component for distribution that is generally competitive with any SoftVelocity product, is a substitute for any SoftVelocity product, or is a general-purpose or special-purpose software programming tool or component.  You may not use the software to create a code generation service. You may not reverse engineer, decompile, or disassemble the SOFTWARE, except to the extent such foregoing restriction is expressly prohibited by applicable law.
+
+5. DUAL-MEDIA SOFTWARE
+You may receive the SOFTWARE in more than one medium. Regardless of the type or size of medium you receive, you may use only the medium appropriate for your single-user computer. You may not use the other medium on another computer or load, rent, lease, or transfer the disks to another user except as part of the permanent transfer (as provided above) of all SOFTWARE and printed materials, nor print copies of any user documentation provided in "online" or electronic form.
+
+6. Separation of Components. The Software is licensed as a single product.  Its component parts may not be separated for use by more than one user.
+
+7. Benchmark Testing.  You may not disclose the results of any benchmark test of the Software to any third party without SoftVelocity’s prior written approval.
+
+6. LANGUAGE SOFTWARE
+You have a royalty-free right to reproduce and distribute executable files created using the SOFTWARE.  SoftVelocity grants you a royalty-free right to reproduce and distribute the run-time modules and 50 user Clarion Application Server/Broker of the SOFTWARE provided that you: (a) distribute the run-time modules and Clarion Application Server/Broker only in conjunction with and as a part of your retail software product; (b) do not use SoftVelocity name, logo, or trademark to market your software product; (c) include a valid copyright notice on your software product; and (d) agree to indemnify, hold harmless, and defend SoftVelocity and its suppliers from and against any claims or lawsuits, including attorney's fees, that arise or result from the use or distribution of your software product; (e) are not using the run-time modules or The Clarion Application Server/Broker as components of a software development tool or library.  The "run-time modules" are those files in the SOFTWARE that are identified in the accompanying documentation as required during execution of your software program.  The run-time modules are limited to run-time, database drivers files, applications or utilities that you deploy upon which your application relies.  All 
+"Redistributable" SOFTWARE covered under this agreement are only to be utilized by you in creating or deploying your applications and no person or organization other than you. If required in the SOFTWARE documentation, you agree to display the designated patent notices on the packaging and in the README file of your software product.
+
+7. LIMITED WARRANTY
+SoftVelocity, Inc. warrants that the SOFTWARE will perform substantially in accordance with the accompanying written materials for a period of ninety (90) days from that date of receipt.  Any implied warranties on the SOFTWARE are limited to ninety (90) days.  Some states/jurisdictions do not allow limitations or duration of an implied warranty, so the above limitation may not apply to you.
+
+8. CUSTOMER REMEDIES
+SoftVelocity, Inc.  and its suppliers' entire liability and your exclusive remedy shall be, at SoftVelocity's option, either (a) return of the price paid, or (b) repair or replacement of the SOFTWARE that does not meet SoftVelocity's Limited Warranty and which is returned to SoftVelocity with a copy of your receipt.  This Limited Warranty is void if failure of the SOFTWARE has resulted from accident, abuse, or misapplication.  Any replacement SOFTWARE will be warranted for the original warranty period or thirty (30) days, whichever is longer.  Outside the Unites States, neither these remedies nor any product support services offered by SoftVelocity are available without proof of purchase from an authorized non- U.S. source.
+
+9. NO OTHER WARRANTIES
+To the maximum extent permitted by applicable law, SoftVelocity, Inc. and its suppliers disclaim all other warranties, either express or implied, including, but not limited to, implied warranties of merchantability and fitness for a particular purpose, with regard to the SOFTWARE and the accompanying printed materials. This limited warranty gives you specific legal rights.  You may have others which vary from state/jurisdiction to state/jurisdiction.
+
+10. NO LIABILITY FOR CONSEQUENTIAL DAMAGES
+To the maximum extent permitted by applicable law, in no event shall SoftVelocity, Inc. or its suppliers be liable for any damages whatsoever (including without limitation, damages for loss of business profits, business interruption, loss of business information, or any other pecuniary loss) arising out of the use of or inability to use this SoftVelocity product, even if SoftVelocity, Inc. has been advised of the possibility of such damages. Because some states/jurisdictions do not allow the exclusion or limitation of liability for consequential or incidental damages, the above limitation may not apply to you.
+
+11.
+HIGH RISK ACTIVITIES
+The Software is not fault-tolerant and is not designed, intended, or licensed for use in line control equipment or in hazardous environments requiring fail-safe performance, such as in the operation of nuclear facilities, aircraft navigation or communication systems, air traffic control, and life support or weapons systems, in which the failure of the Software could lead directly to death, personal injury, or severe physical or environmental damage (“High Risk Activities”).  Without limiting the generality of the foregoing, SoftVelocity and its suppliers specifically disclaim any express or implied warranty of fitness for High Risk Activities.
+
+12. U.S. GOVERNMENT RESTRICTED RIGHTS
+The software and documentation are provided with restricted rights.  Use, duplication, or disclosure by the Government is subject to restrictions as set forth in subparagraph (c)(1)(ii) of the Rights of Technical Data and Computer Software clause at DFARS 252.227-7013 or subparagraphs (c)(1) and (2) of the Commercial Computer Software - Restricted Rights at 48 CFR 52- 227-19, as applicable.  Manufacturer is SoftVelocity, Inc.  2769 E Atlantic Blvd  Pompano Beach, FL  33062.
+
+If you acquired this product in the United States, this Agreement is governed by the laws of the State of Florida.
+
+If you acquired this product in Canada, this Agreement is governed by the laws of the Province of Ontario, Canada.  Each of the parties hereto irrevocably attorns to the jurisdiction of the courts of the Province of Ontario and further agrees to commence any litigation which may arise hereunder in the courts located in the Judicial District of York, Province of Ontario.
+
+If this product was acquired outside the United States, then local laws may apply.
+
+Should you have any questions concerning this Agreement or if you desire to contact SoftVelocity, Inc. for any reason, please contact the SoftVelocity distributor serving your country, or write: SoftVelocity, Inc. 2769 East Atlantic Blvd  Pompano Beach, FL 33062.
+
+REMINDER NOTE:
+When you get a new computer, you have a choice to make concerning your SoftVelocity software.
+
+You may setup your software on your new computer if you delete it from your old computer.
+-OR-
+If you leave your software on your old computer, you need to purchase additional software for your new computer.

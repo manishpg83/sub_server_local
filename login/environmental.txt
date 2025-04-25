@@ -1,0 +1,109 @@
+     DDust and Components
+D002 D. farinae
+D001 D. pteronyssinus
+EZ06 Dust Mite Mix
+HZ05 Dust Mix
+H010 Dust, Grain Mill
+H001 Dust, House (Greer)
+H002 Dust, House (H-S)
+     IInsects
+I010 Ant, Black
+I070 Ant, Fire
+I016 Bumblebee
+IZ17 Cockroach  Mix
+I206 Cockroach, Americana
+I006 Cockroach, German
+I011 Flea Mix (Dog/Cat Flea)
+I012 Fly, Horse
+I001 Honeybee
+I002 Hornet, White-Faced
+I005 Hornet, Yellow
+I014 Lady Beetle (Asian)
+I007 Mosquito
+I004 Wasp,  Paper
+I003 Yellow Jacket, C. Wasp
+     MMolds/Smuts
+M048 Absidia spp.
+M026 Algae
+M006 Alternaria tenuis (alternata)
+M018 Aspergillus flavus
+M003 Aspergillus fumigatus
+M021 Aspergillus nidulans
+M019 Aspergillus niger
+M022 Aspergillus terreus
+M023 Aspergillus versicolor
+M012 Aureobasidium pullulans
+M039 Bipolaris specifera
+M042 Botrytis cinerea
+M031 Candida albicans
+M033 Cephalosporium acremonium
+M025 Chaetomium globosum
+M045 Cladosporium cladosporoides
+M002 Cladosporium herbarum
+M016 Curvularia lunata
+M014 Epicoccum purpurascens
+M037 Epidermophyton flocossum
+M009 Fusarium moniliforme
+M030 Fusarium oxysporum
+M050 Geotrichum candidum
+M008 Helminthosporium halodes
+M062 Helminthosporium intersem.
+M035 Helminthsporium sativum
+M034 Helminthsporium solani
+M052 Hormodendrum hordei
+M036 Microspora canis
+MZ02 Mold Mix
+M049 Mucor mucedo
+M040 Mucor plumbeus
+M004 Mucor racemosus
+M047 Nigraspora oryzae
+M001 Penicillium notatum
+M013 Phoma betae
+M046 Phoma herbarum
+M011 Rhizopus nigricans
+M027 Rhodoturula mucilaginosa
+M038 Smut, Bermuda Grass
+M020 Smut, Corn
+M063 Smut, Johnson Grass
+M061 Smut, Wheat
+M041 Stachybotrys chartarum
+M010 Stemphylium botryosum
+M024 Stemphylium solani
+MZ15 T.O.E.
+M044 Trichoderma lignorum/viride
+M043 Trichophyton mentagroe
+M032 Trichophyton rubrum
+     EEpithelium/Feathers
+E001 Cat Antigen-HD
+E103 Cat&copy;-Fel d1
+E004 Cow Dander
+E005 Dog Epithelium
+EZ04 Epidermal Mix
+EZ07 Epidermal Mix #1
+E008 Feathers, Budgerigar
+E085 Feathers, Chicken
+E086 Feathers, Duck
+E070 Feathers, Goose
+EZ12 Feathers, Mix
+E009 Feathers, Parrot
+E100 Feathers, Pigeon
+E101 Feathers, Turkey
+E013 Goat Epithelium
+E011 Guinea Pig Epithelium
+E012 Hamster Epithelium
+E010 Horse Dander
+E071 Mouse Epithelium
+E072 Mouse Serum Proteins
+E111 Mouse Urine
+E015 Pig Epithelium
+E102 Pigeon Droppings
+E082 Rabbit Epithelium
+E073 Rat Epithelium
+E014 Sheep Epithelium
+     OOccupational Inhalants
+S037 Cotton Linters
+S042 Ethylene Oxide
+K001 Ispaghula
+K082 Latex
+K002 Tobacco
+S046 Wool, Treated

@@ -1,0 +1,3 @@
+  MODULE('ALIS8040.CLW')
+Passcode               FUNCTION(ULONG),ULONG
+  END

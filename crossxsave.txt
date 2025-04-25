@@ -1,0 +1,69 @@
+`Birch` = array(168,53,124,24,235,34,177,118,119,230,13,51,18,19,179,49,199,20,238,207,97,232,140,54,98,248,99,100,102,27,103,146,141,104,184,185,40,
+`Sycamore` = array(53,34,59,18,160,19,179,199,49,20,138,140,27,40,
+`Grasses` = array(132,133,134,135,34,58,59,62,39,51,18,19,199,49,291,69,20,137,139,140,27,71,141,75,104,40,77,
+`Latex` = array(53,124,24,38,118,119,174,39,51,45,103,104,40,
+grass = array(448,443,437,449,450,451,454,439,453,455,444,442,446,438,440,452,441,445,447,
+grassCodes = array('Bahia','Bent/Redtop','Bermuda','Bluegrass,Canada','Brome, Smooth','Canary/Reed','Corn Pollen','Fescue, Meadow','Fescue, Red','Grass Mix #1','Johnson','June','Oat,CultivaRed','Orchard','Rye, perennial','Sweet Vernal','Timothy','Velvet','Wheat, Cultivated',
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'T003' OR `Code` LIKE 'T146' OR `Code` LIKE 'T008' OR `Code` LIKE 'T107' OR `Code` LIKE 'T108' OR `Code` LIKE 'T100' OR `Code` LIKE 'T101' OR `Code` LIKE 'T153' OR `Code` LIKE 'T149' 
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'T140' 
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'W006' 
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'W111' 
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'W001' 
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'K082' 
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'F020' OR `Code` LIKE 'F049' OR `Code` LIKE 'F138' OR `Code` LIKE 'F096' OR `Code` LIKE 'F092' OR `Code` LIKE 'F343' OR `Code` LIKE 'F288' OR `Code` LIKE 'F018' OR `Code` LIKE 'F031' OR `Code` LIKE 'F085' OR `Code` LIKE 'F100' OR `Code` LIKE '43' OR `Code` LIKE 'F341' OR `Code` LIKE '32' OR `Code` LIKE 'F259' OR `Code` LIKE 'F017' OR `Code` LIKE 'F153' OR `Code` LIKE 'F208' OR `Code` LIKE 'F134' OR `Code` LIKE 'F351' OR `Code` LIKE 'F132' OR `Code` LIKE 'F033' OR `Code` LIKE 'F283' OR `Code` LIKE 'F112' OR `Code` LIKE 'F144' OR `Code` LIKE 'F095' OR `Code` LIKE 'F013' OR `Code` LIKE 'F094' OR `Code` LIKE 'F263' OR `Code` LIKE 'F313' OR `Code` LIKE 'F314' OR `Code` LIKE 'F011' OR `Code` LIKE 'F150' OR `Code` LIKE 'F210' OR `Code` LIKE 'F128' OR `Code` LIKE 'F035' OR `Code` LIKE 'F115' OR `Code` LIKE 'F129' OR `Code` LIKE 'F014' OR `Code` LIKE 'F044' OR `Code` LIKE 'F025' OR `Code` LIKE 'F256' OR `Code` LIKE 'F317' OR `Code` LIKE 'F329' OR `Code` LIKE 'F004' 
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'F049' OR `Code` LIKE 'F288' OR `Code` LIKE 'F142' OR `Code` LIKE 'F008' OR `Code` LIKE '43' OR `Code` LIKE 'F017' OR `Code` LIKE 'F208' OR `Code` LIKE 'F215' OR `Code` LIKE 'F134' OR `Code` LIKE 'F351' OR `Code` LIKE 'F033' OR `Code` LIKE 'F095' OR `Code` LIKE 'F013' OR `Code` LIKE 'F210' OR `Code` LIKE '32' OR `Code` LIKE 'F129' OR `Code` LIKE 'F044' OR `Code` LIKE 'F329' 
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'F356' OR `Code` LIKE 'F301' OR `Code` LIKE 'F302' OR `Code` LIKE 'F303' OR `Code` LIKE 'F015' OR `Code` LIKE 'F288' OR `Code` LIKE 'F007' OR `Code` LIKE 'F008' OR `Code` LIKE 'F304' OR `Code` LIKE 'F004' OR `Code` LIKE 'FZ11' OR `Code` LIKE 'F009' OR `Code` LIKE 'F350' OR `Code` LIKE '43' OR `Code` LIKE 'F153' OR `Code` LIKE 'F208' OR `Code` LIKE 'F134' OR `Code` LIKE 'F351' OR `Code` LIKE 'F087' OR `Code` LIKE 'F033' OR `Code` LIKE 'F013' OR `Code` LIKE 'F012' OR `Code` LIKE 'F355' OR `Code` LIKE 'F147' OR `Code` LIKE 'F210' OR `Code` LIKE '32' OR `Code` LIKE 'F129' OR `Code` LIKE 'F014' OR `Code` LIKE 'F044' OR `Code` LIKE 'F025' OR `Code` LIKE 'F329' OR `Code` LIKE 'FOO4' 
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'F049' OR `Code` LIKE 'F096' OR `Code` LIKE 'F092' OR `Code` LIKE 'F031' OR `Code` LIKE 'F085' OR `Code` LIKE 'F103' OR `Code` LIKE 'F153' OR `Code` LIKE 'F087' OR `Code` LIKE 'F305' OR `Code` LIKE 'F329' OR `Code` LIKE 'F127' OR `Code` LIKE 'F035' OR `Code` LIKE 'F025' 
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'T003' OR `Code` LIKE 'T146' OR `Code` LIKE 'T008' OR `Code` LIKE 'T107' OR `Code` LIKE 'T108' OR `Code` LIKE 'T100' OR `Code` LIKE 'T101' OR `Code` LIKE 'T153' OR `Code` LIKE 'T149' 
+
+Tree Header
+[1] 431,433,432,426,427,428,429,430,
+[1] ' Alder, European',' Alder, Sitka',' Alder,Red',' Birch, Gray',' Birch, Red/River',' Elm, American',' Elm, Chinese',' Elm,Scrub',
+
+Sycamore Header
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'T140' 
+[2] 434,
+
+
+
+Mugwort Header
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'W006' 
+[3] 435,
+
+
+Sagebrush Header
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'W111' 
+[4] 436,
+
+
+Common Ragweed Header
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'W001' 
+[5] 459,
+
+
+Latex Header
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'K082' 
+[6] 456,
+
+
+
+
+Tree Foods
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'F020' OR `Code` LIKE 'F049' OR `Code` LIKE 'F138' OR `Code` LIKE 'F096' OR `Code` LIKE 'F092' OR `Code` LIKE 'F343' OR `Code` LIKE 'F288' OR `Code` LIKE 'F018' OR `Code` LIKE 'F031' OR `Code` LIKE 'F085' OR `Code` LIKE 'F100' OR `Code` LIKE '43' OR `Code` LIKE 'F341' OR `Code` LIKE '32' OR `Code` LIKE 'F259' OR `Code` LIKE 'F017' OR `Code` LIKE 'F153' OR `Code` LIKE 'F208' OR `Code` LIKE 'F134' OR `Code` LIKE 'F351' OR `Code` LIKE 'F132' OR `Code` LIKE 'F033' OR `Code` LIKE 'F283' OR `Code` LIKE 'F112' OR `Code` LIKE 'F144' OR `Code` LIKE 'F095' OR `Code` LIKE 'F013' OR `Code` LIKE 'F094' OR `Code` LIKE 'F263' OR `Code` LIKE 'F313' OR `Code` LIKE 'F314' OR `Code` LIKE 'F011' OR `Code` LIKE 'F150' OR `Code` LIKE 'F210' OR `Code` LIKE 'F128' OR `Code` LIKE 'F035' OR `Code` LIKE 'F115' OR `Code` LIKE 'F129' OR `Code` LIKE 'F014' OR `Code` LIKE 'F044' OR `Code` LIKE 'F025' OR `Code` LIKE 'F256' OR `Code` LIKE 'F317' OR `Code` LIKE 'F329' OR `Code` LIKE 'F004' 
+[7] 53,7,24,34,8,43,13,51,18,19,49,20,10,54,27,32,4,5,40,77,124,118,119,97,140,98,99,100,102,103,146,141,104,168,177,179,199,184,185,235,230,238,207,232,248,460,397,408,417,398,390,461,404,405,462,406,399,413,400,394,395,422,391,
+[7] 'Apple','Apricot','Banana','Blueberry','Cherry','Fig','Grape,Raisin','Kiwi','Lemon','Lime','Mango','Orange','Peach','Pear','Pineapple','Pomegranate','Raspberry','Strawberry','Watermelon','Wheat','Avocado','Carrot','Celery','Paprika','Peanut','Pepper,Bell/Green','Pepper,Cayenne','Pepper,Chili','Pepper,Red','Potato,White','Pumpkin','Soybean','Tomato','Almond','Brazil nut','Macadamia','Mango','Walnut,Black','Walnut,English','Basil','Dill','Oregano','Paprika','Parsley','Pepper,Black/White','Apple','Apricot','Banana','Blueberry','Cherry','Grape,Raisin','Kiwi','Lemon','Lime','Mango','Orange','Peach','Pineapple','Plum/ Prune','Raspberry','Strawberry','Watermelon','Wine (grape)',
+
+Sycamore  Foods
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'F049' OR `Code` LIKE 'F288' OR `Code` LIKE 'F142' OR `Code` LIKE 'F008' OR `Code` LIKE '43' OR `Code` LIKE 'F017' OR `Code` LIKE 'F208' OR `Code` LIKE 'F215' OR `Code` LIKE 'F134' OR `Code` LIKE 'F351' OR `Code` LIKE 'F033' OR `Code` LIKE 'F095' OR `Code` LIKE 'F013' OR `Code` LIKE 'F210' OR `Code` LIKE '32' OR `Code` LIKE 'F129' OR `Code` LIKE 'F044' OR `Code` LIKE 'F329' 
+[8] 53,34,43,18,19,49,20,10,27,32,4,5,40,59,160,138,140,179,199,460,417,404,405,462,406,399,413,394,395,422,
+[8] 'Apple','Blueberry','Fig','Lemon','Lime','Mango','Orange','Peach','Pineapple','Pomegranate','Raspberry','Strawberry','Watermelon','Corn','Lettuce','Pea,Chick','Peanut','Macadamia','Mango','Apple','Blueberry','Lemon','Lime','Mango','Orange','Peach','Pineapple','Raspberry','Strawberry','Watermelon',
+
+Grass  Foods
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'F356' OR `Code` LIKE 'F301' OR `Code` LIKE 'F302' OR `Code` LIKE 'F303' OR `Code` LIKE 'F015' OR `Code` LIKE 'F288' OR `Code` LIKE 'F007' OR `Code` LIKE 'F008' OR `Code` LIKE 'F304' OR `Code` LIKE 'F004' OR `Code` LIKE 'FZ11' OR `Code` LIKE 'F009' OR `Code` LIKE 'F350' OR `Code` LIKE '43' OR `Code` LIKE 'F153' OR `Code` LIKE 'F208' OR `Code` LIKE 'F134' OR `Code` LIKE 'F351' OR `Code` LIKE 'F087' OR `Code` LIKE 'F033' OR `Code` LIKE 'F013' OR `Code` LIKE 'F012' OR `Code` LIKE 'F355' OR `Code` LIKE 'F147' OR `Code` LIKE 'F210' OR `Code` LIKE '32' OR `Code` LIKE 'F129' OR `Code` LIKE 'F014' OR `Code` LIKE 'F044' OR `Code` LIKE 'F025' OR `Code` LIKE 'F329' OR `Code` LIKE 'FOO4' 
+[9] 34,43,39,51,18,19,49,20,27,32,4,5,40,58,59,62,69,71,75,77,132,133,134,135,137,139,140,141,104,199,291,417,421,461,404,405,462,406,413,394,395,422,
+[9] 'Blueberry','Fig','Honeydew Melon','Kiwi','Lemon','Lime','Mango','Orange','Pineapple','Pomegranate','Raspberry','Strawberry','Watermelon','Bran,Wheat','Corn','Grain,Mix','Oats','Rice','Sugarcane','Wheat','Bean,Lima','Bean,Pinto','Bean,Wax String','Bean,White/Navy','Pea,Black-Eyed','Pea,Green','Peanut','Soybean','Tomato','Mango','Milk,Goat','Blueberry','Honeydew Melon','Kiwi','Lemon','Lime','Mango','Orange','Pineapple','Raspberry','Strawberry','Watermelon',
+
+Latex  Foods
+SELECT `id`,`Description` FROM `Foods` WHERE `Code` LIKE 'F049' OR `Code` LIKE 'F096' OR `Code` LIKE 'F092' OR `Code` LIKE 'F031' OR `Code` LIKE 'F085' OR `Code` LIKE 'F103' OR `Code` LIKE 'F153' OR `Code` LIKE 'F087' OR `Code` LIKE 'F305' OR `Code` LIKE 'F329' OR `Code` LIKE 'F127' OR `Code` LIKE 'F035' OR `Code` LIKE 'F025' 
+[10] 53,24,38,39,51,45,40,124,118,119,103,104,174,460,408,420,421,461,463,422,
+[10] 'Apple','Banana','Cantaloupe','Honeydew Melon','Kiwi','Papaya','Watermelon','Avocado','Carrot','Celery','Potato,White','Tomato','Chestnut','Apple','Banana','Cantaloupe','Honeydew Melon','Kiwi','Papaya','Watermelon',

@@ -1,0 +1,145 @@
+     GGrass
+G017 Bahia Grass
+G002 Bermuda Grass
+G022 Canary/Reed Grass
+G026 Common Reed 
+G025 Corn Pollen
+G024 Fescue, Red Grass
+GZ08 Grass Mix #1
+G010 Johnson Grass 
+G008 June Grass
+G004 Meadow Fescue Grass
+G014 Oat,Cultivated 
+G003 Orchard Grass 
+G009 Redtop/Bent Grass
+G005 Rye Grass, Perennial
+G021 Smooth Brome Grass
+G023 Sweet Vernal Grass
+G006 Timothy Grass
+G013 Velvet Grass
+G015 Wheat, Cultivated 
+     TTrees
+T019 Acacia
+T100 Alder, European 
+T101 Alder, Red
+T153 Alder, Sitka
+T002 Alder, Smooth
+T022 Alder, Speckled
+T102 Ash, Arizona
+T103 Ash, Green 
+T015 Ash, White
+T104 Aspen, Quaking
+T155 Bayberry/Sweet Gale
+T005 Beech, American
+T003 Birch, Gray/White
+T146 Birch, Red/River
+T021 Birch,Common Silver
+T006 Cedar, Mountain
+T105 Cedar, Red
+T011 Cedar, Salt
+T014 Cottonwood Tree
+T132 Cypress, Aizona
+T106 Cypress, White Bald
+T023 Cypress, Italian
+T008 Elm, American
+T107 Elm, Chinese
+T108 Elm, Scrub
+T018 Eucalyptus
+T154 Fir, Douglas
+T131 Gum, Sweet
+T137 Hackberry
+T149 Hazelnut Tree
+T133 Hickory, Shagbark
+T109 Hickory, White
+T012 Ironwood
+T148 Juniper, Western 
+T017 Juniper, One Seed
+T004 Locust Tree
+T110 Mango Tree
+T111 Maple, Red
+T001 Maple/Box Elder
+T138 Melaleuca
+T020 Mesquite
+T141 Mulberry, Paper
+T112 Mulberry, Red
+T144 Mulberry, White
+T143 Oak, Arizona/Gambel
+T151 Oak, Black
+T134 Oak, CA Black
+T139 Oak, Live/Virginia
+T114 Oak, Red
+T115 Oak, Water
+T007 Oak, White
+T009 Olive Tree
+T116 Olive, Russian
+T117 Orange Tree
+T118 Orange, Osage 
+T119 Palm, Date 
+T072 Palm, Queen
+T145 Pecan Tree
+T120 Pepper Tree
+T142 Pine, Australian
+T121 Pine, Loblolly
+T122 Pine, Lodgepole/Longleaf
+T147 Pine, Ponderosa
+T123 Pine, Western White
+T016 Pine, White
+TZ01 Pollen Tree Mix
+T124 Poplar, Lombardy 
+T125 Poplar, White
+T130 Privet, Common
+T126 Redwood (Sequoia)
+T140 Sycamore
+TZ13 Tree Mix #1
+TZ09 Tree Mix #2
+T150 Tree of Heaven
+T127 Walnut, Black
+T010 Walnut, CA Black
+T013 Walnut, English
+T152 Walnut, Mexican
+T136 Wax Myrtle/Bayberry
+T128 Willow, Black
+     WWeeds
+W100 Alfalfa
+W115 Baccharis, Western
+W116 Burrobrush
+W107 Bush, Rabbit
+W101 Careless Weed
+W013 Cocklebur, Common
+W102 Colza/Rapa
+W123 Cosmos
+W125 Dandelion
+W104 Dockweed, Yellow
+W126 Fennel, Dog
+W121 Goldenrod
+W118 Iodine Bush
+W117 Kochia/Firebush
+W010 Lamb's Quarter
+W015 Lenscale
+W021 Marsh Elder, Burweed
+W016 Marsh Elder, Rough
+W105 Mexican Tea
+W006 Mugwort
+W020 Nettle, Common
+W106 Oat, Wild 
+W019 Pellitory, Wall
+W014 Pigweed, Rough/Redroot
+W119 Pigweed, Smooth
+W122 Pigweed, Spiny
+W009 Plantain, English
+W004 Poverty Weed
+W001 Ragweed, Common
+W124 Ragweed, False
+W003 Ragweed, Giant
+WZ16 Ragweed, Mix
+W109 Ragweed, Southern 
+W002 Ragweed, Western
+W111 Sagebrush, Common
+W018 Sheep Sorrel, Red
+W112 Sugarbeet Pollen 
+W114 Sunflower, Common
+W011 Thistle, Russian
+W113 Water Hemp, Western
+WZ10 Weed Mix #1
+W007 Wing Scale
+W005 Wormwood/Sagebrush  

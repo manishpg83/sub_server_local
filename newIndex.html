@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html lang="en"><head>
+
+<style>
+
+.ui-bar-a{ border: 1px solid rgb(51, 51, 51); background: rgb(17, 17, 17) linear-gradient(rgb(60, 60, 60), rgb(17, 17, 17)) repeat scroll 0% 0%; color: rgb(255, 255, 255); font-weight: bold; text-shadow: 0px -1px 1px rgb(0, 0, 0); }
+.ui-bar-a{ font-family: Helvetica,Arial,sans-serif; }
+.ui-bar-a input{ font-family: Helvetica,Arial,sans-serif; }
+.ui-bar-a select{ font-family: Helvetica,Arial,sans-serif; }
+.ui-bar-a textarea{ font-family: Helvetica,Arial,sans-serif; }
+.ui-bar-a button{ font-family: Helvetica,Arial,sans-serif; }
+.ui-bar-a .ui-link-inherit{ color: rgb(255, 255, 255); }
+.ui-bar-a .ui-link{ color: rgb(124, 196, 231); font-weight: bold; }
+.ui-bar-a .ui-link:hover{ color: rgb(36, 137, 206); }
+.ui-bar-a .ui-link:active{ color: rgb(36, 137, 206); }
+.ui-bar-a .ui-link:visited{ color: rgb(36, 137, 206); }
+.ui-body-a{ border: 1px solid rgb(68, 68, 68); background: rgb(34, 34, 34) linear-gradient(rgb(68, 68, 68), rgb(34, 34, 34)) repeat scroll 0% 0%; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(17, 17, 17); font-weight: normal; }
+.ui-body-a{ font-family: Helvetica,Arial,sans-serif; }
+.ui-body-a input{ font-family: Helvetica,Arial,sans-serif; }
+.ui-body-a select{ font-family: Helvetica,Arial,sans-serif; }
+.ui-body-a textarea{ font-family: Helvetica,Arial,sans-serif; }
+.ui-body-a button{ font-family: Helvetica,Arial,sans-serif; }
+.ui-body-a .ui-link-inherit{ color: rgb(255, 255, 255); }
+.ui-body-a .ui-link{ color: rgb(36, 137, 206); font-weight: bold; }
+.ui-body-a .ui-link:hover{ color: rgb(36, 137, 206); }
+.ui-body-a .ui-link:active{ color: rgb(36, 137, 206); }
+.ui-body-a .ui-link:visited{ color: rgb(36, 137, 206); }
+.ui-btn-up-a{ border: 1px solid rgb(17, 17, 17); background: rgb(51, 51, 51) linear-gradient(rgb(68, 68, 68), rgb(45, 45, 45)) repeat scroll 0% 0%; font-weight: bold; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(17, 17, 17); }
+.ui-btn-up-a a.ui-link-inherit{ color: rgb(255, 255, 255); }
+.ui-btn-up-a{ font-family: Helvetica,Arial,sans-serif; text-decoration: none; }
+.ui-btn-inner{ border-top: 1px solid rgba(255, 255, 255, 0.3); border-color: rgba(255, 255, 255, 0.3); }
+.ui-corner-all{ border-radius: 0.6em; }
+.ui-br{ border-bottom: 1px solid rgba(130, 130, 130, 0.3); }
+.ui-btn-corner-all{ border-radius: 1em; }
+.ui-corner-all{ background-clip: padding-box; }
+.ui-btn-corner-all{ background-clip: padding-box; }
+.ui-shadow{ box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
+.ui-bar-a .ui-shadow{ box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3); }
+.ui-shadow-inset{ box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2) inset; }
+.ui-page{ padding: 0px; margin: 0px; }
+.ui-page{ top: 0px; left: 0px; width: 100%; min-height: 100%; position: absolute; display: none; border: 0px none; }
+.ui-page{ outline: 0px none; }
+.ui-body{ position: relative; padding: 0.4em 15px; overflow: hidden; display: block; clear: both; }
+.ui-header{ position: relative; border-left-width: 0px; border-right-width: 0px; }
+.ui-header .ui-btn-left{ position: absolute; top: 3px; }
+.ui-header .ui-btn-right{ position: absolute; top: 3px; }
+.ui-header .ui-btn-left{ left: 5px; }
+.ui-header .ui-btn-right{ right: 5px; }
+.ui-header .ui-btn-icon-notext{ top: 6px; }
+.ui-header .ui-title{ min-height: 1.1em; text-align: center; font-size: 16px; display: block; margin: 0.6em 30% 0.8em; padding: 0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; outline: 0px none ! important; }
+.ui-content{ border-width: 0px; overflow-y: visible; overflow-x: hidden; padding: 15px; }
+.ui-header-fixed{ left: 0px; right: 0px; width: 100%; position: fixed; z-index: 1000; }
+.ui-header-fixed{ top: 0px; }
+.ui-page-header-fixed{ padding-top: 2.5em; }
+.ui-page-footer-fixed{ padding-bottom: 3em; }
+.ui-header-fixed .ui-btn{ z-index: 10; }
+.ui-btn{ display: block; text-align: center; cursor: pointer; position: relative; margin: 0.5em 5px; padding: 0px; }
+.ui-btn-inner{ padding: 0.6em 20px; min-width: 0.75em; display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; position: relative; }
+.ui-btn input{ z-index: 2; }
+.ui-btn button{ z-index: 2; }
+.ui-btn-block{ display: block; }
+.ui-header .ui-btn{ display: inline-block; margin: 0px; }
+.ui-header .ui-btn-inner{ font-size: 12.5px; padding: 0.55em 11px 0.5em; }
+.ui-btn-text{ position: relative; z-index: 1; width: 100%; }
+.ui-btn-hidden{ position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0.1; cursor: pointer; background: rgba(255, 255, 255, 0) none repeat scroll 0% 0%; font-size: 1px; border: 0px none; text-indent: -9999px; }
+.ui-controlgroup{ padding: 0px; margin: 0px 0px 0.5em; }
+.ui-controlgroup li{ list-style: outside none none; }
+.ui-controlgroup-vertical .ui-btn{ margin: 0px; border-bottom-width: 0px; }
+.ui-controlgroup-vertical .ui-checkbox{ margin: 0px; border-bottom-width: 0px; }
+.ui-controlgroup-vertical .ui-radio{ margin: 0px; border-bottom-width: 0px; }
+.ui-controlgroup-vertical .ui-controlgroup-last{ border-bottom-width: 1px; }
+.ui-field-contain{ padding: 0.8em 0px; margin: 0px; border-width: 0px 0px 1px; overflow: visible; }
+.ui-header .ui-field-contain-left{ position: absolute; top: 0px; width: 25%; }
+.ui-header .ui-field-contain-right{ position: absolute; top: 0px; width: 25%; }
+.ui-header .ui-field-contain-left{ left: 1em; }
+.ui-header .ui-field-contain-right{ right: 1em; }
+.ui-header input.ui-input-text{ margin-left: 1.25%; padding: 0.4em 1%; width: 95.5%; }
+
+.ui-content .ui-listview{ margin: -15px; }
+.ui-content .ui-listview-inset{ margin: 1em 0px; }
+.ui-field-contain input.ui-slider-input{ display: inline-block; width: 50px; }
+.ui-controlgroup a.ui-slider-handle{ position: absolute; z-index: 1; top: 50%; width: 28px; height: 28px; margin-top: -15px; margin-left: -15px; outline: 0px none; }
+.desk{ width: 60%; margin: 0px auto; }
+.center{ text-align: center; margin: 0px auto; }
+.max{ max-width: 400px; margin: 0px auto; }
+#page1{ display: block; }
+</style></head><body>
+<div style="padding-top: 84px; padding-bottom: 15px; min-height: 666px;" class="ui-page
+ui-body-a
+ui-page-header-fixed
+ui-page-footer-fixed
+ui-page-active" tabindex="0" data-url="page1" data-role="page" data-theme="a" id="page1">
+<div role="banner" class="ui-header
+ui-bar-a
+ui-header-fixed slidedown" data-role="header" data-theme="a" data-position="fixed">
+<h2 aria-level="1" role="heading" class="ui-title">Allermetrix<br>Authorized Users Only</h2>
+<div>
+<p class="center">
+An Unauthorized Attempt to Access this Site is Violation of United States  and International&nbsp;Law
+</p>
+</div>
+</div>
+<div role="main" data-role="content" data-theme="a" class="desk
+ui-content
+ui-body-a">
+<form method="post" action="https://amxemr.com/enter.php" data-ajax="false">
+<input name="sub" value="0" type="hidden">
+<div class="ui-field-contain
+ui-body
+ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all
+ui-controlgroup
+ui-controlgroup-vertical" data-role="controlgroup">
+<label class="ui-input-text" for="id">
+User ID
+</label>
+<input class="ui-input-text
+ui-body-a
+ui-corner-all
+ui-shadow-inset" id="id" name="id" placeholder="" value="" type="text">
+</fieldset>
+</div>
+<div class="ui-field-contain
+ui-body
+ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all
+ui-controlgroup
+ui-controlgroup-vertical" data-role="controlgroup">
+<label class="ui-input-text" for="pwh">
+Unexposed Passcode
+</label>
+<input class="ui-input-text
+ui-body-a
+ui-corner-all
+ui-shadow-inset" id="pwh" name="pwh" placeholder="" value="" type="password">
+</fieldset>
+</div>
+<div class="ui-field-contain
+ui-body
+ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all
+ui-controlgroup
+ui-controlgroup-vertical" data-role="controlgroup">
+<label class="ui-input-text" for="pw">
+Visible Passcode 
+</label>
+<input class="ui-input-text
+ui-body-a
+ui-corner-all
+ui-shadow-inset" id="pw" name="pw" placeholder="" value="" type="text">
+</fieldset>
+</div>
+<div class="max">
+<div aria-disabled="false" class="ui-btn
+ui-shadow
+ui-btn-corner-all
+ui-fullsize
+ui-btn-block
+ui-btn-up-a" data-mini="false" data-inline="false" data-theme="a" data-iconpos="null" data-icon="null" data-wrapperels="span" data-iconshadow="true" data-shadow="true" data-corners="true">
+<span class="ui-btn-inner
+ui-btn-corner-all">
+<span class="ui-btn-text">Login</span>
+</span>
+<input aria-disabled="false" class="ui-btn-hidden" value="Login" type="submit">
+</div>
+</div>
+</form>
+<hr>
+<div>
+<h1>HIPAA WARNING</h1>
+<p>
+Protected Health Information in this system is subject to Public Law 104-191,
+the Health Insurance Portability and Accountability Act of 1996 and the
+Final Privacy Rule and Final Security Rule codified in 45 C.F.R. § 160 and 164
+Information in this system may only be used and/or disclosed in strict conformance with these authorities.
+</p>
+<p>
+Allermetrix is required to, and will apply, appropriate sanctions against individuals who fail to comply
+with its policies and procedures.
+</p>
+</div>
+</div>
+<hr>
+</div>

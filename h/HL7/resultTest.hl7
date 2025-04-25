@@ -1,0 +1,6 @@
+MSH|^~\&||||^|2023013000000||ORU^R01||P
+PID|1|||888877|Young^Patrick||1955-06-25|M
+ORC|RE|888877|987654
+OBR|1|888877||M0312^IgG, Candida albicans|||2023012300000||||N|||||||CPL||M0312^IgG, Candida albicans
+OBX|1|ST|M0312^IgG, Candida albicans||21.32|ug/mL|<4.00|H|||M|||2023013000000
+NTE|1||CLASS 3|

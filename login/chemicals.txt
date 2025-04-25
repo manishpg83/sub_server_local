@@ -1,0 +1,6 @@
+          CChemicals and Drugs
+
+C006      Annatto (Red Dye)
+C007      Orris Root
+C005      Papain
+C008      Pyrethrum

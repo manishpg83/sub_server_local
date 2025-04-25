@@ -1,0 +1,47 @@
+Start Fri 07-15 10:29 am
+Fri 07-15 10:29 am 75 HL7 orders found 
+1 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="BN121919" >BN121919</button></form><div class="name"> MILLER</div> W 240143 07-13 Wed BN121919 Tue 07-12 3 days old
+2 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="C3806781" >C3806781</button></form><div class="name"> GREER</div> W 240153 07-13 Wed C3806781 Tue 07-12 3 days old
+4 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="C6566633" >C6566633</button></form><div class="name"> DAUGHTERS</div> W 240145 07-13 Wed C6566633 Tue 07-12 3 days old
+6 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="CM078470" >CM078470</button></form><div class="name"> MAIORKA</div> W 240144 07-13 Wed CM078470 Tue 07-12 3 days old
+7 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="DT408136" >DT408136</button></form><div class="name"> GARBEE</div> W 240152 07-13 Wed DT408136 Tue 07-12 3 days old
+8 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="KT669802" >KT669802</button></form><div class="name"> FLEMING</div> W 240142 07-13 Wed KT669802 Tue 07-12 3 days old
+9 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="LV580751" >LV580751</button></form><div class="name"> ZUNIGA</div> W 240147 07-13 Wed LV580751 Tue 07-12 3 days old
+10 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="LV580770" >LV580770</button></form><div class="name"> CARBALLO ZORRILLA</div> W 240149 07-13 Wed LV580770 Tue 07-12 3 days old
+11 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="MK584296" >MK584296</button></form><div class="name"> OWENS</div> W 240141 07-13 Wed MK584296 Tue 07-12 3 days old
+12 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="QR471407" >QR471407</button></form><div class="name"> CORTEZ</div> W 240148 07-13 Wed QR471407 Tue 07-12 3 days old
+13 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="UN513392" >UN513392</button></form><div class="name"> FITTS</div> W 240151 07-13 Wed UN513392 Tue 07-12 3 days old
+14 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="VT309371" >VT309371</button></form><div class="name"> WAGNER</div> W 240150 07-13 Wed VT309371 Tue 07-12 3 days old
+15 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="W2736978" >W2736978</button></form><div class="name"> FUTRELL</div> W 240146 07-13 Wed W2736978 Tue 07-12 3 days old
+16 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="HA916743" >HA916743</button></form><div class="name"> LEAL</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Wed 07-13 0 days old
+17 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="HA916771" >HA916771</button></form><div class="name"> ROJAS</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Wed 07-13 0 days old
+18 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="IB595791" >IB595791</button></form><div class="name"> KNEZEK</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Wed 07-13 0 days old
+19 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="KH931660" >KH931660</button></form><div class="name"> GORREPATI</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Wed 07-13 0 days old
+20 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="LH586951" >LH586951</button></form><div class="name"> MOORE</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Wed 07-13 0 days old
+21 Login:4, cplTest:4<form action="check.php" method="post"><button name="id" value="LJ802457" >LJ802457</button></form><div class="name"> YNIGUEZ</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Wed 07-13 0 days old
+25 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="UN517195" >UN517195</button></form><div class="name"> ESTRADA</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Wed 07-13 0 days old
+26 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="UQ155560" >UQ155560</button></form><div class="name"> ORTIZ</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Wed 07-13 0 days old
+27 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="WQ194334" >WQ194334</button></form><div class="name"> SOLIS</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Wed 07-13 0 days old
+28 C6584515 processed <span> 8 Login records,  8 cplTest records</span>
+29 C6584533 processed <span> 8 Login records,  8 cplTest records</span>
+30 CM083219 processed <span> 1 Login records,  1 cplTest records</span>
+31 DP184033 processed <span> 2 Login records,  2 cplTest records</span>
+32 FL697333 processed <span> 1 Login records,  1 cplTest records</span>
+33 FR220425 processed <span> 2 Login records,  2 cplTest records</span>
+34 FR221324 processed <span> 3 Login records,  3 cplTest records</span>
+35 IB596742 processed <span> 1 Login records,  1 cplTest records</span>
+36 J7412426 processed <span> 1 Login records,  1 cplTest records</span>
+37 LH587627 processed <span> 1 Login records,  1 cplTest records</span>
+38 LJ803267 processed <span> 4 Login records,  4 cplTest records</span>
+39 LJ803347 processed <span> 4 Login records,  4 cplTest records</span>
+40 LV581285 processed <span> 1 Login records,  1 cplTest records</span>
+41 LV988368 processed <span> 1 Login records,  1 cplTest records</span>
+42 MM420810 processed <span> 2 Login records,  2 cplTest records</span>
+43 UN521911 processed <span> 1 Login records,  1 cplTest records</span>
+44 DN261114 processed <span> 1 Login records,  1 cplTest records</span>
+45 FK968623 processed <span> 1 Login records,  1 cplTest records</span>
+46 FP817960 processed <span> 1 Login records,  1 cplTest records</span>
+47 LV988715 processed <span> 1 Login records,  1 cplTest records</span>
+48 M6499460 processed <span> 1 Login records,  1 cplTest records</span>
+49 MK584831 processed <span> 1 Login records,  1 cplTest records</span>
+50 UZ496390 processed <span> 1 Login records,  1 cplTest records</span>

@@ -1,0 +1,866 @@
+<ICD10CM.index>
+  <version>2015</version>
+  <title>ICD-10-CM INDEX TO DISEASES and INJURIES</title>
+  <letter>
+    <title>A</title>
+    <mainTerm>
+      <title>Aarskog's syndrome</title>
+      <code>Q87.1</code>
+    </mainTerm>
+    <mainTerm>
+      <title>Abandonment</title>
+      <see>Maltreatment</see>
+    </mainTerm>
+    <mainTerm>
+      <title>Abasia<nemod>(-astasia) (hysterical)</nemod></title>
+      <code>F44.4</code>
+    </mainTerm>
+    <mainTerm>
+      <title>Abderhalden-Kaufmann-Lignac syndrome<nemod>(cystinosis)</nemod></title>
+      <code>E72.04</code>
+    </mainTerm>
+    <mainTerm>
+      <title>Abdomen, abdominal</title>
+      <seeAlso>condition</seeAlso>
+      <term level="1">
+        <title>acute</title>
+        <code>R10.0</code>
+      </term>
+      <term level="1">
+        <title>angina</title>
+        <code>K55.1</code>
+      </term>
+      <term level="1">
+        <title>muscle deficiency syndrome</title>
+        <code>Q79.4</code>
+      </term>
+    </mainTerm>
+    <mainTerm>
+      <title>Abdominalgia</title>
+      <see>Pain, abdominal</see>
+    </mainTerm>
+    <mainTerm>
+      <title>Abduction contracture, hip or other joint</title>
+      <see>Contraction, joint</see>
+    </mainTerm>
+    <mainTerm>
+      <title>Aberrant<nemod>(congenital)</nemod></title>
+      <seeAlso>Malposition, congenital</seeAlso>
+      <term level="1">
+        <title>adrenal gland</title>
+        <code>Q89.1</code>
+      </term>
+      <term level="1">
+        <title>artery<nemod>(peripheral)</nemod></title>
+        <code>Q27.8</code>
+        <term level="2">
+          <title>basilar NEC</title>
+          <code>Q28.1</code>
+        </term>
+        <term level="2">
+          <title>cerebral</title>
+          <code>Q28.3</code>
+        </term>
+        <term level="2">
+          <title>coronary</title>
+          <code>Q24.5</code>
+        </term>
+        <term level="2">
+          <title>digestive system</title>
+          <code>Q27.8</code>
+        </term>
+        <term level="2">
+          <title>eye</title>
+          <code>Q15.8</code>
+        </term>
+        <term level="2">
+          <title>lower limb</title>
+          <code>Q27.8</code>
+        </term>
+        <term level="2">
+          <title>precerebral</title>
+          <code>Q28.1</code>
+        </term>
+        <term level="2">
+          <title>pulmonary</title>
+          <code>Q25.79</code>
+        </term>
+        <term level="2">
+          <title>renal</title>
+          <code>Q27.2</code>
+        </term>
+        <term level="2">
+          <title>retina</title>
+          <code>Q14.1</code>
+        </term>
+        <term level="2">
+          <title>specified site NEC</title>
+          <code>Q27.8</code>
+        </term>
+        <term level="2">
+          <title>subclavian</title>
+          <code>Q27.8</code>
+        </term>
+        <term level="2">
+          <title>upper limb</title>
+          <code>Q27.8</code>
+        </term>
+        <term level="2">
+          <title>vertebral</title>
+          <code>Q28.1</code>
+        </term>
+      </term>
+      <term level="1">
+        <title>breast</title>
+        <code>Q83.8</code>
+      </term>
+      <term level="1">
+        <title>endocrine gland NEC</title>
+        <code>Q89.2</code>
+      </term>
+      <term level="1">
+        <title>hepatic duct</title>
+        <code>Q44.5</code>
+      </term>
+      <term level="1">
+        <title>pancreas</title>
+        <code>Q45.3</code>
+      </term>
+      <term level="1">
+        <title>parathyroid gland</title>
+        <code>Q89.2</code>
+      </term>
+      <term level="1">
+        <title>pituitary gland</title>
+        <code>Q89.2</code>
+      </term>
+      <term level="1">
+        <title>sebaceous glands, mucous membrane, mouth, congenital</title>
+        <code>Q38.6</code>
+      </term>
+      <term level="1">
+        <title>spleen</title>
+        <code>Q89.09</code>
+      </term>
+      <term level="1">
+        <title>subclavian artery</title>
+        <code>Q27.8</code>
+      </term>
+      <term level="1">
+        <title>thymus<nemod>(gland)</nemod></title>
+        <code>Q89.2</code>
+      </term>
+      <term level="1">
+        <title>thyroid gland</title>
+        <code>Q89.2</code>
+      </term>
+      <term level="1">
+        <title>vein<nemod>(peripheral)</nemod> NEC</title>
+        <code>Q27.8</code>
+        <term level="2">
+          <title>cerebral</title>
+          <code>Q28.3</code>
+        </term>
+        <term level="2">
+          <title>digestive system</title>
+          <code>Q27.8</code>
+        </term>
+        <term level="2">
+          <title>lower limb</title>
+          <code>Q27.8</code>
+        </term>
+        <term level="2">
+          <title>precerebral</title>
+          <code>Q28.1</code>
+        </term>
+        <term level="2">
+          <title>specified site NEC</title>
+          <code>Q27.8</code>
+        </term>
+        <term level="2">
+          <title>upper limb</title>
+          <code>Q27.8</code>
+        </term>
+      </term>
+    </mainTerm>
+    <mainTerm>
+      <title>Aberration</title>
+      <term level="1">
+        <title>distantial</title>
+        <see>Disturbance, visual</see>
+      </term>
+      <term level="1">
+        <title>mental</title>
+        <code>F99</code>
+      </term>
+    </mainTerm>
+    <mainTerm>
+      <title>Abetalipoproteinemia</title>
+      <code>E78.6</code>
+    </mainTerm>
+    <mainTerm>
+      <title>Abiotrophy</title>
+      <code>R68.89</code>
+    </mainTerm>
+    <mainTerm>
+      <title>Ablatio, ablation</title>
+      <term level="1">
+        <title>retinae</title>
+        <see>Detachment, retina</see>
+      </term>
+    </mainTerm>
+    <mainTerm>
+      <title>Ablepharia, ablepharon</title>
+      <code>Q10.3</code>
+    </mainTerm>
+    <mainTerm>
+      <title>Abnormal, abnormality, abnormalities</title>
+      <seeAlso>Anomaly</seeAlso>
+      <term level="1">
+        <title>acid-base balance<nemod>(mixed)</nemod></title>
+        <code>E87.4</code>
+      </term>
+      <term level="1">
+        <title>albumin</title>
+        <code>R77.0</code>
+      </term>
+      <term level="1">
+        <title>alphafetoprotein</title>
+        <code>R77.2</code>
+      </term>
+      <term level="1">
+        <title>alveolar ridge</title>
+        <code>K08.9</code>
+      </term>
+      <term level="1">
+        <title>anatomical relationship</title>
+        <code>Q89.9</code>
+      </term>
+      <term level="1">
+        <title>apertures, congenital, diaphragm</title>
+        <code>Q79.1</code>
+      </term>
+      <term level="1">
+        <title>auditory perception</title>
+        <code>H93.29-</code>
+        <term level="2">
+          <title>diplacusis</title>
+          <see>Diplacusis</see>
+        </term>
+        <term level="2">
+          <title>hyperacusis</title>
+          <see>Hyperacusis</see>
+        </term>
+        <term level="2">
+          <title>recruitment</title>
+          <see>Recruitment, auditory</see>
+        </term>
+        <term level="2">
+          <title>threshold shift</title>
+          <see>Shift, auditory threshold</see>
+        </term>
+      </term>
+      <term level="1">
+        <title>autosomes</title>
+        <code>Q99.9</code>
+        <term level="2">
+          <title>fragile site</title>
+          <code>Q95.5</code>
+        </term>
+      </term>
+      <term level="1">
+        <title>basal metabolic rate</title>
+        <code>R94.8</code>
+      </term>
+      <term level="1">
+        <title>biosynthesis, testicular androgen</title>
+        <code>E29.1</code>
+      </term>
+      <term level="1">
+        <title>bleeding time</title>
+        <code>R79.1</code>
+      </term>
+      <term level="1">
+        <title>blood-gas level</title>
+        <code>R79.81</code>
+      </term>
+      <term level="1">
+        <title>blood level<nemod>(of)</nemod></title>
+        <term level="2">
+          <title>cobalt</title>
+          <code>R79.0</code>
+        </term>
+        <term level="2">
+          <title>copper</title>
+          <code>R79.0</code>
+        </term>
+        <term level="2">
+          <title>iron</title>
+          <code>R79.0</code>
+        </term>
+        <term level="2">
+          <title>lithium</title>
+          <code>R78.89</code>
+        </term>
+        <term level="2">
+          <title>magnesium</title>
+          <code>R79.0</code>
+        </term>
+        <term level="2">
+          <title>mineral NEC</title>
+          <code>R79.0</code>
+        </term>
+        <term level="2">
+          <title>zinc</title>
+          <code>R79.0</code>
+        </term>
+      </term>
+      <term level="1">
+        <title>blood pressure</title>
+        <term level="2">
+          <title>elevated</title>
+          <code>R03.0</code>
+        </term>
+        <term level="2">
+          <title>low reading<nemod>(nonspecific)</nemod></title>
+          <code>R03.1</code>
+        </term>
+      </term>
+      <term level="1">
+        <title>blood sugar</title>
+        <code>R73.09</code>
+      </term>
+      <term level="1">
+        <title>bowel sounds</title>
+        <code>R19.15</code>
+        <term level="2">
+          <title>absent</title>
+          <code>R19.11</code>
+        </term>
+        <term level="2">
+          <title>hyperactive</title>
+          <code>R19.12</code>
+        </term>
+      </term>
+      <term level="1">
+        <title>brain scan</title>
+        <code>R94.02</code>
+      </term>
+      <term level="1">
+        <title>breathing</title>
+        <code>R06.9</code>
+      </term>
+      <term level="1">
+        <title>caloric test</title>
+        <code>R94.138</code>
+      </term>
+      <term level="1">
+        <title>cerebrospinal fluid</title>
+        <code>R83.9</code>
+        <term level="2">
+          <title>cytology</title>
+          <code>R83.6</code>
+        </term>
+        <term level="2">
+          <title>drug level</title>
+          <code>R83.2</code>
+        </term>
+        <term level="2">
+          <title>enzyme level</title>
+          <code>R83.0</code>
+        </term>
+        <term level="2">
+          <title>hormones</title>
+          <code>R83.1</code>
+        </term>
+        <term level="2">
+          <title>immunology</title>
+          <code>R83.4</code>
+        </term>
+        <term level="2">
+          <title>microbiology</title>
+          <code>R83.5</code>
+        </term>
+        <term level="2">
+          <title>nonmedicinal level</title>
+          <code>R83.3</code>
+        </term>
+        <term level="2">
+          <title>specified type NEC</title>
+          <code>R83.8</code>
+        </term>
+      </term>
+      <term level="1">
+        <title>chemistry, blood</title>
+        <code>R79.9</code>
+        <term level="2">
+          <title>C-reactive protein</title>
+          <code>R79.82</code>
+        </term>
+        <term level="2">
+          <title>drugs</title>
+          <see>Findings, abnormal, in blood</see>
+        </term>
+        <term level="2">
+          <title>gas level</title>
+          <code>R79.81</code>
+        </term>
+        <term level="2">
+          <title>minerals</title>
+          <code>R79.0</code>
+        </term>
+        <term level="2">
+          <title>pancytopenia</title>
+          <code>D61.818</code>
+        </term>
+        <term level="2">
+          <title>PTT</title>
+          <code>R79.1</code>
+        </term>
+        <term level="2">
+          <title>specified NEC</title>
+          <code>R79.89</code>
+        </term>
+        <term level="2">
+          <title>toxins</title>
+          <see>Findings, abnormal, in blood</see>
+        </term>
+      </term>
+      <term level="1">
+        <title>chest sounds<nemod>(friction) (rales)</nemod></title>
+        <code>R09.89</code>
+      </term>
+      <term level="1">
+        <title>chromosome, chromosomal</title>
+        <code>Q99.9</code>
+        <term level="2">
+          <title>with more than three X chromosomes,  female</title>
+          <code>Q97.1</code>
+        </term>
+        <term level="2">
+          <title>analysis result</title>
+          <code>R89.8</code>
+          <term level="3">
+            <title>bronchial washings</title>
+            <code>R84.8</code>
+          </term>
+          <term level="3">
+            <title>cerebrospinal fluid</title>
+            <code>R83.8</code>
+          </term>
+          <term level="3">
+            <title>cervix uteri NEC</title>
+            <code>R87.89</code>
+          </term>
+          <term level="3">
+            <title>nasal secretions</title>
+            <code>R84.8</code>
+          </term>
+          <term level="3">
+            <title>nipple discharge</title>
+            <code>R89.8</code>
+          </term>
+          <term level="3">
+            <title>peritoneal fluid</title>
+            <code>R85.89</code>
+          </term>
+          <term level="3">
+            <title>pleural fluid</title>
+            <code>R84.8</code>
+          </term>
+          <term level="3">
+            <title>prostatic secretions</title>
+            <code>R86.8</code>
+          </term>
+          <term level="3">
+            <title>saliva</title>
+            <code>R85.89</code>
+          </term>
+          <term level="3">
+            <title>seminal fluid</title>
+            <code>R86.8</code>
+          </term>
+          <term level="3">
+            <title>sputum</title>
+            <code>R84.8</code>
+          </term>
+          <term level="3">
+            <title>synovial fluid</title>
+            <code>R89.8</code>
+          </term>
+          <term level="3">
+            <title>throat scrapings</title>
+            <code>R84.8</code>
+          </term>
+          <term level="3">
+            <title>vagina</title>
+            <code>R87.89</code>
+          </term>
+          <term level="3">
+            <title>vulva</title>
+            <code>R87.89</code>
+          </term>
+          <term level="3">
+            <title>wound secretions</title>
+            <code>R89.8</code>
+          </term>
+        </term>
+        <term level="2">
+          <title>dicentric replacement</title>
+          <code>Q93.2</code>
+        </term>
+        <term level="2">
+          <title>ring replacement</title>
+          <code>Q93.2</code>
+        </term>
+        <term level="2">
+          <title>sex</title>
+          <code>Q99.8</code>
+          <term level="3">
+            <title>female phenotype</title>
+            <code>Q97.9</code>
+            <term level="4">
+              <title>specified NEC</title>
+              <code>Q97.8</code>
+            </term>
+          </term>
+          <term level="3">
+            <title>male phenotype</title>
+            <code>Q98.9</code>
+            <term level="4">
+              <title>specified NEC</title>
+              <code>Q98.8</code>
+            </term>
+          </term>
+          <term level="3">
+            <title>structural male</title>
+            <code>Q98.6</code>
+          </term>
+        </term>
+        <term level="2">
+          <title>specified NEC</title>
+          <code>Q99.8</code>
+        </term>
+      </term>
+      <term level="1">
+        <title>clinical findings NEC</title>
+        <code>R68.89</code>
+      </term>
+      <term level="1">
+        <title>coagulation</title>
+        <code>D68.9</code>
+        <term level="2">
+          <title>newborn, transient</title>
+          <code>P61.6</code>
+        </term>
+        <term level="2">
+          <title>profile</title>
+          <code>R79.1</code>
+        </term>
+        <term level="2">
+          <title>time</title>
+          <code>R79.1</code>
+        </term>
+      </term>
+      <term level="1">
+        <title>communication</title>
+        <see>Fistula</see>
+      </term>
+      <term level="1">
+        <title>conjunctiva, vascular</title>
+        <code>H11.41-</code>
+      </term>
+      <term level="1">
+        <title>coronary artery</title>
+        <code>Q24.5</code>
+      </term>
+      <term level="1">
+        <title>cortisol-binding globulin</title>
+        <code>E27.8</code>
+      </term>
+      <term level="1">
+        <title>course, eustachian tube</title>
+        <code>Q17.8</code>
+      </term>
+      <term level="1">
+        <title>creatinine clearance</title>
+        <code>R94.4</code>
+      </term>
+      <term level="1">
+        <title>cytology</title>
+        <term level="2">
+          <title>anus</title>
+          <code>R85.619</code>
+          <term level="3">
+            <title>atypical squamous cells cannot exclude high grade squamous intraepithelial lesion<nemod>(ASC-H)</nemod></title>
+            <code>R85.611</code>
+          </term>
+          <term level="3">
+            <title>atypical squamous cells of undetermined significance<nemod>(ASC-US)</nemod></title>
+            <code>R85.610</code>
+          </term>
+          <term level="3">
+            <title>cytologic evidence of malignancy</title>
+            <code>R85.614</code>
+          </term>
+          <term level="3">
+            <title>high grade squamous intraepithelial lesion<nemod>(HGSIL)</nemod></title>
+            <code>R85.613</code>
+          </term>
+          <term level="3">
+            <title>human papillomavirus<nemod>(HPV)</nemod> DNA test</title>
+            <term level="4">
+              <title>high risk positive</title>
+              <code>R85.81</code>
+            </term>
+            <term level="4">
+              <title>low risk postive</title>
+              <code>R85.82</code>
+            </term>
+          </term>
+          <term level="3">
+            <title>inadequate smear</title>
+            <code>R85.615</code>
+          </term>
+          <term level="3">
+            <title>low grade squamous intraepithelial lesion<nemod>(LGSIL)</nemod></title>
+            <code>R85.612</code>
+          </term>
+          <term level="3">
+            <title>satisfactory anal smear but lacking transformation zone</title>
+            <code>R85.616</code>
+          </term>
+          <term level="3">
+            <title>specified NEC</title>
+            <code>R85.618</code>
+          </term>
+          <term level="3">
+            <title>unsatisfactory smear</title>
+            <code>R85.615</code>
+          </term>
+        </term>
+        <term level="2">
+          <title>female genital organs</title>
+          <see>Abnormal, Papanicolaou (smear)</see>
+        </term>
+      </term>
+      <term level="1">
+        <title>dark adaptation curve</title>
+        <code>H53.61</code>
+      </term>
+      <term level="1">
+        <title>dentofacial NEC</title>
+        <see>Anomaly, dentofacial</see>
+      </term>
+      <term level="1">
+        <title>development, developmental</title>
+        <code>Q89.9</code>
+        <term level="2">
+          <title>central nervous system</title>
+          <code>Q07.9</code>
+        </term>
+      </term>
+      <term level="1">
+        <title>diagnostic imaging</title>
+        <term level="2">
+          <title>abdomen, abdominal region NEC</title>
+          <code>R93.5</code>
+        </term>
+        <term level="2">
+          <title>biliary tract</title>
+          <code>R93.2</code>
+        </term>
+        <term level="2">
+          <title>breast</title>
+          <code>R92.8</code>
+        </term>
+        <term level="2">
+          <title>central nervous system NEC</title>
+          <code>R90.89</code>
+        </term>
+        <term level="2">
+          <title>cerebrovascular NEC</title>
+          <code>R90.89</code>
+        </term>
+        <term level="2">
+          <title>coronary circulation</title>
+          <code>R93.1</code>
+        </term>
+        <term level="2">
+          <title>digestive tract NEC</title>
+          <code>R93.3</code>
+        </term>
+        <term level="2">
+          <title>gastrointestinal<nemod>(tract)</nemod></title>
+          <code>R93.3</code>
+        </term>
+        <term level="2">
+          <title>genitourinary organs</title>
+          <code>R93.8</code>
+        </term>
+        <term level="2">
+          <title>head</title>
+          <code>R93.0</code>
+        </term>
+        <term level="2">
+          <title>heart</title>
+          <code>R93.1</code>
+        </term>
+        <term level="2">
+          <title>intrathoracic organ NEC</title>
+          <code>R93.8</code>
+        </term>
+        <term level="2">
+          <title>limbs</title>
+          <code>R93.6</code>
+        </term>
+        <term level="2">
+          <title>liver</title>
+          <code>R93.2</code>
+        </term>
+        <term level="2">
+          <title>lung<nemod>(field)</nemod></title>
+          <code>R91.8</code>
+        </term>
+        <term level="2">
+          <title>musculoskeletal system NEC</title>
+          <code>R93.7</code>
+        </term>
+        <term level="2">
+          <title>retroperitoneum</title>
+          <code>R93.5</code>
+        </term>
+        <term level="2">
+          <title>site specified NEC</title>
+          <code>R93.8</code>
+        </term>
+        <term level="2">
+          <title>skin and subcutaneous tissue</title>
+          <code>R93.8</code>
+        </term>
+        <term level="2">
+          <title>skull</title>
+          <code>R93.0</code>
+        </term>
+        <term level="2">
+          <title>urinary organs</title>
+          <code>R93.4</code>
+        </term>
+      </term>
+      <term level="1">
+        <title>direction, teeth, fully erupted</title>
+        <code>M26.30</code>
+      </term>
+      <term level="1">
+        <title>ear ossicles, acquired NEC</title>
+        <code>H74.39-</code>
+        <term level="2">
+          <title>ankylosis</title>
+          <see>Ankylosis, ear ossicles</see>
+        </term>
+        <term level="2">
+          <title>discontinuity</title>
+          <see>Discontinuity, ossicles, ear</see>
+        </term>
+        <term level="2">
+          <title>partial loss</title>
+          <see>Loss, ossicles, ear (partial)</see>
+        </term>
+      </term>
+      <term level="1">
+        <title>Ebstein</title>
+        <code>Q22.5</code>
+      </term>
+      <term level="1">
+        <title>echocardiogram</title>
+        <code>R93.1</code>
+      </term>
+      <term level="1">
+        <title>echoencephalogram</title>
+        <code>R90.81</code>
+      </term>
+      <term level="1">
+        <title>echogram</title>
+        <see>Abnormal, diagnostic  imaging</see>
+      </term>
+      <term level="1">
+        <title>electrocardiogram [ECG] [EKG]</title>
+        <code>R94.31</code>
+      </term>
+      <term level="1">
+        <title>electroencephalogram [EEG]</title>
+        <code>R94.01</code>
+      </term>
+      <term level="1">
+        <title>electrolyte</title>
+        <see>Imbalance, electrolyte</see>
+      </term>
+      <term level="1">
+        <title>electromyogram [EMG]</title>
+        <code>R94.131</code>
+      </term>
+      <term level="1">
+        <title>electro-oculogram [EOG]</title>
+        <code>R94.110</code>
+      </term>
+      <term level="1">
+        <title>electrophysiological intracardiac studies</title>
+        <code>R94.39</code>
+      </term>
+      <term level="1">
+        <title>electroretinogram [ERG]</title>
+        <code>R94.111</code>
+      </term>
+      <term level="1">
+        <title>erythrocytes</title>
+        <term level="2">
+          <title>congenital, with perinatal jaundice</title>
+          <code>D58.9</code>
+        </term>
+      </term>
+      <term level="1">
+        <title>feces<nemod>(color) (contents) (mucus)</nemod></title>
+        <code>R19.5</code>
+      </term>
+      <term level="1">
+        <title>finding</title>
+        <see>Findings, abnormal, without diagnosis</see>
+      </term>
+      <term level="1">
+        <title>fluid</title>
+        <term level="2">
+          <title>amniotic</title>
+          <see>Abnormal, specimen, specified</see>
+        </term>
+        <term level="2">
+          <title>cerebrospinal</title>
+          <see>Abnormal, cerebrospinal fluid</see>
+        </term>
+        <term level="2">
+          <title>peritoneal</title>
+          <see>Abnormal, specimen, digestive organs</see>
+        </term>
+        <term level="2">
+          <title>pleural</title>
+          <see>Abnormal, specimen, respiratory organs</see>
+        </term>
+        <term level="2">
+          <title>synovial</title>
+          <see>Abnormal, specimen, specified</see>
+        </term>
+        <term level="2">
+          <title>thorax<nemod>(bronchial washings) (pleural  fluid)</nemod></title>
+          <see>Abnormal, specimen, respiratory organs</see>
+        </term>
+        <term level="2">
+          <title>vaginal</title>
+          <see>Abnormal, specimen, female genital organs</see>
+        </term>
+      </term>
+    </mainTerm>
+    <mainTerm>
+      <title>Zymotic</title>
+      <see>condition</see>
+    </mainTerm>
+  </letter>
+</ICD10CM.index>

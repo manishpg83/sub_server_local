@@ -1,0 +1,14 @@
+9000      <span class="pnumber">900</span>Comprehensive Food Panel 
+9005      <span class="pnumber">900-5</span>Comprehensive Food IgE 
+9006      <span class="pnumber">900-6</span>Comprehensive Food IgG4 
+9500      <span class="pnumber">950</span>Standard Food Panel 
+9503      <span class="pnumber">950-3</span>Standard Food Panel IgE 
+9504      <span class="pnumber">950-4</span>Standard Food Panel IgG4
+9501      <span class="pnumber">950-1</span>Mini Food Panel 
+9505      <span class="pnumber">950-5</span>Mini Food Panel IgE
+9506      <span class="pnumber">950-6</span>Mini Food Panel IgG4
+2550      <span class="pnumber">255</span>IBS Panel 
+2552      <span class="pnumber">255-2</span>IBS Panel IgE
+2551      <span class="pnumber">255-1</span>IBS Panel IgG4
+2530      <span class="pnumber">253</span>Hidden Foods Panel 
+2531      <span class="pnumber">253-1</span>Hidden Foods Panel IgE

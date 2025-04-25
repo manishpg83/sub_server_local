@@ -1,0 +1,19 @@
+G-NP      IgG VIRUS N-PROTEIN
+G-RBD     IgG VIRUS RBD
+V-PANEL   IgG VIRUS NP and RBD
+100T      TIgE Dil
+101T      TIgE Hi Dil
+200-PD    Pediatric Panel
+220       Peanut Risk 
+252       Mold     
+255       IBS
+255-1     G4 only
+255-2     E only
+900       Food
+900-5     E only
+900-6     G4 only
+900-7     E & G
+950       30 E & G4 
+950-3     30 E only
+950-1     15 E & G4
+950-2     15 E & G4 f/up

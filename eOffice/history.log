@@ -1,0 +1,797 @@
+rec=2270 ndx=2270 2023-10-05 5:59 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2023-10-05', 'Baldwin', 'Michelle', '1968-03-03','','','HI','96768')
+
+rec=2271 ndx=2271 2023-10-05 6:06 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2023-10-05', 'Baldwin', 'Michelle', '1968-03-03','','','HI','96768')
+
+rec=2272 ndx=2272 2023-10-07 3:06 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2023-10-07', 'doe', 'jack', '1965-01-01','','','TX','')
+
+rec=2272  
+rec=2273 ndx=2273 2023-10-11 8:43 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200435, '2023-10-11', 'Smith', 'Joe', '1966-05-28','','','TN','')
+
+rec=2273  
+rec=2274 ndx=2274 2023-10-11 6:30 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2023-10-11', 'smith', 'kate', '20000-03-03','1234','fairview','TN','')
+
+rec=2274  
+rec=2275 ndx=2275 2023-10-17 10:51 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200423, '2023-10-17', 'dalla tezza', 'jessica', '1989-05-29','2658 Saint Andrews Drive','Clearwater','FL','33761')
+
+rec=2275  
+rec=2276 ndx=2276 2023-10-23 9:09 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200423, '2023-10-23', 'dalla tezza', 'jessica', '1989-05-29','2658 Saint Andrews Drive','Clearwater','FL','33761')
+
+rec=2276  
+rec=2277 ndx=2277 2023-10-24 4:42 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2023-10-24', 'Coulter', 'Nancy', '1968-10-10','316 Wainohia St','Kihei','HI','96753')
+
+rec=2277  
+rec=2278 ndx=2278 2023-10-27 5:02 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2023-10-27', 'Young', 'Patrick', '2023-09-25','1904 E 22nd Ave','Tampa','FL','33605')
+
+rec=2278  
+rec=2278  
+rec=2278  
+rec=2278  
+rec=2278  
+rec=2278  
+rec=2278  
+rec=2278  
+rec=2279 ndx=2279 2023-10-31 7:17 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2023-10-31', 'Young', 'Patrick', '2000-10-06','1904 E 22nd Ave','Tampa','FL','33605')
+
+rec=2279  
+rec=2280 ndx=2280 2023-11-14 2:03 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2023-11-14', 'Young', 'Patrick', '2023-11-01','1904 E 22nd Ave','Tampa','FL','33605')
+
+rec=2280  
+rec=2280  
+rec=2281 ndx=2281 2023-11-16 1:30 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2023-11-16', 'Hersom', 'Elora', '2004-05-11','228 4th Ave N #7','Franklin','TN','37064')
+
+rec=2281  
+rec=2282 ndx=2282 2023-11-21 1:53 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2023-11-21', 'Douglas', 'Billie', '1998-08-27','84 Oak Creek Dr','Big Sandy','TN','38221')
+
+rec=2282  
+rec=2283 ndx=2283 2023-11-21 5:08 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2023-11-21', 'Waggoner', 'Delia', '2005-10-28','722 Heritage Court','Franklin','TN','37067')
+
+rec=2283  
+rec=2284 ndx=2284 2023-11-24 3:07 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2023-11-24', 'Higginbotham', 'Colleen', '1989-12-18','1621 Lynncove Ln','Saint Charles','MO','63303')
+
+rec=2285 ndx=2285 2023-11-24 3:07 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2023-11-24', 'Higginbotham', 'Colleen', '1989-12-18','1621 Lynncove Ln','Saint Charles','MO','63303')
+
+rec=2285  
+rec=2286 ndx=2286 2023-11-25 2:40 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2023-11-25', 'Black', 'Stephanie', '1971-09-18','132 hoohui rd','Lahaina','HI','96761')
+
+rec=2286  
+rec=2287 ndx=2287 2023-11-25 2:56 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2023-11-25', 'Black', 'Stephanie', '1971-09-18','132 Hoohui Rd ','Lahaina','HI','96761')
+
+rec=2287  
+rec=2288 ndx=2288 2023-11-28 2:15 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2023-11-28', 'bledsoe', 'adelaide', '2012-03-22','626 woodett','nashville','TN','37211')
+
+rec=2288  
+rec=2289 ndx=2289 2023-11-28 2:59 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2023-11-28', 'Dugger', 'Kenslie', '2010-07-27','1356 Sayles circle','Lawrenceburg','TENNESSEE','38464')
+
+rec=2289  
+rec=2290 ndx=2290 2023-11-30 10:04 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2023-11-30', 'Bullock', 'Kayla', '1987-08-19','5320 County Road 41','Florence','ALABAMA','35633')
+
+rec=2290  
+rec=2291 ndx=2291 2023-11-30 12:24 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2023-11-30', 'Persaud', 'Nazeela', '1965-08-27','7948 Daugherty Capley Rd','Primm Springs','TN','38476')
+
+rec=2291  
+rec=2292 ndx=2292 2023-12-01 12:27 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200441, '2023-12-01', 'smith', 'jan', '1966-10-25','','','WI','')
+
+rec=2292  
+rec=2293 ndx=2293 2023-12-04 3:38 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200439, '2023-12-04', 'Karl', 'Starr', '1957-11-20','','','VA','')
+
+rec=2294 ndx=2294 2023-12-04 3:38 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200439, '2023-12-04', 'Smith', 'Joe', '1966-10-05','','','VA','')
+
+rec=2293  
+rec=2294  
+rec=2295 ndx=2295 2023-12-04 3:40 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200439, '2023-12-04', 'Michelle', 'Liu', '1974-11-28','','','VA','')
+
+rec=2295  
+rec=2296 ndx=2296 2023-12-05 12:57 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2023-12-05', 'Banker', 'Susan', '1969-01-24','5507 Hardeman Springs Blvd.','Arrington','TN','37014')
+
+rec=2296  
+rec=2297 ndx=2297 2023-12-19 10:59 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2023-12-19', 'Cook', 'Hannah', '1973-05-05','1257 Old Charlotte Pike','Pegram','TN','37143')
+
+rec=2297  
+rec=2298 ndx=2298 2023-12-20 9:09 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2023-12-20', 'Frye', 'Mary Jo', '1955-08-21','P.O. Box 3049','Kahului','HAWAII','96733')
+
+rec=2298  
+rec=2299 ndx=2299 2023-12-20 11:31 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2023-12-20', 'Lanzetta', 'Teresa', '1958-09-23','PO Box 532550','Kihei','HI','96753')
+
+rec=2299  
+rec=2300 ndx=2300 2023-12-20 4:55 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2023-12-20', 'murphy', 'leticia ', '1993-06-02','1506 gina lynn drive ','lewisburg ','TN','37091')
+
+rec=2300  
+rec=2301 ndx=2301 2024-01-04 3:53 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-01-04', 'King', 'Ava', '2024-05-24','4728 Wildberry ln','Chapel Hill','TN','37034')
+
+rec=2301  
+rec=2302 ndx=2302 2024-01-08 1:49 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200372, '2024-01-08', 'Higginbotham', 'Colleen', '1989-12-18','1621 Lynncove Ln','Saint Charles','MO','63303')
+
+rec=2302  
+rec=2303 ndx=2303 2024-01-09 1:16 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-01-09', 'Ellison', 'Kyle', '1983-02-07','','','TN','')
+
+rec=2303  
+rec=2304 ndx=2304 2024-01-09 1:28 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-01-09', 'Ellison', 'Kyle', '1983-02-07','Second Test','','TN','')
+
+rec=2304  
+rec=2305 ndx=2305 2024-01-10 10:39 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200287, '2024-01-10', 'McPherson', 'Jamie', '1967-02-20','9701 Turquoise Lane','Brentwood','TN','37027')
+
+rec=2305  
+rec=2306 ndx=2306 2024-01-10 3:06 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200287, '2024-01-10', 'McPherson', 'Jamie', '1967-02-20','9701 Turquoise Lane','Brentwoo','TN','37027')
+
+rec=2306  
+rec=2307 ndx=2307 2024-01-11 2:51 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-01-11', 'Honeycutt', 'Meleah', '1996-01-24','246 White Bridge Pike APT B4','Nashville','TENNESSEE','37209')
+
+rec=2307  
+rec=2308 ndx=2308 2024-01-12 5:24 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200452, '2024-01-12', 'Patient', 'Test', '1998-05-22','1234 Main Street','Franklin','TN','32640')
+
+rec=2308  
+rec=2309 ndx=2309 2024-01-16 7:47 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-01-16', 'Crumb', 'Melissa ', '1969-03-14','29 Robin Dr','Washington','PA','15301')
+
+rec=2309  
+rec=2310 ndx=2310 2024-01-16 2:28 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-01-16', 'Betcher', 'Sarah', '1981-08-21','PO box 792012','Paia','HI','96779')
+
+rec=2310  
+rec=2311 ndx=2311 2024-01-25 3:24 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-01-25', 'Michaels', 'Sandy', '1953-09-11','1120 Westhaven Blvd','Franklin','TN','37064')
+
+rec=2312 ndx=2312 2024-01-25 3:27 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-01-25', 'Michaels', 'Sandy', '1953-09-11','1120 Westhaven Blvd','Franklin','TN','37064')
+
+rec=2312  
+rec=2312  
+rec=2313 ndx=2313 2024-02-01 12:01 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-02-01', 'Peterson', 'Rachel', '1984-12-08','5016 Dubose Ct','Spring Hill','TENNESSEE','37174')
+
+rec=2313  
+rec=2314 ndx=2314 2024-02-01 2:16 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-02-01', 'McCord', 'Cynthia', '1962-05-19','7356 Crow Cut','Fairview','TN','37062')
+
+rec=2314  
+rec=2314  
+rec=2315 ndx=2315 2024-02-01 3:25 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200310, '2024-02-01', 'Bussanich', 'Dave', '1960-08-16','','','ID','')
+
+rec=2315  
+rec=2316 ndx=2316 2024-02-06 2:57 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-02-06', 'powell', 'annabelle', '2010-11-09','po box 682146','franklin','TN','37068')
+
+rec=2316  
+rec=2317 ndx=2317 2024-02-14 12:31 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-02-14', 'Cottle', 'Curtis', '1987-07-31','252 Gehl Ave ','Grand Rapids','MI','49534')
+
+rec=2317  
+rec=2318 ndx=2318 2024-02-14 6:41 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-02-14', 'Thomas', 'Caitlin', '1988-03-21','17411 Haleakala Highway','Kula','HI','96790')
+
+rec=2318  
+rec=2319 ndx=2319 2024-02-17 12:34 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-02-17', 'doe', 'jane', '1969-09-09','','','FL','')
+
+rec=2319  
+rec=2320 ndx=2320 2024-02-17 12:47 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-02-17', 'doe', 'jane', '1969-09-09','','','FL','')
+
+rec=2320  
+rec=2321 ndx=2321 2024-02-20 1:58 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-02-20', 'Kaluakini', 'Keani', '1992-07-07','','','HI','')
+
+rec=2321  
+rec=2322 ndx=2322 2024-02-22 1:22 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-02-22', 'Hill', 'Simon', '1972-06-15','46 Kai Makani Loop #103 ','Kihei','HI','96753')
+
+rec=2322  
+rec=2322  
+rec=2323 ndx=2323 2024-02-22 2:04 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-02-22', 'Hill', 'SIMON', '1972-06-15','46 Kai Makani Loop #103','Kihei','HI','96753')
+
+rec=2323  
+rec=2324 ndx=2324 2024-02-25 10:07 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-02-25', 'Storey', 'Kainalu', '1994-09-03','191 Malanani Dr. Unit A','Kula','HI','96790')
+
+rec=2324  
+rec=2325 ndx=2325 2024-02-26 1:02 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-02-26', 'Granstaff', 'Parker', '2018-05-25','','','TN','')
+
+rec=2325  
+rec=2326 ndx=2326 2024-02-26 4:49 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-02-26', 'Jones', 'Jim', '2000-04-04','1234 Main st','Franklin','TN','03604')
+
+rec=2326  
+rec=2327 ndx=2327 2024-02-27 2:03 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-02-27', 'heuker', 'sara', '1996-11-15','2008 Partick Way','Spring Hill','TN','37174')
+
+rec=2327  
+rec=2328 ndx=2328 2024-02-27 4:24 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-02-27', 'Lemos', 'JEsse', '1981-07-05','1209 Meadow Trace Ct','Nashville','TN','37221')
+
+rec=2328  
+rec=2329 ndx=2329 2024-02-27 10:46 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-02-27', 'Sakamoto', 'Camille', '1966-10-07','66 Nano Street','Kahului','HI','96732')
+
+rec=2329  
+rec=2330 ndx=2330 2024-03-01 2:07 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-03-01', 'Hill', 'SIMON', '1972-06-15','2180 Main Street','Wailuku','HI','96793')
+
+rec=2331 ndx=2331 2024-03-01 10:14 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-03-01', 'Bermel', 'Nancy', '1951-06-13','132 Hoowaiwai Loop, Apt. 1603','Wailuku','HI','96793')
+
+rec=2331  
+rec=2332 ndx=2332 2024-03-04 8:29 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-03-04', 'Hill', 'Simon', '1972-06-15','46 Kai Makani Loop','Kihei','HAWAII','96753')
+
+rec=0 ndx=0 2024-03-05 11:44 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-03-05', 'Dunn', 'Dylan', '2005-02-15','5104 Harpeth Peytonsville Ln','Thompson's Station','TN','37179')
+
+rec=0  
+rec=0 ndx=0 2024-03-05 11:51 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-03-05', 'Dunn', 'Dylan', '2005-02-15','5104 Harpeth Peytonsville Ln','Thompson's Station','TN','37179')
+
+rec=0  
+rec=0 ndx=0 2024-03-05 11:57 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-03-05', 'Dunn', 'Dylan', '2005-02-15','5104 Harpeth Pyetonsville LN','Thompson's Station','TN','37179')
+
+rec=0  
+rec=2333 ndx=2333 2024-03-05 1:11 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-03-05', 'miguel', 'aaron', '1983-11-12','88 kahele pl','kihei','HI','96753')
+
+rec=2333  
+rec=2334 ndx=2334 2024-03-05 2:59 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-03-05', 'miguel', 'aaron', '1983-11-12','88 kahele pl','kihei','HAWAII','96753')
+
+rec=2334  
+rec=2335 ndx=2335 2024-03-05 3:00 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-03-05', 'miguel', 'aaron', '1983-11-12','88 kahele pl','kihei','HI','96753')
+
+rec=2335  
+rec=2336 ndx=2336 2024-03-05 3:04 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-03-05', 'miguel', 'aaron', '1983-11-12','88 kahele','kihei','HAWAII','96753')
+
+rec=2336  
+rec=2337 ndx=2337 2024-03-06 1:27 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-03-06', 'Kaawa', 'JohnDerek', '1984-05-30','165 Waimaluhia Lane Apt 102','Wailuku','HI','96793')
+
+rec=2337  
+rec=2338 ndx=2338 2024-03-12 8:34 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-03-12', 'Lozak', 'Gillian', '1998-08-20','4735 North Campbell Avenue','Chicago','IL','60625')
+
+rec=2338  
+rec=2339 ndx=2339 2024-03-12 11:52 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-03-12', 'Lani', 'Robilynn', '1981-05-08','302 A Manini Place ','Kihei ','HAWAII','96753')
+
+rec=2339  
+rec=2340 ndx=2340 2024-03-21 10:01 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200291, '2024-03-21', 'Jones', 'James', '1959-09-09','605 Clareece Park Place','Franklin','TN','37069')
+
+rec=2340  
+rec=2341 ndx=2341 2024-03-25 3:07 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-03-25', 'Arkles', 'Ari', '1996-06-11','P.O. box 791077','Paia','HAWAII','96779')
+
+rec=2341  
+rec=2342 ndx=2342 2024-03-25 3:13 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-03-25', 'Arkles', 'Ari', '1996-06-25','P.O. box 791077','Paia','HAWAII','96779')
+
+rec=2342  
+rec=2343 ndx=2343 2024-04-03 1:17 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-04-03', 'Yamamoto', 'Jayna', '1987-04-14','207 Kolohala Drive','Kula','HI ','96790')
+
+rec=2343  
+rec=2344 ndx=2344 2024-04-11 2:33 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-04-11', 'Bourland', 'Alena', '1980-10-11','31 Kili Nahe St','Lahaina','HAWAII','96761')
+
+rec=2344  
+rec=2345 ndx=2345 2024-04-11 2:33 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-04-11', 'Bourland', 'Alena', '1980-10-11','31 Kili Nahe St','Lahaina','HAWAII','96761')
+
+rec=2345  
+rec=2346 ndx=2346 2024-04-11 2:54 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-04-11', 'Bourland ', 'Alena ', '1980-10-11','31 Kili Nahe St','Lahaina ','HI','96761')
+
+rec=2346  
+rec=2347 ndx=2347 2024-04-28 1:58 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-04-28', 'Arkles', 'Ari', '1996-06-11','P.O. box 791077','Paia','HAWAII','96779')
+
+rec=2348 ndx=2348 2024-05-10 11:21 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-05-10', 'Pendleton', 'Aiyana', '1968-05-03','113 Pine Street','Santa Fe','NM','87501')
+
+rec=2348  
+rec=2349 ndx=2349 2024-05-12 5:18 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-05-12', 'Stewart', 'Patricia', '1952-02-23','3 Marcellina Ln','Galisteo','NM','87540')
+
+rec=2349  
+rec=2350 ndx=2350 2024-05-14 2:37 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-05-14', 'Stewarat', 'Patricia', '1952-02-23','3 Marcellina Ln','Galisteo','NM','87540')
+
+rec=2350  
+rec=2351 ndx=2351 2024-05-15 4:01 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200423, '2024-05-15', 'Mutz', 'David', '1989-09-22','','','FL','33611')
+
+rec=2351  
+rec=2352 ndx=2352 2024-05-16 1:58 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-05-16', 'Babcock', 'Cole', '1996-01-31','96 Kahele Pl','Kihei','HI','96753')
+
+rec=2352  
+rec=2353 ndx=2353 2024-05-21 6:55 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-05-21', 'Bourland', 'Alena', '1980-10-09','31 Kili Nahe St.','Lahaina','HAWAII','96761')
+
+rec=2354 ndx=2354 2024-05-22 10:41 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-05-22', 'Hewitt', 'Sheila M', '1944-03-19','903 West Alameda St.','Santa Fe','NM','87501')
+
+rec=2354  
+rec=2355 ndx=2355 2024-05-22 10:56 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-05-22', 'Hewitt', 'Sheila M', '1944-03-19','903 West Alameda St.','Santa Fe','NM','87501')
+
+rec=2355  
+rec=2356 ndx=2356 2024-05-22 11:09 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-05-22', 'doe', 'john', '1988-05-25','','','TN','')
+
+rec=2356  
+rec=2357 ndx=2357 2024-05-23 11:00 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-05-23', 'kitos', 'gary', '1950-05-02','1234 Main Street','Franklin','TN','37067')
+
+rec=2357  
+rec=2358 ndx=2358 2024-05-30 9:23 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200287, '2024-05-30', 'wilber', 'Kathlen', '1956-08-10','3055 old lebanon dirt rd.','Mount Juliet','TENNESSEE','37122')
+
+rec=2359 ndx=2359 2024-05-30 9:32 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200287, '2024-05-30', 'Tracy', 'Frizsell', '1968-08-19','1832 Park Street Unit','White Bluff','TN','37187')
+
+rec=2359  
+rec=2359  
+rec=2360 ndx=2360 2024-06-04 1:34 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200423, '2024-06-04', 'Senfeld', 'Jacob', '1989-06-21','13513 Woodside Dr','Hudson ','FL','34667')
+
+rec=2360  
+rec=2361 ndx=2361 2024-06-04 1:57 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200287, '2024-06-04', 'Sanders', 'Deborah', '1950-10-09','1133 Duncanwood Dr','Nashville','TN','37204')
+
+rec=2361  
+rec=2362 ndx=2362 2024-06-04 3:44 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200287, '2024-06-04', 'Sanders', 'Deborah', '1950-10-09','1133 Duncanwood Dr','Nashville','TN','37204')
+
+rec=2363 ndx=2363 2024-06-05 10:29 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200287, '2024-06-05', 'Gordon', 'James', '2010-01-26','4204 Hillsboro Pike #102','Nashville','TN','37215')
+
+rec=2363  
+rec=2364 ndx=2364 2024-06-10 4:21 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-06-10', 'Doe', 'joe', '1995-05-25','','','TN','')
+
+rec=2364  
+rec=2365 ndx=2365 2024-06-10 6:27 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-06-10', 'Doe', 'Jane', '1999-04-04','1234 Main Street','Franklin','TN','37064')
+
+rec=2365  
+rec=2365  
+rec=2366 ndx=2366 2024-07-07 10:11 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-07-07', 'JAMES', 'JASMINE', '1993-08-23','10523 East Wallflower Lane','FLORENCE','AZ','85132')
+
+rec=2366  
+rec=2367 ndx=2367 2024-07-11 5:24 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-07-11', 'Bradley', 'Patricia', '1949-07-18','480 Kenolio Road  Apt 16-104','Kihei','HI','96753')
+
+rec=2367  
+rec=2368 ndx=2368 2024-07-11 5:24 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-07-11', 'Bradley', 'Patricia', '1949-07-18','480 Kenolio Road  Apt 16-104','Kihei','HI','96753')
+
+rec=2368  
+rec=2369 ndx=2369 2024-07-12 4:15 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-07-12', 'Herold', 'Connell', '2022-02-06','963 Verdinal Lane','Santa Fe','NM','87505')
+
+rec=2369  
+rec=2369  
+rec=2370 ndx=2370 2024-07-12 6:18 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-07-12', 'Herold', 'Connell', '2022-02-06','963 Verdinal Lane','Santa Fe','NM','87505')
+
+rec=2370  
+rec=2371 ndx=2371 2024-07-12 6:33 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-07-12', 'Herold', 'Connell', '2022-02-06','963 Verdinal Lane','Santa Fe','NM','87505')
+
+rec=2371  
+rec=2372 ndx=2372 2024-07-13 4:17 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-07-13', 'Brott', 'Oren', '2017-08-17','25 Calle San Acacia','Santa Fe ','NEW MEXICO','87506')
+
+rec=2372  
+rec=2373 ndx=2373 2024-07-23 9:35 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-07-23', 'Roybal', 'DeAnnette ', '1983-06-14','P.O. Box 28524','Santa Fe ','NM','87592')
+
+rec=2373  
+rec=2374 ndx=2374 2024-07-23 9:37 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-07-23', 'Roybal', 'DeAnnette ', '1983-06-14','P.O. Box 28524','Santa Fe ','NM','87592')
+
+rec=2374  
+rec=2375 ndx=2375 2024-07-23 9:41 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-07-23', 'Roybal', 'DeAnnette ', '1983-06-14','P.O. Box 28524','Santa Fe ','NM','8750')
+
+rec=2375  
+rec=2376 ndx=2376 2024-07-23 11:19 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-07-23', 'Roybal', 'DeAnnette ', '1983-06-14','P.O. Box 28524','Santa Fe ','NM','8750')
+
+rec=2377 ndx=2377 2024-07-24 12:31 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-07-24', 'Roybal', 'DeAnnette ', '1983-06-14','P.O. Box 28524','Santa Fe ','NM','8750')
+
+rec=2378 ndx=2378 2024-07-24 2:00 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-07-24', 'Streeper', 'Lilia', '1983-01-04','1304 LUJAN ST','Santa Fe','NM','87505')
+
+rec=2378  
+rec=2379 ndx=2379 2024-07-30 3:30 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-07-30', 'Nylander', 'Jeremy', '1981-05-15','2209 Redwing Drive','Denton','TX','76205')
+
+rec=2379  
+rec=2380 ndx=2380 2024-08-02 4:21 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200420, '2024-08-02', 'doe', 'jane', '2000-01-01','','','WA','')
+
+rec=2381 ndx=2381 2024-08-02 4:21 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200420, '2024-08-02', 'doe', 'jane', '1950-03-03','','','TN','')
+
+rec=2380  
+rec=2381  
+rec=2380  
+rec=2382 ndx=2382 2024-08-04 3:53 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-08-04', 'Havins', 'Lisa', '1955-03-24','27 Pothina Street unit 1401','wailuku','HI','96793')
+
+rec=2382  
+rec=2383 ndx=2383 2024-08-04 4:36 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-08-04', 'Havins', 'Lisa', '1955-03-24','27 Pothina Street unit 1401','wailuku','HI','96793')
+
+rec=2383  
+rec=2384 ndx=2384 2024-08-08 2:55 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-08-08', 'Roybal', 'DeAnnette ', '1983-06-14','P.O. Box 28524','Santa Fe ','NM','8750')
+
+rec=2384  
+rec=2384  
+rec=2385 ndx=2385 2024-08-08 2:59 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-08-08', 'Roybal', 'DeAnnette ', '1983-06-14','P.O. Box 28524','Santa Fe ','NM','8750')
+
+rec=2385  
+rec=2386 ndx=2386 2024-08-08 2:59 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-08-08', 'Roybal', 'DeAnnette ', '1983-06-14','P.O. Box 28524','Santa Fe ','NM','8750')
+
+rec=2386  
+rec=2387 ndx=2387 2024-08-08 8:23 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200420, '2024-08-08', 'Ha', 'Khanie', '1980-12-02','11429 SE 195th Pl','Kent','WA','98031')
+
+rec=2387  
+rec=2388 ndx=2388 2024-08-10 12:51 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-08-10', 'Smith', 'Jim', '1950-03-03','123 main street','Franklin','TN','37067')
+
+rec=2388  
+rec=2389 ndx=2389 2024-08-11 8:37 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-08-11', 'ABC', 'XYZ', '1992-06-01','','','NEW JERSEY','08854')
+
+rec=2389  
+rec=2390 ndx=2390 2024-08-12 11:31 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-08-12', 'Murray', 'Tami', '1964-01-02','208 Kahana Ridge Drive','Lahaina','HI','96761')
+
+rec=2390  
+rec=2391 ndx=2391 2024-08-12 12:56 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-08-12', 'Mir', 'Jawad', '1977-01-29','5836 Glen Erin Drive','Mississuauga','ON','94010')
+
+rec=2392 ndx=2392 2024-08-12 7:21 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-08-12', 'Mir', 'Jawad', '1981-04-16','123 Morgan st','Toronto','ON ','m1k 5j7')
+
+rec=2392  
+rec=2393 ndx=2393 2024-08-13 10:01 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-13', 'Pruitt', 'Mark', '1968-03-12','3713 Cherrylog Road','Knoxville','TN ','37921')
+
+rec=2393  
+rec=2394 ndx=2394 2024-08-13 10:27 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-13', 'Pruitt', 'Mark', '1968-03-12','3713 Cherrylog Road','Knoxville','TN','37921')
+
+rec=2394  
+rec=2395 ndx=2395 2024-08-13 10:44 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-08-13', 'Elahi', 'Sufyan', '1982-06-03','','','FLORIDA','')
+
+rec=2396 ndx=2396 2024-08-13 2:23 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-13', 'Quesenberry', 'Kelly', '1966-04-11','403, Big Red Drive','Hillsville','VA','24343')
+
+rec=2396  
+rec=2397 ndx=2397 2024-08-13 3:29 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200450, '2024-08-13', 'Doe', 'Joe', '1962-05-22','124 Main St','','GA','')
+
+rec=2397  
+rec=2398 ndx=2398 2024-08-14 10:47 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-08-14', 'Elahi', 'Sufyan', '1982-05-03','','','FLORIDA','')
+
+rec=2398  
+rec=2395  
+rec=2399 ndx=2399 2024-08-14 11:22 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-08-14', 'Elahi', 'Sufyan', '0001-01-01','','','FLORIDA','')
+
+rec=2399  
+rec=2400 ndx=2400 2024-08-14 11:28 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-14', 'Fullen', 'Sophie', '2018-02-14','111 Castanet ct','Georgetown','KY','40324')
+
+rec=2401 ndx=2401 2024-08-14 1:02 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-08-14', 'Elahi', 'Sufyan', '0001-01-01','','','FLORIDA','')
+
+rec=2401  
+rec=2402 ndx=2402 2024-08-14 2:41 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-14', 'Keeton', 'Maegan', '1997-02-14','1564 Chadwick Dr','Lexington','KY','40515')
+
+rec=2402  
+rec=2403 ndx=2403 2024-08-14 9:30 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-08-14', 'Calina', 'Brandie', '1970-03-28','1520 Kauhikoa rd','Haiku','HI','96708')
+
+rec=2403  
+rec=2404 ndx=2404 2024-08-14 9:37 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-14', 'Hayes', 'Stephanie', '1984-12-19','1391 Cummins Ferry Road','Salvisa','KY','40372')
+
+rec=2404  
+rec=2405 ndx=2405 2024-08-14 9:44 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-14', 'Hayes', 'Stephanie', '1984-12-19','1391 Cummins Ferry Road','Salvisa','KY','40372')
+
+rec=2405  
+rec=2406 ndx=2406 2024-08-14 9:49 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-14', 'Hayes', 'Stephanie', '1984-12-19','1391 Cummins Ferry Road','Salvisa','KY','40372')
+
+rec=2406  
+rec=2407 ndx=2407 2024-08-15 10:13 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-08-15', 'Elahi', 'Sufyan', '0001-01-01','','','FLORIDA','')
+
+rec=2408 ndx=2408 2024-08-15 10:14 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-15', 'Elahi', 'Sufyan', '0001-01-01','','','FLORIDA','')
+
+rec=2408  
+rec=2409 ndx=2409 2024-08-15 10:30 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-15', 'Elahi', 'Sufyan', '0001-01-01','','','FLORIDA','')
+
+rec=2410 ndx=2410 2024-08-15 10:36 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-15', 'Elahi', 'Sufyan', '0001-01-01','','','FLORIDA','')
+
+rec=2411 ndx=2411 2024-08-16 6:10 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-16', 'Pigg', 'Kayla ', '1996-07-02','1158 karla dr','Paris','KY','40361')
+
+rec=2411  
+rec=2412 ndx=2412 2024-08-16 8:13 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-16', 'Elahi', 'Sufyan', '0001-01-01','','','FLORIDA','')
+
+rec=2413 ndx=2413 2024-08-18 11:20 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-18', 'ALMAS', 'furqan', '2024-08-19','','Lahore','PUNJAB','54000')
+
+rec=2413  
+rec=2413  
+rec=2413  
+rec=2414 ndx=2414 2024-08-19 12:37 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-19', 'ALMAS', 'furqan', '2024-08-19','','Lahore','PUNJAB','54000')
+
+rec=2414  
+rec=2414  
+rec=2414  
+rec=2414  
+rec=2414  
+rec=2415 ndx=2415 2024-08-19 4:27 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-19', 'ALMAS', 'furqan', '2024-08-19','','Lahore','PUNJAB','54000')
+
+rec=2415  
+rec=2416 ndx=2416 2024-08-19 3:29 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-19', 'Edenstrom', 'Patricia', '1959-03-28','517 Mallard Park','Verailles','KY','40383')
+
+rec=2416  
+rec=2417 ndx=2417 2024-08-19 3:39 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-19', 'Edenstrom', 'Patty', '1959-03-28','517 Mallard Park','Versailles','KY','40383')
+
+rec=2418 ndx=2418 2024-08-19 11:56 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-19', 'ALMAS', 'furqan', '2024-08-20','','Lahore','PUNJAB','54000')
+
+rec=2418  
+rec=2419 ndx=2419 2024-08-20 1:47 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-20', 'ALMAS', 'furqan', '2024-08-20','','Lahore','PUNJAB','54000')
+
+rec=2419  
+rec=2419  
+rec=2419  
+rec=2419  
+rec=2419  
+rec=2419  
+rec=2419  
+rec=2419  
+rec=2419  
+rec=2419  
+rec=2420 ndx=2420 2024-08-20 4:36 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-20', 'ALMAS', 'furqan', '2024-08-20','','Lahore','PUNJAB','54000')
+
+rec=2420  
+rec=2421 ndx=2421 2024-08-20 9:10 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-20', 'gjhk', 'gghjk', '2024-08-08','','','PK','')
+
+rec=2421  
+rec=2420  
+rec=2422 ndx=2422 2024-08-20 10:33 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-20', 'Petty', 'Amanda', '1994-03-18','2008 Memphis Ct.','Lexington','KY','40505')
+
+rec=2422  
+rec=2423 ndx=2423 2024-08-20 1:44 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-20', 'Jackson', 'Kaylee', '2001-04-01','400 South 8th St','Wytheville','VA','24382')
+
+rec=2423  
+rec=2419  
+rec=2424 ndx=2424 2024-08-21 1:47 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-21', 'ALMAS', 'furqan', '2024-08-20','','Lahore','PUNJAB','54000')
+
+rec=2424  
+rec=2420  
+rec=2425 ndx=2425 2024-08-21 5:11 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-21', 'x', 'y', '2024-08-21','z','d','A','g')
+
+rec=2425  
+rec=2426 ndx=2426 2024-08-21 5:13 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-21', 'a', 'n', '2024-08-20','m','h','A','l')
+
+rec=2426  
+rec=2426  
+rec=2427 ndx=2427 2024-08-21 3:34 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-21', 'Mangialardi', 'Jackson', '2021-09-07','2101 10th Street','Radford','VA','24141')
+
+rec=2427  
+rec=2428 ndx=2428 2024-08-22 12:19 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-22', 'ALMAS', 'furqan', '2024-08-15','','Lahore','PUNJAB','54000')
+
+rec=2428  
+rec=2428  
+rec=2428  
+rec=2429 ndx=2429 2024-08-22 1:57 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-08-22', 'ORTIZ', 'GINA', '1981-12-03','106 Victoria Street','Santa Fe','NM','87505')
+
+rec=2429  
+rec=2430 ndx=2430 2024-08-23 4:01 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-08-23', 'Elahi', 'Sufyan', '2024-08-23','194 C','Lahore','PUNJAB','54000')
+
+rec=2430  
+rec=2431 ndx=2431 2024-08-28 10:09 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-08-28', 'hankinson', 'Julia', '2024-08-28','2840 Michelle park','lexington ','KY','40511')
+
+rec=2431  
+rec=2432 ndx=2432 2024-08-31 1:18 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-08-31', 'Gomez', 'Sebastian', '1990-06-25','93 Hoolaau st','Wailuku','HI','96793')
+
+rec=2432  
+rec=2433 ndx=2433 2024-09-03 1:14 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-09-03', 'a', 'b', '2024-01-01','','','LOUISANA','')
+
+rec=2433  
+rec=2434 ndx=2434 2024-09-10 12:43 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-09-10', 'Gomez', 'Sebastian', '1990-06-25','93 Hoolaau st','Wailuku','HI','96793')
+
+rec=2434  
+rec=2435 ndx=2435 2024-09-10 12:53 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-09-10', 'Gomez', 'Sebastian', '1990-06-25','93 Hoolaau st','Wailuku','HI','96793')
+
+rec=2435  
+rec=2436 ndx=2436 2024-09-10 1:01 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-09-10', 'Gomez', 'Sebastian', '1990-06-25','93 Hoolaau st','Wailuku','HI','96793')
+
+rec=2436  
+rec=2437 ndx=2437 2024-09-10 2:19 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-09-10', 'Gomez', 'Sebastian', '1990-06-25','93 Hoolaau st','Wailuku','HI','96793')
+
+rec=2437  
+rec=2438 ndx=2438 2024-09-12 5:08 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-09-12', 'weeks', 'David', '1961-07-05','910 Camino Sierra Vis','Santa Fe','NM','87505-1032')
+
+rec=2438  
+rec=2439 ndx=2439 2024-09-19 10:57 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-09-19', 'Smith', 'Elizabeth', '1987-06-05','915 California Hollow Rd','Gray','KY','40734')
+
+rec=2439  
+rec=2440 ndx=2440 2024-09-19 1:05 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-09-19', 'foster', 'Kimberly', '1971-04-22','257 shoreside dr','lexington','KY','40515')
+
+rec=2440  
+rec=2441 ndx=2441 2024-09-23 2:29 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-09-23', 'Kendrick', 'Eliam', '2016-09-09','145 Hemingway Pl','georgetown','KY','40324')
+
+rec=2441  
+rec=2442 ndx=2442 2024-10-07 10:46 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-10-07', 'Grunwals', 'Abigail', '2002-10-09','1220 Colonial Drive ','lexington','KY','40504')
+
+rec=2442  
+rec=2443 ndx=2443 2024-10-07 11:36 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-10-07', 'Manning', 'DeMeen', '1991-12-21','104 Wishing Well Path #4103','Gerogetown','KENTUCKY','40324')
+
+rec=2443  
+rec=2444 ndx=2444 2024-10-08 6:35 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-10-08', 'Jaeger', 'Janice', '2023-12-31','140, Uwapo Rd','Kihei','HI','96753')
+
+rec=2445 ndx=2445 2024-10-08 6:36 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-10-08', 'Jaeger', 'Janice', '1951-12-31','140, Uwapo Rd','Kihei','HI','96753')
+
+rec=2445  
+rec=2446 ndx=2446 2024-10-08 6:55 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-10-08', 'Jaeger', 'Janice', '1951-12-01','140, Uwapo Rd','Kihei','HI','96753')
+
+rec=2446  
+rec=2447 ndx=2447 2024-10-09 3:17 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-10-09', 'Varela', 'Gloria', '1965-03-01','7213 Avenida el Nido','Santa Fe','NM','87507')
+
+rec=2447  
+rec=2448 ndx=2448 2024-10-16 9:59 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-10-16', 'Bracewell', 'Mellie', '1964-11-07','223 N Guadalupe St #271','Santa Fe','NEW MEXICO','87501')
+
+rec=2448  
+rec=2449 ndx=2449 2024-10-18 5:13 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-10-18', 'Weiss', 'John', '1953-05-28','400 Sugartree Lane','Franklin','TN','37064')
+
+rec=2449  
+rec=2450 ndx=2450 2024-10-19 9:46 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-10-19', 'Phelps', 'Jacqueline Paulina', '1993-08-07','1104 Canyon Road','Santa Fe','NM','87501')
+
+rec=2450  
+rec=2451 ndx=2451 2024-10-24 12:47 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-10-24', 'Bixby', 'Sarafina', '2009-01-25','5 Calle Pinonero','Santa Fe','NM','87505')
+
+rec=2451  
+rec=2452 ndx=2452 2024-11-02 1:40 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-11-02', 'smith', 'john', '1955-05-16','','','TN','')
+
+rec=2452  
+rec=2452  
+rec=2453 ndx=2453 2024-11-03 7:22 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-11-03', 'Schenck', 'Adam', '1992-06-14','346 Barbee Road','Richlands','NC','28574')
+
+rec=2453  
+rec=2454 ndx=2454 2024-11-03 7:29 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-11-03', 'Schenck', 'Adam', '1992-06-14','346 Barbee Road','Richlands','NC','28574')
+
+rec=2454  
+rec=2455 ndx=2455 2024-11-08 5:48 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-11-08', 'smith', 'Jim', '1950-06-06','123 M','','TN','')
+
+rec=2455  
+rec=2456 ndx=2456 2024-11-09 5:49 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-11-09', 'ghgh', 'rrr', '1960-09-09','','','TN','')
+
+rec=2456  
+rec=2457 ndx=2457 2024-11-09 6:11 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-11-09', 'McCormick ', 'Shannon ', '1987-07-29','P.O. Box 40','Kahului ','HAWAII ','96733')
+
+rec=2457  
+rec=2458 ndx=2458 2024-11-15 11:33 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-11-15', 'Hunt', 'Andrew', '1964-05-28','819 Bishops Lodge Rd','Santa Fe','NM','87501')
+
+rec=2458  
+rec=2458  
+rec=2459 ndx=2459 2024-11-20 3:21 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-11-20', 'Haigh', 'Andrea', '1958-05-27','PO Box 11990','Lahaina','HI','96761')
+
+rec=2460 ndx=2460 2024-11-21 11:17 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-11-21', 'Patient', 'Test', '1991-04-04','1234 Main Street','Franklin','TN','37064')
+
+rec=2460  
+rec=2461 ndx=2461 2024-11-27 11:10 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-11-27', 'kitos', 'gary', '1991-09-09','400 Sugartree Ln Ste 510','Franklin','TN','37064')
+
+rec=2461  
+rec=2462 ndx=2462 2024-11-28 5:08 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-11-28', 'Tester', 'Mia', '2000-11-28','101 My Street','Knoxville','TN','37921')
+
+rec=2463 ndx=2463 2024-11-28 5:09 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-11-28', 'Tester', 'Mia', '2000-11-28','101 My Street','Knoxville','TN','37921')
+
+rec=2464 ndx=2464 2024-11-28 5:29 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-11-28', 'Tester', 'Mia', '2000-04-04','101 My Street','Lexington','KY','40513')
+
+rec=2464  
+rec=2465 ndx=2465 2024-11-28 9:57 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-11-28', 'Avery', 'Max', '1986-06-20','106 Victoria Street','Santa Fe','NM','87505')
+
+rec=2465  
+rec=2368  
+rec=2466 ndx=2466 2024-12-02 2:36 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2024-12-02', 'Doe', 'Jane', '1988-05-05','1234 N Main St','Franklin','TN','122221')
+
+rec=2466  
+rec=2467 ndx=2467 2024-12-02 3:52 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2024-12-02', 'Smith', 'John', '1995-05-22','','','ID','')
+
+rec=2467  
+rec=2468 ndx=2468 2024-12-02 4:48 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2024-12-02', 'Anderson', 'Lauren', '1979-11-18','','','ID','')
+
+rec=2468  
+rec=2469 ndx=2469 2024-12-03 11:55 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-12-03', 'Tester', 'Bill', '2000-01-03','101 E Bay','Nowhere ','VA','24301')
+
+rec=2469  
+rec=2470 ndx=2470 2024-12-03 12:13 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2024-12-03', 'Moss', 'Susan', '1966-12-01','89 No Name Rd','Blackfoot','ID','83221')
+
+rec=2470  
+rec=2471 ndx=2471 2024-12-03 1:03 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-12-03', 'Carr', 'Sandra', '1950-02-12','25 Hui Rd. E','Lahaina','HI','96761')
+
+rec=2471  
+rec=2472 ndx=2472 2024-12-06 1:04 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-12-06', 'Madeline', 'Denaro', '1995-10-29','5632 Chateau dr','San Diego','CA','92117')
+
+rec=2472  
+rec=2473 ndx=2473 2024-12-09 2:49 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-12-09', 'smith', 'gina', '1966-04-04','1234 Main Street','Franklin','TN','37067')
+
+rec=2473  
+rec=2474 ndx=2474 2024-12-09 4:40 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2024-12-09', 'Smith', 'gary', '1966-05-04','400 Sugartree Ln Ste 510','Franklin','TN','37064')
+
+rec=2474  
+rec=2475 ndx=2475 2024-12-11 2:50 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2024-12-11', 'Houghton', 'Sarah', '1981-09-03','2308 Douglas St','Pocatello','ID','83201')
+
+rec=2475  
+rec=2476 ndx=2476 2024-12-13 10:53 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-12-13', 'Gatto', 'Bennett', '1987-02-10','131 N. 4th St.','Nicholasville','KY','40356')
+
+rec=2476  
+rec=2477 ndx=2477 2024-12-24 5:24 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2024-12-24', 'Grinch', 'Sam', '1960-12-20','3313 Elf Lane','Winterland','KY','40513')
+
+rec=2477  
+rec=2478 ndx=2478 2024-12-24 10:08 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-12-24', 'Stewart', 'Patricia', '1952-02-23','3 Marcellina Ln','Galisteo','NM','87540')
+
+rec=2478  
+rec=2479 ndx=2479 2024-12-26 11:47 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2024-12-26', 'Kitts', 'Evan', '1984-11-23','12 Waipaa Lane Unit 206','Wailuku','HI','96793')
+
+rec=2479  
+rec=2480 ndx=2480 2024-12-27 5:17 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-12-27', 'Fellrath', 'Kiersten', '1984-01-08','42 Tayeh Huu U','Santa Fe','NM','87506')
+
+rec=2480  
+rec=2481 ndx=2481 2024-12-31 11:29 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2024-12-31', 'Lincoln', 'Kellie', '1982-07-29','4432 Chamisa Path Rd','Santa Fe','NM','87507')
+
+rec=2481  
+rec=2482 ndx=2482 2025-01-01 6:35 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-01-01', 'Holding', 'Noah', '2003-08-24','1311 Alamo Rd.','Santa Fe','NEW MEXICO','87507')
+
+rec=2482  
+rec=2483 ndx=2483 2025-01-09 9:39 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2025-01-09', 'Haigh', 'Andrea', '1958-05-27','PO Box 11990','Lahaina','HI','96761')
+
+rec=2483  
+rec=2484 ndx=2484 2025-01-13 4:21 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-01-13', 'ALLEN', 'DEBRE', '1955-11-30','6587 Valentine Way #104','Santa Fe','NM','87507')
+
+rec=2484  
+rec=2485 ndx=2485 2025-01-14 4:21 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2025-01-14', 'England', 'Cameron', '1997-12-22','1500 Venture Way APT 12208','Pocatello','ID','83201')
+
+rec=2485  
+rec=2486 ndx=2486 2025-01-15 12:25 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2025-01-15', 'Kelsey', 'Brooke', '2007-07-23','308 Monroe St','Blackfoot ','IDAHO','83221')
+
+rec=2486  
+rec=2487 ndx=2487 2025-01-15 2:46 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2025-01-15', 'Martin', 'Jarmo', '2011-03-06','213 N 500 W','Blackfoot','ID','83221')
+
+rec=2487  
+rec=2488 ndx=2488 2025-01-17 1:42 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-01-17', 'Fuqua', 'Rene', '1983-05-31','2329 Calle Luminoso','Santa Fe','NM','87505')
+
+rec=2489 ndx=2489 2025-01-17 1:43 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-01-17', 'Fuqua', 'Rene', '1983-05-31','2329 Calle Luminoso','Santa Fe','NM','87505')
+
+rec=2489  
+rec=2490 ndx=2490 2025-01-17 6:08 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-01-17', 'Beardsley', 'Kurt', '1967-09-11','2037 Hopi Rd.','Santa Fe','NM','87505')
+
+rec=2490  
+rec=2491 ndx=2491 2025-01-22 10:48 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2025-01-22', 'Bowers', 'Lucy', '1997-10-12','2200 Tracery Oaks Dr. APT 7304','Lexington','KY','40514')
+
+rec=2491  
+rec=2492 ndx=2492 2025-01-23 4:47 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2025-01-23', 'Anderson', 'Tessa', '2000-02-13','201 Briscoe Road Unit 2','Chubbuck','ID','83202')
+
+rec=2492  
+rec=2493 ndx=2493 2025-01-27 4:52 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200287, '2025-01-27', 'Reed', 'David', '1986-11-19','4886 US Highway 641 N','Gilbertsville','KY','42044')
+
+rec=2493  
+rec=2494 ndx=2494 2025-01-28 7:10 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2025-01-28', 'Sempell', 'Donna', '1957-08-25','202 Kapuahi Street','Makawao','HI','96768')
+
+rec=2494  
+rec=2495 ndx=2495 2025-01-28 7:37 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2025-01-28', 'Vanhoose', 'Brian', '1975-08-15','107 Galehouse Rd','Georgetown','KY','40324')
+
+rec=2495  
+rec=2496 ndx=2496 2025-01-28 9:19 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-01-28', 'Love ', 'Tristan ', '1987-01-01','1402 Santa Rosa Dr. ','Santa Fe','NEW MEXICO','87505')
+
+rec=2496  
+rec=2497 ndx=2497 2025-01-30 1:56 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2025-01-30', 'Sempell', 'Donna', '1957-08-25','202 Kapuahi Street','Makawao','HI','96768')
+
+rec=2497  
+rec=2498 ndx=2498 2025-01-30 3:11 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-01-30', 'Goel', 'Puja', '1975-08-16','722 Gildersleeve Street','Santa Fe','NM','87505')
+
+rec=2498  
+rec=2499 ndx=2499 2025-01-30 7:01 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-01-30', 'Herold', 'Connell', '2022-02-06','963 Verdinal Lane','Santa Fe','NM','87505')
+
+rec=2499  
+rec=2500 ndx=2500 2025-02-10 11:41 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200220, '2025-02-10', 'Patient', 'Test', '1988-05-05','123 Main Street','Franklin','TN','12345')
+
+rec=2500  
+rec=2501 ndx=2501 2025-02-10 2:51 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2025-02-10', 'Jeppesen', 'Brian', '2009-06-17','2239 E Berggren ln','Idaho Falls ','ID','83401')
+
+rec=2501  
+rec=2502 ndx=2502 2025-02-10 3:22 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2025-02-10', 'CHILBERG', 'KRYSTAL', '1988-08-27','1428 MEGGAN ST','BLACKFOOT ','ID','83221')
+
+rec=2502  
+rec=2503 ndx=2503 2025-02-13 9:13 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 888888, '2025-02-13', 'P', 'Andy', '1999-12-12','123 Fake St','Wyomissing ','PA','19610')
+
+rec=2503  
+rec=2504 ndx=2504 2025-02-13 9:05 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-02-13', 'Stein', 'Wendy', '1970-09-07','223 N Guadalupe Street #827','Santa Fe','NM','87501')
+
+rec=2504  
+rec=2505 ndx=2505 2025-02-20 10:52 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-02-20', 'LOVE', 'TRISTAN', '1987-01-01','1402 SANTA ROSA DR. ','SANTA FE','NEW MEXICO','87505')
+
+rec=2505  
+rec=2506 ndx=2506 2025-02-20 11:23 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-02-20', 'RINZLER', 'HARLEY', '1964-11-14','94 Paseo Encantado NE','Santa Fe','NM','87506')
+
+rec=2506  
+rec=2507 ndx=2507 2025-02-20 4:04 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2025-02-20', 'Cahoon', 'Christopher', '1987-08-08','451 n 8th ave','Pocatello','ID','83201')
+
+rec=2507  
+rec=2508 ndx=2508 2025-02-22 12:43 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-02-22', 'Aragon ', 'Peggy ', '1968-08-24','P.O. Box 4512','Santa Fe','NM','87502')
+
+rec=2508  
+rec=2508  
+rec=2508  
+rec=2508  
+rec=2508  
+rec=2509 ndx=2509 2025-02-24 12:19 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2025-02-24', 'tam', 'anthony', '1992-06-27','6341 wing point dr','idahofalls','ID','83401')
+
+rec=2509  
+rec=2510 ndx=2510 2025-02-24 2:24 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2025-02-24', 'Crolla', 'Nicole', '1995-01-30','1368 Ashment Ave Apt. 1','Idaho Falls','ID','83404')
+
+rec=2510  
+rec=2511 ndx=2511 2025-03-05 11:10 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2025-03-05', 'Young', 'Braxon', '2019-05-07','1552 W Tabernacle Rd','Blackfoot','ID','83221')
+
+rec=2511  
+rec=2512 ndx=2512 2025-03-07 10:37 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-03-07', 'Aragon ', 'Peggy ', '1968-08-24','P.O. Box 4512','Santa Fe','NM','87502')
+
+rec=2512  
+rec=2513 ndx=2513 2025-03-07 10:53 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-03-07', 'Aragon ', 'Peggy ', '1968-08-24','P.O. Box 4512','Santa Fe','NM','87502')
+
+rec=2513  
+rec=2513  
+rec=2514 ndx=2514 2025-03-07 11:09 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-03-07', 'Aragon ', 'Peggy ', '1968-08-24','P.O. Box 4512','Santa Fe','NM','87502')
+
+rec=2514  
+rec=2514  
+rec=2514  
+rec=2515 ndx=2515 2025-03-12 12:16 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-03-12', 'Aragon ', 'Peggy ', '1968-08-24','P.O. Box 4512','Santa Fe','NM','87502')
+
+rec=2515  
+rec=2516 ndx=2516 2025-03-12 5:16 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-03-12', 'Aragon ', 'Peggy ', '1968-08-24','P.O. Box 4512','Santa Fe','NM','87502')
+
+rec=2517 ndx=2517 2025-03-12 5:18 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-03-12', 'Aragon', 'Peggy', '1968-08-24','P.O.Box 4512','Santa Fe','NM','87502')
+
+rec=2517  
+rec=2518 ndx=2518 2025-03-12 5:23 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-03-12', 'Aragon', 'Peggy', '1968-08-24','PO BOX 4512','Santa Fe','NM','87502')
+
+rec=2518  
+rec=2518  
+rec=2519 ndx=2519 2025-03-17 9:36 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200470, '2025-03-17', 'Terramorse', 'Amanda', '1976-05-16','110 W. Woodhaven Ln.','Idaho Falls','IDAHO','83494')
+
+rec=2519  
+rec=2520 ndx=2520 2025-03-18 8:50 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200451, '2025-03-18', 'Tester', 'Ima', '2000-03-18','101 Bay St','Knoxville','TN','37921')
+
+rec=2520  
+rec=2521 ndx=2521 2025-03-24 11:36 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-03-24', 'Chaparro', 'Ramon', '1992-11-29','3061 Primo Colores Street','Santa Fe','NM','87507')
+
+rec=2521  
+rec=2522 ndx=2522 2025-03-27 9:19 am INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200283, '2025-03-27', 'Shaw', 'Amanda', '2025-03-27','8712 Kerri Ruth Rd','Hernando','MS','38632')
+
+rec=2522  
+rec=2523 ndx=2523 2025-04-10 7:32 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-04-10', 'Gatewood', 'Freddie', '1963-07-07','2415A San Patricio Plz','Santa Fe','NEW MEXICO','87505')
+
+rec=2523  
+rec=2524 ndx=2524 2025-04-12 12:33 pm INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, 200459, '2025-04-12', 'Ayala', 'Melissa', '1986-04-06','6504 Camino Rojo','Santa Fe','NM','87507-3291')
+
+rec=2524  

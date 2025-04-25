@@ -1,0 +1,50 @@
+100T      Total IgE
+101T      High Dil.Total IgE
+201       Hymenoptera (5-IgE)
+200-PD    Ped (T-IgE/18IgE/10 IgG4)
+200-1C    MEX Z-1
+200-2C    MEX Z-2
+200-3C    MEX Z-3
+200-4C    MEX Z-4
+200-5C    MEX Z-5
+200-6C    MEX Z-6
+200-7C    MEX Z-7
+200-8C    MEX Z-8
+250       Aller food ID (IgE)
+250-G     Aller food ID (IgG)
+250-G4    Aller food ID (IgG4)
+252       Aller molds(IgG)
+200TN     Aller-ID TN
+200FL     Aller-ID FL
+200GA     Aller-ID GA
+200AZ     Aller-ID AZ
+200TX     Aller-ID TX
+200MO     Aller-ID MO
+700       Food Pnl (33IgE/IgG4)
+900       Food Pnl(40IgE/IgG4)
+901       Food Pnl(28IgE/22IgG4)
+900-1     Total IgG
+900-2     Total IgA
+900-3     Total IgM
+900-4     Immuno Pnl (TIgG/TIgA/TIgM)
+991       Gastro Pnl(46IgE/45IgG4)                #### This begins in column 51 so it will not be seen by ALIS
+######  ANYTHING FROM HERE DOWN WILL NOT BE SEEN BY ALIS  ################
+
+The format is
+<Panel Code [PAD WITH SPACES to 9 characters] ><space><Description>
+
+Panel code is up to 9 characters in length
+Descriptions are limited to 40 characters.
+
+If the panel number is less than  characters, pad the remaining characters with spaces,
+
+Space separates Panel Code and Panel Description
+
+NO TAB CHARACTERS
+
+
+
+00000000001111111111222222222233333333334444444445   column number tens digit
+12345678901234567890123456789012345678901234567890                 ones digit
+CCCCCCCCCCDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD anything after the 50th character is ignored
+

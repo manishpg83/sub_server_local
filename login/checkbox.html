@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+.txt{display: inline-block;font:400 1em Arial,sans-serif;padding: 0 0 4px 0;}
+
+.chk {
+    margin: 0;
+    display: inline-block;
+	height:0;
+    cursor: pointer;
+    position: relative;
+}
+.inline{display: inline-block;}
+  .chk > span {
+    color: #000;
+     padding: 0;
+	 margin:0;
+	 height:0;
+	 display: inline-block;
+}
+
+.chk > input {
+    height: 1.3em;
+    width: 1.5em;
+	margin:0 1px 0 1px;
+	padding:4px 0 0 0 ;
+    appearance: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    outline: none;
+    transition-duration: 0.1s;
+    background-color: #eee;
+    cursor: pointer;
+  }
+
+.chk > input:checked {
+    border: 1px solid #000;
+    
+}
+.e > input:checked{background-color: #00f;}
+.g > input:checked{background-color: #0f0;}
+.g4 > input:checked{background-color: #ff0;}
+
+.chk > input:checked + span::before {
+content: '\2713';
+display: block;
+text-align: center;
+
+position: absolute;
+left: 0.3rem;
+top: -0.15rem;
+}
+.e > input:checked + span::before {color: #fff;}
+.g,.g4 > input:checked + span::before {color: #000;}
+.chk > input:active {
+    border: 2px solid #000;
+}
+</style><body>
+<div><label class="chk"><input type="checkbox" /><span></span></label><label class="chk"><input type="checkbox" /><span></span></label><label class="chk"><input type="checkbox" /><span></span></label><div class="txt">Check Me</div></div>
+
+<div class="row"><label class="e checkbox"><input type="checkbox" /><span></span></label><label class="g checkbox"><input type="checkbox" /><span></span></label><label class="g4 checkbox"><input type="checkbox" /><span></span></label><div class="txt">Check Me</div></div>
+
+
+<div class="dchk"><label class="chk"><input type="checkbox" id="F0011" class="chk" name="aF0011" value="1" checked/><span></span></label><label class="chk"><input type="checkbox"  id="F0013" class="chk" name="aF0013" value="1" /><span></span></label><label class="chk"><input type="checkbox"  id="F0012" class="chk" name="aF0012" value="1" checked/><span></span></label><div class="inline">&nbsp;<span class="gray">F001</span>&#x2002;Egg&copy;-White</div><br>
+<div class="dchk"><input type="checkbox" id="F2451" class="chk" name="aF2451" value="1" checked/><label for=F2451> </label></div><div class="dchk" ><input type="checkbox"  id="F2453" class="chk" name="aF2453" value="1" /></div><div class="dchk"><input type="checkbox"  id="F2452" class="chk" name="aF2452" value="1" checked/></div><div class="inline">&nbsp;<span class="gray">F245</span>&#x2002;Egg, Whole</div><br>
+<div class="dchk"><input type="checkbox" id="F0751" class="chk" name="aF0751" value="1" checked/><label for=F0751> </label></div><div class="dchk" ><input type="checkbox"  id="F0753" class="chk" name="aF0753" value="1" /></div><div class="dchk"><input type="checkbox"  id="F0752" class="chk" name="aF0752" value="1" checked/></div><div class="inline">&nbsp;<span class="gray">F075</span>&#x2002;Egg&copy;-Yolk</div><br>
+<div class="dchk"><input type="checkbox" id="F0021" class="chk" name="aF0021" value="1" checked/><label for=F0021> </label></div><div class="dchk" ><input type="checkbox"  id="F0023" class="chk" name="aF0023" value="1" checked/></div><div class="dchk"><input type="checkbox"  id="F0022" class="chk" name="aF0022" value="1" /></div><div class="inline">&nbsp;<span class="gray">F002</span>&#x2002;Milk, Cow’s-HD</div><br>
+<div class="dchk"><input type="checkbox" id="F0491" class="chk" name="aF0491" value="1" checked/><label for=F0491> </label></div><div class="dchk" ><input type="checkbox"  id="F0493" class="chk" name="aF0493" value="1" checked/></div><div class="dchk"><input type="checkbox"  id="F0492" class="chk" name="aF0492" value="1" /></div><div class="inline">&nbsp;<span class="gray">F049</span>&#x2002;Apple-HD</div><br>
+<div class="dchk"><input type="checkbox" id="F0921" class="chk" name="aF0921" value="1" checked/><label for=F0921> </label></div><div class="dchk" ><input type="checkbox"  id="F0923" class="chk" name="aF0923" value="1" checked/></div><div class="dchk"><input type="checkbox"  id="F0922" class="chk" name="aF0922" value="1" /></div><div class="inline">&nbsp;<span class="gray">F092</span>&#x2002;Banana</div><br>
+<div class="dchk"><input type="checkbox" id="F2091" class="chk" name="aF2091" value="1" checked/><label for=F2091> </label></div><div class="dchk" ><input type="checkbox"  id="F2093" class="chk" name="aF2093" value="1" checked/></div><div class="dchk"><input type="checkbox"  id="F2092" class="chk" name="aF2092" value="1" /></div><div class="inline">&nbsp;<span class="gray">F209</span>&#x2002;Grapefruit</div><br>
+<div class="dchk"><input type="checkbox" id="F1531" class="chk" name="aF1531" value="1" checked/><label for=F1531> </label></div><div class="dchk" ><input type="checkbox"  id="F1533" class="chk" name="aF1533" value="1" checked/></div><div class="dchk"><input type="checkbox"  id="F1532" class="chk" name="aF1532" value="1" /></div><div class="inline">&nbsp;<span class="gray">F153</span>&#x2002;Kiwi</div><br>
+<div class="dchk"><input type="checkbox" id="F0331" class="chk" name="aF0331" value="1" checked/><label for=F0331> </label></div><div class="dchk" ><input type="checkbox"  id="F0333" class="chk" name="aF0333" value="1" checked/></div><div class="dchk"><input type="checkbox"  id="F0332" class="chk" name="aF0332" value="1" /></div><div class="inline">&nbsp;<span class="gray">F033</span>&#x2002;Orange</div><br>
+<div class="dchk"><input type="checkbox" id="F0251" class="chk" name="aF0251" value="1" checked/><label for=F0251> </label></div><div class="dchk" ><input type="checkbox"  id="F0253" class="chk" name="aF0253" value="1" checked/></div><div class="dchk"><input type="checkbox"  id="F0252" class="chk" name="aF0252" value="1" /></div><div class="inline">&nbsp;<span class="gray">F025</span>&#x2002;Tomato</div><br>
+<div class="dchk"><input type="checkbox" id="F0041" class="chk" name="aF0041" value="1" checked/><label for=F0041> </label></div><div class="dchk" ><input type="checkbox"  id="F0043" class="chk" name="aF0043" value="1" checked/></div><div class="dchk"><input type="checkbox"  id="F0042" class="chk" name="aF0042" value="1" /></div><div class="inline">&nbsp;<span class="gray">F004</span>&#x2002;Wheat</div><br>
+<div class="dchk"><input type="checkbox" id="F0791" class="chk" name="aF0791" value="1" checked/><label for=F0791> </label></div><div class="dchk" ><input type="checkbox"  id="F0793" class="chk" name="aF0793" value="1" checked/></div><div class="dchk"><input type="checkbox"  id="F0792" class="chk" name="aF0792" value="1" /></div><div class="inline">&nbsp;<span class="gray">F079</span>&#x2002;Wheat&copy;-Gluten</div><br>
+<div class="dchk"><input type="checkbox" id="F0201" class="chk" name="aF0201" value="1" checked/><label for=F0201> </label></div><div class="dchk" ><input type="checkbox"  id="F0203" class="chk" name="aF0203" value="1" /></div><div class="dchk"><input type="checkbox"  id="F0202" class="chk" name="aF0202" value="1" /></div><div class="inline">&nbsp;<span class="gray">F020</span>&#x2002;Almond</div><br>
+<div class="dchk"><input type="checkbox" id="F0181" class="chk" name="aF0181" value="1" checked/><label for=F0181> </label></div><div class="dchk" ><input type="checkbox"  id="F0183" class="chk" name="aF0183" value="1" /></div><div class="dchk"><input type="checkbox"  id="F0182" class="chk" name="aF0182" value="1" /></div><div class="inline">&nbsp;<span class="gray">F018</span>&#x2002;Brazil Nut</div><br>
+<div class="dchk"><input type="checkbox" id="F2021" class="chk" name="aF2021" value="1" checked/><label for=F2021> </label></div><div class="dchk" ><input type="checkbox"  id="F2023" class="chk" name="aF2023" value="1" /></div><div class="dchk"><input type="checkbox"  id="F2022" class="chk" name="aF2022" value="1" /></div><div class="inline">&nbsp;<span class="gray">F202</span>&#x2002;Cashew Nut</div><br>
+<div class="dchk"><input type="checkbox" id="F1031" class="chk" name="aF1031" value="1" checked/><label for=F1031> </label></div><div class="dchk" ><input type="checkbox"  id="F1033" class="chk" name="aF1033" value="1" /></div><div class="dchk"><input type="checkbox"  id="F1032" class="chk" name="aF1032" value="1" /></div><div class="inline">&nbsp;<span class="gray">F103</span>&#x2002;Chestnut, Sweet</div><br>
+<div class="dchk"><input type="checkbox" id="F0171" class="chk" name="aF0171" value="1" checked/><label for=F0171> </label></div><div class="dchk" ><input type="checkbox"  id="F0173" class="chk" name="aF0173" value="1" /></div><div class="dchk"><input type="checkbox"  id="F0172" class="chk" name="aF0172" value="1" /></div><div class="inline">&nbsp;<span class="gray">F017</span>&#x2002;Hazelnut/Filbert</div><br>
+<div class="dchk"><input type="checkbox" id="F2011" class="chk" name="aF2011" value="1" checked/><label for=F2011> </label></div><div class="dchk" ><input type="checkbox"  id="F2013" class="chk" name="aF2013" value="1" /></div><div class="dchk"><input type="checkbox"  id="F2012" class="chk" name="aF2012" value="1" /></div><div class="inline">&nbsp;<span class="gray">F201</span>&#x2002;Pecan Nut</div><br>
+<div class="dchk"><input type="checkbox" id="F2031" class="chk" name="aF2031" value="1" checked/><label for=F2031> </label></div><div class="dchk" ><input type="checkbox"  id="F2033" class="chk" name="aF2033" value="1" /></div><div class="dchk"><input type="checkbox"  id="F2032" class="chk" name="aF2032" value="1" /></div><div class="inline">&nbsp;<span class="gray">F203</span>&#x2002;Pistachio Nut</div><br>
+<div class="dchk"><input type="checkbox" id="F3171" class="chk" name="aF3171" value="1" checked/><label for=F3171> </label></div><div class="dchk" ><input type="checkbox"  id="F3173" class="chk" name="aF3173" value="1" /></div><div class="dchk"><input type="checkbox"  id="F3172" class="chk" name="aF3172" value="1" /></div><div class="inline">&nbsp;<span class="gray">F317</span>&#x2002;Walnut, English</div><br>
+<div class="dchk"><input type="checkbox" id="F0311" class="chk" name="aF0311" value="1" checked/><label for=F0311> </label></div><div class="dchk" ><input type="checkbox"  id="F0313" class="chk" name="aF0313" value="1" checked/></div><div class="dchk"><input type="checkbox"  id="F0312" class="chk" name="aF0312" value="1" /></div><div class="inline">&nbsp;<span class="gray">F031</span>&#x2002;Carrot</div><br>
+<div class="dchk"><input type="checkbox" id="F0851" class="chk" name="aF0851" value="1" checked/><label for=F0851> </label></div><div class="dchk" ><input type="checkbox"  id="F0853" class="chk" name="aF0853" value="1" checked/></div><div class="dchk"><input type="checkbox"  id="F0852" class="chk" name="aF0852" value="1" /></div><div class="inline">&nbsp;<span class="gray">F085</span>&#x2002;Celery</div><br>
+<div class="dchk"><input type="checkbox" id="F0351" class="chk" name="aF0351" value="1" checked/><label for=F0351> </label></div><div class="dchk" ><input type="checkbox"  id="F0353" class="chk" name="aF0353" value="1" checked/></div><div class="dchk"><input type="checkbox"  id="F0352" class="chk" name="aF0352" value="1" /></div><div class="inline">&nbsp;<span class="gray">F035</span>&#x2002;Potato, White</div><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

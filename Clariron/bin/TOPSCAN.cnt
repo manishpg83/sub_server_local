@@ -1,0 +1,29 @@
+:Base TOPSCAN.hlp
+:Title TopSpeed Database Scanner
+1 Contents=Contents
+1 Menu Commands=Menu_Commands
+1 About TopScan=TopScan002
+1 Pick TopSpeed File=TopScan003
+1 Format Database Column=TopScan004
+1 Display File Layout=TopScan005
+1 Analyze TopSpeed Database=TopScan012
+1 Export to ASCII File=TopScan023
+1 Show/Hide=TopScan007
+1 Expression=TopScan008
+1 Dynamic index query=TopScan009
+1 Mass update=TopScan010
+1 Mass update progress=Mass_update_progress
+1 Analyze File=Analyze_File
+1 Password Dialog=TopScan013
+1 Select TXD file=Select_TXD_file
+1 Rebuild keys=Rebuild_keys
+1 Search/Replace within Column=TopScan019
+1 Picture Tokens
+2 Picture Tokens=Picture_Tokens
+2 Date Pictures=Date_Pictures
+2 Key-in Template Pictures=Key_in_Template_Pictures
+2 Numeric and Currency Pictures=Numeric_and_Currency_Pictures
+2 Pattern Pictures=Pattern_Pictures
+2 Scientific Notation Pictures=Scientific_Notation_Pictures
+2 String Pictures=String_Pictures
+2 Time Pictures=Time_Pictures

@@ -1,0 +1,476 @@
+C005#Papain^Papain
+C006#Annatto (Red Dye)^Annatto (tinte rojo)
+C007#Orris Root^Raíz de Lirio
+D001#D. pteronyssinus^D. pteronyssinus
+D002#D. farinae^D. farinae
+E001#Cat Antigen-HD^Pelo de Gato
+E004#Cow Dander^Pelo de Ganado
+E005#Dog Epithelium^Pelo de Perro
+E008#Feathers, Budgerigar^Plumas De Perico
+E009#Feathers, Parrot ^Plumas De Loro-ASR*
+E010#Horse Dander^Pelo de Caballo
+E011#Guinea Pig Epithelium^Pelo de Coinejillo de Indias
+E012#Hamster, Golden/Epithelium^Epitelio de Hamster
+E013#Goat Epithelium^Epitelio de Cabra
+E014#Sheep Epithelium^Epitelio de Oveja
+E015#Pig Epithelium^Epitelio de Cerdo
+E070#Feathers, Goose ^Plumas de Ganso
+E071#Mouse Epithelium^Pelo de Ratón
+E072#Mouse Serum Proteins^Proteínas de Suero de Ratón
+E073#Rat Epithelium^Pelo de Rata
+E082#Rabbit Epithelium^Pelo de Conejo
+E085#Feathers, Chicken^Plumas de Gallina
+E086#Feathers, Duck^Plumas de Pato
+E100#Feathers, Pigeon^Plumas de Paloma
+E101#Feathers, Turkey ^Plumas de Pavo
+E102#Pigeon Droppings^Excremento de Paloma
+E103#Cat@-Fel d1^Pelo de Gato@-Fel d1
+E111#Mouse Urine^Orina de ratón
+EZ04#Epidermal Mix^Mezcla de Epidermicas
+EZ06#Dust Mite Mix^Mezcla de Acaros
+EZ07#Epidermal Mix #1^Mezcla de Epidermicas #1
+EZ12#Feather Mix^Mezcla de Plumas
+F001#Egg©-White^Claro Del Huevo
+F002#Milk, Cow's-HD^Leche De Vaca
+F003#Codfish^Bacalao
+F004#Wheat^Trigo
+F005#Rye^Centeno
+F006#Barley^Cebada
+F007#Oat^Avena
+F008#Corn ^Maíz
+F009#Rice^Arroz
+F010#Sesame Seed^Semilla De Ajonjolí
+F011#Jalapeno^Jalapeño
+F012#Pea, Green^Guisante Chinharo
+F013#Peanut-HD^Maní / Cacahuate-HD
+F014#Soybean^Soya
+F015#Bean, White/Navy^Haba Blanca
+F016#Turmeric^Cúrcuma
+F017#Hazelnut^Avellana
+F018#Brazil Nut^Nuez De Brazil
+F019#alpha-Galactose^alpha-Galactose
+F020#Almond^Almendra
+F021#Pomegranate^Granada
+F022#Carob^Algarroba
+F023#Chive^Cebollino
+F024#Shrimp^Camaron
+F025#Tomato^Tomate
+F026#Pork^Carne De Cerdo
+F027#Beef^Carne De Res/Carne De Vaca
+F028#Okra^Ocra
+F029#Bromelain^Bromelina
+F030#Cilantro^Cilantra
+F031#Carrot^Zanahoria
+F032#Anchovy^La Anchoa
+F033#Orange^Naranja
+F035#Potato, White^Papa
+F036#Coconut^Coco
+F040#Tuna^Atún
+F041#Salmon, Atlantic^Salmón Atlántico
+F044#Strawberry^Fresa
+F045#Yeast, Brewers^Levadura De Cerveceria
+F047#Garlic^Ajo
+F048#Onion^Cebolla
+F049#Apple-HD^Manzana
+F054#Potato, Sweet^Batata/Camote
+F075#Egg©-Yolk^Yema Del Huevo
+F076#Milk, Cow's©-Lactalbumin, Alpha ^Lactalbumin Alfa
+F077#Milk, Cow's©-Lactoglobulin, Beta ^Lactoglobulin Beta
+F078#Milk, Cow's©-Casein^Caseína
+F079#Wheat©-Gluten^Gluten
+F080#Lobster, Maine^Langosta
+F081#Cheese, Cheddar^Queso De Cheddar
+F082#Cheese, Mold^Hongo De Queso
+F083#Chicken^Carne De Pollo
+F085#Celery^Apio
+F087#Melon, Honeydew^Melon Ligamaza
+F089#Mustard^Mostaza
+F090#Malt^Malta
+F092#Banana^Platano / Guineo
+F093#Chocolate/Cocoa^Chocolate / Cacao
+F094#Pear^Pera
+F095#Peach^Melecoton
+F096#Avocado^Aguacate
+F100#Cherry, Bing^Cereza
+F101#Bass, Black  ^Percha Negra
+F102#Buckwheat  ^Alforfón
+F103#Chestnut^Castaña
+F104#Cranberry  ^Arándano
+F105#Date ^Higo
+F106#Duck ^Carne De Pato
+F107#Eel  ^Anguila
+F108#Eggplant  ^Berenjena
+F109#Gum, Acacia ^Savia De Acacia
+F110#Gum, Karaya  ^Savia De Karaya
+F111#Mackerel ^Caballa
+F112#Paprika ^Pimienton Dulce / Paprika
+F114#Pine Nut ^Nuez De Pino
+F115#Pumpkin  ^Calabaza
+F116#Squid^Calamar
+F117#Cheese, Swiss   ^Queso Suizo
+F118#Swordfish  ^Pez De Espada
+F119#Halibut  ^Hipogloso
+F120#Perch, Lake^Perca
+F121#Whitefish   ^Prosopium sp.
+F122#Artichoke   ^Alcachofa
+F123#Snapper, Red   ^Pez Comestible del Golfo de Mex
+F124#Olive, Black ^Aceituna Negra
+F125#Hops  ^Lupulo
+F126#Lentil  ^Lenteja
+F127#Papaya ^Papaya
+F128#Plum/Prune  ^Ciruela
+F129#Raspberry  ^Frambuesa
+F130#Vanilla  ^Vainilla
+F131#Tapioca^Tapioca
+F132#Nectarine  ^Nectarina
+F133#Gelatin ^Gelatina
+F134#Lime^Lima/Limón Agrio
+F135#Asparagus^Esparrago
+F136#Lobster, Spiny^Langosta con Puas
+F137#Poppy Seed^Semilla de Amapola
+F138#Apricot^Albaricoque/Chabacano
+F139#Blackberry^Zarzamora
+F140#Cumin^Comino
+F141#Curry powder^Polvo de Curry
+F142#Chick pea^Garbanzo
+F143#Flaxseed^Linaza
+F144#Parsley^Perejil
+F145#Beet Sugar^Remolacha Azucarera
+F146#Cloves^Clavos
+F147#Milk, Goat's^Leche de Cabra
+F148#Nutmeg^Nuez Moscada
+F149#Radish^Rabano
+F150#Pepper, Red/Cayenne^Pimiento Rojo
+F151#Sage^Salvia
+F152#Beet^Remolacha
+F153#Kiwi^Kiwi
+F154#Brussel Sprouts^Coles de bruselas
+F155#Tangerine^Mandarina
+F156#Thyme^Tomillo
+F157#Millet^Mijo
+F158#Lamb ^Carne de Cordero
+F159#Canola Seed^Semilla de Canola
+F201#Pecan^Pacana
+F202#Cashew^Anarcado
+F203#Pistachio Nut^Pistacho
+F204#Trout^Trucha
+F207#Clam^Almeja
+F208#Lemon^Limòn
+F209#Grapefruit^Toronja
+F210#Pineapple^Piña
+F212#Mushroom^Champiñones
+F214#Spinach^Espinaca
+F215#Lettuce^Lechuga
+F216#Cabbage Mix^Mezcla De Repollo
+F221#Coffee^Café
+F236#Milk, Cow's©-Whey^Suero De La Leche
+F244#Cucumber^Pepinillo
+F245#Egg, Whole^Huevo Completo 
+F247#Honey^Miel
+F256#Walnut, Black^Nuez De Castilla (Negro)
+F259#Grape/Raisin^Uva/Pasa
+F260#Broccoli^Bróculi
+F263#Pepper, Bell/Green^Pimiento Verde
+F283#Oregano^Oregano
+F284#Turkey^Carne De Pavo
+F288#Blueberry^Mora Azul
+F290#Oyster^Ostra/Ostion
+F291#Cauliflower^Coliflor
+F300#Bean, Kidney^Frijol Colorado
+F301#Bean, Lima^Haba Lima
+F302#Bean, Pinto^Frijol Pinto
+F303#Bean, Wax/Yellow^Haba Verde
+F304#Bran, Wheat^Trigo Del Salvado
+F305#Cantaloupe/Muskmelon^Melon Cantalupo
+F306#Catfish^Siluro (Pes)
+F307#Cheese, P. American^Queso Americano
+F308#Cinnamon^Canela
+F309#Cottonseed ^Semilla De Algodon
+F310#Crab, Blue^Cangrejo
+F311#Flounder^Platija
+F312#Haddock^Eglefino
+F313#Pepper, Black/White^Pimienta Negra/Blanca
+F314#Pepper, Chili^Pimiento Chile
+F316#Sunflower Seed^Semilla De Girasol
+F317#Walnut, English^Nuez De Castilla (Inglés)
+F318#Yeast, Bakers  ^Levadura De Hornear
+F319#Yogurt^Yogur
+F329#Watermelon^Sandía
+F337#Sole^Lenguado
+F338#Scallop^Ostión/Vieira
+F339#Crab, Alaskan^Cangrejo, Alaskan
+F340#Tea, Black^Té
+F341#Dill^Eneldo
+F342#Olive, Green^Aceituna
+F343#Basil^Albahaca
+F344#Squash, Zucchini^Calabaza de Zuchhini
+F345#Ginger^Jengibre
+F346#Squash, Summer/Yellow^Calabaza Amarilla
+F347#Bay Leaf^Hoja de Laurel
+F348#Cola nut^Nuez de Cola
+F349#Safflower Seed^Semilla de Alazor
+F350#Sugar Cane^Azucar de Caña
+F351#Mango^Mango
+F352#Rosemary^Rosemary
+F353#Salmon, Pacific ^Salmón pacífico
+F354#Crab,  Dungeness^Cangrejo de dungeness
+F355#Pea,  Black-Eyed ^Chicaros de Ojo Amoratado
+F356#Bean, Black^Frijol Negro
+F357#Egg©-White-Ovomucoid^Ovomucoid
+F358#Milk, Cow's©-Lactoferrin^Lactoferrin
+F359#Peanut©-Ara h 1^Maní/Cacahuate©-Ara h 1
+F360#Peanut©-Ara h 2^Maní/Cacahuate©-Ara h 2
+F361#Tilapia^Tilapia
+F363#Macadamia Nut^Tuerca de macadamia
+F364#Carrageenan, iota ^iota Carrageenan
+F365#Carrageenan, kappa ^kappa Carrageenan
+F366#Carrageenan,  lambda ^lambda Carrageenan
+F369#Quonia^Quonia
+F370#Kale^Col Rizada
+F372#Peanut©-Ara h 6^Maní/Cacahuate©-Ara h 6
+F373#Allspice^Pimienta de Jamaica
+F374#Aniseed^Anís
+F376#Butter^Mantequilla
+F378#Carp^Carpa
+F379#Cheese, Gouda^Queso, Gouda
+F380#Cheese, Parmesan^Queso, Parmesano
+F381#Crayfish^Cangrejo de Río
+F382#Fennel^Hinojo
+F387#Horseradish^Rábano Picante
+F388#Maple Syrup^Miel de Maple
+F392#Mint^Menta
+F393#Mussel^Mejillón
+F394#Octopus^Pulpo
+F395#Egg©-White-Ovalbumin^Ovalbúmina
+F396#Pike^Lucio
+F398#Sardine^Sardina
+F404#Vinegar, Wine^Vinagre, Vino
+F406#Wine, Red^Vino Rojo
+F407#Wine, White^Vino, Blanco
+F408#Yeast, Wine^Levadura, Vino
+F409#Tea, Camomile^Té, manzanilla
+F410#Venison^Venado
+F411#Goat's Cheese^Queso de Cabra
+F414#Leek^Puerro
+F415#Rhubarb^Ruibarbo
+F416#Rabbit (food)^Conejo (Comida)
+F417#Bean, Green^Frijol verde
+FZ03#Food Mix^Mezcla de Alimentos
+FZ11#Grain Food Mix^Mezcla de Grano
+FZ13#Nut Mix^Mezcla de Nuez
+FZ16#Walnut SPP^Nuez, SPP
+G002#Bermuda Grass^Cynodon dactylon
+G003#Orchard^Dactylis glomerata
+G004#Fescue, Meadow^Festuca elatior
+G005#Rye, Perennial^Lolium perenne
+G006#Timothy Grass^Phleum pratense
+G008#Bluegrass, KY/June^Poa pratensis
+G009#Bent/Redtop Grass^Agrostis alba
+G010#Johnson^Sorghum halepense
+G013#Velvet^Holcus lanatus
+G014#Oat Pollen, Cultivated^Avena sativa
+G015#Wheat Pollen, Cultivated^Triticum sativum (aestivum)
+G017#Bahia ^Paspalum notatum
+G021#Brome, Smooth^Bromus inermis
+G022#Canary/Reed^Phalaris arundinacea
+G023#Vernal, Sweet^Anthoxanthum odoratum
+G024#Fescue, Red^Festuca rubra
+G025#Corn, Cultivated^Zea mays
+G026#Reed, Common^Phragmites communis
+GZ08#Grass Mix#1^Mezcla de Hierbas
+H001#Dust, House (Greer)^Polvo Casero
+H002#Dust, House (Holister-Stier)^Polvo Casero (Holistier-Stier)
+H010#Dust, Grain Mill^Polve de Molino
+HZ05#Dust Mix^Mezcla de Polvos
+I001#Honeybee^Apis mellifera
+I002#Hornet,  White-Faced ^Dolichovespula maculata
+I003#Yellow Jacket, Common Wasp^Vespula spp
+I004#Wasp,  Paper ^Polistes spp
+I005#Hornet,  Yellow^Dolichovespula arenaria
+I006#Cockroach, German^Cucaracha alemana
+I007#Mosquito^Mosquito
+I010#Ant, Black^Hormiga negra
+I011#Flea Mix (Dog/Cat flea)^Ctenocephalides canis/c. felis
+I012#Fly, Horse ^Tábano
+I014#Lady Beetle (Asian)^Harmonia axyridis
+I016#Bumblebee^Bombus spp
+I070#Ant,  Fire ^Solenopsis invicta
+I206#Cockroach, American^Cucaracha Americana
+IZ17#Cockroach  Mix^Mezcla de cucarachas
+K001#Isphagula^Isphagula
+K002#Tobacco^Tabaco
+K082#Latex^Latex
+M001#Penicillium notatum^Penicillium notatum
+M002#Cladosporium herbarum^Cladosporium herbarum
+M003#Aspergillus fumigatus^Aspergillus fumigatus
+M004#Mucor racemosus^Mucor racemosus
+M006#Alternaria tenuis (alternata)^Alternaria tenuis (alternata)
+M008#Helminthosporium halodes^Helminthosporium halodes
+M009#Fusarium moniliforme^Fusarium moniliforme
+M010#Stemphylium botryosum^Stemphylium botryosum
+M011#Rhizopus nigricans^Rhizopus nigricans
+M012#Aureobasidium pullulans^Aureobasidium pullulans
+M013#Phoma betae^Phoma betae
+M014#Epicoccum purpurascens^Epicoccum purpurascens
+M016#Curvularia lunata^Curvularia lunata
+M018#Aspergillus flavus^Aspergillus flavus
+M019#Aspergillus niger^Aspergillus niger
+M020#Ustilago maydis^Ustilago maydis
+M021#Aspergillus nidulans^Aspergillus nidulans
+M022#Aspergillus terreus^Aspergillus terreus
+M023#Aspergillus versicolor^Aspergillus versicolor
+M024#Stemphylium solani^Stemphylium solani
+M025#Chaetomium globosum^Chaetomium globosum
+M026#Algae^Algae
+M027#Rhodoturula mucilaginosa^Rhodoturula mucilaginosa
+M030#Fusarium oxysporum^Fusarium oxysporum
+M031#Candida albicans^Candida albicans
+M032#Trichophyton rubrum^Trichophyton rubrum
+M033#Cephalosporium acremonium^Cephalosporium acremonium
+M034#Helminthsporium solani^Helminthsporium solani
+M035#Helminthsporium sativum^Helminthsporium sativum
+M036#Microspora canis^Microspora canis
+M037#Epidermophyton flocossum^Epidermophyton flocossum
+M038#Ustilago cynodontis^Ustilago cynodontis
+M039#Bipolaris specifera^Bipolaris specifera
+M040#Mucor plumbeus^Mucor plumbeus
+M041#Stachybotrys chartarum^Stachybotrys chartarum
+M042#Botrytis cinerea^Botrytis cinerea
+M043#Trichophyton mentagrophytae^Trichophyton mentagrophytae
+M044#Trichoderma lignorum/viride^Trichoderma lignorum/viride
+M045#Cladosporium cladosporoides^Cladosporium cladosporoides
+M046#Phoma herbarum^Phoma herbarum
+M047#Nigraspora oryzae^Nigraspora oryzae
+M048#Absidia spp.^Absidia spp.
+M049#Mucor mucedo  ^Mucor mucedo  
+M050#Geotrichum candidum^Geotrichum candidum
+M052#Hormodendrum hordei^Hormodendrum hordei
+M061#Ustilago tritici^Ustilago tritici
+M062#Helminthosporium interseminatum^Helminthosporium interseminatum
+M063#Sphacelotheca cruenta^Sphacelotheca cruenta
+MZ02#Mold Mix^Mezcla de Hongos
+MZ15#T.O.E.^T.O.E.
+MZ17#Helminthosporium, ssp^Helminthosporium, ssp
+T001#Maple/Box Elder^Acer negundo
+T002#Alder, Smooth^Alnus rugosa (serrulata)
+T003#Birch, Gray/White^Betula populifolia
+T004#Locust Tree^Robinia pseudoacacia
+T005#Beech, American^Fagus grandifolia (americana)
+T006#Cedar, Mountain^Juniperus sabinoides (sabina)
+T007#Oak, White^Quercus alba
+T008#Elm, American^Ulmus americana
+T009#Olive Tree^Olea europea
+T010#Walnut, CA Black^Juglans Californica
+T011#Cedar, Salt^Tamarix gallica
+T012#Ironwood^Ostrya virginiana
+T013#Walnut, English^Juglans regia
+T014#Cottonwood Tree^Populus deltoides
+T015#Ash, White^Fraxinus americana
+T016#Pine, White^Pinus strobus
+T017#Juniper, One Seed^Juniperis monosperma
+T018#Eucalyptus^Eucalyptus spp.
+T019#Acacia^Acacia spp.
+T020#Mesquite^Prosopis glandulosa (juliflora)
+T021#Birch,Common Silver^Betula verrucosa (alba, pendula)
+T022#Alder, Speckled^Alnus incana
+T023#Cypress,Japanese^Chamaecyparis spp
+T072#Palm, Queen^Arecastrum romanzoffianum (syagrus)
+T100#Alder, European ^Alnus glutinosa
+T101#Alder, Red^Alnus rubra
+T102#Ash, Arizona^Fraxinus velutina
+T103#Ash, Green ^Fraxinus pennsylvanica
+T104#Aspen, Quaking^Populus tremoloides
+T105#Cedar, Red^Juniperus virginiana
+T106#Cypress, White Bald^Taxodium distichum
+T107#Elm, Chinese/Siberian^Ulmus pumila
+T108#Elm, Fall Blooming/Scrub^Ulmus crassifolia
+T109#Hickory, White^Carya alba
+T110#Mango Tree^Mangifera indica
+T111#Maple, Red^Acer rubrum
+T112#Mulberry, Red^Morus rubra
+T114#Oak, Red^Quercus rubra
+T115#Oak, Water^Quercus nigra
+T116#Olive, Russian^Elaegnus angustifolia
+T117#Orange Tree^Citrus sinensis
+T118#Orange, Osage ^Malcura pomifera
+T119#Palm, Date ^Phoenix dactylifera
+T120#Pepper Tree^Schinus molle
+T121#Pine, Loblolly^Pinus taeda
+T122#Pine, Lodgepole^Pinus palustris
+T123#Pine, Western White^Pinus strobus
+T124#Poplar, Lombardy ^Populus nigra
+T125#Poplar, White^Populus alba
+T126#Redwood (Sequoia)^Sequoia sempervirens
+T127#Walnut, Black^Juglans nigra
+T128#Willow, Black^Salix nigra
+T130#Privet, Common^Lingustrum vulgare
+T131#Gum, Sweet^Liquidambar styraciflua
+T132#Cypress, Italian^Cupressus sempervirens
+T133#Hickory, Shagbark^Carya obata
+T134#Oak, CA Black^Quercus kelloggii
+T136#Wax Myrtle/Bayberry^Myrtle cerifera
+T137#Hackberry^Celtis occidentalis
+T138#Melaleuca^Melaleuca leucadendron
+T139#Oak, Live/Virginia^Quercus virginiana
+T140#Sycamore^Plantanus occidentalis
+T141#Mulberry, Paper^Broussonetia papyrifera
+T142#Pine, Australian^Casuarina equisetifolia
+T143#Oak, Arizona/Gambel^Quercus gambelii
+T144#Mulberry, White^Morus alba
+T145#Pecan Tree^Carya illinoensis
+T146#Birch, Red/River^Betula nigra
+T147#Pine, Ponderosa^Pinus ponderosa
+T148#Juniper,  Western  ^Juniperus occidentalis
+T149#Hazelnut Tree^Corylus americana
+T150#Tree of Heaven^Ailanthus altissima
+T151#Oak, Black^Quercus velutina
+T152#Walnut, Mexican^Juglans microcarpa
+T153#Alder, Sitka^Alnus sinuata
+T154#Fir, Douglas^Pseudotsuga menziesii
+T155#Bayberry/Sweet Gale^Myrica gale
+TZ01#Pollen Tree Mix^Mezcla de polen de árbol
+TZ09#Tree Mix #2^Mezcla # 2 del árbol
+TZ13#Tree Mix #1^Mezcla # 1 del árbol
+W001#Ragweed, Common^Ambrosia elatior (artemisiifolia)
+W002#Ragweed, Western^Ambrosia psilostachya
+W003#Ragweed, Giant^Ambrosia trifida
+W004#Poverty Weed^Iva axillaris
+W005#Wormwood/Sagebrush^Artemisia absinthium
+W006#Mugwort^Artemisia vulgaris
+W007#Wing Scale^Atriplex canescens
+W009#Plantain, English^Plantago lanceolata
+W010#Lamb’s Quarter^Chenopodium album
+W011#Thistle, Russian^Salsola kali
+W013#Cocklebur, Common^Xanthium commune (strumarium)
+W014#Pigweed, Rough/Redroot^Amaranthus retroflexus
+W015#Lenscale^Atriplex Ientiformis
+W016#Marsh Elder, Rough^Iva ciliata
+W018#Sheep Sorrel, Red^Rumex acetosella
+W019#Pellitory, Wall^Parietaria officinalis
+W020#Nettle, Common^Urtica dioica
+W021#Marsh Elder, Burweed^Iva Xanthifolia
+W100#Alfalfa^Medicago sativa
+W101#Careless Weed^Amaranthus palmeri
+W102#Colza/Rapa^Brassica napus
+W104#Dockweed, Yellow^Rumex crispus
+W105#Mexican Tea^Chenopodium ambrosioides 
+W106#Oat, Wild ^Avena fatua
+W107#Bush, Rabbit^Franseria deltoides (Ambrosia)
+W109#Ragweed, Southern ^Ambrosia bidentata
+W111#Sagebrush, Common^Artemisia tridentata
+W112#Sugarbeet Pollen ^Beta vulgaris
+W113#Water Hemp, Western^Acnida tamariscina
+W114#Sunflower, Common^Helianthus annuus
+W115#Baccharis, Western^Baccharis sarothroides
+W116#Burrobrush^Hymenoclea salsola
+W117#Kochia/Firebush^Kochia scoparia
+W118#Iodine Bush^Allenrolfea occidentalis
+W119#Pigweed, Smooth^Amaranthus hybridus
+W121#Goldenrod^Solidago virgaurea
+W122#Pigweed, Spiny^Amaranthus spinosus
+W123#Cosmos^Cosmos
+W124#Ragweed, False^Franseria acanthicarpa
+W125#Dandelion^Taraxacum officinale
+W126#Fennel, Dog^Eupatorium capillifolia
+WZ10#Weed Mix #1^Mezcla de Malas Hierbas #1
+WZ16#Weed Mix, Ragweed^Mezlca de Ambrosia

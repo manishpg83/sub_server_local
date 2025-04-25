@@ -1,0 +1,233 @@
+F373                             Allspice
+F020                             Almond
+F019                             alpha-Galactose
+F032                             Anchovy
+F374                             Aniseed
+F049                             Apple-HD
+F138                             Apricot
+F122                             Artichoke
+F135                             Asparagus
+F096                             Avocado
+F092                             Banana
+F006                             Barley
+F343                             Basil
+F101                             Bass, Black
+F347                             Bay Leaf
+F356                             Bean, Black
+F417                             Bean, Green
+F300                             Bean, Kidney/Red
+F301                             Bean, Lima
+F302                             Bean, Pinto
+F303                             Bean, Wax/Yellow
+F015                             Bean, White/Navy
+F027                             Beef
+F152                             Beet, Red
+F145                             Beet, Sugar
+F037                             Bison
+F139                             Blackberry
+F288                             Blueberry
+F304                             Bran
+F018                             Brazil Nut
+F260                             Broccoli
+F029                             Bromelain
+F154                             Brussels Sprouts
+F102                             Buckwheat
+F376                             Butter
+F216                             Cabbage
+F159                             Canola Seed
+F305                             Cantaloupe
+F022                             Carob Bean
+F378                             Carp
+F364                             Carrageenan, iota 
+F365                             Carrageenan, kappa 
+F366                             Carrageenan, lambda 
+F031                             Carrot
+F202                             Cashew Nut
+F306                             Catfish
+F291                             Cauliflower
+F085                             Celery
+F307                             Cheese, American
+F082                             Cheese, Blue (Mold)
+F081                             Cheese, Cheddar
+F379                             Cheese, Gouda
+F034                             Cheese,  Mozzarella
+F380                             Cheese, Parmesan
+F117                             Cheese, Swiss
+F100                             Cherry, Bing
+F103                             Chestnut, Sweet
+F083                             Chicken
+F023                             Chives
+F093                             Chocolate/Cocoa
+F030                             Cilantro
+F308                             Cinnamon
+F207                             Clam
+F146                             Cloves
+F036                             Coconut
+F003                             Cod
+F221                             Coffee
+F348                             Cola Nut
+F008                             Corn
+F309                             Cottonseed
+F339                             Crab, Alaskan
+F310                             Crab, Blue
+F354                             Crab, Dungeness
+F104                             Cranberry
+F381                             Crayfish
+F244                             Cucumber
+F140                             Cumin
+F141                             Curry
+F105                             Date
+F341                             Dill
+F106                             Duck
+F107                             Eel
+F245                             Egg, Whole
+F001                             Egg&copy;-White
+F395                             Egg&copy;-White-Ovalbumin
+F357                             Egg&copy;-White-Ovomucoid
+F075                             Egg&copy;-Yolk
+F108                             Eggplant
+F382                             Fennel
+F143                             Flaxseed/Linseed
+F311                             Flounder
+FZ03                             Food Mix
+F047                             Garlic
+F133                             Gelatin (Bovine)
+F345                             Ginger
+F411                             Goat's Cheese
+FZ11                             Grain Food Mix
+F259                             Grape/Raisin
+F418                             Grape, White
+F209                             Grapefruit
+F109                             Gum, Arabic
+F110                             Gum, Karaya
+F312                             Haddock
+F119                             Halibut
+F017                             Hazelnut/Filbert
+F247                             Honey
+F125                             Hops
+F387                             Horseradish
+F011                             Jalapeno
+F370                             Kale
+F153                             Kiwi
+F158                             Lamb
+F414                             Leek
+F208                             Lemon
+F126                             Lentil
+F215                             Lettuce
+F134                             Lime
+F080                             Lobster, Maine
+F136                             Lobster, Spiny
+F363                             Macadamia Nut
+F111                             Mackerel
+F090                             Malt
+F351                             Mango
+F388                             Maple Syrup
+F087                             Melon (Honeydew)
+F002                             Milk, Cow’s-HD
+F078                             Milk, Cow's&copy;-Casein
+F076                             Milk, Cow's&copy;-Lact., Alpha 
+F077                             Milk, Cow's&copy;-Lacto., Beta 
+F358                             Milk, Cow's&copy;-Lactoferrin
+F236                             Milk, Cow's&copy;-Whey
+F147                             Milk, Goat’s
+F157                             Millet
+F392                             Mint
+F212                             Mushroom
+F393                             Mussel
+F089                             Mustard
+F132                             Nectarine
+FZ13                             Nut Mix
+F148                             Nutmeg
+F007                             Oat
+F394                             Octopus
+F028                             Okra
+F124                             Olive, Black
+F342                             Olive, Green
+F048                             Onion
+F033                             Orange
+F283                             Oregano
+F290                             Oyster
+F127                             Papaya
+F112                             Paprika
+F144                             Parsley
+F355                             Pea, Black-Eyed
+F142                             Pea, Chick/Garbanzo
+F012                             Pea, Green
+F095                             Peach
+F013                             Peanut-HD
+F359                             Peanut&copy;-Ara h 1
+F360                             Peanut&copy;-Ara h 2
+F372                             Peanut&copy;-Ara h 6
+F094                             Pear
+F201                             Pecan Nut
+F313                             Pepper, Black
+F150                             Pepper, Cayenne/Red
+F314                             Pepper, Chili
+F263                             Pepper, Green Bell
+F120                             Perch, Lake
+F396                             Pike
+F114                             Pine Nut
+F210                             Pineapple
+F203                             Pistachio Nut
+F128                             Plum
+F021                             Pomegranate
+F137                             Poppy Seed
+F026                             Pork
+F054                             Potato, Sweet
+F035                             Potato, White
+F115                             Pumpkin
+F369                             Quinoa
+F416                             Rabbit
+F149                             Radish
+F259                             Raisin
+F129                             Raspberry
+F415                             Rhubarb
+F009                             Rice
+F352                             Rosemary
+F005                             Rye
+F349                             Safflower Seed
+F151                             Sage
+F041                             Salmon
+F353                             Salmon, Pacific 
+F398                             Sardine
+F338                             Scallop
+F010                             Sesame Seed
+F024                             Shrimp
+F123                             Snapper, Red
+F337                             Sole
+F014                             Soybean
+F214                             Spinach
+F346                             Squash, Summer
+F116                             Squid
+F044                             Strawberry
+F350                             Sugar, Cane
+F316                             Sunflower Seed
+F118                             Swordfish
+F155                             Tangerine
+F131                             Tapioca  
+F340                             Tea, Black
+F409                             Tea, Camomile
+F156                             Thyme
+F361                             Tilapia
+F025                             Tomato
+F204                             Trout
+F016                             Tumeric
+F040                             Tuna
+F284                             Turkey
+F130                             Vanilla
+F410                             Venison
+F404                             Vinegar, Wine
+F256                             Walnut, Black
+F317                             Walnut, English
+FZ16                             Walnut SPP
+F329                             Watermelon
+F004                             Wheat
+F079                             Wheat&copy;-Gluten
+F121                             Whitefish
+F406                             Wine, Red
+F407                             Wine, White
+F318                             Yeast, Baker’s
+F045                             Yeast, Brewer’s
+F408                             Yeast, Wine
+F319                             Yogurt
+F344                             Zucchini

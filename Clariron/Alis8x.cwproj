@@ -1,0 +1,302 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{0D30B5C0-747E-4243-A516-3B68B9639DDA}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>Alis8x</AssemblyName>
+    <OutputName>Alis8</OutputName>
+    <DefineConstants>_ABCDllMode_=&gt;0%3b_ABCLinkMode_=&gt;1%3b_GRAPHDllMode_=&gt;0%3b_GRAPHLinkMode_=&gt;1%3b</DefineConstants>
+    <Model>Lib</Model>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <vid>full</vid>
+    <check_stack>True</check_stack>
+    <check_index>True</check_index>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <vid>off</vid>
+    <check_stack>False</check_stack>
+    <check_index>False</check_index>
+  </PropertyGroup>
+  <ItemGroup>
+    <Library Include="BrushedSteel.jpg" />
+    <Library Include="C:\c6\clacom\clalit32.lib" />
+    <Library Include="CheckOff.ICO" />
+    <Library Include="CheckOffDim.ICO" />
+    <Library Include="CheckOn.ICO" />
+    <Library Include="CheckOnDim.ICO" />
+    <Library Include="en.ico" />
+    <Library Include="mx.ico" />
+    <Library Include="steel.jpg" />
+    <Library Include="SteelCalc.ico" />
+    <Library Include="SteelCancel.ico" />
+    <Library Include="SteelCheck.ico" />
+    <Library Include="SteelCheckOff.ico" />
+    <Library Include="SteelCheckOn.ico" />
+    <Library Include="SteelEmail.gif" />
+    <Library Include="SteelEmail.ico" />
+    <Library Include="SteelFax.gif" />
+    <Library Include="SteelFax.ico" />
+    <Library Include="SteelPostal.gif" />
+    <Library Include="SteelPostal.ico" />
+    <Library Include="SteelWarning.gif" />
+    <FileDriver Include="ASCII" />
+    <FileDriver Include="MEMORY" />
+    <FileDriver Include="TOPSPEED" />
+    <Compile Include="Alis8x.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x001.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x002.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x003.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x004.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x005.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x006.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x007.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x008.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x009.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x010.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x011.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x012.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x013.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x014.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x015.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x016.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x017.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x018.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x019.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x020.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x021.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x022.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x023.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x024.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x025.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x026.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x027.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x028.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x029.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x030.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x031.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x032.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x033.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x034.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x035.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x036.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x037.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x038.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x039.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x040.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x041.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x042.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x043.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x044.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x045.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x046.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x047.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x048.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x049.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x050.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x051.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x052.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x053.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x054.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x055.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x056.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x057.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x058.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x059.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x060.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x061.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x062.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x063.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x064.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x065.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x066.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x067.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x068.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x069.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x070.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x071.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x072.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x073.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x074.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x075.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x076.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x077.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="ALIS8X_BC.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x_BC0.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x_BC1.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Alis8x_BC2.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="EFOCUS.CLW">
+      <Generated>true</Generated>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(ClarionBinPath)\SoftVelocity.Build.Clarion.targets" />
+</Project>

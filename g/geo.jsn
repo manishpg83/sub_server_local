@@ -1,0 +1,377 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "3121",
+               "short_name" : "3121",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "West Sunrise Boulevard",
+               "short_name" : "W Sunrise Blvd",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Fort Lauderdale",
+               "short_name" : "Fort Lauderdale",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Broward County",
+               "short_name" : "Broward County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Florida",
+               "short_name" : "FL",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "33311",
+               "short_name" : "33311",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "3121 W Sunrise Blvd, Fort Lauderdale, FL 33311, USA",
+         "geometry" : {
+            "location" : {
+               "lat" : 26.137101,
+               "lng" : -80.19115699999999
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 26.1384499802915,
+                  "lng" : -80.18980801970849
+               },
+               "southwest" : {
+                  "lat" : 26.1357520197085,
+                  "lng" : -80.1925059802915
+               }
+            }
+         },
+         "place_id" : "ChIJL7UDd9QG2YgRsRstp5TtQSM",
+         "types" : [ "street_address" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Sunrise B/Tunderbird Swap Shop",
+               "short_name" : "Sunrise B/Tunderbird Swap Shop",
+               "types" : [ "point_of_interest", "establishment" ]
+            },
+            {
+               "long_name" : "Lauderhill",
+               "short_name" : "Lauderhill",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Broward County",
+               "short_name" : "Broward County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Florida",
+               "short_name" : "FL",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "33311",
+               "short_name" : "33311",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Sunrise B/Tunderbird Swap Shop, Lauderhill, FL 33311, USA",
+         "geometry" : {
+            "location" : {
+               "lat" : 26.136339,
+               "lng" : -80.190361
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 26.13768798029151,
+                  "lng" : -80.1890120197085
+               },
+               "southwest" : {
+                  "lat" : 26.1349900197085,
+                  "lng" : -80.19170998029151
+               }
+            }
+         },
+         "place_id" : "ChIJZxhiYtQG2YgRjVrPRkwktJY",
+         "types" : [
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            "establishment"
+         ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Lauderhill",
+               "short_name" : "Lauderhill",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Broward County",
+               "short_name" : "Broward County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Florida",
+               "short_name" : "FL",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Lauderhill, FL, USA",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 26.194161,
+                  "lng" : -80.1860679
+               },
+               "southwest" : {
+                  "lat" : 26.1207639,
+                  "lng" : -80.267771
+               }
+            },
+            "location" : {
+               "lat" : 26.1403635,
+               "lng" : -80.2133808
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 26.1941612,
+                  "lng" : -80.1860679
+               },
+               "southwest" : {
+                  "lat" : 26.1207639,
+                  "lng" : -80.267771
+               }
+            }
+         },
+         "place_id" : "ChIJc4xmemIG2YgRMmkCWsgns84",
+         "types" : [ "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "33311",
+               "short_name" : "33311",
+               "types" : [ "postal_code" ]
+            },
+            {
+               "long_name" : "Fort Lauderdale",
+               "short_name" : "Fort Lauderdale",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Broward County",
+               "short_name" : "Broward County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Florida",
+               "short_name" : "FL",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Fort Lauderdale, FL 33311, USA",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 26.1683168,
+                  "lng" : -80.143154
+               },
+               "southwest" : {
+                  "lat" : 26.1210709,
+                  "lng" : -80.203172
+               }
+            },
+            "location" : {
+               "lat" : 26.142147,
+               "lng" : -80.1763467
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 26.1683168,
+                  "lng" : -80.143154
+               },
+               "southwest" : {
+                  "lat" : 26.1210709,
+                  "lng" : -80.203172
+               }
+            }
+         },
+         "place_id" : "ChIJieKYHTsB2YgR_UcTSoXl2Ec",
+         "postcode_localities" : [
+            "Fort Lauderdale",
+            "LAUD LAKES",
+            "Lauderdale Lakes",
+            "Lauderhill",
+            "Oakland Park",
+            "Plantation",
+            "Wilton Manors"
+         ],
+         "types" : [ "postal_code" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Broward County",
+               "short_name" : "Broward County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Florida",
+               "short_name" : "FL",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Broward County, FL, USA",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 26.3346979,
+                  "lng" : -80.07472949999999
+               },
+               "southwest" : {
+                  "lat" : 25.9567499,
+                  "lng" : -80.88123299999999
+               }
+            },
+            "location" : {
+               "lat" : 26.190096,
+               "lng" : -80.365865
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 26.3346979,
+                  "lng" : -80.07472949999999
+               },
+               "southwest" : {
+                  "lat" : 25.9567499,
+                  "lng" : -80.88123299999999
+               }
+            }
+         },
+         "place_id" : "ChIJFUaCG35_2YgRFNYLv44fMaA",
+         "types" : [ "administrative_area_level_2", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Florida",
+               "short_name" : "FL",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Florida, USA",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 31.000968,
+                  "lng" : -80.0311371
+               },
+               "southwest" : {
+                  "lat" : 24.5210795,
+                  "lng" : -87.634896
+               }
+            },
+            "location" : {
+               "lat" : 27.6648274,
+               "lng" : -81.5157535
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 31.000968,
+                  "lng" : -80.03134299999999
+               },
+               "southwest" : {
+                  "lat" : 24.5236278,
+                  "lng" : -87.634896
+               }
+            }
+         },
+         "place_id" : "ChIJvypWkWV2wYgR0E7HW9MTLvc",
+         "types" : [ "administrative_area_level_1", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "United States",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 71.3867745,
+                  "lng" : -66.9502861
+               },
+               "southwest" : {
+                  "lat" : 18.9106768,
+                  "lng" : 172.4458955
+               }
+            },
+            "location" : {
+               "lat" : 37.09024,
+               "lng" : -95.712891
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 49.38,
+                  "lng" : -66.94
+               },
+               "southwest" : {
+                  "lat" : 25.82,
+                  "lng" : -124.39
+               }
+            }
+         },
+         "place_id" : "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
+         "types" : [ "country", "political" ]
+      }
+   ],
+   "status" : "OK"
+}

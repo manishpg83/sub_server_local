@@ -1,0 +1,289 @@
+#!---------------------------------------------------------------------------
+#GROUP(%HIDEProcedureParametersList)
+#BOXED,HIDE
+  #BUTTON('Procedure Parameters'),MULTI(%ProcedureParameters,%ProcedureParameterName&'-'&%ProcedureParameterType),INLINE
+    #PROMPT('Parameter Name:',@S50),%ProcedureParameterName,REQ
+    #PROMPT('Original parameter Name:',@S50),%ProcedureParameterOrigName
+    #PROMPT('Parameter Type:',@S50),%ProcedureParameterType,REQ
+    #PROMPT('Parameter Default:',@S50),%ProcedureParameterDefault
+    #PROMPT('Omitted Parameter:',CHECK),%ProcedureParameterOmitted
+    #PROMPT('Reference Parameter:',CHECK),%ProcedureParameterByReference
+    #PROMPT('Constant Parameter:',CHECK),%ProcedureParameterConstant
+  #ENDBUTTON
+#ENDBOXED
+#!
+#GROUP(%LoadProcedureParametersPrototype)
+#CALL(%ParseProcedureParametersPrototype,CLIP(LEFT(%Prototype)),1)
+#IF(%Prototype <> '' AND %Parameters = '')
+  #CALL(%SetParametersFromPrototype)
+#ELSE
+  #CALL(%ParseProcedureParametersPrototype,CLIP(LEFT(%Parameters)),2)
+#ENDIF
+#!
+#GROUP(%ParseProcedureParametersPrototype,%ParamString,%Which),AUTO
+#DECLARE(%lParamCount,LONG)
+#DECLARE(%type)
+#DECLARE(%name)
+#DECLARE(%default)
+#DECLARE(%omittable,LONG)
+#DECLARE(%constant,LONG)
+#DECLARE(%byref,LONG)
+#DECLARE(%state,LONG)
+#DECLARE(%ch,LONG)
+#DECLARE(%start,LONG)
+#DECLARE(%idx,LONG)
+#DECLARE(%len,LONG)
+#IF(%Which = 1)
+  #FREE(%ProcedureParameters)
+#ENDIF
+#SET(%lParamCount, 0)
+#SET(%state, 0)
+#! -- State values:
+#!(*STRING pIntext, CONST *STRING pPass, <*STRING pOutText>),ULONG
+#!(*CSTRING pstr, LONG CodePage = PXC_CP_ACP, CONST *STRING pPass, BYTE value = true, BYTE spaces = 20, <*CSTRING pOutText>),CSTRING
+#! -1 : error
+#!  0 : before parameter list
+#!  1 : before parameter
+#!  2 : after <
+#!  3 : after *
+#!  4 : after parameter type
+#!  5 : after parameter's array specifier
+#!  6 : after parameter name
+#!  7 : after =
+#!  8 : after default parameter value
+#!  9 : after >
+#! 10 : at the end of parameter
+#! 11 : end of parameter list
+#! 12 : end of empty parameter list
+#IF(%ParamString <> '')
+  #SET(%len, LEN(%ParamString))
+  #SET(%idx, 1)
+  #LOOP,WHILE(%idx <= %len)
+    #SET(%ch, VAL(SUB(%ParamString,%idx,1)))
+    #IF(%ch <> VAL(' '))
+      #BREAK
+    #ENDIF
+    #SET(%idx, %idx+1)
+  #ENDLOOP
+  #IF(%ch = VAL('('))
+    #LOOP
+      #SET(%type, '')
+      #SET(%name, '')
+      #SET(%default, '')
+      #SET(%omittable, %False)
+      #SET(%constant, %False)
+      #SET(%byref, %False)
+      #SET(%state, 1)
+      #LOOP,WHILE(%state > 0 AND %state < 10)
+        #! -- Skip leading spaces
+        #LOOP
+          #IF(%idx = %len)
+            #SET(%state, -1)
+            #BREAK
+          #ENDIF
+          #SET(%idx, %idx + 1)
+          #SET(%ch, VAL(SUB(%ParamString,%idx,1)))
+          #IF(%ch <> VAL(' '))
+            #BREAK
+          #ENDIF
+        #ENDLOOP
+        #! -- Process next token and update the state
+        #IF(%state > 0)
+          #IF(%ch = VAL('<'))
+            #IF(%state < 2)
+              #SET(%omittable, %True)
+              #SET(%state, 2)
+            #ELSE
+              #SET(%state, -1)
+            #ENDIF
+          #ELSIF(%ch = VAL('*'))
+            #IF(%state < 3)
+              #SET(%byref, %True)
+              #SET(%state, 3)
+            #ELSE
+              #SET(%state, -1)
+            #ENDIF
+          #ELSIF(%ch = VAL('['))
+            #IF(%state = 4)
+              #LOOP
+                #IF(%ch <> VAL(' '))
+                  #SET(%type, %type & CHR(%ch))
+                  #IF(%ch = VAL(']'))
+                    #SET(%state, 5)
+                    #BREAK
+                  #ENDIF
+                #ENDIF
+                #IF(%idx = %len)
+                  #SET(%state, -1)
+                  #BREAK
+                #ENDIF
+                #SET(%idx, %idx + 1)
+                #SET(%ch, VAL(SUB(%ParamString,%idx,1)))
+              #ENDLOOP
+            #ELSE
+              #SET(%state, -1)
+            #ENDIF
+          #ELSIF(%ch = VAL('='))
+            #IF(%state < 7 AND NOT %omittable)
+              #SET(%state, 7)
+            #ELSE
+              #SET(%state, -1)
+            #ENDIF
+          #ELSIF(%ch = VAL('>'))
+            #IF(%state >= 4 AND %state <= 6)
+              #SET(%state, 9)
+            #ELSE
+              #SET(%state, -1)
+            #ENDIF
+          #ELSIF(%ch = VAL(',') OR %ch = VAL(')'))
+            #IF(%omittable AND %state <> 9)
+              #SET(%state, -1)
+            #ELSIF(%state = 1 AND %ch = VAL(')') AND %lParamCount = 0)
+              #SET(%state, 12)
+            #ELSIF(%state < 4 OR %state = 7)
+              #SET(%state, -1)
+            #ELSIF(%ch = VAL(','))
+              #SET(%state, 10)
+            #ELSE
+              #SET(%state, 11)
+            #ENDIF
+          #ELSIF(%ch = VAL(''''))
+            #IF(%state = 7)
+              #SET(%start, %idx)
+              #LOOP
+                #IF(%idx = %len)
+                  #SET(%state, -1)
+                  #BREAK
+                #ENDIF
+                #SET(%idx, %idx + 1)
+                #SET(%ch, VAL(SUB(%ParamString,%idx,1)))
+                #IF(%ch = VAL(''''))
+                  #IF(%idx = %len)
+                    #BREAK
+                  #ELSIF(VAL(SUB(%ParamString,%idx+1,1)) <> VAL(''''))
+                    #BREAK
+                  #ENDIF
+                  #SET(%idx, %idx + 1)
+                #ENDIF
+              #ENDLOOP
+              #IF(%state <> -1)
+                #SET(%default, SLICE(%ParamString, %start, %idx))
+                #SET(%state, 8)
+              #ENDIF
+            #ELSE
+              #SET(%state, -1)
+            #ENDIF
+          #ELSIF(UPPER(SUB(%ParamString,%idx,6)) = 'CONST ')
+             #IF(%state < 3 AND NOT %constant)
+               #SET(%idx, %idx + 5)
+               #SET(%constant, %True)
+             #ELSE
+               #SET(%state, -1)
+             #ENDIF
+          #ELSE
+            #IF(%state < 6 OR %state = 7)
+              #SET(%start, %idx)
+              #LOOP,WHILE(%idx < %len)
+                #SET(%idx, %idx + 1)
+                #SET(%ch, VAL(SUB(%ParamString,%idx,1)))
+                #IF(%ch = VAL(' ') OR %ch = VAL('=') OR %ch = VAL(',') OR %ch = VAL(')') OR %ch = VAL('>') OR %ch = VAL('['))
+                  #SET(%idx, %idx - 1)
+                  #BREAK
+                #ENDIF
+              #ENDLOOP
+              #IF(%idx < %start)
+                #SET(%state, -1)
+              #ELSIF(%state = 7)
+                #SET(%default, SLICE(%ParamString, %start, %idx))
+                #SET(%state, 8)
+              #ELSIF(%state < 4)
+                #SET(%type, SLICE(%ParamString, %start, %idx))
+                #SET(%state, 4)
+              #ELSE
+                #SET(%name, SLICE(%ParamString, %start, %idx))
+                #SET(%state, 6)
+              #ENDIF
+            #ELSE
+              #SET(%state, -1)
+            #ENDIF
+          #ENDIF
+        #ENDIF
+      #ENDLOOP
+      #! -- Post-processing of parameter
+      #IF(%state = -1)
+        #BREAK
+      #ENDIF
+      #IF(%state = 12)
+        #BREAK
+      #ENDIF
+      #SET(%lParamCount, %lParamCount + 1)
+      #IF(%Which = 1)
+        #ADD(%ProcedureParameters, %lParamCount)
+        #SET(%ProcedureParameterOrigName, %name)
+        #SET(%ProcedureParameterType, %type)
+        #SET(%ProcedureParameterDefault,%default)
+        #SET(%ProcedureParameterOmitted,%omittable)
+        #SET(%ProcedureParameterByReference, %byref)
+        #SET(%ProcedureParameterConstant,%constant)
+      #ELSE
+        #SELECT(%ProcedureParameters, %lParamCount)
+        #IF(INSTANCE(%ProcedureParameters))
+          #IF(%name = '')
+            #SET(%name, %type)
+          #!ELSIF(%omittable <> %ProcedureParameterOmitted)
+            #!SET(%state, -1)
+            #!BREAK
+          #ENDIF
+          #SET(%ProcedureParameterName, %name)
+        #ENDIF
+      #ENDIF
+      #IF(%state = 11)
+        #BREAK
+      #ENDIF
+    #ENDLOOP
+  #ENDIF
+#ENDIF
+#! -- Errors handling
+#IF(%state < 0)
+  #ERROR('Incorrect syntax of the ' & CHOOSE(%Which = 1, 'prototype', 'parameter list') & ' of the procedure ' & %Procedure)
+#ELSIF(%Which = 2 AND ITEMS(%ProcedureParameters) <> %lParamCount)
+  #ERROR('The prototype and the parameters does not have the same number of variables. Procedure:' & %Procedure)
+#ENDIF
+#!
+#GROUP(%SetParametersFromPrototype),AUTO
+#IF(ITEMS(%ProcedureParameters) = 0)
+  #SET(%Parameters, '')
+  #RETURN
+#ENDIF
+#DECLARE(%NParam,LONG)
+#DECLARE(%ParamString)
+#SET(%NParam,0)
+#FOR(%ProcedureParameters)
+  #SET(%NParam, %NParam + 1)
+  #IF(%NParam > 1)
+    #SET(%ParamString, %ParamString & ',')
+  #ENDIF
+  #IF(%ProcedureParameterOmitted)
+    #SET(%ParamString, %ParamString & '<')
+  #ENDIF
+  #IF(%ProcedureParameterConstant)
+    #SET(%ParamString, %ParamString & 'CONST ')
+  #ENDIF
+  #IF(%ProcedureParameterByReference)
+    #SET(%ParamString, %ParamString & '*')
+  #ENDIF
+  #SET(%ParamString, %ParamString & %ProcedureParameterType)
+  #IF(%ProcedureParameterOrigName = '')
+    #SET(%ParamString, %ParamString & ' p' & %NParam)
+  #ELSE
+    #SET(%ParamString, %ParamString & ' ' & %ProcedureParameterOrigName)
+  #ENDIF
+  #IF(%ProcedureParameterDefault <> '')
+    #SET(%ParamString, %ParamString & '=' & %ProcedureParameterDefault)
+  #ENDIF
+  #IF(%ProcedureParameterOmitted)
+    #SET(%ParamString, %ParamString & '>')
+  #ENDIF
+#ENDFOR
+#SET(%Parameters, '(' & %ParamString & ')')
+#!

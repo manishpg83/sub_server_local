@@ -1,0 +1,3 @@
+  MODULE('ALIS8050.CLW')
+DocEmail               PROCEDURE(ULONG)
+  END

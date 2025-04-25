@@ -1,0 +1,8 @@
+connect sftp://amx:xD1GkuK7a7DK8!@amxemr.com/home/amx/Z/PATRICK/test/
+
+cd /home/amx/Z/PATRICK
+lcd \\apps\\500258\\test
+lls
+ls
+lmdel ^testd
+lls

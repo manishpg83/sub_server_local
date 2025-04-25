@@ -1,0 +1,36 @@
+Start Fri 09-09 10:41 am
+Fri 09-09 10:41 am 44 HL7 orders found 
+1 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="FR508267" >FR508267</button></form><div class="name"> BYRANT</div> W 241997 09-07 Wed FR508267 Sat 09-03 <span class="warn">5 days old! ◄————— </span>
+3 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="FR508347" >FR508347</button></form><div class="name"> STEWART</div> W 241993 09-07 Wed FR508347 Sat 09-03 <span class="warn">5 days old! ◄————— </span>
+4 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="KT903997" >KT903997</button></form><div class="name"> VARDYS</div> W 241995 09-07 Wed KT903997 Sat 09-03 <span class="warn">5 days old! ◄————— </span>
+5 Login:4, cplTest:4<form action="check.php" method="post"><button name="id" value="M6919359" >M6919359</button></form><div class="name"> RIVERA</div> W 241992 09-07 Wed M6919359 Sat 09-03 <span class="warn">5 days old! ◄————— </span>
+9 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="NW937752" >NW937752</button></form><div class="name"> TREJOS TORRES</div> W 241998 09-07 Wed NW937752 Sat 09-03 <span class="warn">5 days old! ◄————— </span>
+10 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="UQ608496" >UQ608496</button></form><div class="name"> PERKINS</div> W 241996 09-07 Wed UQ608496 Sat 09-03 <span class="warn">5 days old! ◄————— </span>
+11 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="WQ524968" >WQ524968</button></form><div class="name"> VARGAS GARCIA</div> W 241994 09-07 Wed WQ524968 Sat 09-03 <span class="warn">5 days old! ◄————— </span>
+12 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="DN295524" >DN295524</button></form><div class="name"> HUYNH</div> W 242028 09-08 Thu DN295524 Wed 09-07 0 days old
+14 Login:3, cplTest:3<form action="check.php" method="post"><button name="id" value="J9928164" >J9928164</button></form><div class="name"> LEIJA</div> W 242029 09-08 Thu J9928164 Wed 09-07 0 days old
+17 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="VT734821" >VT734821</button></form><div class="name"> HERBERT</div> W 242030 09-08 Thu VT734821 Wed 09-07 0 days old
+19 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="WQ349895" >WQ349895</button></form><div class="name"> ARENAS</div> W 242031 09-08 Thu WQ349895 Wed 09-07 0 days old
+20 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="WQ349901" >WQ349901</button></form><div class="name"> ZAPATA</div> W 242026 09-08 Thu WQ349901 Wed 09-07 0 days old
+21 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="WQ525437" >WQ525437</button></form><div class="name"> DONAVA</div> W 242027 09-08 Thu WQ525437 Wed 09-07 0 days old
+22 FR505050 processed <span> 1 Login records,  1 cplTest records</span>
+23 FR505130 processed <span> 1 Login records,  1 cplTest records</span>
+24 IB746760 processed <span> 1 Login records,  1 cplTest records</span>
+25 MM993377 processed <span> 1 Login records,  1 cplTest records</span>
+26 MW329883 processed <span> 1 Login records,  1 cplTest records</span>
+27 WQ350359 processed <span> 1 Login records,  1 cplTest records</span>
+28 BN192044 processed <span> 1 Login records,  1 cplTest records</span>
+29 BS304884 processed <span> 1 Login records,  1 cplTest records</span>
+30 CM145984 processed <span> 1 Login records,  1 cplTest records</span>
+31 CS751044 processed <span> 1 Login records,  1 cplTest records</span>
+32 FL708080 processed <span> 1 Login records,  1 cplTest records</span>
+33 FR375142 processed <span> 2 Login records,  2 cplTest records</span>
+34 FR505309 processed <span> 1 Login records,  1 cplTest records</span>
+35 IB747319 processed <span> 1 Login records,  1 cplTest records</span>
+36 IB747687 processed <span> 1 Login records,  1 cplTest records</span>
+37 IB756292 processed <span> 1 Login records,  1 cplTest records</span>
+38 J9734741 processed <span> 1 Login records,  1 cplTest records</span>
+39 J9734797 processed <span> 1 Login records,  1 cplTest records</span>
+40 LJ573532 processed <span> 2 Login records,  2 cplTest records</span>
+41 M8345284 processed <span> 1 Login records,  1 cplTest records</span>
+42 UZ742869 processed <span> 1 Login records,  1 cplTest records</span>

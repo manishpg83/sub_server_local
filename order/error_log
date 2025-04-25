@@ -1,0 +1,49 @@
+[19-Dec-2022 01:16:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/test/selections.php on line 16
+[19-Dec-2022 01:16:59 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /home/amx/public_html/test/selections.php on line 21
+[19-Dec-2022 01:16:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/test/review.php on line 118
+[19-Dec-2022 01:19:44 UTC] PHP Warning:  include(/home/amx/public_html/test/addon.php): failed to open stream: No such file or directory in /home/amx/public_html/order/index.php on line 90
+[19-Dec-2022 01:19:44 UTC] PHP Warning:  include(): Failed opening '/home/amx/public_html/test/addon.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/amx/public_html/order/index.php on line 90
+[19-Dec-2022 01:19:54 UTC] PHP Warning:  include(/home/amx/public_html/test/addon.php): failed to open stream: No such file or directory in /home/amx/public_html/order/index.php on line 90
+[19-Dec-2022 01:19:54 UTC] PHP Warning:  include(): Failed opening '/home/amx/public_html/test/addon.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/amx/public_html/order/index.php on line 90
+[19-Dec-2022 01:20:42 UTC] PHP Warning:  include(/home/amx/public_html/test/addon.php): failed to open stream: No such file or directory in /home/amx/public_html/order/index.php on line 90
+[19-Dec-2022 01:20:42 UTC] PHP Warning:  include(): Failed opening '/home/amx/public_html/test/addon.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/amx/public_html/order/index.php on line 90
+[19-Dec-2022 01:21:02 UTC] PHP Warning:  include(/home/amx/public_html/test/addon.php): failed to open stream: No such file or directory in /home/amx/public_html/order/index.php on line 90
+[19-Dec-2022 01:21:02 UTC] PHP Warning:  include(): Failed opening '/home/amx/public_html/test/addon.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/amx/public_html/order/index.php on line 90
+[19-Dec-2022 01:22:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/selections.php on line 16
+[19-Dec-2022 01:22:48 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /home/amx/public_html/order/selections.php on line 21
+[19-Dec-2022 01:22:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/review.php on line 118
+[19-Dec-2022 01:23:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/selections.php on line 16
+[19-Dec-2022 01:23:51 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /home/amx/public_html/order/selections.php on line 21
+[19-Dec-2022 01:23:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/review.php on line 118
+[19-Dec-2022 01:26:23 UTC] PHP Warning:  file_get_contents(foodsBase.jsn): failed to open stream: No such file or directory in /home/amx/public_html/order/selections.php on line 128
+[19-Dec-2022 01:26:23 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/selections.php on line 143
+[19-Dec-2022 01:26:26 UTC] PHP Warning:  file_get_contents(foodsBase.jsn): failed to open stream: No such file or directory in /home/amx/public_html/order/selections.php on line 40
+[19-Dec-2022 01:26:26 UTC] PHP Warning:  file_get_contents(foodBase.jsn): failed to open stream: No such file or directory in /home/amx/public_html/order/selections.php on line 42
+[19-Dec-2022 01:26:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/selections.php on line 47
+[19-Dec-2022 01:26:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/review.php on line 118
+[19-Dec-2022 01:26:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/review.php on line 164
+[19-Dec-2022 01:27:56 UTC] PHP Warning:  file_get_contents(foodsBase.jsn): failed to open stream: No such file or directory in /home/amx/public_html/order/selections.php on line 40
+[19-Dec-2022 01:27:56 UTC] PHP Warning:  file_get_contents(foodBase.jsn): failed to open stream: No such file or directory in /home/amx/public_html/order/selections.php on line 42
+[19-Dec-2022 01:27:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/selections.php on line 47
+[19-Dec-2022 01:27:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/review.php on line 118
+[19-Dec-2022 01:27:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/review.php on line 164
+[19-Dec-2022 01:29:48 UTC] PHP Warning:  file_get_contents(foodsBase.jsn): failed to open stream: No such file or directory in /home/amx/public_html/order/selections.php on line 40
+[19-Dec-2022 01:29:48 UTC] PHP Warning:  file_get_contents(foodBase.jsn): failed to open stream: No such file or directory in /home/amx/public_html/order/selections.php on line 42
+[19-Dec-2022 01:29:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/selections.php on line 47
+[19-Dec-2022 01:29:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/review.php on line 118
+[19-Dec-2022 01:29:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/review.php on line 164
+[19-Dec-2022 01:30:00 UTC] PHP Warning:  file_get_contents(foodsBase.jsn): failed to open stream: No such file or directory in /home/amx/public_html/order/selections.php on line 40
+[19-Dec-2022 01:30:00 UTC] PHP Warning:  file_get_contents(foodBase.jsn): failed to open stream: No such file or directory in /home/amx/public_html/order/selections.php on line 42
+[19-Dec-2022 01:30:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/selections.php on line 47
+[19-Dec-2022 01:30:01 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/review.php on line 118
+[19-Dec-2022 01:30:01 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/review.php on line 164
+[19-Dec-2022 01:46:20 UTC] PHP Warning:  file_get_contents(foodsBase.jsn): failed to open stream: No such file or directory in /home/amx/public_html/order/selections.php on line 40
+[19-Dec-2022 01:46:20 UTC] PHP Warning:  file_get_contents(foodBase.jsn): failed to open stream: No such file or directory in /home/amx/public_html/order/selections.php on line 42
+[19-Dec-2022 01:46:20 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/selections.php on line 47
+[19-Dec-2022 01:46:20 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/review.php on line 118
+[19-Dec-2022 01:46:20 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/review.php on line 164
+[19-Dec-2022 01:46:31 UTC] PHP Warning:  file_get_contents(foodsBase.jsn): failed to open stream: No such file or directory in /home/amx/public_html/order/selections.php on line 40
+[19-Dec-2022 01:46:31 UTC] PHP Warning:  file_get_contents(foodBase.jsn): failed to open stream: No such file or directory in /home/amx/public_html/order/selections.php on line 42
+[19-Dec-2022 01:46:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/selections.php on line 47
+[19-Dec-2022 01:46:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/review.php on line 118
+[19-Dec-2022 01:46:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/order/review.php on line 164

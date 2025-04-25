@@ -1,0 +1,16 @@
+connect sftp://amx:xD1GkuK7a7DK8!@amxemr.com
+cd /home/amx/HL7/500258/Results
+dir
+lcd C:\\apps\\500258\\Results
+ldir C:\\apps\\500258\\Results
+mget --exists s hl7$
+dir C:\\apps\\500258\\Results
+disconnect
+connect sftp://Allermetrix01:All3rm3tr1x#@44.235.72.131/ResultsInbound/
+lcd C:\\apps\\500258\\Results
+mput --exists s hl7$
+dir
+ren //home//amx//HL7//500258//Archive
+disconnect
+exit
+ren hl7$ //Allermetrix//Results//In//hl7$ 

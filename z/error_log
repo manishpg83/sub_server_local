@@ -1,0 +1,26 @@
+[24-Aug-2022 00:30:52 UTC] PHP Warning:  file_get_contents(zillow4.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 62
+[24-Aug-2022 00:30:52 UTC] PHP Warning:  file_get_contents(zillow5.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 64
+[24-Aug-2022 00:48:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/z/realtor.php on line 65
+[24-Aug-2022 00:48:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/z/realtor.php on line 121
+[24-Aug-2022 00:48:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/z/realtor.php on line 65
+[24-Aug-2022 00:48:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/z/realtor.php on line 65
+[24-Aug-2022 00:48:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/z/realtor.php on line 65
+[24-Aug-2022 00:48:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/z/realtor.php on line 65
+[24-Aug-2022 00:48:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/z/realtor.php on line 65
+[24-Aug-2022 00:48:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/amx/public_html/z/realtor.php on line 65
+[24-Aug-2022 14:56:43 UTC] PHP Warning:  get_browser(): browscap ini directive not set in /home/amx/public_html/z/browsercap.php on line 48
+[24-Aug-2022 21:32:15 UTC] PHP Warning:  file_get_contents(zillow4.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 62
+[24-Aug-2022 21:32:15 UTC] PHP Warning:  file_get_contents(zillow5.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 64
+[25-Aug-2022 00:03:22 UTC] PHP Warning:  file_get_contents(zillow4.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 62
+[25-Aug-2022 00:03:22 UTC] PHP Warning:  file_get_contents(zillow5.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 64
+[25-Aug-2022 02:26:32 UTC] PHP Warning:  file_get_contents(zillow4.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 63
+[25-Aug-2022 02:26:32 UTC] PHP Warning:  file_get_contents(zillow5.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 65
+[25-Aug-2022 02:27:54 UTC] PHP Warning:  file_get_contents(zillow4.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 63
+[25-Aug-2022 02:27:54 UTC] PHP Warning:  file_get_contents(zillow5.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 65
+[12-Oct-2022 17:47:06 UTC] PHP Warning:  file_get_contents(zillow4.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 63
+[12-Oct-2022 17:47:06 UTC] PHP Warning:  file_get_contents(zillow5.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 65
+[12-Oct-2022 17:49:12 UTC] PHP Parse error:  syntax error, unexpected 'icrotime' (T_STRING), expecting ',' or ';' in /home/amx/public_html/z/zillow.php on line 305
+[12-Oct-2022 17:51:07 UTC] PHP Warning:  file_get_contents(zillow4.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 64
+[12-Oct-2022 17:51:07 UTC] PHP Warning:  file_get_contents(zillow5.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 66
+[12-Oct-2022 17:52:59 UTC] PHP Warning:  file_get_contents(zillow4.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 64
+[12-Oct-2022 17:52:59 UTC] PHP Warning:  file_get_contents(zillow5.txt): failed to open stream: No such file or directory in /home/amx/public_html/z/zillow.php on line 66

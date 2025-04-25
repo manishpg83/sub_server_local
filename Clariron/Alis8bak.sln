@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+# Clarion 2.1.0.2447
+Project("{12B76EC0-1D7B-4FA7-A7D0-C524288B48A1}") = "Alis8bak", "Alis8bak.cwproj", "{470376F8-B8FA-4FAC-955D-74F7FB07FBF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{{2150E333-8FDC-42A3-9474-1A3956D46DE8}}"
+	ProjectSection(SolutionItems) = postProject
+		Alis8bak.app = Alis8bak.app
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{470376F8-B8FA-4FAC-955D-74F7FB07FBF7}.Debug|Win32.Build.0 = Debug|Win32
+		{470376F8-B8FA-4FAC-955D-74F7FB07FBF7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{470376F8-B8FA-4FAC-955D-74F7FB07FBF7}.Release|Win32.Build.0 = Release|Win32
+		{470376F8-B8FA-4FAC-955D-74F7FB07FBF7}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+EndGlobal

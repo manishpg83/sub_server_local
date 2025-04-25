@@ -1,0 +1,1 @@
+UPDATE `orders` SET `status`='C',`accession`=0,`first`= 'Alicia',`last`= 'Leverette',`gender`='2',`address`='',`city`= '',`state`= '',`zip`= '',`phone`='', `dob` = '1969-07-30', `collection` = '', `physician` = 'Sunil Pai MD', `icd101` = '', `icd102` = '', `icd103` = '', `clientID` = '',`attest`= 2, `initials`=''  WHERE `id` = 6718

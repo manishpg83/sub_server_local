@@ -1,0 +1,50 @@
+Start Tue 07-12 10:55 am
+Tue 07-12 10:55 am 69 HL7 orders found 
+1 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="BN111421" >BN111421</button></form><div class="name"> ARICEAGA</div> W 240040 07-08 Fri BN111421 Thu 07-07 3 days old
+2 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="BX053461" >BX053461</button></form><div class="name"> HINESTROZA NEVAREZ</div> W 240033 07-08 Fri BX053461 Thu 07-07 3 days old
+3 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="C6870481" >C6870481</button></form><div class="name"> FRATES</div> W 240038 07-08 Fri C6870481 Thu 07-07 3 days old
+5 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="FF832652" >FF832652</button></form><div class="name"> ENGLAND</div> W 240031 07-08 Fri FF832652 Thu 07-07 3 days old
+6 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="FF970407" >FF970407</button></form><div class="name"> SHANNON</div> W 240034 07-08 Fri FF970407 Thu 07-07 3 days old
+8 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="FP813380" >FP813380</button></form><div class="name"> WASSON</div> W 240035 07-08 Fri FP813380 Thu 07-07 3 days old
+9 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="IB481913" >IB481913</button></form><div class="name"> KETTLER</div> W 240047 07-08 Fri IB481913 Thu 07-07 3 days old
+10 Login:4, cplTest:4<form action="check.php" method="post"><button name="id" value="LJ797151" >LJ797151</button></form><div class="name"> CHAIREZ</div> W 240030 07-08 Fri LJ797151 Thu 07-07 3 days old
+14 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="LJ798078" >LJ798078</button></form><div class="name"> PAGE</div> W 240032 07-08 Fri LJ798078 Thu 07-07 3 days old
+15 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="LJ798087" >LJ798087</button></form><div class="name"> PAGE</div> W 240039 07-08 Fri LJ798087 Thu 07-07 3 days old
+16 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="LV579680" >LV579680</button></form><div class="name"> CARDENAS</div> W 240029 07-08 Fri LV579680 Thu 07-07 3 days old
+17 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="LV986766" >LV986766</button></form><div class="name"> ALMANZA</div> W 240041 07-08 Fri LV986766 Thu 07-07 3 days old
+18 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="MM416316" >MM416316</button></form><div class="name"> PAQUETTE</div> W 240043 07-08 Fri MM416316 Thu 07-07 3 days old
+20 Login:7, cplTest:7<form action="check.php" method="post"><button name="id" value="MQ197256" >MQ197256</button></form><div class="name"> WHITE</div> W 240037 07-08 Fri MQ197256 Thu 07-07 3 days old
+27 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="QR286534" >QR286534</button></form><div class="name"> SCHROEDER</div> W 240048 07-08 Fri QR286534 Thu 07-07 3 days old
+29 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="UC970022" >UC970022</button></form><div class="name"> STEINS</div> W 240045 07-08 Fri UC970022 Thu 07-07 3 days old
+30 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="UN478490" >UN478490</button></form><div class="name"> STONE</div> W 240042 07-08 Fri UN478490 Thu 07-07 3 days old
+32 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="UZ416325" >UZ416325</button></form><div class="name"> RILEY</div> W 240046 07-08 Fri UZ416325 Thu 07-07 3 days old
+34 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="UZ436991" >UZ436991</button></form><div class="name"> SMITH</div> W 240044 07-08 Fri UZ436991 Thu 07-07 3 days old
+35 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="VT472441" >VT472441</button></form><div class="name"> ROSALES-MADLA</div> W 240036 07-08 Fri VT472441 Thu 07-07 3 days old
+36 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="C3803485" >C3803485</button></form><div class="name"> TUPA</div> W 240094 07-11 Mon C3803485 Fri 07-08 2 days old
+37 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="CV757324" >CV757324</button></form><div class="name"> COHEN</div> W 240089 07-11 Mon CV757324 Fri 07-08 2 days old
+39 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="FP814341" >FP814341</button></form><div class="name"> MARTINEZ JR</div> W 240093 07-11 Mon FP814341 Fri 07-08 2 days old
+40 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="FR208547" >FR208547</button></form><div class="name"> ROY</div> W 240092 07-11 Mon FR208547 Fri 07-08 2 days old
+41 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="IB593544" >IB593544</button></form><div class="name"> CERDA</div> W 240091 07-11 Mon IB593544 Fri 07-08 2 days old
+43 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="IB593615" >IB593615</button></form><div class="name"> ESTRADA</div> W 240088 07-11 Mon IB593615 Fri 07-08 2 days old
+44 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="LV580232" >LV580232</button></form><div class="name"> SALINAS</div> W 240095 07-11 Mon LV580232 Fri 07-08 2 days old
+45 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="QR773785" >QR773785</button></form><div class="name"> WALKER</div> W 240090 07-11 Mon QR773785 Fri 07-08 2 days old
+46 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="UN508820" >UN508820</button></form><div class="name"> AKTER</div> W 240087 07-11 Mon UN508820 Fri 07-08 2 days old
+47 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="WN016074" >WN016074</button></form><div class="name"> LUCAS</div> W 240096 07-11 Mon WN016074 Fri 07-08 2 days old
+48 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="C6208160" >C6208160</button></form><div class="name"> HASSAN</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+49 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="DF681281" >DF681281</button></form><div class="name"> KIM</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+51 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="DH120733" >DH120733</button></form><div class="name"> MINK</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+53 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="LV580401" >LV580401</button></form><div class="name"> MARTINEZ</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+54 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="LV987441" >LV987441</button></form><div class="name"> ROSAS</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+55 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="M6219987" >M6219987</button></form><div class="name"> HERNANDEZ</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+57 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="MK584133" >MK584133</button></form><div class="name"> ARMSTRONG</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+58 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="MK584142" >MK584142</button></form><div class="name"> CRONIN</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+59 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="MM627821" >MM627821</button></form><div class="name"> MAHAKIAN</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+60 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="OY411445" >OY411445</button></form><div class="name"> JONES</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+61 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="OY411463" >OY411463</button></form><div class="name"> WRIGHT</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+62 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="RX081608" >RX081608</button></form><div class="name"> HASSAN</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+63 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="RX195298" >RX195298</button></form><div class="name"> LINVILLE</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+64 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="UN480255" >UN480255</button></form><div class="name"> UNGER</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+65 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="UZ417108" >UZ417108</button></form><div class="name"> BOLIN</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+66 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="VT157251" >VT157251</button></form><div class="name"> TREVINO</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+68 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="VT474651" >VT474651</button></form><div class="name"> ARON</div>   serum not received&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sat 07-09 2 days old
+69 BX143120 processed <span> 1 Login records,  1 cplTest records</span>

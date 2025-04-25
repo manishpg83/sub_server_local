@@ -1,0 +1,2 @@
+  MODULE('ALIS8X002.CLW')
+  END

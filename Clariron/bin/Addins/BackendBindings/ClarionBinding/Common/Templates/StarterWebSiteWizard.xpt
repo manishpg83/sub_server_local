@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Template originator   = "SoftVelocity">
+  <!-- Template Header -->
+	<TemplateConfiguration>
+		<Name>Starter WebSite Application Wizard</Name>
+		<Category>Clarion.Net</Category>
+		<Subcategory>ASP.NET</Subcategory>
+		<Icon>ClarionSharp.Generator.Project.WebProject</Icon>
+    <Description>A wizard to create an empty Website Application</Description>
+    <BinaryProjectGenerator chain="Clarion.File" name="StarterWebSiteWizard" askfordct="True">/SoftVelocity/BinaryProjectGenerator/ApplicationFactoryWizard</BinaryProjectGenerator>
+  </TemplateConfiguration>
+  <Project name = "${ProjectName}" directory = "." language = "ASP.NET">  
+  </Project>
+  </Template>
+

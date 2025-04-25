@@ -1,0 +1,9 @@
+connect sftp://allermetrix_reflab:allermetrix_reflab@edi.sonichealthcareusa.com:9516/Allermetrix/Orders/Out
+lcd C:\\apps\\orders
+mget --exists s hl7$ C:\\apps\\orders
+disconnect
+connect sftp://amx:xD1GkuK7a7DK8!@amxemr.com/home/amx/public_html/cpl/orders
+lcd C:\\apps\\orders
+mput --exists s hl7$
+disconnect
+

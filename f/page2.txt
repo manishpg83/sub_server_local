@@ -1,0 +1,203 @@
+          ** MITES **
+D001      D. pterony.          D. pteronyssinus               D. pteronyssinus                     1  
+D002      D. farinae           D. farinae                     D. farinae                           1         
+
+          ** SEND-OUT MRT
+S033      Acetominophen        Acetominophen                  Acetominophen                        5
+S028      Ampicillin	       Ampicillin                     Ampicillin			   5
+S001      Aspirin              Aspirin                        Aspirin                              5  S010	  Ciprofloxacin	       Ciprofloxacin                  Ciprofloxacin			   5
+S004      Clavulanic Acid      Clavulanic Acid                Clavulanic Acid                      5
+S014      Clindamycin          Clindamycin                    Clindamycin                          5
+S008      Diclofenac           Diclofenac                     Diclofenac                           5
+S009      Erythromycin         Erythromycin                   Erythromycin                         5
+S029      Formaldehyhde        Formaldehyhde                  Formaldehyhde                        5
+S003      Ibuprofen            Ibuprofen                      Ibuprofen                            5
+S007      Iodine               Iodine                         Iodine                               5
+S013      MSG (Glutamic Acid)  MSG (Glutamic Acid)            MSG (Glutamic Acid)                  5
+S011	  Naproxen	       Naproxen			      Naproxen				   5
+S005      Nickel Cloride       Nickel Cloride                 Nickel Cloride                       5
+S031      Nystatin             Nystatin                       Nystatin                             5  S032      Doxycyclin           Doxycyclin                     Doxycyclin                           5
+S027 	  Pen V                Pen V	                      Pen V				   5
+S034      Pen G                Pen G                          Pen G                                5
+S012	  Piroxicam	       Piroxicam		      Piroxicam				   5
+S002      Sulfamethoxazole     Sulfamethoxazole               Sulfamethoxazole                     5  
+S015      Tartrazine           Tartrazine                     Tartrazine                           5
+S030      TDI                  TDI                            TDI                                  5
+S018      Tetracycline         Tetracycline                   Tetracycline                         5
+S006      Titanium Cloride     Titanium Cloride               Titanium Cloride                     5
+S017      Quinoline Yellow     Quinoline Yellow               Quinoline Yellow                     5 
+S016      Yellow Orange        Yellow Orange                  Yellow Orange                        5					      
+
+          ** EPIDERMAL **
+E001      Cat Hair/Dand.       Cat Hair/Dander                Pelo de Gato                         1          100          0707
+E004      Cow Dander           Cow Dander                     Pelo de Ganado                       1
+E005      Dog Hair/Dand.       Dog Hair/Dander                Pelo de Perro                        1          100          0707
+E008      Parakeet Feath.      Feathers, Parakeet             Plumas de Perico                     1
+E009      Parrot Feather.      Feathers, Parrot-ASR*  	      Plumas de Loro-ASR*                  1
+E010      Horse Epithel.       Horse Epithelia                Pelo de Caballo                      1          100          0707
+E011	  Guinea Pig Dander    Guinea Pig Dander	      Pelo de Coinejillo de Indias	   1
+E012      Hamster Epithium     Hamster Epithelium             Epitelio de Hamster	           1
+E013      Goat Epithelium      Goat Epithilium                Epitelio de Cabra                    1
+E014      Sheep Epithium       Sheep Epithelium               Epitelio de Oveja                    1
+E015      Pig Epithelium       Pig Epithelium                 Epitelio de Cerdo                    1
+E070	  Goose Feather        Feathers, Goose                Plumas de Ganso	                   1
+E071	  Mouse Epith.         Mouse Epithelium	              Pelo de Ratón	                   1
+E072	  Mouse Ser. Prot.     Mouse Serum Proteins	      Proteínas de Suero de Ratón	   1
+E073	  Rat Epithelium       Rat Epithelium	              Pelo de Rata	                   1
+E082      Rabbit Epithelium    Rabbit Epithelium              Pelo de Conejo                       1
+E085      Chick. Feather       Feathers, Chicken              Plumas de Gallina                    1          100          0707
+E086      Duck Feathers        Feathers, Duck                 Plumas de Pato                       1          100          0707
+E100      Pigeon Feather       Feathers, Pigeon               Plumas de Paloma                     1          100          0707
+E101	  Turkey Feathers      Feathers, Turkey 	      Plumas de Pavo                       1
+E102	  Pigeon Droppings     Pigeon Droppings	              Excremento de Paloma                 1
+E103      Fel d1               Fel d1                         Fel d1                               5
+EZ04      Epider MX            Epidermal Mix-ASR*             Mezcla de Epidermicas-ASR*           3  
+EZ06      Dust Mite Mix        Dust Mite Mix                  Mezcla de Acaros                     3
+EZ07      Epid. MX #1          Epidermal Mix                  Mezcla de Epidermicas #1             3           
+EZ12      Feather Mix          Feather Mix                    Mezcla de Plumas                     3
+
+
+
+          ** DUST **
+H001	  House Dust(G)        House Dust (Greer)             Polvo Casero (Greer)                 1
+H002	  House Dust(HS)       House Dust (HS)                Polvo Casero (HS)                    1
+H010	  Grain Mill Dust      Grain Mill Dust	              Polve de Molino	                   1
+HZ05      Dust Mix             Dust Mix                       Mezcla de Polvos                     3   
+
+          ** INSECTS **
+I001      Honey Bee            Honey Bee Venom                Apis mellifera                       2          100          0707
+I002      Hornet, W.F.         Hornet, White Faced            Dolichovespula maculata              2          100          0707
+I003      Yellow Jacket        Yellow Jacket spp.             Vespula spp.                         2          100          0707
+I004      Wasp, Paper          Wasp, Paper spp.               Polistes spp                         2          100          0707
+I005      Hornet, y.           Hornet, Yellow                 Dolichovespula arenaria              2          100          0707
+I006      Cockroach,G.         Cockroach, German              Cucaracha, Alemana                   1          100          0707
+I007	  Mosquito	       Mosquito                       Mosquito	                           1
+I010      Ant, Black           Ant, Black (Carpenter)         Hormiga Negra                        1
+I011      Flea                 Flea                           Pulga                                1
+I012	  Horsefly             Horsefly                       Tábano                               1
+I070      Fire Ant             Ant, Fire                      Solenopsis invicta (Hormiga)         1          100          0707
+I206      Cockroach, A.        Cockroach, American            Cucaracha, Americana                 1
+
+
+
+
+
+
+
+
+
+
+
+          ** OCCUPATION **
+K001      Isphagula	       Isphagula                      Isphagula                            4
+K082      Latex                Latex                          Latex                                4          100          0707
+K002      Tobacco              Tobacco                        Tobaco                               4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          ** MOLDS **
+M001      Penicillium n.       Penicillium notatum            Penicillium notatum                  1          100          0707
+M002      Cladospor h.         Cladosporium herbarum          Cladosporium herbarum                1          100          0707
+M003      Aspergill. f.        Aspergillus fumigatus          Aspergillus fumigatus                1          100          0707
+M004      Mucor r.             Mucor racemosus                Mucor racemosus                      1          100          0707
+M006      Alternaria a.        Alternaria alternata           Alternaria alternata                 1          100          0707
+M008      Helmintho h.         Helminthosporium halodes       Helminthosporium halodes             1          100          0707
+M009      Fusarium m.          Fusarium moniliforme           Fusarium moniliforme                 1          100          0707
+M010      Stemphyll b.         Stemphyllium bortyosum         Stemphyllium bortyosum               1          100          0707
+M011      Rhizopus n.          Rhizopus nigricans             Rhizopus nigricans                   1          100          0707
+M012      Pullularia p.        Pullularia pullulans           Pullularia pullulans                 1          100          0707
+M013      Phoma betae          Phoma betae                    Phoma betae                          1          100          0707
+M014      Epiccocum p.         Epiccocum purpurascens         Epiccocum purpurascens               1          100          0707
+M016      Curvularia l.        Curvularia lunata              Curvularia lunata                    1          100          0707
+M018      Asperg.fla.          Aspergillus flavus 	      Aspergillus flavus                   1 
+M019	  Asperg. nig.         Aspergillus niger  	      Aspergillus niger                    1
+M020	  Corn Smut            Corn Smut                      Hongo De Maiz                        1
+M021      Asperg. nid.         Aspergillus nidulans           Aspergillus nidulans                 1
+M022      Asperg. ter.         Aspergillus terreus            Aspergillus terreus                  1
+M023      Asperg. ver.         Aspergillus versicolor         Aspergillus versicolor               1
+M024      Stemphy sol.         Stemphyllium solani            Stemphyllium solani                  1
+M025      Chaetomium g.        Chaetomium globosum            Chaetomium globosum                  1
+M026      Algae                Algae                          Algae                                1
+M027	  Rhodoturula m	       Rhodoturula mucilaginosa	      Rhodoturula mucilaginosa             1
+M030      Fusarium oxy         Fusarium oxysporum             Fusarium oxysporum                   1          100          0707
+M031      Candida a            Candida albicans	              Candida albicans                     1
+M032	  Trichophyton r.      Trichophyton rubrum	      Trichophyton rubrum	           1
+M033	  Cephalospor.a.       Cephalosporium acremonium      Cephalosporium acremonium	           1
+M034	  Helminth.sola.       Helminthsporium solani	      Helminthsporium solani	           1
+M035	  Helminth.sati.       Helminthsporium sativum	      Bipolaris sorokiniana	           1
+          ** MOLDS **
+M036	  Microsporum c.       Microsporum canis	      Microsporum canis                    1       
+M037	  Epidermop.f.         Epidermophyton floccosum	      Epidermiphyton floccosum	           1
+M038	  Ustilago cyn.        Ustilago cynodontis (Smut)     Ustilago cynodontis	           1
+M039	  Curvular.spi.        Curvularia spicifera	      Drechslera spicifera	           1
+M040	  Mucor plumb.         Mucor plumbeus	              Mucor plumbeus	                   1
+M041	  Stachybotrys c.      Stachybotrys chartarum         Stachybotrys chartarum               1
+M042      Botrytis cin.        Botrytis cinerea               Botrytis cinerea                     1
+M043      Trichophy m.         Trichophyton mentagrophytes    Trichophyton mentagrophytes          1
+M044      Trichoderma l.       Trichoderma lignorum           Trichoderma lignorum                 1
+M045      Cladospor. cla.      Cladosporium cladosporoides    Cladosporium cladosporoides          1
+M046      Phoma herbarum       Phoma herbarum                 Phoma herbarum                       1     
+M047      Nigrospora oryzae    Nigrospora oryzae              Nigrospora oryzae                    1         
+M048	  Absidia spp.	       Absidia spp.                   Absidia spp.                         1
+M049      Mucor mucedo         Mucor mucedo                   Mucor mucedo                         1  
+MZ02      Mold Mix             Mold Mix                       Mezcla de Hongos                     3   
+MZ15      T.O.E.               T.O.E                          T.O.E.                               3
+
+          ** MIXES **
+EZ04      Epidermal Mix        Epidermal Mix-ASR*             Mezcla de Epidermicas-ASR*           3  
+EZ06      Dust Mite Mix        Dust Mite Mix                  Mezcla de Acaros                     3
+EZ07      Epidermal Mix#1      Epidermal Mix                  Mezcla de Epidermicas #1             3           
+EZ12      Feather Mix          Feather Mix                    Mezcla de Plumas                     3
+FZ03      Food Mix             Food Mix                       Mezcla de Alimentos                  3 
+FZ11      Grain Mix            Grain Food Mix                 Mezcla de Grano                      3
+FZ13      Nut Mix              Nut Mix                        Mezcla de Nuez                       3
+GZ08      Grass Mix #1         Grass Mix #1                   Mezcla de Hierbas                    3 
+HZ05      Dust Mix             Dust Mix                       Mezcla de Polvos                     3    
+MZ02      Mold Mix             Mold Mix                       Mezcla de Hongos                     3   
+MZ15      T.O.E.               T.O.E                          T.O.E.                               3
+          ** MIXES **
+TZ01	  Pollen Mix           Pollen Mix	              Mezcla de Polen 	                   3                                                                              
+TZ09      Tree Mix #2          Tree Mix #2                    Mezcla de Arboles 2                  3      
+TZ13      Tree Mix #1          Tree Mix #2                    Mezcla de Arboles 1                  3 
+WZ10      Weed Mix #1          Weed Mix #1                    Mezcla de Malas Hierbas #1           3
+ 
+          ** Other Tests **
+Z002      Der p 2	       Purified D. pter.Component
+Z004	  Ara h 6	       Purified Peanut Component
+Z100	  alpha-gal M	       alpha gal monovalent
+Z101	  alpha-gal P	       alpha gal polyvalent
+Z102	  alpha-gal P2	       alpha gal polyvalent 2
+Z103	  Fort. peanut 1       Fort. peanut 1
+Z104      Fort. peanut 2       Fort. peanut 2
+Z105      Fort. peanut 3       Fort. peanut 3              
+
+
+
+
+
+
+
+

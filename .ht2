@@ -1,0 +1,38 @@
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+AddCharset UTF-8 .html
+<Limit GET POST>
+#The next line modified by DenyIP
+order allow,deny
+#The next line modified by DenyIP
+#deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName amxemr.com
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.amxemr.com/$1 [R,L]
+Options -Indexes
+
+Header unset ETag
+FileETag None
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)(\.gz)?$">
+ExpiresActive On
+ExpiresDefault "access plus 31536000 seconds"
+Header set Expires "access plus 31536000 seconds"
+
+</FilesMatch>
+Header set Connection keep-alive
+
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+
+deny from 220.181.
+deny from 166.216.162.192

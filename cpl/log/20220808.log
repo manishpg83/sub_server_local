@@ -1,0 +1,45 @@
+Start Mon 08-08 10:12 am
+Mon 08-08 10:12 am 104 HL7 orders found 
+1 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="BR957755" >BR957755</button></form><div class="name"> WILSON</div> W 240882 08-04 Thu BR957755 Wed 08-03 3 days old
+2 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="BX179365" >BX179365</button></form><div class="name"> VALDEZ</div> W 240883 08-04 Thu BX179365 Wed 08-03 3 days old
+4 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="CM109914" >CM109914</button></form><div class="name"> ROYAL</div> W 240878 08-04 Thu CM109914 Wed 08-03 3 days old
+5 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="CV774719" >CV774719</button></form><div class="name"> NELSON</div> W 240877 08-04 Thu CV774719 Wed 08-03 3 days old
+7 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="DN273133" >DN273133</button></form><div class="name"> MAYFIELD</div> W 240885 08-04 Thu DN273133 Wed 08-03 3 days old
+8 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="FR322210" >FR322210</button></form><div class="name"> DAWKINS</div> W 240881 08-04 Thu FR322210 Wed 08-03 3 days old
+10 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="LJ817960" >LJ817960</button></form><div class="name"> GUZMAN</div> W 240884 08-04 Thu LJ817960 Wed 08-03 3 days old
+12 Login:4, cplTest:4<form action="check.php" method="post"><button name="id" value="LJ818911" >LJ818911</button></form><div class="name"> FLORES</div> W 240886 08-04 Thu LJ818911 Wed 08-03 3 days old
+16 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="LV585785" >LV585785</button></form><div class="name"> HERNANDEZ</div> W 240880 08-04 Thu LV585785 Wed 08-03 3 days old
+17 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="M8069771" >M8069771</button></form><div class="name"> OLIVARRI</div> W 240876 08-04 Thu M8069771 Wed 08-03 3 days old
+18 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="VT669052" >VT669052</button></form><div class="name"> MENNIS</div> W 240879 08-04 Thu VT669052 Wed 08-03 3 days old
+19 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="C6799368" >C6799368</button></form><div class="name"> HILL</div> W 240914 08-05 Fri C6799368 Thu 08-04 2 days old
+20 Login:2, cplTest:2<form action="check.php" method="post"><button name="id" value="FR353092" >FR353092</button></form><div class="name"> TRAHAN</div> W 240917 08-05 Fri FR353092 Thu 08-04 2 days old
+22 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="LH596930" >LH596930</button></form><div class="name"> PALACIOS</div> W 240918 08-05 Fri LH596930 Thu 08-04 2 days old
+23 Login:1, cplTest:1<form action="check.php" method="post"><button name="id" value="LV026992" >LV026992</button></form><div class="name"> DOMINGUEZ</div> W 240916 08-05 Fri LV026992 Thu 08-04 2 days old
+24 Login:15, cplTest:15<form action="check.php" method="post"><button name="id" value="OG653517" >OG653517</button></form><div class="name"> MCWHORTER</div> W 240913 08-05 Fri OG653517 Thu 08-04 2 days old
+39 Login:15, cplTest:15<form action="check.php" method="post"><button name="id" value="OG653544" >OG653544</button></form><div class="name"> ROBERTSON</div> W 240915 08-05 Fri OG653544 Thu 08-04 2 days old
+54 BN196894 processed <span> 2 Login records,  2 cplTest records</span>
+55 FF823528 processed <span> 2 Login records,  2 cplTest records</span>
+56 FF841455 processed <span> 2 Login records,  2 cplTest records</span>
+57 FR354788 processed <span> 2 Login records,  2 cplTest records</span>
+58 IL105156 processed <span> 3 Login records,  3 cplTest records</span>
+59 J7066292 processed <span> 1 Login records,  1 cplTest records</span>
+60 LJ820713 processed <span> 2 Login records,  2 cplTest records</span>
+61 LV586371 processed <span> 1 Login records,  1 cplTest records</span>
+62 M6957799 processed <span> 2 Login records,  2 cplTest records</span>
+63 MV124017 processed <span> 1 Login records,  1 cplTest records</span>
+64 OG653615 processed <span> 15 Login records,  15 cplTest records</span>
+65 UN568793 processed <span> 2 Login records,  2 cplTest records</span>
+66 VV350896 processed <span> 1 Login records,  1 cplTest records</span>
+67 WH499266 processed <span> 2 Login records,  2 cplTest records</span>
+68 WH499524 processed <span> 1 Login records,  1 cplTest records</span>
+69 WN076850 processed <span> 1 Login records,  1 cplTest records</span>
+70 WN485055 processed <span> 1 Login records,  1 cplTest records</span>
+71 WQ343238 processed <span> 1 Login records,  1 cplTest records</span>
+72 C6215576 processed <span> 1 Login records,  1 cplTest records</span>
+73 CS309881 processed <span> 1 Login records,  1 cplTest records</span>
+74 HV413511 processed <span> 2 Login records,  2 cplTest records</span>
+75 QU086131 processed <span> 1 Login records,  1 cplTest records</span>
+76 QU086168 processed <span> 1 Login records,  1 cplTest records</span>
+77 RT430647 processed <span> 1 Login records,  1 cplTest records</span>
+78 WQ219836 processed <span> 1 Login records,  1 cplTest records</span>
+79 WQ343603 processed <span> 1 Login records,  1 cplTest records</span>

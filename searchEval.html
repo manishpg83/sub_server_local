@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+</title>
+<link rel="stylesheet" href="https://amxemr.com/jquery.mobile-1.1.0.min.css" />
+        <style>
+#result {color:#ff0;}
+.mobile{width:90%;margin:0 auto 0;}
+.tablet{width:80%;margin:0 auto 0;}
+.desk{width:80%;margin:0 auto 0;}
+.head1 {width:40%;}
+.head2 {width:24%;}
+.head3 {width:20%;}
+.head4 {width:15%;}
+.row1 {width:35%;background:none;text-align:left;}
+.row2 {width:24%;background:none;}
+.row3 {width:20%;background:none;}
+.row4t {width:20%;color:#0f9;background:none;}
+.row4r {width:20%;color:#fff;background:none;}
+.row4a {width:20%;color:#f00;background:#000;}
+.row4c {width:20%;color:#3bf;}
+.center{text-align:center;margin:0 auto 0;}
+.left {text-align:left;}
+.small {font-size:small;font-weight:400}
+.max {max-width:400px;margin:0 auto 0}
+.ui-btn-text {text-align:left;font-size:.9em;}
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+        </script>
+        <script src="https://amxemr.com/jquery.mobile-1.1.0.min.js">
+        </script>
+</head>
+<body>
+<div data-role="page" data-theme="a" id="page1">
+ <div data-theme="a" data-role="header" data-position="fixed">
+  <h3>Allermetrix</h3>
+  <a data-role="button"  rel="external" data-ajax="false" href="https://amxemr.com/logout.php">
+  Logout
+  </a>
+  </div>
+  <div data-role="content" class="desk">
+
+<div id="clsp" data-role="collapsible" data-collapsed="true">
+<h2>Search</h2>
+<form action="https://amxemr.com/search.php" method="POST" data-ajax="false">
+<div  class="left">
+
+<div data-role="fieldcontain">
+ <fieldset data-role="controlgroup">
+  <label for="code">
+  Patient ID
+  </label>
+  <input id="code" name="code" placeholder="Begins With" value="" type="search" />
+ </fieldset>
+</div>
+<hr/>
+<div data-role="fieldcontain">
+ <fieldset data-role="controlgroup">
+  <label for="name">
+  Patient Last Name
+  </label>
+  <input id="name" name="name" placeholder="Leave Blank for All" value="" type="search" />
+ </fieldset>
+</div>
+
+
+
+
+<div class="max">
+<div data-role="fieldcontain">
+ <fieldset data-role="controlgroup" data-type="vertical">
+ <input name="daysOn" id="daysOn" type="checkbox" checked/>
+ <label for="daysOn">Use Days</label>
+ </fieldset>
+</div></div>
+<hr/>
+<div class="max">
+<div data-role="fieldcontain">
+ <fieldset data-role="controlgroup">
+  <label for="days">
+  Days
+  </label>
+  <input type="range" name="days" id="days" value="25" min="1" max="60" data-highlight="true" data-theme="" data-track-theme="d" />
+ </fieldset>
+</div>
+ <input type="submit" data-icon="check" data-iconpos="left" value="Submit" />
+</div>
+</div>
+</form>
+<p><br/></p>
+<hr/>
+</div>
+<h2>14  Records Found in Past 25 Days</h2><div data-role="controlgroup" data-type="horizontal"   class="para">
+<a class="head1" href="#" data-role="button" data-inline="true" data-theme="e" >Name</a>
+<a class="head2" href="#" data-role="button" data-inline="true" data-theme="e">Patient ID</a>
+<a class="head3" href="#" data-role="button" data-inline="true" data-theme="e">Date</a>
+<a class="head4" href="#"  data-role="button" data-inline="true" data-theme="e">Status</a></div><div data-role="controlgroup" data-type="horizontal"  class="para">
+<a class="row1" href="#" data-role="button" data-inline="true">Arnold, Cynthia</a>
+<a class="row2" href="#" data-role="button" data-inline="true"></a>
+<a class="row3" href="#" data-role="button" data-inline="true">08-27-12</a>
+<a class=" row4c"  data-icon="plus" href="https://amxemr.com/pdf.php?c=200005&amp;p=144333 " target="_blank"   data-role="button" data-inline="true">Complete PDF </a>
+</div><div data-role="controlgroup" data-type="horizontal"  class="para">
+<a class="row1" href="#" data-role="button" data-inline="true">Fletcher, Richard</a>
+<a class="row2" href="#" data-role="button" data-inline="true"></a>
+<a class="row3" href="#" data-role="button" data-inline="true">08-27-12</a>
+<a class=" row4c"  data-icon="plus" href="https://amxemr.com/pdf.php?c=200005&amp;p=144331 " target="_blank"   data-role="button" data-inline="true">Complete PDF </a>
+</div><div data-role="controlgroup" data-type="horizontal"  class="para">
+<a class="row1" href="#" data-role="button" data-inline="true">Gann, Larry</a>
+<a class="row2" href="#" data-role="button" data-inline="true"></a>
+<a class="row3" href="#" data-role="button" data-inline="true">08-27-12</a>
+<a class=" row4c"  data-icon="plus" href="https://amxemr.com/pdf.php?c=200005&amp;p=144336 " target="_blank"   data-role="button" data-inline="true">Complete PDF </a>
+</div><div data-role="controlgroup" data-type="horizontal"  class="para">
+<a class="row1" href="#" data-role="button" data-inline="true">Hall, Cindi</a>
+<a class="row2" href="#" data-role="button" data-inline="true"></a>
+<a class="row3" href="#" data-role="button" data-inline="true">08-27-12</a>
+<a class=" row4c"  data-icon="plus" href="https://amxemr.com/pdf.php?c=200005&amp;p=144335 " target="_blank"   data-role="button" data-inline="true">Complete PDF </a>
+</div><div data-role="controlgroup" data-type="horizontal"  class="para">
+<a class="row1" href="#" data-role="button" data-inline="true">Howell, Dani</a>
+<a class="row2" href="#" data-role="button" data-inline="true"></a>
+<a class="row3" href="#" data-role="button" data-inline="true">09-05-12</a>
+<a class=" row4t" href="#"  data-icon="gear"   data-role="button" data-inline="true">Testing </a>
+</div><div data-role="controlgroup" data-type="horizontal"  class="para">
+<a class="row1" href="#" data-role="button" data-inline="true">Hunter, Barbara</a>
+<a class="row2" href="#" data-role="button" data-inline="true"></a>
+<a class="row3" href="#" data-role="button" data-inline="true">09-05-12</a>
+<a class=" row4t" href="#"  data-icon="gear"   data-role="button" data-inline="true">Testing </a>
+</div><div data-role="controlgroup" data-type="horizontal"  class="para">
+<a class="row1" href="#" data-role="button" data-inline="true">Murphy, Sherry</a>
+<a class="row2" href="#" data-role="button" data-inline="true"></a>
+<a class="row3" href="#" data-role="button" data-inline="true">08-27-12</a>
+<a class=" row4c"  data-icon="plus" href="https://amxemr.com/pdf.php?c=200005&amp;p=144334 " target="_blank"   data-role="button" data-inline="true">Complete PDF </a>
+</div><div data-role="controlgroup" data-type="horizontal"  class="para">
+<a class="row1" href="#" data-role="button" data-inline="true">Shoun, Janet</a>
+<a class="row2" href="#" data-role="button" data-inline="true"></a>
+<a class="row3" href="#" data-role="button" data-inline="true">09-05-12</a>
+<a class=" row4t" href="#"  data-icon="gear"   data-role="button" data-inline="true">Testing </a>
+</div><div data-role="controlgroup" data-type="horizontal"  class="para">
+<a class="row1" href="#" data-role="button" data-inline="true">Turney, Diane</a>
+<a class="row2" href="#" data-role="button" data-inline="true"></a>
+<a class="row3" href="#" data-role="button" data-inline="true">09-05-12</a>
+<a class=" row4t" href="#"  data-icon="gear"   data-role="button" data-inline="true">Testing </a>
+</div><div data-role="controlgroup" data-type="horizontal"  class="para">
+<a class="row1" href="#" data-role="button" data-inline="true">Vincent, Stephanie</a>
+<a class="row2" href="#" data-role="button" data-inline="true"></a>
+<a class="row3" href="#" data-role="button" data-inline="true">08-27-12</a>
+<a class=" row4c"  data-icon="plus" href="https://amxemr.com/pdf.php?c=200005&amp;p=144332 " target="_blank"   data-role="button" data-inline="true">Complete PDF </a>
+</div><div data-role="controlgroup" data-type="horizontal"  class="para">
+<a class="row1" href="#" data-role="button" data-inline="true">Whitley, Joy</a>
+<a class="row2" href="#" data-role="button" data-inline="true"></a>
+<a class="row3" href="#" data-role="button" data-inline="true">08-29-12</a>
+<a class=" row4c"  data-icon="plus" href="https://amxemr.com/pdf.php?c=200005&amp;p=144376 " target="_blank"   data-role="button" data-inline="true">Complete PDF </a>
+</div><div data-role="controlgroup" data-type="horizontal"  class="para">
+<a class="row1" href="#" data-role="button" data-inline="true">Williams, James</a>
+<a class="row2" href="#" data-role="button" data-inline="true"></a>
+<a class="row3" href="#" data-role="button" data-inline="true">08-29-12</a>
+<a class=" row4c"  data-icon="plus" href="https://amxemr.com/pdf.php?c=200005&amp;p=144375 " target="_blank"   data-role="button" data-inline="true">Complete PDF </a>
+</div><div data-role="controlgroup" data-type="horizontal"  class="para">
+<a class="row1" href="#" data-role="button" data-inline="true">Young, Michelle</a>
+<a class="row2" href="#" data-role="button" data-inline="true"></a>
+<a class="row3" href="#" data-role="button" data-inline="true">08-24-12</a>
+<a class=" row4c"  data-icon="plus" href="https://amxemr.com/pdf.php?c=200005&amp;p=144293 " target="_blank"   data-role="button" data-inline="true">Complete PDF </a>
+</div><div data-role="controlgroup" data-type="horizontal"  class="para">
+<a class="row1" href="#" data-role="button" data-inline="true">Young, Michelle</a>
+<a class="row2" href="#" data-role="button" data-inline="true"></a>
+<a class="row3" href="#" data-role="button" data-inline="true">09-04-12</a>
+<a class=" row4t" href="#"  data-icon="gear"   data-role="button" data-inline="true">Testing </a>
+</div>
+</div></div>
+ <script>
+ $( '#clsp' ).expand(function() {
+  alert('expand');
+  //if (14 == 0) {
+  //  $('#result').css('color', '#fff');
+ // }
+   });
+        </script>
+  </body></html>

@@ -1,0 +1,3 @@
+  MODULE('ALIS8X046.CLW')
+GetPatient             PROCEDURE(LONG)
+  END

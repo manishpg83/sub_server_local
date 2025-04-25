@@ -1,0 +1,14 @@
+connect sftp://amx:xD1GkuK7a7DK8!@amxemr.com/home/amx/public_html/cpl/Results
+dir
+lcd C:\\apps\\results
+ldir C:\\apps\\results
+mget --exists s hl7$
+dir
+disconnect
+connect sftp://allermetrix_reflab:allermetrix_reflab@edi.sonichealthcareusa.com:9506/Allermetrix/Results
+lcd C:\\apps\\results
+mput --exists s hl7$
+dir
+ren hl7$ //Allermetrix//Results//In//hl7$
+disconnect
+

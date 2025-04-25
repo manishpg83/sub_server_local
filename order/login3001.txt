@@ -1,0 +1,24 @@
+1
+500258
+
+C
+ZZZTEST
+CERT
+M
+1940-01-01
+1234 Maple 
+Farmington
+NM
+87401
+
+
+
+2023-01-09
+230090002
+Physician - Hospitalist
+1746362809
+
+
+
+FZ131
+FZ031

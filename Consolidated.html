@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+</title>
+<link rel="stylesheet" href="https://amxemr.com/jquery.mobile-1.1.0.min.css" />
+        <style>
+#result {color:#ff0;}
+.mobile{width:90%;margin:0 auto 0;}
+.tablet{width:80%;margin:0 auto 0;}
+.desk{width:80%;margin:0 auto 0;}
+.head1 {width:40%;}
+.head2 {width:24%;}
+.head3 {width:20%;}
+.head4 {width:15%;}
+.row1 {width:40%;background:none;text-align:left;}
+.row2 {width:24%;background:none;}
+.row3 {width:20%;background:none;}
+.row4t {width:15%;color:#0f0;background:none;}
+.row4r {width:15%;color:#ff0;background:none;}
+.row4a {width:15%;color:#fff;background:#f00;}
+.row4c {width:15%;color:#f00;}
+.center{text-align:center;margin:0 auto 0;}
+.left {text-align:left;}
+.small {font-size:small;font-weight:400}
+.max {max-width:400px;margin:0 auto 0}
+.ui-btn-text {text-align:left;font-size:.9em;}
+.pick{width=10%}
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+        </script>
+        <script src="https://amxemr.com/jquery.mobile-1.1.0.min.js">
+        </script>
+</head>
+<body>
+<div data-role="page" data-theme="a" id="page1">
+ <div data-theme="a" data-role="header" data-position="fixed">
+  <h3>Allermetrix</h3>
+  <a data-role="button"  rel="external" data-ajax="false" href="https://amxemr.com/logout.php">
+  Logout
+  </a>
+  </div>
+<div data-role="content" class="desk">
+<div id="clsp" data-role="collapsible" data-collapsed="true">
+<h2>Consolidated Report:</h2>
+<form action="https://amxemr.com/search.php" method="POST" data-ajax="false">
+<div  class="max">
+
+	<fieldset data-role="controlgroup" data-type="horizontal">
+		<legend></legend>
+		
+		<label for="select-choice-month">Month</label>
+		<select name="select-choice-month" id="select-choice-month" data-native-menu="false">
+			<option value="sep">Sep</option>
+			<option value="oct">Oct</option>
+			<option value="nov">Nov</option>
+			<option value="dec">Dec</option>
+			<option value="jan">Jan</option>
+			<option value="dec">Dec</option>
+			<option value="feb">Feb</option>
+			<option value="mar">Mar</option>
+			<option value="apr">Apr</option>
+			<option value="may">May</option>
+			<option value="jun">Jun</option>
+			<option value="jul">Jul</option>
+			<option value="aug">Aug</option>
+		</select>
+
+		<label for="select-choice-day">Day</label>
+		<select name="select-choice-day" id="select-choice-day" data-native-menu="false">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option  selected="selected" value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+		</select>
+
+		<label for="select-choice-year">Year</label>
+		<select name="select-choice-year" id="select-choice-year" data-native-menu="false">
+			<option value="2012">2012</option>
+			<option value="2011">2011</option>
+			<option value="2010">2010</option>
+			<option value="2009">2009</option>
+			<option value="2008">2008</option>
+			<option value="2007">2007</option>
+			<option value="2006">2006</option>
+		</select>
+	</fieldset>
+
+
+ <input type="submit" data-icon="check" data-iconpos="left" value="Submit" />
+</div>
+</form>
+<p><br/></p>
+
+
+
+
+</div></div></div>
+</body></html>
