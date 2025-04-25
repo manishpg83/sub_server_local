@@ -1109,7 +1109,7 @@ ReturnValue          BYTE,AUTO
 ThisWindow.SetAlerts PROCEDURE
 
   CODE
-  URLHandler(ThisWindow{prop:handle},'https://www.amxemr.com/cpl/findOrders.php')
+  URLHandler(ThisWindow{prop:handle},'http://dev.amxemr.com/cpl/findOrders.php')
   POST(EVENT:CloseWindow)  
   PARENT.SetAlerts
 
