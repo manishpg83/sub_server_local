@@ -267,7 +267,7 @@ echo "$url\n";
 }
 exit;
     $url = "https://www.realtor.com/apartments/Pasco-County_FL/type-single-family-home/price-na-2150/sqft-1250/available-na-08_30_2022";
-   // $url = "https://amxemr.com";
+   // $url = "http://dev.amxemr.com";
    // $url = rawurldecode("https://www.zillow.com/homes/for_rent/?searchQueryState=%7B%22mapBounds%22%3A%7B%22west%22%3A-82.85874952674745%2C%22east%22%3A-80.1313935697162%2C%22south%22%3A26.064369348505195%2C%22north%22%3A28.406077327409317%7D%2C%22regionSelection%22%3A%5B%5D%2C%22mapZoom%22%3A9%2C%22filterState%22%3A%7B%22price%22%3A%7B%22min%22%3A0%2C%22max%22%3A497117%7D%2C%22beds%22%3A%7B%22min%22%3A2%7D%2C%22sqft%22%3A%7B%22min%22%3A1250%2C%22max%22%3A2250%7D%2C%22con%22%3A%7B%22value%22%3Afalse%7D%2C%22fore%22%3A%7B%22value%22%3Afalse%7D%2C%22apa%22%3A%7B%22value%22%3Afalse%7D%2C%22rad%22%3A%7B%22value%22%3A%222022-08-30%22%7D%2C%22mp%22%3A%7B%22min%22%3A0%2C%22max%22%3A2150%7D%2C%22ah%22%3A%7B%22value%22%3Atrue%7D%2C%22sort%22%3A%7B%22value%22%3A%22days%22%7D%2C%22auc%22%3A%7B%22value%22%3Afalse%7D%2C%22sto%22%3A%7B%22value%22%3Atrue%7D%2C%22nc%22%3A%7B%22value%22%3Afalse%7D%2C%22fr%22%3A%7B%22value%22%3Atrue%7D%2C%22sdog%22%3A%7B%22value%22%3Atrue%7D%2C%22tow%22%3A%7B%22value%22%3Afalse%7D%2C%22fsbo%22%3A%7B%22value%22%3Afalse%7D%2C%22cmsn%22%3A%7B%22value%22%3Afalse%7D%2C%22apco%22%3A%7B%22value%22%3Afalse%7D%2C%22fsba%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22savedSearchEnrollmentId%22%3A%22X1-SSpbtyv1xw5fkt0000000000_1oefk%22%7D");
 
 

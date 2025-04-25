@@ -69,7 +69,7 @@ WHILE ($row = mysql_fetch_array($results, MYSQL_NUM)) {
 
  }
  
-    echo '<br/><a href="https://amxemr.com/aP.php?id=' . $pw . '&amp;c=' . $c . '"><input id="sub" type="submit" value="' . $pw . ' " /></a>';
+    echo '<br/><a href="http://dev.amxemr.com/aP.php?id=' . $pw . '&amp;c=' . $c . '"><input id="sub" type="submit" value="' . $pw . ' " /></a>';
     
    
     

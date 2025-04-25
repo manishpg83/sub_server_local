@@ -69,7 +69,7 @@ while (true){
 
 echo <<<EOT
 
-<form method="get" action="https://amxemr.com/client/">
+<form method="get" action="http://dev.amxemr.com/client/">
 <fieldset>
 <legend>Display</legend>
 <div id="divChk1"  class="$classChk[1]" ><INPUT id="chk1"  class="$classChk[1]" type=checkbox name="grocery" value="1" $checked[1] onclick="check(1)" /></div>&nbsp;&nbsp;Grocery Page<br>

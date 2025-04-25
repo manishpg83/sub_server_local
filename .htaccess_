@@ -2,7 +2,7 @@
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} ^(www\.)?amxemr\.com$ [NC]
-RewriteRule ^(.*)$ https://amxemr.com/$1 [L,R=301]
+RewriteRule ^(.*)$ http://dev.amxemr.com/$1 [L,R=301]
 <IfModule mod_headers.c>
 Header always set Content-Security-Policy "upgrade-insecure-requests;"
 </IfModule>

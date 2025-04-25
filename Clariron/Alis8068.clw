@@ -598,7 +598,7 @@ ReturnValue          BYTE,AUTO
     locCurrentPath = LONGPATH(locCurrentPath)
   
     
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)
@@ -809,7 +809,7 @@ Looped BYTE
       !   TXT:TEST = file_put_contents('\home\amx\Z\check.php','',FILE_APPEND);'
       RUN('CMD /c  ECHO ON & pscp -v -p -pw xD1GkuK7a7DK8! movePDF.php amx@amxemr.com:/home/amx/Z/ & PAUSE',1) 
       RUN('CMD /c  ECHO ON & pscp -v -p -pw xD1GkuK7a7DK8! ' & CLIP(locFileList) & ' amx@amxemr.com:/home/amx/Z/ & PAUSE',1) 
-      URLHandler(QuickWindow{prop:handle},'https://amxemr.com/movePDFs.php')
+      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/movePDFs.php')
       .   
       
       OMIT('XXX')
@@ -930,11 +930,11 @@ Looped BYTE
       ThisWindow.Reset
     OF ?buttonCreateSeroLabsHL7
       ThisWindow.Update
-      URLHandler(QuickWindow{prop:handle},'https://amxemr.com/HL7/200424/post200424.php?filename=' & gloFileName)
+      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/HL7/200424/post200424.php?filename=' & gloFileName)
       DoUpdateSanJuan()
     OF ?ButtonCreateHL7s
       ThisWindow.Update
-      URLHandler(QuickWindow{prop:handle},'https://amxemr.com/HL7/500258/post500258.php?filename=' & gloFileName)
+      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/HL7/500258/post500258.php?filename=' & gloFileName)
     OF ?UpdateSanaJuan
       ThisWindow.Update
         DoUpdateSanJuan()      

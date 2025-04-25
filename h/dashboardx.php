@@ -455,7 +455,7 @@ if(isset($posted['c2'])){$father = '<circle cx="320.524" cy="430.731" r="37.2365
 
 $id = intval($_COOKIE['amxc']);
 $cookies = ''; //var_export($_COOKIE);
-$exit = "<form class=\"inline\" action=\"https://amxemr.com/requestForm.php\" <input type=\"hidden\" name=\"id\" value=\"$id\"><input type=\"hidden\" name=\"sub\" value=\"4\"><button>Done</button></form>";
+$exit = "<form class=\"inline\" action=\"http://dev.amxemr.com/requestForm.php\" <input type=\"hidden\" name=\"id\" value=\"$id\"><input type=\"hidden\" name=\"sub\" value=\"4\"><button>Done</button></form>";
 
 
 }

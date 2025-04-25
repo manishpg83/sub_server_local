@@ -91,7 +91,7 @@ input[type="text"]{width:5em;}
 </style>
 </head><body>
 <div id="page"><h2>All History</h2>
-<div><form style="display:block;" action="https://amxemr.com/f/" method="post"><div>
+<div><form style="display:block;" action="http://dev.amxemr.com/f/" method="post"><div>
 ID: <input type="text" name="id" value="" /><br/>
 <button style="background:#fff;padding:.6em;border:4px groove #000;">
 <img style="vertical-align:middle;" width="46" height ="40" src="data:image/gif;base64,R0lGODlhLgAoAKIAAAUyNP3+/nCxumiPkw5wgafN0mertNDk5ywAAAAALgAoAAAD/hi63P4wyknrO4LoUew6RwF6QcYVBQEQB1UIRiwLImWwjYZD2EC3oIKsE0k9UhpIwddyYGCCpoMgOOqqjSVRaYAZpIsCALzQJRkHDgXadQgAWMbATGi0113YVpGhhukaUloVUAIwYH2AgAyHFAd5hgZ7SIp0H3cThZFxCpV0W0JfE0KGpTBZnjoMoXsOpKaRZImKYKSSF5qwoqi0WXldIkFesKa7rnMEt66QMs3EumQkj8/UupwkC7nVxMrYq5Db3NF2yD4P4OGlmA8DAO5z7gADvunFxg0H7w3t7vT1jRD6PVAhMAy6Z zHGdQIQgZ+8LMO4dVEYQIyBhvEAtKroWaUZsAntKBLUdwGFSYoMCjowkFGlN3wk7bR0+fJDvHlhHLbcWDNfRg0zW9YMGLQozaEBdBq9idTV0pk8kSo1irOpg6fxrEZ4WkcrxqBVvUYQMKCsObFohyYAADs=" alt="Allermetrix e-Office"/>

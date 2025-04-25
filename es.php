@@ -87,7 +87,7 @@ if ($sub == 0){
     session_start( );
     setcookie("amxc", $id,time()+86400,'/');
     setcookie(session_name('amxs'), '', time() + 86400);
-    $link = "https://amxemr.com/logout.php";
+    $link = "http://dev.amxemr.com/logout.php";
     $action = "Cerrar sesión";
     $days = intval($cli[13]);
     if ($days == 0) {$days = 5;}
@@ -100,7 +100,7 @@ if ($sub == 0){
   }
   else {
    include('/home/amx/public_html/index.php');exit;
-   $link = "https://amxemr.com/";
+   $link = "http://dev.amxemr.com/";
    $action = "Log In";
    $terms = 'false';
    $admin = false;
@@ -317,7 +317,7 @@ $pdf['I'][1] = '<td><button class="i5"  type="button">Sendout  Due: ';
 $pdf['Q'][1] = '<td><button class="q5"  type="button">QNS';
 $pdf['X'][1] = '<td><button class="x5"  type="button">Void';
 $pdf['H'][1] = '<td><button class="q5"  type="button">On Hold';
-$pdf['C'][1] = '<td><form action="https://amxemr.com/pdf.php" method="get" target="_blank"><button class="c5"  type="submit">Terminado ( PDF )</button><input type="hidden" name="p" value="';
+$pdf['C'][1] = '<td><form action="http://dev.amxemr.com/pdf.php" method="get" target="_blank"><button class="c5"  type="submit">Terminado ( PDF )</button><input type="hidden" name="p" value="';
 $pdf['V'][2] = '</button></td>';
 $pdf['L'][2] = '</button></td>';
 $pdf['Q'][2] = '</button></td>';

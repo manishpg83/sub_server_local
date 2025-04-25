@@ -218,7 +218,7 @@ $err .= '<br/>TPL<br/><pre>' . var_export($tpl,true) . '</pre><br/>';
 $err .= '<br/>CHECKED<pre>' . var_export($checked,true) . '</pre><br/>';
 echo <<<EOT
 <div id="hd" class="noPrint">
-<form method="get" enctype="application/x-www-form-urlencoded" action="https://amxemr.com/cross.php">
+<form method="get" enctype="application/x-www-form-urlencoded" action="http://dev.amxemr.com/cross.php">
 <div><input type="hidden" name="sub" value="2" /> <br/> </div>
 <fieldset class="widthWide"><legend>Patient</legend> 
 <input class="desc" type="text" name="p" value="$patient" />
@@ -977,7 +977,7 @@ else{
   $patient = $_GET['p'];
   echo <<< EOT
 <div id="hd" class="noPrint">
-<form method="get" enctype="application/x-www-form-urlencoded" action="https://amxemr.com/cross.php">
+<form method="get" enctype="application/x-www-form-urlencoded" action="http://dev.amxemr.com/cross.php">
 <div><input type="hidden" name="sub" value="1" /> <br/> </div>
 <fieldset class="widthWide"><legend>Patient</legend> 
 <input class="desc" type="text" name="p" value="$patient" />

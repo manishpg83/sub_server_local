@@ -424,7 +424,7 @@ EOT;
 ob_flush();
 }
 if($sub == 1 && $dobOK){
-  echo'<div id="col"><form action="https://amxemr.com/h/" method="post"><div id="post">';
+  echo'<div id="col"><form action="http://dev.amxemr.com/h/" method="post"><div id="post">';
 //  echo'<div id="col"><form action="http://ispeedlink.com/amx/h/" method="post"><div id="post">';
   $showE = array();
   $showG4 = array();

@@ -226,7 +226,7 @@ ReturnValue          BYTE,AUTO
   Do DefineListboxStyle
   INIMgr.Fetch('ClientPanelDesciptionEdit',Window)         ! Restore window settings from non-volatile store
   SELF.SetAlerts()
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)
@@ -373,10 +373,10 @@ ReturnValue          BYTE,AUTO
     SET(HL7:OrderKey,HL7:OrderKey)
     LOOP UNTIL EOF(HL7)
       NEXT(HL7)
-      URLHandler(QuickWindow{prop:handle},'https://amxemr.com/HL7/' & HL7:Accession & '.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
+      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/HL7/' & HL7:Accession & '.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
   
     .
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)
@@ -507,7 +507,7 @@ ReturnValue          BYTE,AUTO
   INIMgr.Fetch('DoUpdateSanJuan',QuickWindow)              ! Restore window settings from non-volatile store
   Resizer.Resize                                           ! Reset required after window size altered by INI manager
   SELF.SetAlerts()
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)

@@ -206,7 +206,7 @@ td {text-align:center;padding:3px 0 0 0;}
 Fax:(615) 599-4648</p>
 <br/>Client: $id<br/>Billing:$billingCheck<br/>
 </div><div id="form">
-<div id="nav"><button class="link" onclick="prn()">Print</button> <form action="https://amxemr.com/requestForm.php" method="post"><input type="hidden" name="id" value="$id" /><input type="hidden" name="rec" value="$rec" /><input type="hidden" name="sub" value="6" /> <button class="link">Complete</button></form></div>
+<div id="nav"><button class="link" onclick="prn()">Print</button> <form action="http://dev.amxemr.com/requestForm.php" method="post"><input type="hidden" name="id" value="$id" /><input type="hidden" name="rec" value="$rec" /><input type="hidden" name="sub" value="6" /> <button class="link">Complete</button></form></div>
 <br/><input type="text" name="last" value="$last" class="name"  placeholder="Last Name" />
 <input type="text" name="first" class="name" value="$first"  placeholder="First Name" />
 <legend>DoB:</legend><input class="date" type="date" name="dob" value="$strdob" placeholder="m/d/yyyy" />

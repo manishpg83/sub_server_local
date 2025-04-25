@@ -11,9 +11,9 @@ echo <<<EOT
 <title>Print PDF</title>
 
 <div class="hide">
-<iframe id='abnG' src="https://amxemr.com/login/abnG.pdf" height="200" width="300"></iframe>
+<iframe id='abnG' src="http://dev.amxemr.com/login/abnG.pdf" height="200" width="300"></iframe>
 
-<iframe id='abnE' src="https://amxemr.com/login/abnE.pdf" height="200" width="300"></iframe>
+<iframe id='abnE' src="http://dev.amxemr.com/login/abnE.pdf" height="200" width="300"></iframe>
 </div>
 
 

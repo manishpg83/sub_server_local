@@ -11,7 +11,7 @@ $_COOKIE['amxc'] = $id;
 
 $client = $id;
 
-header("Location: https://amxemr.com/requestForm.php?client=$client");
+header("Location: http://dev.amxemr.com/requestForm.php?client=$client");
 //echo "\ncookie2: $client\n";
 exit; 
 

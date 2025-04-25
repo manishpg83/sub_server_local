@@ -81,7 +81,7 @@ echo <<<EOT
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
 </title>
-<link rel="stylesheet" href="https://amxemr.com/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="http://dev.amxemr.com/jquery.mobile-1.1.0.min.css" />
         <style>
 #result {color:#ff0;}
 .mobile{width:90%;margin:0 auto 0;}
@@ -111,14 +111,14 @@ form{display:inline;}
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
         </script>
-        <script src="https://amxemr.com/jquery.mobile-1.1.0.min.js">
+        <script src="http://dev.amxemr.com/jquery.mobile-1.1.0.min.js">
         </script>
 </head>
 <body>
 <div data-role="page" data-theme="a" id="page1">
  <div data-theme="a" data-role="header" data-position="fixed">
   <h3>Allermetrix</h3>
-  <a data-role="button"  rel="external" data-ajax="false" href="https://amxemr.com/logout.php">
+  <a data-role="button"  rel="external" data-ajax="false" href="http://dev.amxemr.com/logout.php">
   Logout
   </a>
   </div>
@@ -130,7 +130,7 @@ if ($pass) {
   echo '
 <div id="clsp" data-role="collapsible" data-collapsed="true">
 <h2>Search &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;' . $client   . '</h2>
-<form action="https://amxemr.com/search.php" method="POST" data-ajax="false">
+<form action="http://dev.amxemr.com/search.php" method="POST" data-ajax="false">
 <div  class="left">
 
 <div data-role="fieldcontain">
@@ -320,7 +320,7 @@ while ($row = @mysql_fetch_array($results, MYSQL_NUM)) {
   elseif ($row[8] == 'C'){
     $status = "Complete PDF";
     $path = "pdf.php?p=$row[1]";
-	$pdf = 'row4c"  data-icon="plus" href="https://amxemr.com/' . "$path" . ' " target="_blank" ' ;
+	$pdf = 'row4c"  data-icon="plus" href="http://dev.amxemr.com/' . "$path" . ' " target="_blank" ' ;
     $tresults = @mysql_query($sql);
 	$positive = number_format(mysql_num_rows($tresults),0);
   }
@@ -361,7 +361,7 @@ echo <<<EOT
 <a class="row1" href="#" data-role="button" data-inline="true">$row[3], $row[4]</a>
 EOT;
 if (true){ //$admin){
-  echo '<a class="row2' . $class . '" href="https://amxemr.com/diet.php?sub=1&amp;p=' . $row[1] . '" data-role="button" data-inline="true"  target="_blank" data-ajax="false" rel="external" >' . $clientID . '</a>';
+  echo '<a class="row2' . $class . '" href="http://dev.amxemr.com/diet.php?sub=1&amp;p=' . $row[1] . '" data-role="button" data-inline="true"  target="_blank" data-ajax="false" rel="external" >' . $clientID . '</a>';
 }
   else{ 
   echo '<a class="row2' . $class . '" href="#" data-role="button" data-inline="true">' . $clientID . '</a>';
@@ -390,7 +390,7 @@ $time = (microtime(1) - $start) / 1000;
   $L1 += 100;
   $L2 = 100;
   $sql = urlencode(preg_replace('/LIMIT.*$/i', 'LIMIT',$sql)); 
-echo '<form method="post" action="https://amxemr.com/search.php">
+echo '<form method="post" action="http://dev.amxemr.com/search.php">
 <input type="hidden" name="term" value="' . $code . '"/>
 <input type="hidden" name="L1" value="' . $L1 . '"/>
 <input type="hidden" name="L2" value="' . $L2 . '"/>
@@ -405,8 +405,8 @@ echo '<form method="post" action="https://amxemr.com/search.php">
 else { echo'
 <div class="head1">
 <h2 class="center">Session Expired</h2>
-<a data-role="button" data-transition="fade" rel="external" data-ajax="false" href="https://amxemr.com/logout.php" data-icon="delete" data-iconpos="left">Allermetrix Website</a>
-<a data-role="button" data-transition="fade" href="https://amxemr.com/" data-icon="star" data-iconpos="left">Log In</a>
+<a data-role="button" data-transition="fade" rel="external" data-ajax="false" href="http://dev.amxemr.com/logout.php" data-icon="delete" data-iconpos="left">Allermetrix Website</a>
+<a data-role="button" data-transition="fade" href="http://dev.amxemr.com/" data-icon="star" data-iconpos="left">Log In</a>
 </div>
 ';
 }

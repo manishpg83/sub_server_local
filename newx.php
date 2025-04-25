@@ -4,7 +4,7 @@ echo <<<EOT
 <html><head><title>New AMX Portal</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" type="text/css" href="https://amxemr.com/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" type="text/css" href="http://dev.amxemr.com/jquery.mobile-1.1.0.min.css" />
 <style type="text/css" >
 .mobile{width:90%;margin:0 auto 0;}
 .tablet{width:80%;margin:0 auto 0;}
@@ -18,7 +18,7 @@ echo <<<EOT
 </style>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
 </script>
-<script type="text/javascript" src="https://amxemr.com/jquery.mobile-1.1.0.min.js">
+<script type="text/javascript" src="http://dev.amxemr.com/jquery.mobile-1.1.0.min.js">
 </script>
 </head><body>
 <div data-role="page"  data-theme="a" id="page1">
@@ -31,7 +31,7 @@ An Unauthorized Attempt to Access this Site is Violation of United States,  and 
 </div>
 </div>
 <div data-role="content" data-theme="a"  class="desk">
-<form  method="post"  action="https://amxemr.com/enter.php" data-ajax="false">
+<form  method="post"  action="http://dev.amxemr.com/enter.php" data-ajax="false">
 <div data-role="fieldcontain">
 <fieldset data-role="controlgroup">
 <label for="id">

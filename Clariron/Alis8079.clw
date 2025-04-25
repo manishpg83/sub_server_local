@@ -225,7 +225,7 @@ ReturnValue          BYTE,AUTO
   Previewer.SetINIManager(INIMgr)
   Previewer.AllowUserZoom = True
   SELF.SetAlerts()
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)
@@ -571,7 +571,7 @@ ReturnValue          BYTE,AUTO
   SELECT(?locClientID)
   getHL7Orders
   ProcessOrdersHL7
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)
@@ -688,7 +688,7 @@ Looped BYTE
       UNHIDE(?STRING:V1,?locVolume3)
       HIDE(?STRING:Scan,?BUTTON_Inport)
       SELECT(?locVolume1)
-      URLHandler(QuickWindow{prop:handle},'https://amxemr.com/cpl/post.php?assession=' & Pat:INVOICE & '&id=' & Pat:CLIENT_ID)
+      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/cpl/post.php?assession=' & Pat:INVOICE & '&id=' & Pat:CLIENT_ID)
     OF ?BUTTON_PrintLabel1
               InitStr = 'N<10>B' & gloLabelXpos & ',' & gloLabelYpos & ',0,3,3,6,70,N,"' & CLIP(PAT:Invoice) & '-1"<10>'
               ComPuts(CommPort,InitStr)
@@ -868,7 +868,7 @@ ReturnValue          BYTE,AUTO
   INIMgr.Fetch('ExportResult',QuickWindow)                 ! Restore window settings from non-volatile store
   Resizer.Resize                                           ! Reset required after window size altered by INI manager
   SELF.SetAlerts()
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)
@@ -921,7 +921,7 @@ ThisWindow.SetAlerts PROCEDURE
       OF 5
         MESSAGE('CREATE DIRECTORY: Access Denied')
     . .      
-     URLHandler(QuickWindow{prop:handle},'https://amxemr.com/cpl/results.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
+     URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/cpl/results.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
     locDelay = CLOCK() + 150
     LOOP WHILE CLOCK() < locDelay
       YIELD    
@@ -931,7 +931,7 @@ ThisWindow.SetAlerts PROCEDURE
     locRecordNumber += 1
   .
   IF locRecordNumber > 1
-    URLHandler(QuickWindow{prop:handle},'https://amxemr.com/cpl/status.php') 
+    URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/cpl/status.php') 
   .
   
   POST(EVENT:CloseWindow)
@@ -970,7 +970,7 @@ Looped BYTE
         OF 5
           MESSAGE('Access Denied')
       . .      
-      URLHandler(QuickWindow{prop:handle},'https://amxemr.com/cpl/results.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
+      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/cpl/results.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
       STOP('If results posted okay then click Ignore ')
       RUN('C:\Windows\System32\CMD.exe /c ECHO ON & "c:\apps\pscp" -v -p -pw xD1GkuK7a7DK8! amx@amxemr.com:/home/amx/public_html/cpl/Results/' & CLIP(Pat:CLIENT_ID) & '/fzUploadResultsCPL.script' & ' C:\Apps\Results\' & CLIP(Pat:CLIENT_ID) & '\fzUploadResultsCPL.script' & ' & exit',1)  
       RUN('C:\Windows\System32\CMD.exe /c ECHO ON & C:\Apps\uploadResultsCPL.bat ' & CLIP(Pat:CLIENT_ID) & ' exit',1) 
@@ -1082,7 +1082,7 @@ ReturnValue          BYTE,AUTO
   Do DefineListboxStyle
   INIMgr.Fetch('ProcessOrdersHL7',Window)                  ! Restore window settings from non-volatile store
   SELF.SetAlerts()
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)
@@ -1270,7 +1270,7 @@ ReturnValue          BYTE,AUTO
   SELECT(?locOrderNumber)
   
   
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)
@@ -1785,7 +1785,7 @@ ReturnValue          BYTE,AUTO
       TXT:Text = BILL:Accession & '|' & CLIP(BILL:AddressPatient) & '|' & CLIP(BILL:CityPatient) & '|' & CLIP(BILL:StatePatient) & '|' & CLIP(BILL:PostalPatient) & '|' & CLIP(BILL:emailPatient) & '|' & CLIP(BILL:PhonePatient)  
       ADD(Text)
   . .
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)

@@ -807,7 +807,7 @@ ReturnValue          BYTE,AUTO
   gloResultsPrinter = GETINI('PrintReport','RESULTSPRINTER','','PrintResults.INI')   
   DO CheckBilling
   gloPatientNumber = Pat:INVOICE
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)
@@ -1039,7 +1039,7 @@ Looped BYTE
             locDisclaimer = DOC:Body
           .
           locSubject = 'Allermetrix:  Le adjuntamos los resultados de las pruebas de alergia de su paciente'
-          locBody = '<p  style="color:#20889A;">Le adjuntamos los resultados de las pruebas de alergia de su paciente. Si tiene alguna pregunta o desea m&#225s informaci&#243n&#44 comuníquese con nosotros por medio de este correo electr&#243nico.<p>C&#243mo abrir los archivos pdf de ' & PAT:Client & '<p>Gracias.<p><br>Gary A. Kitos&#44 Ph.D.&#44 H.C.L.D.<br>Director del Laboratorio M&#233dico<br>Tel: 615-599-4100<br>Fax: 615-599-4648</p>'          
+          locBody = '<p  style="color:#20889A;">Le adjuntamos los resultados de las pruebas de alergia de su paciente. Si tiene alguna pregunta o desea m&#225s informaci&#243n&#44 comunï¿½quese con nosotros por medio de este correo electr&#243nico.<p>C&#243mo abrir los archivos pdf de ' & PAT:Client & '<p>Gracias.<p><br>Gary A. Kitos&#44 Ph.D.&#44 H.C.L.D.<br>Director del Laboratorio M&#233dico<br>Tel: 615-599-4100<br>Fax: 615-599-4648</p>'          
           locSubject = 'Allermetrix:  Le adjuntamos los resultados de las pruebas de alergia de su paciente'
           locAttachments = 'file:///' & CLIP(locPath) & 'Results\' & PAT:Client & '\' & PAT:Invoice & 's.PDF'
         ELSE
@@ -1266,7 +1266,7 @@ Looped BYTE
             . 
     OF ?ButtonHL7
       ThisWindow.Update
-          URLHandler(QuickWindow{prop:handle},'https://amxemr.com/cpl/results.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
+          URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/cpl/results.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
           locDelay = CLOCK() + 150
           LOOP WHILE CLOCK() < locDelay
             YIELD    

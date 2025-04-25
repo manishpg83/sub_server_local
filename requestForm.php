@@ -93,7 +93,7 @@ form,table,#frmtop,#frmbot{border:0;margin:0 auto;}
 h2{text-align:center;}
 input[type="text"]{width:5em;}
 #lo{width:20em;display:inline-block;padding:1.2em;}
-.history{border:0;padding:0;margin:0;height:40px;width:40px;background-image: url('https://amxemr.com/dashboard40.jpg');}
+.history{border:0;padding:0;margin:0;height:40px;width:40px;background-image: url('http://dev.amxemr.com/dashboard40.jpg');}
 .foods{border:0;padding:0;margin:0;height:40px;width:40px;vertical-align: middle;border-image-width:0;border:0;margin:0;padding:0;width:40px;background-image: url('data:image/gif;base64,R0lGODlhKAAoAKIAAAMBA5qbmk5NTv3+/YqKivb29m1sbR4dHiwAAAAAKAAoAAADjgi63P4wykmrvTjrzZsABxR2y2CYgzA8K6mgquoUrQun9Tvk3S2XOx4Hdfrpdq5XEccICjeDQHRAyDmTAGewuU1qkUCw7csVd0LaT/g53I3W2KPjGu+W2VDzEa+xw+t6coBsgT2FWXwZflxxiISJGItAjZI6lIeHeY+Xm4MQmX2YkBeVWQWNqKmqq6ytCwkAOw==');}
 #ph,#lo{font:700 1.1em Arial,sans-serif;color:#fff;margin:4px 0 4px;width:100%;height:40px;}
 #ph{color:#fff;background-image: linear-gradient(to bottom, #2bf 0%, #02f 100%);}
@@ -107,7 +107,7 @@ input[type="text"]{width:5em;}
 </style>
 </head><body>
 <div id="page">
-<form style="display:inline-block;" action="https://amxemr.com/eOffice/" method="post"><div>
+<form style="display:inline-block;" action="http://dev.amxemr.com/eOffice/" method="post"><div>
 <input type="hidden" name="id" value="$id" />
 <input type="hidden" name="action" value="1" />
 <button style="background:#fff;padding:.6em;border:4px groove #000;">

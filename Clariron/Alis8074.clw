@@ -253,7 +253,7 @@ Start   ROUTINE
   CLOSE(TEXT)
   RUN('CMD /c ' & i#  & ' & ECHO ON & pscp -v -p -pw 7oT9W6l7E3cS2ge4O1UXxdDi .\budata\amxUpdate.SQL amx@amxemr.com:/home/amx/Z/buData/ & EXIT',1)   
   SLEEP(2000)
-  URLHandler(QuickWindow{prop:handle},'https://amxemr.com/update.php')   
+  URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/update.php')   
   
 
 Upload  ROUTINE
@@ -288,7 +288,7 @@ Upload  ROUTINE
         RUN('CMD /c ' & i#  & ' & ECHO ON & pscp -v -p -pw 7oT9W6l7E3cS2ge4O1UXxdDi .\budata\movePDF.php amx@amxemr.com:/home/amx/Z/ & EXIT',1)   
         RUN('CMD /c ' & i#  & ' & ECHO ON & pscp -v -p -pw 7oT9W6l7E3cS2ge4O1UXxdDi ' & CLIP(locFileList) & ' amx@amxemr.com:/home/amx/Z/ & EXIT',1)   
         SLEEP(2000)
-        URLHandler(QuickWindow{prop:handle},'https://amxemr.com/update.php') 
+        URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/update.php') 
       !       STOP('CMD /c ' & i#  & ' & ECHO ON & pscp -v -p -pw 7oT9W6l7E3cS2ge4O1UXxdDi ' & CLIP(locFileList) & ' amx@amxemr.com:/home/amx/Z/ & PAUSE & EXIT')   
       
         IF ~EXISTS('BUDATA.KEY') 
@@ -497,7 +497,7 @@ ReturnValue          BYTE,AUTO
   DO START
   
   POST(EVENT:CloseWindow)
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)
@@ -681,7 +681,7 @@ ReturnValue          BYTE,AUTO
   SELF.AddItem(?Progress:Cancel, RequestCancelled)
   SEND(Billing,'QUICKSCAN=on')
   SELF.SetAlerts()
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)
@@ -3219,7 +3219,7 @@ ReturnValue          BYTE,AUTO
   0{PROP:Wallpaper} = gloWallpaper
   BRW1::AutoSizeColumn.Init()
   BRW1::AutoSizeColumn.AddListBox(?Browse:1,Queue:Browse:1)
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)
@@ -3575,7 +3575,7 @@ ReturnValue          BYTE,AUTO
    0{PROP:Wallpaper} = gloWallpaper
   BRW1::AutoSizeColumn.Init()
   BRW1::AutoSizeColumn.AddListBox(?Browse:1,Queue:Browse:1)
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)

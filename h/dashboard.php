@@ -438,7 +438,7 @@ if($ip == '70.171.10.12' && $sub == 0){$bw = 'fff';$comment = '';$sub = 99;$rec 
 if($sub == 4 || $sub == 14){
 $id = intval($_COOKIE['amxc']);
 $cookies = ''; //var_export($_COOKIE);
-//$exit = "<form class=\"inline\" action=\"https://amxemr.com/requestForm.php\" <input type=\"hidden\" name=\"id\" value=\"$id\"><input type=\"hidden\" name=\"sub\" value=\"4\"><button id=\"done\">Done</button></form>";
+//$exit = "<form class=\"inline\" action=\"http://dev.amxemr.com/requestForm.php\" <input type=\"hidden\" name=\"id\" value=\"$id\"><input type=\"hidden\" name=\"sub\" value=\"4\"><button id=\"done\">Done</button></form>";
 }
 elseif($sub == 64 || $sub == 99){
 

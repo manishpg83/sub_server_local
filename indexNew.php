@@ -9,7 +9,7 @@ header('Cache-Control: max-age=0');
 echo <<<EOT
 <!DOCTYPE html>
 <html><head>
-<base href="https://amxemr.com/">
+<base href="http://dev.amxemr.com/">
 <title>Allermetrix Client Portal</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -736,7 +736,7 @@ data-role="content"
 data-theme="a" class="desk
 ui-content
 ui-body-a">
-<form method="post" action="https://amxemr.com/enter.php"
+<form method="post" action="http://dev.amxemr.com/enter.php"
 data-ajax="false">
 <input name="sub" value="0" type="hidden">
 <div class="ui-field-contain

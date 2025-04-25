@@ -122,7 +122,7 @@ if ($clientNum > 99999 && $clientNum < 1000000) {
   $cliErr =  "<h4>$error <br/>$sql</h4>";
   $rows = @mysql_num_rows($results); 
 }
-  if ($rows < 1) { // https://amxemr.com/fbi.gov?cybercrime
+  if ($rows < 1) { // http://dev.amxemr.com/fbi.gov?cybercrime
     echo <<<EOT
 <h3>Unauthorized access attempts or attempts to change information on this service or tamper with this web site are strictly prohibited and may be punishable under the Computer Fraud Act of 1986 and the National Information Infrastructure Protection Act.</h3><h3> All information, including personal information, placed on or sent over this system is monitored. Statistics and other information about your visit will be recorded.</h3>
 <p style="padding:0;margin:0;font:400 .5em Arial;color:#f00;">Metadata Sent</p><h3>Use of this system constitutes consent to monitoring for these purposes.</h3><h3>For site security purposes and to ensure that this service remains available to all authorized users, this computer system employs software programs to monitor network traffic to identify unauthorized attempts to access, upload, or change information, or otherwise cause damage.</h3><form name="DOJ_CyberCrime" action="http://www.justice.gov/criminal/cybercrime/" method="get">
@@ -409,13 +409,13 @@ array("</p><br/>\n","</p><br/>\n","</p><br/>\n"),
 array("</p><br/>\n","</p><br/>\n","</p><br/>\n"));
 
 echo <<<EOT
-<form method="get" enctype="application/x-www-form-urlencoded" action="https://amxemr.com/diet.php">
+<form method="get" enctype="application/x-www-form-urlencoded" action="http://dev.amxemr.com/diet.php">
 <div><input type="hidden" name="sub" value="1" /><br/></div>
 <fieldset class="widthWide"><legend>Patient</legend> 
 <input class="desc" type="text" name="p" value="$patient" />
 <button class="login">Update</button>  
 </fieldset></form>
-<form method="get" enctype="application/x-www-form-urlencoded" action="https://amxemr.com/diet.php">
+<form method="get" enctype="application/x-www-form-urlencoded" action="http://dev.amxemr.com/diet.php">
 <div><input type="hidden" name="sub" value="2" /><br/>
 <input type="hidden" name="p" value="$patient" /></div>
 EOT;
@@ -1204,7 +1204,7 @@ if ($sub == 2){
 else{
   $patient = $_GET['p'];
   echo <<< EOT
-<form method="get" enctype="application/x-www-form-urlencoded" action="https://amxemr.com/diet.php">
+<form method="get" enctype="application/x-www-form-urlencoded" action="http://dev.amxemr.com/diet.php">
 <div><input type="hidden" name="sub" value="1" /> <br/> </div>
 <fieldset class="widthWide"><legend>Patient</legend> 
 <input class="desc" type="text" name="p" value="$patient" />

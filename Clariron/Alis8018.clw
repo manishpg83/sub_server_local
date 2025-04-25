@@ -862,7 +862,7 @@ ReturnValue          BYTE,AUTO
   BRW9::AutoSizeColumn.AddListBox(?List:3,Queue:Browse:2)
   BRW11::AutoSizeColumn.Init()
   BRW11::AutoSizeColumn.AddListBox(?List:4,Queue:Browse:3)
-  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'»',8)
+  EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'ï¿½',8)
   EnhancedFocusManager.DisableControlType(CREATE:Radio)
   EnhancedFocusManager.DisableControlType(CREATE:Check)
   EnhancedFocusManager.DisableControlType(CREATE:Combo)
@@ -1154,7 +1154,7 @@ Looped BYTE
       END
     OF ?ButtonPassword
       ThisWindow.Update
-      URLHandler(QuickWindow{prop:handle},'https://amxemr.com/gP.php?c=' & CLI:Number & '&amp;p=MDkwNzEy')
+      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/gP.php?c=' & CLI:Number & '&amp;p=MDkwNzEy')
     END
     RETURN ReturnValue
   END
