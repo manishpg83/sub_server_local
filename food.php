@@ -221,7 +221,7 @@ if ($n > 0){
   $prev = $n - $rows;
   if ($prev < 0){$prev = 0;}
   echo <<< EOF
-<form action="http://dev.amxemr.com/food.php" method="post">
+<form action="https://dev.amxemr.com/food.php" method="post">
 <input type="hidden" name="s" value="$s" />
 <input type="hidden" name="r" value="$rows" />
 <input type="hidden" name="sort" value="$sort" />
@@ -229,7 +229,7 @@ if ($n > 0){
 <input class="btn" type="submit" value="&emsp;&emsp;Top&emsp;&emsp;" /><br>
 </form>
 <br>
-<form action="http://dev.amxemr.com/food.php" method="post">
+<form action="https://dev.amxemr.com/food.php" method="post">
 <input type="hidden" name="s" value="$s" />
 <input type="hidden" name="sort" value="$sort" />
 <input type="hidden" name="n" value="$prev" />
@@ -240,7 +240,7 @@ EOF;
 }
 
 echo <<<EOF
-<form action="http://dev.amxemr.com/food.php" method="post">
+<form action="https://dev.amxemr.com/food.php" method="post">
 <input type="hidden" name="r" value="$rows" />
 <input type="hidden" name="s" value="$s" />
 <table><tr>
@@ -268,7 +268,7 @@ echo <<<EOF
 </div>
 </form>
 <br>
-<form action="http://dev.amxemr.com/food.php" method="post">
+<form action="https://dev.amxemr.com/food.php" method="post">
 <input class="txt" type="text" name="s" value="$s" />
 <input type="hidden" name="sort" value="$sort" />
 <input type="hidden" name="r" value="$rows" />
@@ -279,7 +279,7 @@ EOF;
 while ($row = mysql_fetch_array($results, MYSQL_NUM)) {
 ++$line ;
 echo <<<EOR
-<tr><td><form action="http://dev.amxemr.com/detail.php" method="post">
+<tr><td><form action="https://dev.amxemr.com/detail.php" method="post">
 <input type="hidden" name="r" value="$rows" />
 <input type="hidden" name="s" value="$s" />
 <input type="hidden" name="sort" value="$sort" />
@@ -293,7 +293,7 @@ EOR;
 }
 echo <<<EOF
 </table><br>
-<form action="http://dev.amxemr.com/food.php" method="post">
+<form action="https://dev.amxemr.com/food.php" method="post">
 <input class="num" type="text" name="r" value="$rows" />
 <input type="hidden" name="s" value="$s" />
 <input type="hidden" name="sort" value="$sort" />
@@ -304,14 +304,14 @@ EOF;
 if ($count > ($next)){
 echo <<<EOF
 
-<form action="http://dev.amxemr.com/food.php" method="post">
+<form action="https://dev.amxemr.com/food.php" method="post">
 <input type="hidden" name="s" value="$s" />
 <input type="hidden" name="sort" value="$sort" />
 <input type="hidden" name="n" value="$next" />
 <input type="hidden" name="r" value="$rows" />
 <input class="btn" type="submit" value="&emsp;Page Down&emsp;" /><p>
 </form><br>
-<form action="http://dev.amxemr.com/food.php" method="post">
+<form action="https://dev.amxemr.com/food.php" method="post">
 <input type="hidden" name="s" value="$s" />
 <input type="hidden" name="sort" value="$sort" />
 <input type="hidden" name="n" value="$last" />

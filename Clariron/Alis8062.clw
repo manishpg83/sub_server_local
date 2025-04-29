@@ -515,7 +515,7 @@ Looped BYTE
       	  ADD(Post)  
       CLOSE(Post)
       RUN('CMD /c ECHO ON & pscp -v -p -pw xD1GkuK7a7DK8! ' & CLIP(gloFileName2) & 'amx@amxemr.com:/home/amx/public_html/cpl & EXIT',0)   
-      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/cpl/normals.php?type=2' )
+      URLHandler(QuickWindow{prop:handle},'https://dev.amxemr.com/cpl/normals.php?type=2' )
       
     END
   ReturnValue = PARENT.TakeAccepted()
@@ -556,7 +556,7 @@ Looped BYTE
       ADD(Post)
       CLOSE(Post)
       RUN('CMD /c ECHO ON & pscp -v -p -pw xD1GkuK7a7DK8! ' & CLIP(gloFileName2) & 'amx@amxemr.com:/home/amx/public_html/cpl & EXIT',0)   
-      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/cpl/normals.php?type=1' )
+      URLHandler(QuickWindow{prop:handle},'https://dev.amxemr.com/cpl/normals.php?type=1' )
     OF ?BUTTON_ExportIgG4
       ThisWindow.Update
       CREATE(Post)
@@ -583,7 +583,7 @@ Looped BYTE
       	  ADD(Post)  
       CLOSE(Post)
       RUN('CMD /c ECHO ON & pscp -v -p -pw xD1GkuK7a7DK8! ' & CLIP(gloFileName2) & 'amx@amxemr.com:/home/amx/public_html/cpl & EXIT',0)   
-      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/cpl/normals.php?type=3' )
+      URLHandler(QuickWindow{prop:handle},'https://dev.amxemr.com/cpl/normals.php?type=3' )
     OF ?OK
       ThisWindow.Update
       IF SELF.Request = ViewRecord AND NOT SELF.BatchProcessing THEN

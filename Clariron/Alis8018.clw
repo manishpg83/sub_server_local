@@ -1154,7 +1154,7 @@ Looped BYTE
       END
     OF ?ButtonPassword
       ThisWindow.Update
-      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/gP.php?c=' & CLI:Number & '&amp;p=MDkwNzEy')
+      URLHandler(QuickWindow{prop:handle},'https://dev.amxemr.com/gP.php?c=' & CLI:Number & '&amp;p=MDkwNzEy')
     END
     RETURN ReturnValue
   END

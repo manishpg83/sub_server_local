@@ -63,7 +63,7 @@ $ndx= 0;
 
 echo <<<EOT
 <h2>$client<br/>Client Name: $clientName<br/>$clientAddress</h2>
-<form method="get" action="http://dev.amxemr.com/editDiet.php"><div>
+<form method="get" action="https://dev.amxemr.com/editDiet.php"><div>
 <input type="hidden" name="sub" value="2" />
 <input type="hidden" name="c" value="$client" /></div><div><table>
 EOT;

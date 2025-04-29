@@ -424,7 +424,7 @@ function match($filename) {
     }
     else {
       
-      $warning .= "<div><br/><h3 class=\"green inline\">&emsp;Update Ready</h3><form class=\"inline\" action=\"http://dev.amxemr.com/update.php\" method=\"POST\">&emsp;<input class=\"link inline\" type=\"submit\" value=\"&emsp;Update&emsp;\" /></form></div>";
+      $warning .= "<div><br/><h3 class=\"green inline\">&emsp;Update Ready</h3><form class=\"inline\" action=\"https://dev.amxemr.com/update.php\" method=\"POST\">&emsp;<input class=\"link inline\" type=\"submit\" value=\"&emsp;Update&emsp;\" /></form></div>";
     }
   }
   return array($class,$warning );

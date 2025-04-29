@@ -1266,7 +1266,7 @@ Looped BYTE
             . 
     OF ?ButtonHL7
       ThisWindow.Update
-          URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/cpl/results.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
+          URLHandler(QuickWindow{prop:handle},'https://dev.amxemr.com/cpl/results.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
           locDelay = CLOCK() + 150
           LOOP WHILE CLOCK() < locDelay
             YIELD    

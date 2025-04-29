@@ -26,7 +26,7 @@ if($client == 0){$client = intval($_COOKIE['amxc']);}
 $_COOKIE['amxc'] = $client;
 
 
-header("Location: http://dev.amxemr.com/requestForm.php?clent=$client");
+header("Location: https://dev.amxemr.com/requestForm.php?clent=$client");
 
 exit; 
 

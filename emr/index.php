@@ -30,7 +30,7 @@ if ($sub == 0){
 //  }
   if ((hash('ripemd320',$passcode) == '6732f3c024fe3c3c1ccd7dbe5d0fa7d4a53c516f800707bb86a9017c1e1646d9d4a2d7adc56a505d') ){ //&& (substr($ip,0,11)  == '128.30.52.7' || $ip == '99.3.150.55' || $ip == '173.162.23.21' || $ip == '70.197.160.30')){
     $admin = true;
-    $clear = '<div id="sc"><form action="http://dev.amxemr.com/emr/" method="post"><input type="hidden" name="id" value="' . $SAVE_ID . '"><input type="hidden" name="pw" value="' . $passcode . '"><input type="hidden" name="sub" value="9"><button id="clear">Reset Diet Icons</button></form></div>';  
+    $clear = '<div id="sc"><form action="https://dev.amxemr.com/emr/" method="post"><input type="hidden" name="id" value="' . $SAVE_ID . '"><input type="hidden" name="pw" value="' . $passcode . '"><input type="hidden" name="sub" value="9"><button id="clear">Reset Diet Icons</button></form></div>';  
   }
   $sql = "SELECT COUNT(*)  FROM `Banned` WHERE `ip` LIKE '$ip'";
   $results = mysql_query($sql);
@@ -247,12 +247,12 @@ table,#frmtop,#frmbot{border:0;margin:0 auto 0 ;}
 </head><body onload="init()">
 <div id="page"><div id="keys"><h4 id="cli">$id $client</h4>
 <div id="frmtop">
-<form action="http://dev.amxemr.com/logout.php">
+<form action="https://dev.amxemr.com/logout.php">
 <button id="announce" type="button" onclick="showAnnounce()">Announcement</button>
 &#x2003;<button id="lo" type="submit" value="Log Out" />Log Out</button></form>
 </div>$clear
 <div id="frmbot"><div id="inp">
-<form action="http://dev.amxemr.com/emr/" method="post">
+<form action="https://dev.amxemr.com/emr/" method="post">
 <div class="box"><h3>Search Patients By:</h3>
 <p class="label">Client Patient ID</p>
 <input id="code" name="code" placeholder="or Begins With" value="" type="search" />
@@ -295,7 +295,7 @@ $pdf['I'][1] = '<td><button class="i5"  type="button">Sendout  Due: ';
 $pdf['Q'][1] = '<td><button class="q5"  type="button">QNS';
 $pdf['X'][1] = '<td><button class="x5"  type="button">Void';
 $pdf['H'][1] = '<td><button class="q5"  type="button">On Hold';
-$pdf['C'][1] = '<td><form action="http://dev.amxemr.com/pdf.php" method="get" target="_blank"><button class="c5"  type="submit">Complete ( PDF )</button><input type="hidden" name="p" value="';
+$pdf['C'][1] = '<td><form action="https://dev.amxemr.com/pdf.php" method="get" target="_blank"><button class="c5"  type="submit">Complete ( PDF )</button><input type="hidden" name="p" value="';
 $pdf['V'][2] = '</button></td>';
 $pdf['L'][2] = '</button></td>';
 $pdf['Q'][2] = '</button></td>';

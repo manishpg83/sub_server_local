@@ -253,7 +253,7 @@ Start   ROUTINE
   CLOSE(TEXT)
   RUN('CMD /c ' & i#  & ' & ECHO ON & pscp -v -p -pw 7oT9W6l7E3cS2ge4O1UXxdDi .\budata\amxUpdate.SQL amx@amxemr.com:/home/amx/Z/buData/ & EXIT',1)   
   SLEEP(2000)
-  URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/update.php')   
+  URLHandler(QuickWindow{prop:handle},'https://dev.amxemr.com/update.php')   
   
 
 Upload  ROUTINE
@@ -288,7 +288,7 @@ Upload  ROUTINE
         RUN('CMD /c ' & i#  & ' & ECHO ON & pscp -v -p -pw 7oT9W6l7E3cS2ge4O1UXxdDi .\budata\movePDF.php amx@amxemr.com:/home/amx/Z/ & EXIT',1)   
         RUN('CMD /c ' & i#  & ' & ECHO ON & pscp -v -p -pw 7oT9W6l7E3cS2ge4O1UXxdDi ' & CLIP(locFileList) & ' amx@amxemr.com:/home/amx/Z/ & EXIT',1)   
         SLEEP(2000)
-        URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/update.php') 
+        URLHandler(QuickWindow{prop:handle},'https://dev.amxemr.com/update.php') 
       !       STOP('CMD /c ' & i#  & ' & ECHO ON & pscp -v -p -pw 7oT9W6l7E3cS2ge4O1UXxdDi ' & CLIP(locFileList) & ' amx@amxemr.com:/home/amx/Z/ & PAUSE & EXIT')   
       
         IF ~EXISTS('BUDATA.KEY') 

@@ -107,12 +107,12 @@ if ($sub == 0){
     if (($statusSort & 8) > 0){$chkStatus[3] = ' checked="checked"';}
   }
   else {
-     header("Location: http://dev.amxemr.com");exit; 
+     header("Location: https://dev.amxemr.com");exit; 
   }
 }
 else{
   $client = intval($_COOKIE['amxc']);
-  if ($client < 100000){header("Location: http://dev.amxemr.com");exit;} 
+  if ($client < 100000){header("Location: https://dev.amxemr.com");exit;} 
   setcookie("amxc", $client,time()+3600,'/');
   if ($sub == 4){
     $name = $_POST['name'];

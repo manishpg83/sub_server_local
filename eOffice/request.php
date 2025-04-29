@@ -60,7 +60,7 @@ button{width:100%;font:700 1em Arial,sans-serif;cursor:pointer;padding:6px 0 6px
       background: linear-gradient(to bottom, rgba(0,0,255,1) 0%, rgba(0,0,64,1) 100%);}.dchk{font:700 .8em Arial,sans-serif;display:inline-block;padding:0;margin:0;vertical-align: middle;position: relative;}
 </style></head><body>
 <div id="billing"> 
-<form action="http://dev.amxemr.com/login/"  method="post" >
+<form action="https://dev.amxemr.com/login/"  method="post" >
 <div style="inline-block;">Billing:<span class="red"> &#x2731;</span></div>
 <div id="d003"><input id="c003" type="radio" name="billing" value="1"  $checked[1] required />&#x2002;
 Bill Client </div><div id="s003"></div>
@@ -82,7 +82,7 @@ EOT;
 exit;
   $code = rand(100000,999999);
   file_put_contents('/home/amx/public_html/login/next.txt',"$code|$client|$history");
-  header("Location: http://dev.amxemr.com/login?session=$code");
+  header("Location: https://dev.amxemr.com/login?session=$code");
   exit;
 
 

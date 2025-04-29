@@ -60,7 +60,7 @@ if($sub == 70){
 if($sub == 60){
   $code = rand(100000,999999);
   file_put_contents('/home/amx/public_html/login/done.txt',"$code|$client");
-  header("Location: http://dev.amxemr.com/enter.php?Accession=$code");
+  header("Location: https://dev.amxemr.com/enter.php?Accession=$code");
   exit;
 }
 ob_start("ob_gzhandler");

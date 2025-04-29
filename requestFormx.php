@@ -94,13 +94,13 @@ input[type="text"]{width:5em;}
 </style>
 </head><body>
 <div id="page">
-<form style="display:inline-block;" action="http://dev.amxemr.com/f/" method="post"><div>
+<form style="display:inline-block;" action="https://dev.amxemr.com/f/" method="post"><div>
 <input type="hidden" name="id" value="$id" />
 <button style="background:#fff;padding:.6em;border:4px groove #000;">
 <img style="vertical-align:middle;" width="46" height ="40" src="data:image/gif;base64,R0lGODlhLgAoAKIAAAUyNP3+/nCxumiPkw5wgafN0mertNDk5ywAAAAALgAoAAAD/hi63P4wyknrO4LoUew6RwF6QcYVBQEQB1UIRiwLImWwjYZD2EC3oIKsE0k9UhpIwddyYGCCpoMgOOqqjSVRaYAZpIsCALzQJRkHDgXadQgAWMbATGi0113YVpGhhukaUloVUAIwYH2AgAyHFAd5hgZ7SIp0H3cThZFxCpV0W0JfE0KGpTBZnjoMoXsOpKaRZImKYKSSF5qwoqi0WXldIkFesKa7rnMEt66QMs3EumQkj8/UupwkC7nVxMrYq5Db3NF2yD4P4OGlmA8DAO5z7gADvunFxg0H7w3t7vT1jRD6PVAhMAy6Z zHGdQIQgZ+8LMO4dVEYQIyBhvEAtKroWaUZsAntKBLUdwGFSYoMCjowkFGlN3wk7bR0+fJDvHlhHLbcWDNfRg0zW9YMGLQozaEBdBq9idTV0pk8kSo1irOpg6fxrEZ4WkcrxqBVvUYQMKCsObFohyYAADs=" alt="Allermetrix e-Office"/>
 <span style="font:700 1.5em 'Comic Sans MS',sans-serif;color:#000;" >Allermetrix e-Office</span>
 </button></form>
-<form action="http://dev.amxemr.com/enter.php" method="post">
+<form action="https://dev.amxemr.com/enter.php" method="post">
 <input id="lo" type="submit" value="Patient Portal" />
 <input type="hidden" name="sub" value="2" /></form>
 </div><h2>Patient Food History<br></h2>
@@ -174,7 +174,7 @@ EOT;
     echo <<<EOT
 <tr>
 
-<td><form action="http://dev.amxemr.com/f/" method="post"><input type="hidden" name="rec" value="$rec" /><input type="hidden" name="sub" value="4" />
+<td><form action="https://dev.amxemr.com/f/" method="post"><input type="hidden" name="rec" value="$rec" /><input type="hidden" name="sub" value="4" />
 <button class="ck1"  type="submit">$last, $first</button></form></td>
 <td><button class="c4"  type="submit">$dob</button></td>
 <td><button class="c3"  type="submit">$date</button></td>

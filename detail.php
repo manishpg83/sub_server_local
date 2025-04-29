@@ -184,7 +184,7 @@ if (strlen(mysql_error()) > 0){
 }
 
 $ndx = 0;
-echo '<p><form action="http://dev.amxemr.com/food.php" method="post">
+echo '<p><form action="https://dev.amxemr.com/food.php" method="post">
 <input type="hidden" name="r" value="' . $rows . '" />
 <input type="hidden" name="s" value="' . $s . '" />
 <input type="hidden" name="sort" value="' . $sort . '" />

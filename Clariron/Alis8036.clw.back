@@ -4023,7 +4023,7 @@ CreatePDF  ROUTINE
     WP:Text = '<form action="file:///' & CLIP(locFileName) & '"><button id="p' & locID & '" onclick="pdf(' & locID & ')">PDF</button></form>'
     ADD(WebPage)
       SHARE(TEST)
-      WP:Text = '<form action="http://dev.amxemr.com/cpl/alisReview.php" method="post">'
+      WP:Text = '<form action="https://dev.amxemr.com/cpl/alisReview.php" method="post">'
       ADD(WebPage)
       WP:Text = '<input type="hidden" name="assession" value="' & PR:Invoice  & '"/>'
       ADD(WebPage)
@@ -5292,7 +5292,7 @@ Looped BYTE
       IF ERRORCODE() THEN STOP(' Text  ' & ERROR()).
       CLOSE(Text)
       RUN('CMD /c pscp  -v -pw 7oT9W6l7E3cS2ge4O1UXxdDi ..\budata\amxUpdate.SQL amx@amxemr.com:/home/amx/Z/buData/ & exit',1)   
-      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/update.php')   
+      URLHandler(QuickWindow{prop:handle},'https://dev.amxemr.com/update.php')   
     OF ?ViewPDF
       ThisWindow.Update
       CLI:Number = Pat:CLIENT

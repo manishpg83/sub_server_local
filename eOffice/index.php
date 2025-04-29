@@ -1,5 +1,4 @@
 <?php
-! 
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
 $link = mysqli_connect('localhost','amx',$data,'amx_portal');
 date_default_timezone_set('America/Chicago');

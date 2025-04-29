@@ -44,7 +44,7 @@ $terms = 'true';
   session_start( );
   setcookie("amxc", $id,time()+900);
   setcookie(session_name('amxs'), '', time() + 900);
-  $link = "http://dev.amxemr.com/logout.php";
+  $link = "https://dev.amxemr.com/logout.php";
   $action = "Log Out";
   $address= trim($row[3]);
   if (strlen($address) > 3){ $address .= '<br/>';}
@@ -52,7 +52,7 @@ $terms = 'true';
    $client = "<p id='client'>$row[1]<br>$row[2]<br/>$address</p>";
 }
 else {
- $link = "http://dev.amxemr.com/";
+ $link = "https://dev.amxemr.com/";
  $action = "Log In";
  $terms = 'false';
  $admin = false;
@@ -66,7 +66,7 @@ echo <<<EOT
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>
         </title>
-<link rel="stylesheet" href="http://dev.amxemr.com/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="https://dev.amxemr.com/jquery.mobile-1.1.0.min.css" />
 
  <style>
 #client{margin-bottom:0px;padding-bottom:0}
@@ -85,7 +85,7 @@ echo <<<EOT
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
         </script>
-        <script src="http://dev.amxemr.com/jquery.mobile-1.1.0.min.js">
+        <script src="https://dev.amxemr.com/jquery.mobile-1.1.0.min.js">
         </script>
 </head>
 <body>
@@ -99,11 +99,11 @@ EOT;
 
 
 if ($pass === true) {
- $link = "http://dev.amxemr.com/logout.php";
+ $link = "https://dev.amxemr.com/logout.php";
  $action = "Log Out";
 }
 else {
- $link = "http://dev.amxemr.com/";
+ $link = "https://dev.amxemr.com/";
  $action = "Log In";
 }
 

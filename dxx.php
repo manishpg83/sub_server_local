@@ -712,7 +712,7 @@ $cap = array(array("</p><br/>\n","</p><br/>\n","</p><br/>\n",'','','',"</p><br/>
 
 if ($ip == '99.3.150.55' || $ip == '173.162.23.21' ){
 echo <<<EOT
-<form method="post" enctype="application/x-www-form-urlencoded" action="http://dev.amxemr.com/d.php">
+<form method="post" enctype="application/x-www-form-urlencoded" action="https://dev.amxemr.com/d.php">
 <div><input type="hidden" name="sub" value="1" /><br/></div>
 <fieldset class="widthWide"><legend>Get New Patient</legend> 
 <input class="desc" type="text" name="p" value="$patient" />
@@ -722,10 +722,10 @@ echo <<<EOT
 EOT;
 }
 if(!stripos($_SERVER['HTTP_USER_AGENT'],'irefox')){
-echo '<div><a href="https://www.mozilla.org/en-US/firefox/new/"><img width="96" height=96" src="http://dev.amxemr.com/ff.png" /></a><h3>WARNING:  FireFox Browser is required to print Diet Plan.</h3></div>';
+echo '<div><a href="https://www.mozilla.org/en-US/firefox/new/"><img width="96" height=96" src="https://dev.amxemr.com/ff.png" /></a><h3>WARNING:  FireFox Browser is required to print Diet Plan.</h3></div>';
 }
 echo <<<EOT
-<form method="get" enctype="application/x-www-form-urlencoded" action="http://dev.amxemr.com/editDiet.php">
+<form method="get" enctype="application/x-www-form-urlencoded" action="https://dev.amxemr.com/editDiet.php">
 <div>
 <input type="hidden" name="c" value="$client" /><br/></div>
 <fieldset class="widthWide"><legend>Client</legend><h3>$clientName<br/>$clientAddress</h3><button class="btn">Edit Foods</button>
@@ -1467,7 +1467,7 @@ mysql_unbuffered_query("UPDATE `Patient` SET `Attributes` = $linked  WHERE `Pati
   if (!isset($sub) || $sub == 0){
     if (true || $ip == '99.3.150.55' || $ip == '173.162.23.21' ){
     echo <<< EOT
-<form method="post" enctype="application/x-www-form-urlencoded" action="http://dev.amxemr.com/d.php">
+<form method="post" enctype="application/x-www-form-urlencoded" action="https://dev.amxemr.com/d.php">
 <div><input type="hidden" name="sub" value="1" /> <br/> </div>
 <fieldset class="widthWide"><legend>Get Patient</legend> 
 <input class="desc" type="text" name="p" value="$patient" />

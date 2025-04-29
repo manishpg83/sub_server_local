@@ -688,7 +688,7 @@ Looped BYTE
       UNHIDE(?STRING:V1,?locVolume3)
       HIDE(?STRING:Scan,?BUTTON_Inport)
       SELECT(?locVolume1)
-      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/cpl/post.php?assession=' & Pat:INVOICE & '&id=' & Pat:CLIENT_ID)
+      URLHandler(QuickWindow{prop:handle},'https://dev.amxemr.com/cpl/post.php?assession=' & Pat:INVOICE & '&id=' & Pat:CLIENT_ID)
     OF ?BUTTON_PrintLabel1
               InitStr = 'N<10>B' & gloLabelXpos & ',' & gloLabelYpos & ',0,3,3,6,70,N,"' & CLIP(PAT:Invoice) & '-1"<10>'
               ComPuts(CommPort,InitStr)
@@ -921,7 +921,7 @@ ThisWindow.SetAlerts PROCEDURE
       OF 5
         MESSAGE('CREATE DIRECTORY: Access Denied')
     . .      
-     URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/cpl/results.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
+     URLHandler(QuickWindow{prop:handle},'https://dev.amxemr.com/cpl/results.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
     locDelay = CLOCK() + 150
     LOOP WHILE CLOCK() < locDelay
       YIELD    
@@ -931,7 +931,7 @@ ThisWindow.SetAlerts PROCEDURE
     locRecordNumber += 1
   .
   IF locRecordNumber > 1
-    URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/cpl/status.php') 
+    URLHandler(QuickWindow{prop:handle},'https://dev.amxemr.com/cpl/status.php') 
   .
   
   POST(EVENT:CloseWindow)
@@ -970,7 +970,7 @@ Looped BYTE
         OF 5
           MESSAGE('Access Denied')
       . .      
-      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/cpl/results.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
+      URLHandler(QuickWindow{prop:handle},'https://dev.amxemr.com/cpl/results.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
       STOP('If results posted okay then click Ignore ')
       RUN('C:\Windows\System32\CMD.exe /c ECHO ON & "c:\apps\pscp" -v -p -pw xD1GkuK7a7DK8! amx@amxemr.com:/home/amx/public_html/cpl/Results/' & CLIP(Pat:CLIENT_ID) & '/fzUploadResultsCPL.script' & ' C:\Apps\Results\' & CLIP(Pat:CLIENT_ID) & '\fzUploadResultsCPL.script' & ' & exit',1)  
       RUN('C:\Windows\System32\CMD.exe /c ECHO ON & C:\Apps\uploadResultsCPL.bat ' & CLIP(Pat:CLIENT_ID) & ' exit',1) 
@@ -1109,7 +1109,7 @@ ReturnValue          BYTE,AUTO
 ThisWindow.SetAlerts PROCEDURE
 
   CODE
-  URLHandler(ThisWindow{prop:handle},'http://dev.amxemr.com/cpl/findOrders.php')
+  URLHandler(ThisWindow{prop:handle},'https://dev.amxemr.com/cpl/findOrders.php')
   POST(EVENT:CloseWindow)  
   PARENT.SetAlerts
 

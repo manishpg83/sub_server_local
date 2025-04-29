@@ -197,7 +197,7 @@ Fax:(615) 599-4648</p>
 Client: $id<br/>Billing:$billingCheck
 </div><div id="form">
 <div id="nav"><button class="link" onclick="prn()">Print</button> 
-<form action="http://dev.amxemr.com/requestForm.php" method="post">
+<form action="https://dev.amxemr.com/requestForm.php" method="post">
 <input type="hidden" name="id" value="$id" />
 <input type="hidden" name="rec" value="$rec" />
 <input type="hidden" name="sub" value="6" /> 

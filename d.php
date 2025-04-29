@@ -679,10 +679,10 @@ if (strlen($patient) == 6){
 EOT;
     }
     if(!stripos($_SERVER['HTTP_USER_AGENT'],'irefox')){
-      echo '<div><a href="https://www.mozilla.org/en-US/firefox/new/"><img width="96" height=96" src="http://dev.amxemr.com/ff.png" /></a><h3>WARNING: FireFox Browser is required to print Diet Plan.</h3></div>';
+      echo '<div><a href="https://www.mozilla.org/en-US/firefox/new/"><img width="96" height=96" src="https://dev.amxemr.com/ff.png" /></a><h3>WARNING: FireFox Browser is required to print Diet Plan.</h3></div>';
     }
     echo <<<EOT
-<form method="get" enctype="application/x-www-form-urlencoded" action="http://dev.amxemr.com/editDiet.php">
+<form method="get" enctype="application/x-www-form-urlencoded" action="https://dev.amxemr.com/editDiet.php">
 <div>
 <input type="hidden" name="c" value="$client" /><br/></div>
 <fieldset class="widthWide"><legend>Client</legend><h3>$clientName<br/>$clientAddress</h3><button class="btn">Edit Foods</button>

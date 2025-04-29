@@ -373,7 +373,7 @@ ReturnValue          BYTE,AUTO
     SET(HL7:OrderKey,HL7:OrderKey)
     LOOP UNTIL EOF(HL7)
       NEXT(HL7)
-      URLHandler(QuickWindow{prop:handle},'http://dev.amxemr.com/HL7/' & HL7:Accession & '.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
+      URLHandler(QuickWindow{prop:handle},'https://dev.amxemr.com/HL7/' & HL7:Accession & '.php?id=' & CLIP(Pat:CLIENT_ID) & '&accession=' & Pat:INVOICE)
   
     .
   EnhancedFocusManager.Init(1,11206570,1,0,8421631,1,11206570,8421376,2,11206570,8421376,1,8421376,'�',8)
