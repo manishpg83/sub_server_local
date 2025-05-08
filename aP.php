@@ -12,26 +12,26 @@ $ip = $_SERVER['REMOTE_ADDR'];
 
 if ( $ip== '70.171.4.227' || $ip== '173.162.23.21' ||  $ip == '173.169.76.167'){
   settype($id,"integer");
-  $dbc=mysql_connect('localhost','amx','xD1GkuK7a7DK8!');
-  $error = mysql_error();
+  $dbc=mysqli_connect('localhost','amx','xD1GkuK7a7DK8!');
+  $error = mysqli_connect_error();
   if (strlen($error) == 0) {
-    mysql_select_db('amx_portal');
-    $error = mysql_error();
+    mysqli_select_db($dbc, 'amx_portal');
+    $error = mysqli_error($dbc);
     if (strlen($error) == 0){
       $sql = "SELECT *  FROM `Client` WHERE `Number` = $id ";
-      $results = @mysql_query($sql);
-      $error = mysql_error();
-      $rows = mysql_num_rows($results);
+      $results = @mysqli_query($dbc, $sql);
+      $error = mysqli_error($dbc);
+      $rows = mysqli_num_rows($results);
       $validID = false;
       if (strlen($error) == 0 && $rows == 1) {
-        $row = mysql_fetch_array($results, MYSQL_NUM);
+        $row = mysqli_fetch_array($results, MYSQL_NUM);
         $validID = true;
         $email = $row[9];
 
         $name = $row[1];
         $sql = "UPDATE  `Client` SET `RecordsCRC` = '" . $hash . "'  WHERE `Number` = '$id'";
-        $results = @mysql_query($sql);
-        $error = mysql_error();
+        $results = @mysqli_query($dbc, $sql);
+        $error = mysqli_error($dbc);
         if (strlen($error) == 0) {
 		  echo "<p>Record Updated</p>";
           $pass = true;

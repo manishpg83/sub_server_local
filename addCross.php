@@ -1,6 +1,8 @@
 <?php
-$dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510');
-@mysql_select_db('amx_portal');
+$dbc = mysqli_connect('localhost', 'amx_allermetrix', 'allermetrix510', 'amx_portal');
+if (!$dbc) {
+  die("Connection failed: " . mysqli_connect_error());
+}
 $codes[0] = array('T003','T146','T008','T107','T108','T100','T101','T153','T149'); 
 $desc[0] = array(' Birch, Gray',' Birch, Red/River',' Elm, American',' Elm, Chinese ',' Elm,Scrub ',' Alder, European',' Alder,Red ',' Alder, Sitka ',' Hazelnut ');
 $desc[1] = array('Sycamore');
@@ -19,9 +21,9 @@ do{
     $c = $codes[$ndx][$code];
     $d = $desc[$ndx][$code];
     $sql = "INSERT INTO `amx_portal`.`Allergens` (`id`, `alpha`, `Family`, `Type`, `Description`, `Group`, `Code`, `Day`, `Birch`, `Sycamore`, `Mugwort`, `Grasses`, `Latex`) VALUES (NULL, '0', '0', '0', '$d', '0', '$c', '9', '0', '0', '0', '0', '0');";
-	mysql_query($sql);
-	$sql = "UPDATE `Allergens` SET `Description`= $d WHERE `Code` = $c ";
-	mysql_query($sql);
+	mysqli_query($dbc,$sql);
+	$sql = "UPDATE `Allergens` SET `Description`= '$d' WHERE `Code` = '$c' ";
+	mysqli_query($dbc,$sql);
     $code++;
   }while($code < $counts[$ndx]);
   $ndx++;
