@@ -1,8 +1,4 @@
 <?php
-/* ini_set('display_startup_errors', 1);
-ini_set('display_errors', 1);
-error_reporting(-1); */
-
 header('Content-Type: text/html; charset=utf-8');
 header('Connection: Keep-Alive');
 header('Keep-Alive: timeout=5, max=100');
@@ -79,23 +75,24 @@ form,table{border:0;margin:0 auto 0 ;}
 EOT;
 $hid[0] = '';
 $hid[1] = '<td><button class="h5"  type="button" name="sn6" onclick="stNum(6)" >Patient ID</button></td>';
-$dbc=mysqli_connect('localhost','amx','xD1GkuK7a7DK8!'); @mysqli_select_db($dbc, 'amx_portal');
-  $lnk = intval(preg_replace("[^0-9]", "", $_POST['link']));
+
+$dbc=mysql_connect('localhost','amx','xD1GkuK7a7DK8!'); @mysql_select_db('amx_portal');
+  $lnk = intval(preg_replace("[^0-9]", "", $_POST['lnk']));
   if ($lnk > 0){
-    @mysqli_unbuffered_query("UPDATE `Patient` SET `Link`=0, `Attributes`=0 WHERE `Link`= $lnk");
+    @mysql_unbuffered_query("UPDATE `Patient` SET `Link`=0, `Attributes`=0 WHERE `Link`= $lnk");
   }
 $sql = "SELECT `Patient`, `Last`, `First` FROM `Patient` WHERE `Patient` = $patient LIMIT 1";
-$results = @mysqli_query($dbc,$sql);
-$pat = mysqli_fetch_array($results, MYSQLI_NUM);
+$results = @mysql_query($sql);
+$pat = mysql_fetch_array($results, MYSQL_NUM);
 
 $icon = array('class="dietblue"','class="dietred"','class="dietblack"','class="none"');
 $x = 0;
 $idRow[0] = "";
 $SQL = "SELECT COUNT(`ClientID`),`ClientID` FROM `Patient` WHERE `Date` > '2006-3-3' AND `Client` = $client AND `Last` LIKE '$pat[1]' AND `First` LIKE '$pat[2]' ";
-$results = @mysqli_query($dbc, $SQL);
-$error =  ($dbc);
-$rows = @mysqli_num_rows($results);
-$row = mysqli_fetch_array($results, MYSQLI_NUM);
+$results = @mysql_query($SQL);
+$error = mysql_error();
+$rows = @mysql_num_rows($results);
+$row = mysql_fetch_array($results, MYSQL_NUM);
 $len = strlen(trim($row[1]));
 $cntID = $row[1];
 
@@ -106,9 +103,9 @@ $hid[$cid]
 </tr>
 EOT;
 $sql = "SELECT  `Last`, `First` ,`DoB`, `Age`, `Sex`, `ClientID`,`Patient` FROM `Patient` WHERE `Date` > '2006-3-3' AND `Client` = $client AND `Last` LIKE '$pat[1]' AND `First` LIKE '$pat[2]'";
-$results = @mysqli_query($dbc, $sql);
+$results = @mysql_query($sql);
 $chk = 0;
-while ($row = mysqli_fetch_array($results, MYSQLI_NUM)) {
+while ($row = mysql_fetch_array($results, MYSQL_NUM)) {
   $idRow[1] = '<td><button class="c5"  type="button" name="sn2" onclick="stNum(2)" >' . $row[5] . '</button></td>';
   $chk++;
   $age = date_diff(date_create($row[2]), date_create('today'))->y;
@@ -121,8 +118,8 @@ while ($row = mysqli_fetch_array($results, MYSQLI_NUM)) {
       $pozChk = "<td><div id=\"d$chk\"  class=\"divNoCheck\" ><input id=\"c$chk\"  class=\"noCheck\" type=\"checkbox\" name=\"$lnk\" value=\"2\" onclick=\"check('$chk')\"   /></div></td>\n"; 
 	}
     $sql = "SELECT COUNT(*) FROM `Test` WHERE `Patient` = $row[6]  AND `Code` LIKE 'F%' ";
-    $result = mysqli_query($dbc, $sql);
-    $fgtw = mysqli_fetch_array($result, MYSQLI_NUM);
+    $result = mysql_query($sql);
+    $fgtw = mysql_fetch_array($result, MYSQL_NUM);
 	
 
   echo <<<EOT
@@ -147,9 +144,9 @@ $note = '<p>No additional Links were found with the same patient name.</p><p>Cli
 $note .= '<p>If you do not want to create a diet report, close this tab.</p>';
 foreach ($labID as $id){
   $sql = "SELECT COUNT(`Score`),`Score` FROM `Test` WHERE `Patient` = $id  AND `Code` LIKE 'F%' GROUP BY `Score` ORDER BY `Score` ASC";
-  $results = @mysqli_query($dbc, $sql);
+  $results = @mysql_query($sql);
   $note .= "<p>Food Class Scores for $id:&#x2002; "; 
-  while ($row = mysqli_fetch_array($results, MYSQLI_NUM)) {
+  while ($row = mysql_fetch_array($results, MYSQL_NUM)) {
     $note .= "Score:$row[1]=$row[0],&#x2002; "; 
   }
   $note = substr($note,0,-10);
