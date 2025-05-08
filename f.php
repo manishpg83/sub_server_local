@@ -17,13 +17,13 @@ if($id == 0){$id = intval($_POST['id']);}
 setcookie("amxp", $id,time()+31536000);
 $client = 'ID: <input type="text" name="id" value="" /><br/>';
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx_allermetrix',$data);
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix',$data);
+mysqli_select_db($dbc,'amx_portal');
 if($id > 199999 && $id < 300000){
   $sql = "SELECT `Name`  FROM `Client` WHERE `Number` = $id LIMIT 1";
-  $results = mysql_query($sql);
-  if(mysql_errno() == 0 && mysql_num_rows($results) == 1){
-    list($name) = mysql_fetch_array($results, MYSQL_NUM);
+  $results = mysqli_query($dbc,$sql);
+  if(mysqli_errno($dbc) == 0 && mysqli_num_rows($results) == 1){
+    list($name) = mysqli_fetch_array($results, MYSQLI_NUM);
     $client = "<h3>$name</h3><input type=\"hidden\" name=\"id\" value=\"$id\" />";
   }
   else{$client = mysql_error() . '<br/>' . $sql ;}
@@ -179,8 +179,8 @@ $checked = array();
 $desc = array();
 $grp = array();
 $sql= "SELECT `Code`,`Description`,`alpha` FROM `Foods` WHERE `Code` LIKE 'F%' ORDER BY `Code` ASC";
-$results = mysql_query($sql);
-while ($row = mysql_fetch_array($results, MYSQL_NUM)){
+$results = mysqli_query($dbc,$sql);
+while ($row = mysqli_fetch_array($results, MYSQLI_NUM)){
   $num = substr($row[0],1);
   $desc[$row[0]] = "$row[1]";
   $grp[$row[0]] = $row[2];
@@ -489,12 +489,12 @@ $panels['772']= array('Food Panel 30','no',30,30) ;
 $panels['773'] = array('Food Panel 40','no',40,40) ;
 /*
 $sql = "SELECT `number`, `description` `ige`, `igg4` FROM `Panels` WHERE 1";
-$result = mysql_query($sql);
-while(list($number,$description,$total,$ige,$igg4) =  mysql_fetch_array($result, MYSQL_NUM)){
+$result = mysqli_query($dbc,$sql);
+while(list($number,$description,$total,$ige,$igg4) =  mysqli_fetch_array($result, MYSQLI_NUM)){
   $panels[$number] = array($description,$total,$ige,$igg4);
   $sql = "SELECT `code`, `type` FROM `PanelTests` WHERE `panel` = '$num'";
-  $results = mysql_query($sql);
-  while(list($code,$type) =  mysql_fetch_array($results, MYSQL_NUM)){
+  $results = mysqli_query($dbc,$sql);
+  while(list($code,$type) =  mysqli_fetch_array($results, MYSQLI_NUM)){
     $tests[$number][] = array($code,$types[$type]);
   }
 }
@@ -543,8 +543,8 @@ while (($text= fgets($fp , 64)) !== false) {
   $description = substr($text,10,38);
   $TestTypeCount = array(0,0,0,0,0,0,0);
   $sql = "SELECT `code`, `type` FROM `PanelTests` WHERE `panel` = '$panel'";
-  $results = mysql_query($sql);
-  while(list($code,$type) =  mysql_fetch_array($results, MYSQL_NUM)){
+  $results = mysqli_query($dbc,$sql);
+  while(list($code,$type) =  mysqli_fetch_array($results, MYSQLI_NUM)){
     $tests[$panel][] = array($code,$types[$type]);
 	$TestTypeCount[$type]++;
   }
@@ -653,8 +653,8 @@ $show = '';
 //$cat = array('','Fruit','Grain','Vegetables','Tree Nuts','Spices/Seeds','Meats / Dairy','Fish &#x26; Shellfish','Drinks');
 
 //$sql = "SELECT `Patient` FROM `Patient` WHERE `Client` = 200220";
-//$results = mysql_query($sql);
-//while ($row = mysql_fetch_array($results, MYSQL_NUM)){
+//$results = mysqli_query($dbc,$sql);
+//while ($row = mysqli_fetch_array($results, MYSQLI_NUM)){
 //  $p[] = $row[0];
 //}
 // accession   1/2013 146997 1/2014 155389 1/2105 163401
@@ -663,9 +663,9 @@ $show = '';
 //  $sql = "SELECT `Code`,`Type` FROM `Test` WHERE `Patient`=$patient AND `Code` LIKE 'F%' AND `Score` NOT LIKE '0' GROUP BY `Code`,`Type`";
   //$sql = "SELECT `Code`,`Type`,`Patient` FROM `Test` WHERE`Code` LIKE 'F%' AND `Score` NOT LIKE '%0%'  AND `Patient` > 146997 AND `Patient` < 155389";
   $sql = "SELECT `Code`,`Type`,`Score` FROM `Test` WHERE `Code` LIKE 'F%' AND `Patient` > 155389 AND `Patient` < 163401";
-  $results = mysql_query($sql);
-  if (mysql_errno() > 0){echo "<p>$sql<br/>" . mysql_error();}
-  while ($row = mysql_fetch_array($results, MYSQL_NUM)){
+  $results = mysqli_query($dbc,$sql);
+  if (mysqli_errno($dbc) > 0){echo "<p>$sql<br/>" . mysql_error();}
+  while ($row = mysqli_fetch_array($results, MYSQLI_NUM)){
     $food[$row[1]][$row[0]][$row[2]] = intval($food[$row[1]][$row[0]][$row[2]]) + 1;
   }
 

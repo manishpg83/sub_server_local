@@ -7,12 +7,12 @@ header('Connection: Keep-Alive');
 header('Keep-Alive: timeout=5, max=100');
 header('Cache-Control: max-age=120');
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx_allermetrix',$data);
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix',$data);
+mysqli_select_db($dbc,'amx_portal');
 /*
 $sql = "SELECT `panel` FROM `clientPanels` WHERE 1";
-$result = mysql_query($sql);
-while(list($panel,$newNumber) =  mysql_fetch_array($result, MYSQL_NUM)){
+$result = mysqli_query($dbc,$sql);
+while(list($panel,$newNumber) =  mysqli_fetch_array($result, MYSQLI_NUM)){
   $alphCheck = preg_replace('/[^A-Z]/','',$panel);
   if(strlen($alphCheck) > 0){$alpha[] = $panel;continue;}
   $parts = explode('-',$panel);
@@ -52,17 +52,17 @@ asort($equal);
 
 foreach ($panels as $number => $panel){
 $sql = "UPDATE `clientPanels` SET `number`='$number' WHERE `panel` = '$panel'";
-$result = mysql_query($sql);
-if(mysql_errno() > 0){echo mysql_error . "<br/>$sql";}
+$result = mysqli_query($dbc,$sql);
+if(mysqli_errno($dbc) > 0){echo mysql_error . "<br/>$sql";}
 }
 
 $sql = "SELECT `panel`,`number` FROM `clientPanels` WHERE `number` BETWEEN 999 AND 10000 GROUP BY `panel`";
-$result = mysql_query($sql);
-while(list($panel,$number) =  mysql_fetch_array($result, MYSQL_NUM)){$panels[$number] = $panel;}
+$result = mysqli_query($dbc,$sql);
+while(list($panel,$number) =  mysqli_fetch_array($result, MYSQLI_NUM)){$panels[$number] = $panel;}
 foreach ($panels as $number => $panel){
 $sql = "UPDATE `PanelTests` SET `panel`= '$number' WHERE `panel`='$panel'";
-$result = mysql_query($sql);
-if(mysql_errno() > 0){echo mysql_error . "<br/>$sql";}
+$result = mysqli_query($dbc,$sql);
+if(mysqli_errno($dbc) > 0){echo mysql_error . "<br/>$sql";}
 }
 
 
@@ -73,7 +73,7 @@ $id = intval($_POST['id']);
 $c = strtoupper($_POST['c']);
 if(strlen($c) == 4 && $id > 99999){
   $sql = "UPDATE `Client` SET `passcode` = '$c' WHERE `Number` = $id";
-  $result = mysql_query($sql);
+  $result = mysqli_query($dbc,$sql);
   $err = mysql_error();
   $show .= "$c\n$id\n$sql\n$err";
 }
@@ -83,18 +83,18 @@ if($rec > 0){
   if(intval($_POST['sub']) == 2){
     $description = $_POST['description'];
     $sql = "UPDATE `clientPanels` SET `description` ='$description' WHERE `rec` = $rec";
-    $result = mysql_query($sql);
+    $result = mysqli_query($dbc,$sql);
   }
   else{
     $include = intval($_POST['include']) ^ 1;
     $sql = "UPDATE `amx_portal`.`clientPanels` SET `include` = '$include' WHERE `clientPanels`.`rec` =$rec;";
-    $result = mysql_query($sql);
+    $result = mysqli_query($dbc,$sql);
   }
 }
 if($id > 99999){
 $sql = "SELECT `Name`,`City`,`State`,`passcode`   FROM `Client` WHERE `Number` = $id ";
-$result = mysql_query($sql);
-list($name,$city,$state,$c) =  mysql_fetch_array($result, MYSQL_NUM);
+$result = mysqli_query($dbc,$sql);
+list($name,$city,$state,$c) =  mysqli_fetch_array($result, MYSQLI_NUM);
 }
 echo <<<EOT
 <?xml version="1.0" encoding="utf-8"?>
@@ -142,7 +142,7 @@ $sub = intval($_POST['sub']);
 if($sub == 4){
   foreach($_POST as $k => $v){
     if(substr($k,0,1) == 'r'){
-    mysql_query("DELETE FROM `history` WHERE `id` =$v");
+    mysqli_query($dbc,"DELETE FROM `history` WHERE `id` =$v");
     }
   }
 }
@@ -152,14 +152,14 @@ elseif($sub == 7){
   $pnum = intval($_POST['pnum']);
   $panel = $_POST['panel'];
   $sql = "SELECT `rec`,`description` FROM `clientPanels` WHERE `client` = '$id' AND `panel` LIKE '$panel' LIMIT 1";
-  $results = mysql_query($sql);
-  $rows =  mysql_num_rows($results);
+  $results = mysqli_query($dbc,$sql);
+  $rows =  mysqli_num_rows($results);
   
   if($rows == 1){
-    list($rec,$description) = mysql_fetch_array($results, MYSQL_NUM);
+    list($rec,$description) = mysqli_fetch_array($results, MYSQLI_NUM);
     if($rec < 1000 || $rec > 9999){
       $sql = "DELETE FROM `clientPanels` WHERE `client` = '$id' AND `panel` = '$panel'";
-      $results = mysql_query($sql);
+      $results = mysqli_query($dbc,$sql);
     }
     else{
       $addPanel = false;
@@ -169,55 +169,55 @@ elseif($sub == 7){
   $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysql_error();
   if(strlen($description) < 4){
     $sql = "SELECT `description`  FROM `Panels` WHERE `number` LIKE '$panel' LIMIT 1";
-    $results = mysql_query($sql);
-    $rows =  mysql_num_rows($results);
+    $results = mysqli_query($dbc,$sql);
+    $rows =  mysqli_num_rows($results);
     $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysql_error();
-    if($rows == 1){list($description) = mysql_fetch_array($results, MYSQL_NUM);}
+    if($rows == 1){list($description) = mysqli_fetch_array($results, MYSQLI_NUM);}
     else{
       $sql = "SELECT `description`  FROM `importpanels` WHERE `number` LIKE '$panel' LIMIT 1";
-      $results = mysql_query($sql);
-      $rows =  mysql_num_rows($results);
+      $results = mysqli_query($dbc,$sql);
+      $rows =  mysqli_num_rows($results);
       $show .= "\nRows=$rows, $sql\n" .  mysql_error();
-      if($rows == 1){list($description) = mysql_fetch_array($results, MYSQL_NUM);}
+      if($rows == 1){list($description) = mysqli_fetch_array($results, MYSQLI_NUM);}
     }
   }
   if($addPanel){
     $sql = "INSERT INTO `amx_portal`.`clientPanels` (`rec`, `include`, `client`, `panel`, `number`, `description`, `fee`) VALUES (NULL, '0', '$id', '$panel', '$pnum', '$description', '0') ON DUPLICATE KEY UPDATE `number`='$pnum';";
-    $results = mysql_query($sql);
+    $results = mysqli_query($dbc,$sql);
     $rows =  mysql_affected_rows($results);
     if($rows == 1){$pnum = mysql_insert_id($results);}
     $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysql_error();
     $sql = "INSERT INTO `amx_portal`.`Panels` (`id`, `number`, `description`, `fee`, `tests`, `ige`, `igg4`) VALUES (NULL, '$panel', '$description', '0', '0', '0', '0');";
-    $results = mysql_query($sql);
+    $results = mysqli_query($dbc,$sql);
     $rows =  mysql_affected_rows($results);
     $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysql_error();
     $sql = "INSERT INTO `amx_portal`.`clientPanels` (`rec`, `include`, `client`, `panel`, `number`, `description`, `fee`) VALUES (NULL, '0', '$id', '$panel', '0', '$description', '0');";
-    $results = mysql_query($sql);
+    $results = mysqli_query($dbc,$sql);
     $rows =  mysql_affected_rows($results);
     if($rows == 1){$pnum = mysql_insert_id($results);}
     $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysql_error();
   }
   $sql = "UPDATE `clientPanels` SET `number`='$pnum',`description`='$description' WHERE `client`='$id' AND `panel`='$panel'";
-  $results = mysql_query($sql);
+  $results = mysqli_query($dbc,$sql);
   $rows =  mysql_affected_rows($results);
   $show .= "\n202->Rows=$rows, number=$pnum, $sql\n" .  mysql_error();
   $sql = "SELECT `code`,`type`  FROM `importpaneltests` WHERE `number` LIKE '$panel'";
-  $results = mysql_query($sql);
-  $rows =  mysql_num_rows($results);
+  $results = mysqli_query($dbc,$sql);
+  $rows =  mysqli_num_rows($results);
   $show .= "\n206->Rows=$rows, number=$pnum, $sql\n" .  mysql_error();
-  while(list($code,$type) =  mysql_fetch_array($results, MYSQL_NUM)){
+  while(list($code,$type) =  mysqli_fetch_array($results, MYSQLI_NUM)){
     $ptests[$code][$type] = $type;
   }
   if(count($ptests) > 0){
     $sql = "DELETE FROM `PanelTests` WHERE `panel` LIKE '$panel'";
-    mysql_query($sql);
+    mysqli_query($dbc,$sql);
     $sql = "DELETE FROM `PanelTests` WHERE `number` = '$pnum'";
-    mysql_query($sql);
+    mysqli_query($dbc,$sql);
   }
   foreach($ptests as $k => $array){
     foreach($array as  $v){
       $sql = "INSERT INTO `amx_portal`.`PanelTests` (`id`, `panel`, `code`, `type`, `number`) VALUES (NULL, '$pnum', '$k', '$v', '$pnum');";
-      mysql_query($sql);
+      mysqli_query($dbc,$sql);
     }
   }
 }
@@ -227,13 +227,13 @@ $classes = array(' class="grn" ', ' class="red" ');
 if($id > 99999){
 echo "<h3>$name $city $state</h3><table>";
 $sql = "SELECT `rec`,`client`,`include`,`number`,`panel`,`description` FROM `clientPanels` WHERE `client` = $id";
-$result = mysql_query($sql);
-while(list($rec,$client,$include,$number,$panel,$description) =  mysql_fetch_array($result, MYSQL_NUM)){
+$result = mysqli_query($dbc,$sql);
+while(list($rec,$client,$include,$number,$panel,$description) =  mysqli_fetch_array($result, MYSQLI_NUM)){
  if($number == 0){$class=' class="hide" ';}else{$class = $classes[$include];}
  $action = $actions[$include];
  if($number == 0 && intval($panel) > 999 && intval($panel) < 10000){
    $sql = "UPDATE `amx_portal`.`clientPanels` SET `number` = '$panel' WHERE `clientPanels`.`rec` =$rec;";
-   mysql_query($sql);
+   mysqli_query($dbc,$sql);
  }
   echo "<tr><td style=\"padding:0;\"><form action=\"#\" method=\"post\" ><input type=\"hidden\" name=\"id\" value=\"$id\"/><input type=\"hidden\" name=\"rec\" value=\"$rec\"/><input type=\"hidden\" name=\"include\" value=\"$include\"/><button$class>$action</button> </form></td>
   <td>$client </td><td> $include </td>
@@ -241,9 +241,9 @@ while(list($rec,$client,$include,$number,$panel,$description) =  mysql_fetch_arr
 }
 
   $sql = "SELECT `id`,`date`, `last`, `first`, `dob`, `gender` FROM `history` WHERE `client` = $id ORDER BY `client` ASC,`last` ASC, `first` ASC";
-  $results = mysql_query($sql);
+  $results = mysqli_query($dbc,$sql);
   echo '</table><hr/><h2>Delete Checked Patients in History</h2><form action="#" method="post"><input type="hidden" name="id" value="' . $id . '" /><input type="hidden" name="sub" value="4" /><table>';
-  while($row = @mysql_fetch_array($results, MYSQL_NUM)) {
+  while($row = @mysqli_fetch_array($results, MYSQLI_NUM)) {
   list($rec,$date, $last, $first, $dob, $gender) = $row;
   echo <<<EOT
 <tr><td><input type="checkbox" name="r$rec" value="$rec" /></td><td>$last, $first</td><td>$dob</td><td>$date</td></tr>

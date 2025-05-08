@@ -43,22 +43,22 @@ $match = match($filename);
 echo "<p$match[0]> test.tps:  " . date ("F d Y H:i ( g:ia ) ", filemtime($filename)) . '  ' . substr($filename,31) . "</p>\n<hr/>";
 
 
-  $dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510');
+  $dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
   $error = mysql_error();
   if (strlen($error) > 0){
     print "DBC: $error <br/>";
   }
-  mysql_select_db('amx_portal');
+  mysqli_select_db($dbc,'amx_portal');
   $error = mysql_error();
   if (strlen($error) > 0){
     print "</pre>\n<h3>SEL: $error </h3><pre>\n";
   }
   $sql = "SET time_zone = '-5:00';";
-  @mysql_unbuffered_query($sql);
+  @mysqli_query($dbc,$sql);
   $sql = "SELECT * FROM `Updates` WHERE 1 ORDER BY `TimeStamp` DESC LIMIT 1";
-  $results = @mysql_query($sql);
+  $results = @mysqli_query($dbc,$sql);
   echo mysql_error(); 
-$row = mysql_fetch_array($results , MYSQL_NUM);
+$row = mysqli_fetch_array($results , MYSQLI_NUM);
 if ($update){
 echo $row[1] . '<hr/>';
 }
@@ -108,12 +108,12 @@ print "<p class=\"bold\">Free Disk Space: $df </p><hr/><div id=\"pdf\">xxxxx</di
 // look for missing patients in the past 30 days and get the first patient number from 30 days ago.
 // #########################################
 $sql = "SELECT `patient`, `Date`  FROM `Patient` WHERE `Patient` > 146000 ORDER BY `Patient` DESC  ";
-$results = @mysql_query($sql);
+$results = @mysqli_query($dbc,$sql);
 $missing = 0;
-$row = mysql_fetch_array($results , MYSQL_NUM);
+$row = mysqli_fetch_array($results , MYSQLI_NUM);
 $next = $row[0];
 $first = $next;
- while ($row = mysql_fetch_array($results , MYSQL_NUM)) {
+ while ($row = mysqli_fetch_array($results , MYSQLI_NUM)) {
   $next--;
   if ($next != $row[0]) {
      $missing++;
@@ -146,16 +146,16 @@ elseif ($missing > 1) {
 
 //echo "Week: $week <br/> Month: $month <br/>";
 $sql = "SELECT MIN(`Patient`),MAX(`Patient`),COUNT(*) FROM `Patient` WHERE (`Status` != \'L\' AND `Status` != \'V\' AND `Status` != \'W\' AND `Status` != \'C\' AND `Status` != \'X\' AND `Status` != \'I\')";
-$results = @mysql_query($sql);
-$row = @mysql_fetch_array($results , MYSQL_NUM);
+$results = @mysqli_query($dbc,$sql);
+$row = @mysqli_fetch_array($results , MYSQLI_NUM);
 $first = $row[0];
 $last = $row[1];
 //$sql = "SELECT `Client` , `Patient`, `Date`, `Status`  FROM `Patient` WHERE `Patient` > $month  AND  (`Status` != 'L' AND `Status` != 'V' AND `Status` != 'W' AND `Status` != 'C' AND `Status` != 'X' AND `Status` != 'I') ORDER BY `Patient` DESC";
 $sql = "SELECT `Client` , `Patient`, `Date`, `Status` FROM `Patient` WHERE (`Status` != \'L\' AND `Status` != \'V\' AND `Status` != \'W\' AND `Status` != \'C\' AND `Status` != \'X\' AND `Status` != \'I\') ORDER BY `Patient` DESC";
-$results = @mysql_query($sql);
-if (true) { //(@mysql_num_rows($results)) {
+$results = @mysqli_query($dbc,$sql);
+if (true) { //(@mysqli_num_rows($results)) {
   echo "\n<p>$row[2] Patients From: $first To: $last ( status &lt;&gt; C,W,V,I, or L )</p>";
-  while ($row = @mysql_fetch_array($results , MYSQL_NUM)) {       
+  while ($row = @mysqli_fetch_array($results , MYSQLI_NUM)) {       
     $date = strtotime($row[2]);
     $row[0] = preg_replace('/(\d\d\d)(\d\d\d)/',"$1 $2" , $row[0]);
     $row[1] = preg_replace('/(\d\d\d)(\d\d\d)/',"$1 $2" , $row[1]);
@@ -166,8 +166,8 @@ echo "\n" . "<p>Status From: $first To: $week </p>";
 
  echo "\n" . '<p class="i">Sendouts</p>'; 
  $sql = "SELECT `Client` , `Patient`, `Date`, `Status`  FROM `Patient` WHERE `Patient` > $week AND (`Status` = 'I') ORDER BY `Patient` DESC";
- $results = @mysql_query($sql);
- while ($row = mysql_fetch_array($results , MYSQL_NUM)) {
+ $results = @mysqli_query($dbc,$sql);
+ while ($row = mysqli_fetch_array($results , MYSQLI_NUM)) {
    $date = strtotime($row[2]);
    $row[0] = preg_replace('/(\d\d\d)(\d\d\d)/',"$1 $2" , $row[0]);
    $row[1] = preg_replace('/(\d\d\d)(\d\d\d)/',"$1 $2" , $row[1]);
@@ -175,8 +175,8 @@ echo "\n" . "<p>Status From: $first To: $week </p>";
  }
  echo "\n" . '<p class="v"><br/>Received</p>'; 
  $sql = "SELECT `Client` , `Patient`, `Date`, `Status`  FROM `Patient` WHERE `Patient` > $week AND (`Status` = 'L' OR `Status` = 'V') ORDER BY `Patient` DESC";
- $results = @mysql_query($sql);
- while ($row = mysql_fetch_array($results , MYSQL_NUM)) {
+ $results = @mysqli_query($dbc,$sql);
+ while ($row = mysqli_fetch_array($results , MYSQLI_NUM)) {
    $date = strtotime($row[2]);
    $row[0] = preg_replace('/(\d\d\d)(\d\d\d)/',"$1 $2" , $row[0]);
    $row[1] = preg_replace('/(\d\d\d)(\d\d\d)/',"$1 $2" , $row[1]);
@@ -185,8 +185,8 @@ echo "\n" . "<p>Status From: $first To: $week </p>";
  echo "\n" . '<br/><p class="w">Testing</p>'; 
  $sql = "SELECT `Client` , `Patient`, `Date`, `Status`  FROM `Patient` WHERE `Patient` > $week AND `Status` = 'W' ORDER BY `Patient` DESC";
 
- $results = @mysql_query($sql);
- while ($row = mysql_fetch_array($results , MYSQL_NUM)) {
+ $results = @mysqli_query($dbc,$sql);
+ while ($row = mysqli_fetch_array($results , MYSQLI_NUM)) {
    $date = strtotime($row[2]);
    $row[0] = preg_replace('/(\d\d\d)(\d\d\d)/',"$1 $2" , $row[0]);
    $row[1] = preg_replace('/(\d\d\d)(\d\d\d)/',"$1 $2" , $row[1]);
@@ -195,12 +195,12 @@ echo "\n" . "<p>Status From: $first To: $week </p>";
  echo "\n" . '<br/><p class="c">Complete</p>';
 
 $sql = "SELECT MAX(`Patient`) FROM `Patient` WHERE `Status`='W' OR `Status`='V' OR `Status`='L'";
-$results = @mysql_query($sql);
-$row = mysql_fetch_array($results , MYSQL_NUM);
+$results = @mysqli_query($dbc,$sql);
+$row = mysqli_fetch_array($results , MYSQLI_NUM);
 $last = $row[0];
 $sql = "SELECT `Date`  FROM `Patient` WHERE `Patient` < $last LIMIT 1";
-$results = @mysql_query($sql);
-$row = mysql_fetch_array($results , MYSQL_NUM);
+$results = @mysqli_query($dbc,$sql);
+$row = mysqli_fetch_array($results , MYSQLI_NUM);
 $date = strtotime($row[0]);
 $days = array(10,9,9,8,8,8,10);
 $dow = intval(date("w",$date));
@@ -209,8 +209,8 @@ $dy2 = time()-$dy;
 $date = date('Y-m-d',$dy2);
 
 $sql = "SELECT `Patient` FROM `Patient` WHERE `Date` > '$date' ORDER BY `Patient` ASC LIMIT 1 ";
-$results = @mysql_query($sql);
-$row = mysql_fetch_array($results , MYSQL_NUM);
+$results = @mysqli_query($dbc,$sql);
+$row = mysqli_fetch_array($results , MYSQLI_NUM);
 $first = $row[0] ;
 //echo "<h4>dow:$dow<br/>dy: $dy<br/>date: $date<br/>1st: $first: $sql</h4>\n";
 
@@ -220,9 +220,9 @@ $in = ' `Patient` IN(';
 $missingPDF = 0;
 $checkPDF = 0;
  $sql = "SELECT `Client` , `Patient`, `Date`,`PDF`  FROM `Patient` WHERE `Patient` > $first AND `Status` = 'C' ORDER BY `Patient` DESC";
- $results = @mysql_query($sql);
- if (mysql_errno() > 0){echo mysql_error() . "<h4>$sql</h4>";}
-  while ($row = mysql_fetch_array($results , MYSQL_NUM)) {
+ $results = @mysqli_query($dbc,$sql);
+ if (mysqli_errno($dbc) > 0){echo mysql_error() . "<h4>$sql</h4>";}
+  while ($row = mysqli_fetch_array($results , MYSQLI_NUM)) {
     $date = strtotime($row[2]);
     if ($row[0] > 199999) { 
       $pdf = "/home/amx/Z/ResultsNoEncrypt/$row[0]/$row[1]e.PDF";
@@ -282,12 +282,12 @@ if ($update){
 
 
 $sql = "SELECT `Client`, `TimeStamp`, `ip`, `Value` FROM `access` ORDER BY `TimeStamp` DESC LIMIT 0, 32";
-$results = @mysql_query($sql);
-if (mysql_errno() > 0){echo mysql_error() . "<h4>$sql</h4>";}
+$results = @mysqli_query($dbc,$sql);
+if (mysqli_errno($dbc) > 0){echo mysql_error() . "<h4>$sql</h4>";}
 
 
 echo "<h3>Client Log In</h3>";
- while ($row = mysql_fetch_array($results , MYSQL_NUM)) {
+ while ($row = mysqli_fetch_array($results , MYSQLI_NUM)) {
    if ($row[3] == 1) {
      $login = 'pass';
    }
@@ -299,9 +299,9 @@ echo "<h3>Client Log In</h3>";
 if ($checkPDF > 0){
   $in = substr($in,0,-1) . ')';
   $sql = "UPDATE `Patient` SET `PDF`=1 WHERE $in";
-  mysql_query($sql);
+  mysqli_query($dbc,$sql);
   echo mysql_error() . "<h4>$sql</h4>";
-  if (mysql_errno() > 0){echo mysql_error() . "<h4>$sql</h4>";}
+  if (mysqli_errno($dbc) > 0){echo mysql_error() . "<h4>$sql</h4>";}
   echo "<span class='bold red'>$checkPDF PDFs checked, $checked OK</span></div><hr/><pre>";
 }
 

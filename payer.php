@@ -14,7 +14,7 @@ echo <<<EOT
 </style></head><body>
 <pre>
 EOT;
-$dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510'); @mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510'); @mysqli_select_db($dbc,'amx_portal');
 
 
     $header = true;
@@ -23,7 +23,7 @@ $dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510'); @mysql_selec
     {
       while (($data = fgetcsv($fp, 1000, ',')) !== FALSE){
 	  $sql = "INSERT INTO `amx_portal`.`payer` (`PayerId`, `PayerNames`, `States`, `Models`, `Lob`, `Cards`, `ReEnroll`, `Enroll`, `TPO`, `Services`, `Reporting`, `Cob`, `ICD10Ready`, `ICD10Testing`, `ICD10Required`, `Additional`) VALUES ('$data[2]', '$data[3]', '$data[4]', '$data[5]', '$data[6]', '$data[7]', '$data[8]', '$data[9]', '$data[10]', '$data[11]', '$data[12]', '$data[13]', '$data[14]', '$data[15]', '$data[16]', '$data[17]');";
-	  mysql_query($sql);
+	  mysqli_query($dbc,$sql);
 	  }
     }
 	fclose($fp);

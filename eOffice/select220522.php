@@ -187,8 +187,8 @@ $startTime = microtime(true);
 $strdob = date('Y-m-d',strtotime($dob));
 $foods = array();
 $sql = "SELECT `client`,`last`,`first`,`dob`,`address`,`city`,`state`,`zip`,`foods` FROM `history` WHERE `id`= $rec";
-$results = mysql_query($sql);
-(list($client, $last, $first,$dob,$address,$city,$state,$zip,$jsn) =  mysql_fetch_array($results, MYSQL_NUM));
+$results = mysqli_query($dbc,$sql);
+(list($client, $last, $first,$dob,$address,$city,$state,$zip,$jsn) =  mysqli_fetch_array($results, MYSQLI_NUM));
 $data = json_decode($jsn,1);
 foreach($data[0] as $code => $x){$foods[] = $code;}
 
@@ -199,16 +199,16 @@ $matches = array();
 $sort = array();
 $rast = array();
 $sql = "SELECT `Code`, `description` FROM `Rast` WHERE 1 ORDER BY `description` ASC";
-$results = mysql_query($sql);
-while(list($code,$description) =  mysql_fetch_array($results, MYSQL_NUM)){$sort[] = $code; $rast[$code] = $description; $matches[$code] = 0;}
+$results = mysqli_query($dbc,$sql);
+while(list($code,$description) =  mysqli_fetch_array($results, MYSQLI_NUM)){$sort[] = $code; $rast[$code] = $description; $matches[$code] = 0;}
 foreach($foods as $code){$matches[$code] = 1;}
 $sort = array_flip($sort);
 $amxpanels = array('900' => 'Food, Comprehensive','900-5' => 'Food, Comprehensive IgE','900-6' => 'Food, Comprehensive IgG4','950' => 'Food, Standard','950-3' => 'Food, Standard IgE','950-4' => 'Food, Standard IgG4','950-1' => 'Food, Mini','950-5' => 'Food, Mini IgE','950-6' => 'Food, Mini IgG4','255' => 'IBS','255-2' => 'IBS IgE','255-1' => 'IBS IgG4','253' => 'Hidden Foods ','253-1' => 'Hidden Foods IgE','253-2' => 'Hidden Foods IgG4');
 $yn = array('No','Yes');
 $pdx = 100;
 $sql = "SELECT `description`,`panel` FROM `clientPanels` WHERE  `include` = 1 AND `client` = $client ORDER BY `description` ASC";
-$result = mysql_query($sql);
-while(list($pDescription,$pName) =  mysql_fetch_array($result, MYSQL_NUM)){$pSort[$pdx][$pDescription] = $pName;$pdx++;}
+$result = mysqli_query($dbc,$sql);
+while(list($pDescription,$pName) =  mysqli_fetch_array($result, MYSQLI_NUM)){$pSort[$pdx][$pDescription] = $pName;$pdx++;}
 $pdx = 200;
 foreach($amxpanels as $pName => $pDescription){$pSort[$pdx][$pDescription] = $pName;$pdx++;}
 
@@ -228,8 +228,8 @@ foreach($pSort as $pdx => $array){
     $types=array();
     $food = array();
     $sql = "SELECT  `code`,`type` FROM `PanelTests` WHERE `number`='$pName' ORDER BY `sort`";
-    $results = mysql_query($sql);
-    while(list($code,$type) =  mysql_fetch_array($results, MYSQL_NUM)){
+    $results = mysqli_query($dbc,$sql);
+    while(list($code,$type) =  mysqli_fetch_array($results, MYSQLI_NUM)){
   	  $type = intval($type);
       if(substr($code,0,3) == '100'){$totalIgE = 1;continue;}
       $sortedFoods[$sort[$code]] = $code;

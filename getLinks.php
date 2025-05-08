@@ -115,8 +115,8 @@ return;
 
 
 
-$dbc=mysql_connect('localhost','er','yes12yes');
-@mysql_select_db('er_prescription');
+$dbc=mysqli_connect('localhost','er','yes12yes');
+@mysqli_select_db($dbc,'er_prescription');
 
 $pt = explode("\n",trim($_POST['msg']));
 $t = strpos($pt[0],"\t");
@@ -141,14 +141,14 @@ echo "<br>$phone</h1>";
 }
 
 $sql = "INSERT INTO `er_prescription`.`Profile` (`Number`, `ip`, `business`, `addr`, `city`, `email`, `exp`, `web`, `name`, `note`, `age`, `sex`, `bodyweight`, `months`, `height1`, `height2`, `int`, `vol`, `activity`, `tape1`, `tape2`, `tape3`, `waist`, `hrr`, `minutes`, `seconds`, `hrs`, `spm`, `height`) VALUES ('$phone', '', '', '', '', '', '', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');";
-@mysql_unbuffered_query($sql);
+@mysqli_query($dbc,$sql);
 $x=  mysql_error() ;
 if (strlen($x)>0){
   echo $x .'<br><textarea cols="60" rows="14" name="msg">' . $sql . '</textarea><br><br>';
 }
 //echo "e: $x<br>$sql";
 $sql = "UPDATE `Profile` SET `ip`='$ip',`business`='$business',`addr`='$addr',`city`='$city',`email`='$email',`exp`='$exp',`web`='$web',`name`='$name',`note`='$note' WHERE `Number`= $phone";
-@mysql_unbuffered_query($sql);
+@mysqli_query($dbc,$sql);
 $x=  mysql_error() ;
 if (strlen($x)>0){
   echo $x . '<br><textarea cols="60" rows="14" name="msg">' . $sql . '</textarea><br><br>';

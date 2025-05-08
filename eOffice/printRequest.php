@@ -5,8 +5,8 @@ header('Connection: Keep-Alive');
 header('Keep-Alive: timeout=5, max=100');
 header('Cache-Control: max-age=0');
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx',$data);
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx',$data);
+mysqli_select_db($dbc,'amx_portal');
 $id = intval($_POST['id']);
 //if($id == 0){$id = intval($_COOKIE['amxc']);}
 //if($id == 0){$id = intval($_COOKIE['amxp']);}
@@ -425,8 +425,8 @@ $specimen = mysql_real_escape_string($specimen);
 $physician = mysql_real_escape_string($physician);
 $request = mysql_real_escape_string(json_encode($ordered));
 $sql = "UPDATE `history` SET `specimen`='$specimen', `collection` = '$collection',`physician` = '$physician',`idc` = '$idc', `request` = '$request' WHERE `id` = '$rec'";
-mysql_query($sql);
-if(mysql_errno() > 0){echo mysql_error() . "<br/>\n$sql";}
+mysqli_query($dbc,$sql);
+if(mysqli_errno($dbc) > 0){echo mysql_error() . "<br/>\n$sql";}
 
 echo '</body></html>';
 ?>

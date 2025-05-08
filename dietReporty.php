@@ -126,8 +126,8 @@ $daySpace[3] = "\n</div><hr><div>";
 ob_flush();
 $pt = array(0,1,2,2);
 $type = array('','IgE','IgG','IgG4');
-$dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510');
-@mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
+@mysqli_select_db($dbc,'amx_portal');
 
  
   $class[1]['0'] = ' class="tested" ';
@@ -156,11 +156,11 @@ $dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510');
   $score = array('0' => '-','0/1' => '+','1' => '+','2' => '+','3' => '+','4' => '+','5' => '+');  
   
 //  $sql = "SELECT COUNT(*),`Client`  FROM `Patient` WHERE `Patient` = $pat LIMIT 1";
-//  $results = @mysql_query($sql);
-//  $row = mysql_fetch_array($results, MYSQL_NUM);
+//  $results = @mysqli_query($dbc,$sql);
+//  $row = mysqli_fetch_array($results, MYSQLI_NUM);
   $sql = "SELECT `Code`,`Type`,`Score`,`Description`  FROM `Test` WHERE `Patient` =  $pat ORDER BY `Type` ASC,`Score` ASC ";
-  $results = @mysql_query($sql);
-  while ($row = mysql_fetch_array($results, MYSQL_NUM)) {
+  $results = @mysqli_query($dbc,$sql);
+  while ($row = mysqli_fetch_array($results, MYSQLI_NUM)) {
     if ($row[2] >= $cutoff){
 	  if ($epos[$row[0]]){continue;}
 	  if ($row[1] == 1){$epos[$row[0]] = true;}
@@ -222,8 +222,8 @@ while (true){
   $day++;
   echo "</div><h3 class=\"day\">Day $day</h3><br><div class=\"col\">\n";
   $sql = "SELECT `id`, `Family`, `Type`, `Description`,`Day`,`Code`,`Group` FROM `Allergens` WHERE `Day` = $day   ORDER BY `alpha` ASC , `Description` ASC";
-        $results = @mysql_query($sql);
-        while($row = mysql_fetch_array($results, MYSQL_NUM)){
+        $results = @mysqli_query($dbc,$sql);
+        while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
 		//  if ($epos[$row[5]]){continue;}
           $group = ($row[1] & 0x3CFF0000)/ 67108864;
           if ($saveGroup != $group){
@@ -262,13 +262,13 @@ EOT;
 ob_end_flush();
 /*
 $sql = "SELECT `Group`, COUNT(*) FROM Allergens WHERE `Day` = 1 AND `Type` = 1 GROUP BY `Group`;";
-$results = @mysql_query($sql);
-while($row = mysql_fetch_array($results, MYSQL_NUM)){
+$results = @mysqli_query($dbc,$sql);
+while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
   $skip[$row[0]] = false ;
 }
 $sql = "SELECT `Group`, COUNT(*) FROM Allergens WHERE `Day` = 1 AND `Type` != 1 GROUP BY `Group`;";
-$results = @mysql_query($sql);
-while($row = mysql_fetch_array($results, MYSQL_NUM)){
+$results = @mysqli_query($dbc,$sql);
+while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
   $skip[$row[0]] = false ;
 }
 */

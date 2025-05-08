@@ -1,19 +1,19 @@
 <?php //ob_start("ob_gzhandler");
 error_reporting(0);
 $ip =  $_SERVER['REMOTE_ADDR'];
-// $dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510');
+// $dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx',$data);
-@mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx',$data);
+@mysqli_select_db($dbc,'amx_portal');
 $client = intval($_GET['c']);
 $sql = "SELECT `Name`, `RecordsCRC`, `Session`,`Phone`,`Fax`,`Address`,`Address2`,`City`,`State`,`PostalCode` FROM `Client`  WHERE `Number` = $client LIMIT 1";
-$results = @mysql_query($sql);
+$results = @mysqli_query($dbc,$sql);
 $error = mysql_error();
 $cliErr =  "<h4>$error <br/>$sql</h4>";
-$rows = @mysql_num_rows($results);
+$rows = @mysqli_num_rows($results);
 if (strlen($error) == 0 AND $rows == 1){
   $foodsTable = "`Foods$client`";
-  $cli = mysql_fetch_array($results, MYSQL_BOTH);
+  $cli = mysqli_fetch_array($results, MYSQL_BOTH);
   $clientName = htmlspecialchars($cli[0]);
   $clientAddress = $cli[5];
   if (strlen($cli[6]) > 0){$clientAddress .= '<br/>' . $cli[6];}
@@ -87,7 +87,7 @@ if (isset($_GET['sub'])){
   }
   foreach ($row as $k => $v){
   $sql = "UPDATE Foods$client SET  `Day`= '$v[0]',`Birch`='$v[1]', `Sycamore`='$v[2]', `Mugwort`='$v[3]', `Grasses`='$v[4]', `Latex`='$v[5]' WHERE `id`=$k";
-    @mysql_unbuffered_query($sql);
+    @mysqli_query($dbc,$sql);
 	$error = mysql_error();
 	if (strlen($error) > 0){echo "$error<br>$sql";break;}
   }
@@ -116,10 +116,10 @@ $bg = 1;
 //                                                         5         6           7          8          9
 $sql = "SELECT `id`,`Family`, `Type`, `Description`,`Day`,`Birch`, `Sycamore`, `Mugwort`, `Grasses`, `Latex`,`alpha`,`Code` FROM $foodsTable WHERE `alpha` > 0 ORDER BY `alpha` ASC, `Group` ASC,`Type` ASC, `Description` ASC";
 
-        $results = @mysql_query($sql);
+        $results = @mysqli_query($dbc,$sql);
 //		if (mysql_errno > 0){echo mysql_error() . '<br/>' . $sql;}
 //		echo $sql;
-        while($row = mysql_fetch_array($results, MYSQL_NUM)){
+        while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
 		  $group = $row[10]; 
 		  if ($saveGroup != $group){
 		    $saveGroup = $group;

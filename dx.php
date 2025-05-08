@@ -108,12 +108,12 @@ background-image: linear-gradient(to bottom, #2ef 0%, #02f 100%);}
 EOT;
 flush();
 ob_flush();
-$dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510'); @mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510'); @mysqli_select_db($dbc,'amx_portal');
 $tdx = 0;
 $t[$tdx] = microtime(true);
  $lnk = intval(preg_replace("[^0-9]", "", $_POST['lnk']));
  if ($lnk > 0){
-  @mysql_unbuffered_query("UPDATE `Patient` SET `Link`=0, `Attributes`=0 WHERE `Link`= $lnk");
+  @mysqli_query($dbc,"UPDATE `Patient` SET `Link`=0, `Attributes`=0 WHERE `Link`= $lnk");
  }
 $sub = intval($_POST['sub']);
 if ($sub == 1) {
@@ -128,28 +128,28 @@ if ($sub == 1) {
  $cnt = count($links);
 //    echo $client.' - ' . $patient . '<br><br><pre>LINKS<br/>' . var_export($links,true) . '</pre><br/>';
  if ($cnt == 1){
-  mysql_unbuffered_query("UPDATE `Patient` SET `Link`=0 WHERE `Link`= $links[0]");
-  mysql_unbuffered_query("DELETE FROM `Link` WHERE `next` = $links[0]"); 
+  mysqli_query($dbc,"UPDATE `Patient` SET `Link`=0 WHERE `Link`= $links[0]");
+  mysqli_query($dbc,"DELETE FROM `Link` WHERE `next` = $links[0]"); 
  }
  elseif ($cnt > 1){
-  $results = mysql_query("SELECT MAX(`next`) FROM `Link` WHERE 1") ;
-  $row = mysql_fetch_array($results, MYSQL_NUM);
+  $results = mysqli_query($dbc,"SELECT MAX(`next`) FROM `Link` WHERE 1") ;
+  $row = mysqli_fetch_array($results, MYSQLI_NUM);
   $next = $row[0];
   $next++;
-  mysql_unbuffered_query("INSERT INTO `amx_portal`.`Link` (`next`) VALUES (NULL);");
+  mysqli_query($dbc,"INSERT INTO `amx_portal`.`Link` (`next`) VALUES (NULL);");
   echo "<h2>$cnt $next</h2>";
   foreach ($links as $v){
-   $results = mysql_query("SELECT `Link` FROM `Patient` WHERE `Patient` = $v LIMIT 1");
-   $rows = mysql_num_rows($results); 
+   $results = mysqli_query($dbc,"SELECT `Link` FROM `Patient` WHERE `Patient` = $v LIMIT 1");
+   $rows = mysqli_num_rows($results); 
    if ($rows == 1 ){
-    $row = mysql_fetch_array($results, MYSQL_NUM);
+    $row = mysqli_fetch_array($results, MYSQLI_NUM);
     if ($row[0] > 0){
-     mysql_unbuffered_query("UPDATE `Patient` SET `Link`=0 WHERE `Link`= $row[0]");
+     mysqli_query($dbc,"UPDATE `Patient` SET `Link`=0 WHERE `Link`= $row[0]");
     }
    }
   }
   foreach ($links as $v){
-   @mysql_unbuffered_query("UPDATE `Patient` SET `Link`=$next WHERE `patient`= $v");
+   @mysqli_query($dbc,"UPDATE `Patient` SET `Link`=$next WHERE `patient`= $v");
   }
  } 
 }
@@ -158,35 +158,35 @@ if ($sub == 1) {
 
 
 /*
-$results = mysql_query("SELECT * FROM Allergens");
+$results = mysqli_query($dbc,"SELECT * FROM Allergens");
 $ndx++;$last = $ndx-1;$t[$ndx] = microtime(true);$et = number_format($t[$ndx] - $t[$last],5); echo "<p>$ndx) SELECT time: $et</p>";
 
 $ndx++;$t[$ndx] = microtime(true);
-$ndx++;$t[$ndx] = microtime(true);mysql_unbuffered_query("CREATE TABLE Foods200221 SELECT * FROM Allergens");
+$ndx++;$t[$ndx] = microtime(true);mysqli_query($dbc,"CREATE TABLE Foods200221 SELECT * FROM Allergens");
 $ndx++;$last = $ndx-1;$t[$ndx] = microtime(true);$et = number_format($t[$ndx] - $t[$last],5); echo "<p>$ndx) CREATE SELECT FROM: $et</p>";
 $ndx++;$t[$ndx] = microtime(true);
 $ndx++;$t[$ndx] = microtime(true);
-mysql_unbuffered_query("CREATE TABLE Foods200220 LIKE Allergens");
+mysqli_query($dbc,"CREATE TABLE Foods200220 LIKE Allergens");
 $ndx++;$last = $ndx-1;$t[$ndx] = microtime(true);$et = number_format($t[$ndx] - $t[$last],5); echo "<p>$ndx) CREATE LIKE: $et</p>";
-mysql_unbuffered_query("ALTER TABLE Foods200220 DISABLE KEYS");
+mysqli_query($dbc,"ALTER TABLE Foods200220 DISABLE KEYS");
 $ndx++;$last = $ndx-1;$t[$ndx] = microtime(true);$et = number_format($t[$ndx] - $t[$last],5); echo "<p>$ndx) DISABLE KEYS: $et</p>";
-mysql_unbuffered_query("INSERT INTO Foods200220 SELECT * FROM $foodsTable ORDER BY `Allergens`.`alpha` ASC, `Allergens`.`Description` ASC");
+mysqli_query($dbc,"INSERT INTO Foods200220 SELECT * FROM $foodsTable ORDER BY `Allergens`.`alpha` ASC, `Allergens`.`Description` ASC");
 $ndx++;$last = $ndx-1;$t[$ndx] = microtime(true);$et = number_format($t[$ndx] - $t[$last],5); echo "<p>$ndx) NSERT INTO FROM: $et</p>";
-mysql_unbuffered_query("ALTER TABLE Foods200220 ENABLE KEYS");
+mysqli_query($dbc,"ALTER TABLE Foods200220 ENABLE KEYS");
 $ndx++;$last = $ndx-1;$t[$ndx] = microtime(true);$et = number_format($t[$ndx] - $t[$last],5); echo "<p>$ndx) ENABLE KEYS: $et</p>";
 $last = $ndx-5;$t[$ndx] = microtime(true);$et = number_format($t[$ndx] - $t[$last],5); echo "<p>$ndx) TOTAL: $et</p>";
 
 $ndx++;$t[$ndx] = microtime(true);
 $ndx++;$t[$ndx] = microtime(true);
-mysql_unbuffered_query("CREATE TABLE Foods200223 LIKE `Allergens`");
+mysqli_query($dbc,"CREATE TABLE Foods200223 LIKE `Allergens`");
 $ndx++;$last = $ndx-1;$t[$ndx] = microtime(true);$et = number_format($t[$ndx] - $t[$last],5); echo "<p>$ndx) CREATE LIKE: $et</p>";
-mysql_unbuffered_query("SELECT * INTO OUTFILE '/tmp/table1.txt' FROM `Allergens`");
+mysqli_query($dbc,"SELECT * INTO OUTFILE '/tmp/table1.txt' FROM `Allergens`");
 $ndx++;$last = $ndx-1;$t[$ndx] = microtime(true);$et = number_format($t[$ndx] - $t[$last],5); echo "<p>$ndx) SAVE DATA: $et</p>";
-mysql_unbuffered_query("ALTER TABLE Foods200223 DISABLE KEYS");
+mysqli_query($dbc,"ALTER TABLE Foods200223 DISABLE KEYS");
 $ndx++;$last = $ndx-1;$t[$ndx] = microtime(true);$et = number_format($t[$ndx] - $t[$last],5); echo "<p>$ndx) DISABLE KEYS: $et</p>";
-mysql_unbuffered_query("LOAD DATA INFILE '/tmp/table1.txt' INTO TABLE Foods200223");
+mysqli_query($dbc,"LOAD DATA INFILE '/tmp/table1.txt' INTO TABLE Foods200223");
 $ndx++;$last = $ndx-1;$t[$ndx] = microtime(true);$et = number_format($t[$ndx] - $t[$last],5); echo "<p>$ndx) IMPORT DATA: $et</p>";
-mysql_unbuffered_query("ALTER TABLE Foods200223 ENABLE KEYS");
+mysqli_query($dbc,"ALTER TABLE Foods200223 ENABLE KEYS");
 $ndx++;$last = $ndx-1;$t[$ndx] = microtime(true);$et = number_format($t[$ndx] - $t[$last],5); echo "<p>$ndx) ENABLE KEYS: $et</p></div></body></html>";
 $last = $ndx-5;$t[$ndx] = microtime(true);$et = number_format($t[$ndx] - $t[$last],5); echo "<p>$ndx) TOTAL: $et</p></div>";
 
@@ -214,14 +214,14 @@ $err .= "<br/>Patient: $patient<br/>";
 
 if (strlen($patient) == 6){
  if (strlen($lnk) == 6){
-  @mysql_unbuffered_query("UPDATE `Patient` SET `Link`=0 WHERE `Link`= $lnk");
+  @mysqli_query($dbc,"UPDATE `Patient` SET `Link`=0 WHERE `Link`= $lnk");
  }
  $sql = "SELECT `Client`,`Last`, `First`, `ClientID`,`Attributes`,`Link` FROM `Patient` WHERE `Patient` = $patient";
- $results = @mysql_query($sql);
+ $results = @mysqli_query($dbc,$sql);
  $error = mysql_error();
- $rows = @mysql_num_rows($results);
+ $rows = @mysqli_num_rows($results);
  if (strlen($error) == 0 AND $rows == 1){
-  $pat = mysql_fetch_array($results, MYSQL_BOTH);
+  $pat = mysqli_fetch_array($results, MYSQL_BOTH);
   $patState = $pat[4];
   $client = $pat[0] ;
   $patID = $pat[3];
@@ -237,11 +237,11 @@ if (strlen($patient) == 6){
   if ($pat[5] > 0){
     $linked = 1;
     $sql = "SELECT `Patient` FROM `Patient` WHERE `Link` = $pat[5]"; 
-    $results = @mysql_query($sql); 
+    $results = @mysqli_query($dbc,$sql); 
     $ass = $sql;
-    $rows = @mysql_num_rows($results);
+    $rows = @mysqli_num_rows($results);
     if ($rows > 1){
-      while ($pats = mysql_fetch_array($results, MYSQL_NUM)){
+      while ($pats = mysqli_fetch_array($results, MYSQLI_NUM)){
        $patients[] = $pats[0];
       }
     }
@@ -253,9 +253,9 @@ if (strlen($patient) == 6){
   }
   else{
    $sql = "SELECT `Link` FROM `Patient` WHERE `Client` = $client AND `Last` LIKE '$pat[1]' AND `First` LIKE '$pat[2]' ";
-   $results = @mysql_query($sql); 
+   $results = @mysqli_query($dbc,$sql); 
    $error = mysql_error();
-   $rows = @mysql_num_rows($results);
+   $rows = @mysqli_num_rows($results);
    $rows--;
    $patients[] = $patient;
    $linked = 1;
@@ -264,12 +264,12 @@ if (strlen($patient) == 6){
   $time['get linked results'] = number_format((microtime(true) - $startTime),3);
   $time['get patient'] = number_format((microtime(true) - $startTime),3);
   $sql = "SELECT `Name`, `RecordsCRC`, `Session`,`Phone`,`Fax`,`Address`,`Address2`,`City`,`State`,`PostalCode` FROM `Client` WHERE `Number` = $client LIMIT 1";
-  $results = @mysql_query($sql);
+  $results = @mysqli_query($dbc,$sql);
   $error = mysql_error();
   $cliErr = "<h4>$error <br/>$sql</h4>";
-  $rows = @mysql_num_rows($results);
+  $rows = @mysqli_num_rows($results);
   if (strlen($error) == 0 AND $rows == 1){
-   $cli = mysql_fetch_array($results, MYSQL_NUM);
+   $cli = mysqli_fetch_array($results, MYSQLI_NUM);
    $clientName = htmlspecialchars($cli[0]);
    $clientAddress = $cli[5];
    if (strlen($cli[6]) > 0){$clientAddress .= '<br/>' . $cli[6];}
@@ -277,32 +277,32 @@ if (strlen($patient) == 6){
    $clientAddress .= "<br/>$cli[7] $cli[8] $cli[9]<br/>$client";
    $err .= "<br/>Client Name: $clientName<br/>";
    $sql = "SELECT * FROM `template` WHERE `Client` = 0 AND `Patient` = $patient LIMIT 1"; 
-   $results = @mysql_query($sql);
+   $results = @mysqli_query($dbc,$sql);
    $error = mysql_error();
-   $rows = @mysql_num_rows($results);
+   $rows = @mysqli_num_rows($results);
    if (strlen($error) != 0 || $rows != 1){
     $err .= "<br/>SEL #1 PAT TPL: $error<br/>$sql<br/>";
     $sql = "SELECT * FROM `template` WHERE `Client` = $client AND `Patient` = 0 LIMIT 1"; 
-    $results = @mysql_query($sql);
+    $results = @mysqli_query($dbc,$sql);
     $error = mysql_error();
-    $rows = @mysql_num_rows($results);
+    $rows = @mysqli_num_rows($results);
     if (strlen($error) != 0 || $rows != 1){
      $sql = "SELECT * FROM `template` WHERE `Client` = 999999 AND `Patient` = 0 LIMIT 1"; 
-     $results = @mysql_query($sql);
-     $tpl = mysql_fetch_array($results, MYSQL_BOTH);
+     $results = @mysqli_query($dbc,$sql);
+     $tpl = mysqli_fetch_array($results, MYSQL_BOTH);
      $template[3] = $tpl;
      $sql = "INSERT INTO `amx_portal`.`template` (`Client`, `Patient`, `CutOff`, `excludeMethod`, `CrossreactivityGrocery`, `CrossreactivityDiet`, `CrossreactivityPhycian`, `CrossreactivityPatient`, `HiddenFoodPhysician`, `HiddenFoodPatient`, `ExcludeIgE`, `ExcludeIgG`, `ExcludeIgG4`) VALUES ('$client', '0','$tpl[2]', '$tpl[3]', '$tpl[4]', '$tpl[5]', '$tpl[6]', '$tpl[7]', '$tpl[8]', '$tpl[1]', '$tpl[10]', '$tpl[11]', '$tpl[12]', '$tpl[13]')";
      
     }
     else{
-     $tpl = mysql_fetch_array($results, MYSQL_BOTH);
+     $tpl = mysqli_fetch_array($results, MYSQL_BOTH);
      $template[1] = $tpl;
     }
     $sql = "INSERT INTO `amx_portal`.`template` (`Client`, `Patient`, `CutOff`, `excludeMethod`, `CrossreactivityGrocery`, `CrossreactivityDiet`, `CrossreactivityPhycian`, `CrossreactivityPatient`, `HiddenFoodPhysician`, `HiddenFoodPatient`, `ExcludeIgE`, `ExcludeIgG`, `ExcludeIgG4`) VALUES (0, $patient, '$tpl[2]', '$tpl[3]', '$tpl[4]', '$tpl[5]', '$tpl[6]', '$tpl[7]', '$tpl[8]', '$tpl[1]', '$tpl[10]', '$tpl[11]', '$tpl[12]', '$tpl[13]')";
-    $results = @mysql_unbuffered_query($sql);
+    $results = @mysqli_query($dbc,$sql);
    }
    else{
-    $tpl = mysql_fetch_array($results, MYSQL_BOTH);
+    $tpl = mysqli_fetch_array($results, MYSQL_BOTH);
     $template[0] = $tpl;
    }
   }
@@ -333,7 +333,7 @@ if (strlen($client) == 6){
 `CrossreactivityPatient` = $tpl[7],
 `HiddenFoodPhysician` = $tpl[8],
 `HiddenFoodPatient` = $tpl[9] WHERE `Client` = 0 AND `Patient` = $patient";
-  $results = @mysql_query($sql);
+  $results = @mysqli_query($dbc,$sql);
   $error = mysql_error();
   if (strlen($error) > 0){
    $err .= "<br/>UPDATE ERROR PAT TPL: $error<br/>$sql<br/>";
@@ -343,7 +343,7 @@ if (strlen($client) == 6){
 
  elseif ($sub == 1){
   $sql = "UPDATE `template` SET`ExcludeIgE` = $tpl[10],`ExcludeIgG` = $tpl[11],`ExcludeIgG4` = $tpl[12] WHERE `Client` = 0 AND `Patient` = $patient";
-  $results = @mysql_query($sql);
+  $results = @mysqli_query($dbc,$sql);
   $error = mysql_error();
   if (strlen($error) > 0){
    $err .= "<br/>UPDATE ERROR PAT TPL: $error<br/>$sql<br/>";
@@ -359,12 +359,12 @@ if (strlen($client) == 6){
 if (strlen($client) == 6 AND strlen($patient) == 6){
 
  $foodsTable = "`Foods$client`";
- @mysql_unbuffered_query("SELECT 1 FROM $foodsTable LIMIT 1 ");
- if (mysql_errno() == 1146){
-  mysql_unbuffered_query("CREATE TABLE $foodsTable LIKE `Allergens`");
-  mysql_unbuffered_query("ALTER TABLE $foodsTable DISABLE KEYS");
-  mysql_unbuffered_query("INSERT INTO $foodsTable SELECT * FROM `Foods888887` ORDER BY `alpha` ASC,`Description` ASC");
-  mysql_unbuffered_query("ALTER TABLE $foodsTable ENABLE KEYS");
+ @mysqli_query($dbc,"SELECT 1 FROM $foodsTable LIMIT 1 ");
+ if (mysqli_errno($dbc) == 1146){
+  mysqli_query($dbc,"CREATE TABLE $foodsTable LIKE `Allergens`");
+  mysqli_query($dbc,"ALTER TABLE $foodsTable DISABLE KEYS");
+  mysqli_query($dbc,"INSERT INTO $foodsTable SELECT * FROM `Foods888887` ORDER BY `alpha` ASC,`Description` ASC");
+  mysqli_query($dbc,"ALTER TABLE $foodsTable ENABLE KEYS");
  }
  $type = array('Added','IgE','IgG','IgG4');
  $type[9] = 'Added';
@@ -372,14 +372,14 @@ if (strlen($client) == 6 AND strlen($patient) == 6){
  
  if ($sub == 2){
   foreach($patients as $key=>$value){
-    @mysql_unbuffered_query("UPDATE `Test` SET `Exclude` = 0 WHERE `Patient` = $value");
-    @mysql_unbuffered_query("DELETE FROM `Exceptions` WHERE `Patient`= $value");
+    @mysqli_query($dbc,"UPDATE `Test` SET `Exclude` = 0 WHERE `Patient` = $value");
+    @mysqli_query($dbc,"DELETE FROM `Exceptions` WHERE `Patient`= $value");
   }
   foreach ($_POST as $k => $v){
     if (substr($k,0,1) == 'e'){
       $code = substr($k,2);
 	  foreach($patients as $key=>$value){
-        @mysql_unbuffered_query("UPDATE `Test` SET `Exclude` = 1 WHERE `Patient` = $value AND `Code` = '$code' ");
+        @mysqli_query($dbc,"UPDATE `Test` SET `Exclude` = 1 WHERE `Patient` = $value AND `Code` = '$code' ");
 	  }
     }
       elseif (substr($k,0,1) == 'a'){
@@ -454,8 +454,8 @@ if (strlen($client) == 6 AND strlen($patient) == 6){
  $foods = array();
  //         0    1 v0     2 v6  3 v7 4 v8  5 v9
  $sql = "SELECT `Code`,`Description`,`alpha`,`Day`,`Group`,`id` FROM $foodsTable WHERE `Type` > 0 ORDER BY `alpha` ASC , `Description` ASC";
- $results = mysql_query($sql);
- while ($fd = mysql_fetch_array($results, MYSQL_NUM)){list($Code,$Description,$Alpha,$Day,$Group,$Id ) = $fd;
+ $results = mysqli_query($dbc,$sql);
+ while ($fd = mysqli_fetch_array($results, MYSQLI_NUM)){list($Code,$Description,$Alpha,$Day,$Group,$Id ) = $fd;
   $code2id[$fd[0]][] = $fd[5];
   if (isset($foods[$Id])){continue;}
   $grp = $Alpha; //intval($fd[2]);
@@ -471,8 +471,8 @@ if (strlen($client) == 6 AND strlen($patient) == 6){
  $cutoffType = array(0,$cutoff,$cutoffG,$cutoffG);
  foreach ($patients as $p){
   $sql = "SELECT `Code`,`Type`,`Score`,`Exclude` FROM `Test` WHERE `Patient` = $p ";
-  $results = @mysql_query($sql);
-  while ($row = @mysql_fetch_array($results, MYSQL_NUM)){
+  $results = @mysqli_query($dbc,$sql);
+  while ($row = @mysqli_fetch_array($results, MYSQLI_NUM)){
    if (count($code2id[$row[0]]) == 0){
     $foods[$next] = array($row[4],0,0,0,0,0,0,9,0,0,'','','');
     $code2id[$row[0]][] = $next;
@@ -500,8 +500,8 @@ if (strlen($client) == 6 AND strlen($patient) == 6){
 $components = array(); 
 $priority = array(2,2,0); 
 if ($sub == 1){
- $results = mysql_query("SELECT `id`,`value` FROM `Exceptions` WHERE `Patient` = $patient ");
- while ($excpt = mysql_fetch_array($results, MYSQL_NUM)){
+ $results = mysqli_query($dbc,"SELECT `id`,`value` FROM `Exceptions` WHERE `Patient` = $patient ");
+ while ($excpt = mysqli_fetch_array($results, MYSQLI_NUM)){
   if($excpt[0] ==0){continue;} 
   $foods[$excpt[0]][4] |= 4;
   $foods[$row[0]][4] = 1;
@@ -891,8 +891,8 @@ $pg++;
 }
 
 $sql = "SELECT `id`, `Family`,`alpha`,`Description`,`Day`,`Code`,`Group` FROM $foodsTable WHERE `day` < 5 AND `Type` > 0  ORDER BY `alpha` ASC , `Description` ASC";
-$results = @mysql_query($sql);
-while($row = mysql_fetch_array($results, MYSQL_NUM)){
+$results = @mysqli_query($dbc,$sql);
+while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
  $grp = ($row[1] & 0x3CFF0000)/ 67108864;
  if ($savGrp != $grp){
   $savGrp = $grp;
@@ -935,8 +935,8 @@ $pgBrk[9] = "</div></div>\n";
 $pgInc = array(1,0,0,1,0,0,1,0);
 $savGrp = 99;
 $sql = "SELECT `id`, `Family`,`alpha`,`Description`,`Day`,`Code`,`Group`,`Type` FROM $foodsTable WHERE `alpha` > 0 AND `Family` > 0 ORDER BY $foodsTable.`Family` ASC";
-$results = @mysql_query($sql);
-while($row = mysql_fetch_array($results, MYSQL_NUM)){
+$results = @mysqli_query($dbc,$sql);
+while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
  $grp = $row[2] ;
  if ($grp == 8){break;}
  if ($savGrp != $grp){
@@ -1375,7 +1375,7 @@ function init(){hd.style.display='none'; }
 EOT;
 flush();
 ob_end_flush();
-mysql_unbuffered_query("UPDATE `Patient` SET `Attributes` = $linked WHERE `Patient`= $patient ");
+mysqli_query($dbc,"UPDATE `Patient` SET `Attributes` = $linked WHERE `Patient`= $patient ");
 }
 }
  if (!isset($sub) || $sub == 0){
@@ -1400,9 +1400,9 @@ EOT;
 ob_flush();
 ob_end_flush();
 if ($sub == 2 && count($flip) > 0){
- mysql_unbuffered_query("DELETE FROM `Exceptions` WHERE `Patient` = $patient");
+ mysqli_query($dbc,"DELETE FROM `Exceptions` WHERE `Patient` = $patient");
  foreach ($flip as $k=>$v){
-  mysql_unbuffered_query("INSERT INTO `amx_portal`.`Exceptions` (`Patient`, `id`, `Offset`, `value`) VALUES ($patient, '$k', 4, '4')");
+  mysqli_query($dbc,"INSERT INTO `amx_portal`.`Exceptions` (`Patient`, `id`, `Offset`, `value`) VALUES ($patient, '$k', 4, '4')");
  }
 }
 

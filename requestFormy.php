@@ -123,22 +123,22 @@ input[type="text"]{width:5em;}
 </div><h2>Patient Inhalant and Food History<br></h2>
 EOT;
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx','xD1GkuK7a7DK8!');
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx','xD1GkuK7a7DK8!');
+mysqli_select_db($dbc,'amx_portal');
 
-//$dbc=mysql_connect('localhost','isl_isl','yes12yes');
-//mysql_select_db('isl_portal');
+//$dbc=mysqli_connect('localhost','isl_isl','yes12yes');
+//mysqli_select_db($dbc,'isl_portal');
 $sub = intval($_GET['sub']);
 if($sub == 0){$sub = intval($_POST['sub']);}
 $rec = intval($_POST['rec']);
 if($sub == 6 && $rec > 0){
   $sql = "UPDATE `history` SET `status`= 'C' WHERE `id`=$rec";
-  mysql_query($sql);
+  mysqli_query($dbc,$sql);
 }
   $js = "var completed = false;\nvar entered = false;\n";
   $sql = "SELECT `id`,`date`, `last`, `first`, `dob`, `gender` FROM `history` WHERE `client` = $id AND `status` = 'E'  ORDER BY `client` ASC,`last` ASC, `first` ASC";
-  $results = mysql_query($sql);
-  if(mysql_num_rows($results) > 0){
+  $results = mysqli_query($dbc,$sql);
+  if(mysqli_num_rows($results) > 0){
   $js .= "entered = true;\n";
   echo <<<EOT
 <button id="ph" type="button"  onclick="exp('s0')" >New Patient Histories</button>
@@ -151,7 +151,7 @@ if($sub == 6 && $rec > 0){
 </tr>
 EOT;
 
-  while (list($rec,$date,$last,$first,$dob,$gender) = @mysql_fetch_array($results, MYSQL_NUM)) {
+  while (list($rec,$date,$last,$first,$dob,$gender) = @mysqli_fetch_array($results, MYSQLI_NUM)) {
     $dob = date('M j, Y',strtotime($dob));
     $date = date('M j, Y',strtotime($date));
     $diff = date_diff(date_create(),date_create($dob),true);
@@ -176,10 +176,10 @@ else{
   echo '<div id="s0"></div>';
 }
   $sql = "SELECT `id`,`date`, `last`, `first`, `dob`, `gender`,`client` FROM `history` WHERE `client` = $id AND `status` = 'C' ORDER BY `client` ASC,`last` ASC, `first` ASC";
-  $results = mysql_query($sql);
-  if(mysql_errno() > 0){echo mysql_error() . "<br/>\n$sql";}
+  $results = mysqli_query($dbc,$sql);
+  if(mysqli_errno($dbc) > 0){echo mysql_error() . "<br/>\n$sql";}
   
-  if(mysql_num_rows($results) > 0){
+  if(mysqli_num_rows($results) > 0){
   $js .= "completed = true;\n";
   echo <<<EOT
 <button id="ph" type="button"  onclick="exp('s1')" >Completed Patient Histories</button>
@@ -191,7 +191,7 @@ else{
 <td><button class="c3"  type="button" name="sn4">Entered</button></td>
 </tr>
 EOT;
-  while (list($rec,$date,$last,$first,$dob,$gender,$id) = @mysql_fetch_array($results, MYSQL_NUM)) {
+  while (list($rec,$date,$last,$first,$dob,$gender,$id) = @mysqli_fetch_array($results, MYSQLI_NUM)) {
     $dob = date('M j, Y',strtotime($dob));
     $date = date('M j, Y',strtotime($date));
     $diff = date_diff(date_create(),date_create($dob),true);

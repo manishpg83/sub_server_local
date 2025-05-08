@@ -186,7 +186,7 @@ ob_flush();
 	$jsn = mysql_real_escape_string(json_encode($foods));
     fwrite($fp,$jsn);
 	$sqlf = "INSERT INTO `amx_portal`.`history` (`id`, `client`, `date`, `last`, `first`, `dob`, `gender`, `foods`) VALUES (NULL, $id, '$today', '$last', '$first', '$dob', '$gender', '$jsn');";
-	mysql_query($sqlf);
+	mysqli_query($dbc,$sqlf);
 	$sqlf .= "\n" . mysql_error() . "\nEnd";
   }
 

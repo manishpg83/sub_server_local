@@ -194,7 +194,7 @@ $last = $row[1];
 //$sql = "SELECT `Client` , `Patient`, `Date`, `Status`  FROM `Patient` WHERE `Patient` > $month  AND  (`Status` != 'L' AND `Status` != 'V' AND `Status` != 'W' AND `Status` != 'C' AND `Status` != 'X' AND `Status` != 'I') ORDER BY `Patient` DESC";
 $sql = "SELECT `Client` , `Patient`, `Date`, `Status` FROM `Patient` WHERE (`Patient`  BETWEEN 230000 AND 499999 AND `Status` != 'L' AND `Status` != 'V' AND `Status` != 'W' AND `Status` != 'C' AND `Status` != 'X' AND `Status` != 'I') ORDER BY `Patient` DESC";
 $results = mysqli_query($link,$sql);
-if (intval($row[2]) > 0 ) { //(MYSQLI_NUM_rows($results)) {
+if (intval($row[2]) > 0 ) { //(mysqli_num_rows($results)) {
   echo "\n<p>$row[2] Patients From: $first To: $last ( status &lt;&gt; C,W,V,I, or L )</p>";
   while (list($Client,$Patient,$Date,$Status) = mysqli_fetch_array($results , MYSQLI_NUM)) {
     $date = strtotime($Date);

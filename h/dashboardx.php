@@ -6,11 +6,11 @@ header('Connection: Keep-Alive');
 header('Keep-Alive: timeout=50, max=100');
 
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx_allermetrix',$data);
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix',$data);
+mysqli_select_db($dbc,'amx_portal');
 $ip = $_SERVER['REMOTE_ADDR'];
-//$dbc=mysql_connect('localhost','isl_isl','yes12yes');
-//mysql_select_db('isl_portal');
+//$dbc=mysqli_connect('localhost','isl_isl','yes12yes');
+//mysqli_select_db($dbc,'isl_portal');
 
 $startTime = microtime(true);
 $checkbox = array();
@@ -411,9 +411,9 @@ $animal = array('dog','cat','bird','horse',' hamster ','rabbit','goat','pig','ch
 
 if($sub == 4){
   $sqlf = "SELECT `client`, `date`, `last`, `first`, `dob`,`state`, `gender`, `history` FROM `history` WHERE `id` = $rec";
-  $results = mysql_query($sqlf);
+  $results = mysqli_query($dbc,$sqlf);
   $sqlf .= "\n" . mysql_error();
-  list($client,$date,$last,$first,$dob,$state,$gender,$jsn) = @mysql_fetch_array($results, MYSQL_NUM);
+  list($client,$date,$last,$first,$dob,$state,$gender,$jsn) = @mysqli_fetch_array($results, MYSQLI_NUM);
 
   $strdob = date('M j, Y',strtotime($dob));
   $date = date('M j, Y',strtotime($date));
@@ -461,9 +461,9 @@ $exit = "<form class=\"inline\" action=\"https://dev.amxemr.com/requestForm.php\
 }
 elseif($sub == 1 || $sub == 99){
   $sqlf = "SELECT `client`, `date`, `last`, `first`, `dob`,`state`,`zip` `gender` FROM `history` WHERE `id` = $rec";
-  $results = mysql_query($sqlf);
+  $results = mysqli_query($dbc,$sqlf);
   $sqlf .= "\n" . mysql_error();
-  list($client,$date,$last,$first,$dob,$state,$zip,$gender) = @mysql_fetch_array($results, MYSQL_NUM);
+  list($client,$date,$last,$first,$dob,$state,$zip,$gender) = @mysqli_fetch_array($results, MYSQLI_NUM);
 
   
   foreach($_POST as $k => $v){
@@ -817,7 +817,7 @@ if($sub == 1){
   $jsn = json_encode($posted);
   $jsn = mysql_real_escape_string($jsn);
   $sqlf = "UPDATE `history` SET `history`='$jsn' WHERE `date` = '$today' AND `last` = '$last' AND `first`= '$first'";
-  mysql_query($sqlf);
+  mysqli_query($dbc,$sqlf);
   if(mysql_errno > 0){$err = "$sqlf\n" . mysql_error();echo $err;}
 }
 //var_export($inhalantFoods);

@@ -99,11 +99,11 @@ ID: <input type="text" name="id" value="" /><br/>
 </button><br/></div><br/></form></div>
 EOT;
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx_allermetrix',$data);
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix',$data);
+mysqli_select_db($dbc,'amx_portal');
   $sql = "SELECT `id`,`date`, `last`, `first`, `dob`, `gender`,`client` FROM `history` WHERE `status` = 'E'  ORDER BY `client` ASC,`last` ASC, `first` ASC";
-  $results = mysql_query($sql);
-  if(mysql_num_rows($results) > 0){
+  $results = mysqli_query($dbc,$sql);
+  if(mysqli_num_rows($results) > 0){
   echo <<<EOT
 <button id="ph" type="button"  onclick="exp('s0')" >New Patient Histories</button>
 <div id="s0">
@@ -115,7 +115,7 @@ mysql_select_db('amx_portal');
 </tr>
 EOT;
 
-  while (list($rec,$date,$last,$first,$dob,$gender,$id) = @mysql_fetch_array($results, MYSQL_NUM)) {
+  while (list($rec,$date,$last,$first,$dob,$gender,$id) = @mysqli_fetch_array($results, MYSQLI_NUM)) {
     $dob = date('M j, Y',strtotime($dob));
     $date = date('M j, Y',strtotime($date));
     echo <<<EOT
@@ -131,8 +131,8 @@ EOT;
     }
     echo '</table>';
 }  $sql = "SELECT `id`,`date`, `last`, `first`, `dob`, `gender`,`client` FROM `history` WHERE `status` = 'C' ORDER BY `client` ASC,`last` ASC, `first` ASC";
-  $results = mysql_query($sql);
-  if(mysql_num_rows($results) > 0){
+  $results = mysqli_query($dbc,$sql);
+  if(mysqli_num_rows($results) > 0){
   echo <<<EOT
 </div>
 <button id="ph" type="button"  onclick="exp('s1')" >Completed Patient Histories</button>
@@ -145,7 +145,7 @@ EOT;
 <td><button class="c3"  type="button" name="sn4">Entered</button></td>
 </tr>
 EOT;
-  while (list($rec,$date,$last,$first,$dob,$gender,$id) = @mysql_fetch_array($results, MYSQL_NUM)) {
+  while (list($rec,$date,$last,$first,$dob,$gender,$id) = @mysqli_fetch_array($results, MYSQLI_NUM)) {
     $dob = date('M j, Y',strtotime($dob));
     $date = date('M j, Y',strtotime($date));
     echo <<<EOT

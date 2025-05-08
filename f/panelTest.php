@@ -4,8 +4,8 @@ ob_start("ob_gzhandler");
 $startTime = microtime(true);
 $err = '';
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=@mysql_connect('localhost','amx',$data);
-@mysql_select_db('amx_portal');
+$dbc=@mysqli_connect('localhost','amx',$data);
+@mysqli_select_db($dbc,'amx_portal');
 $ip = $_SERVER['REMOTE_ADDR'];
 $sub = intval($_POST['sub']);
 echo <<<EOT
@@ -42,12 +42,12 @@ input[type="checkbox"]{width:1.5em;height:1.5em;border:0;margin:0;outline:0;disp
 EOT;
 ob_flush();
 $sql = "SELECT `Code`, `description` FROM `Rast` WHERE 1 ORDER BY `description` ASC";
-$results = mysql_query($sql);
+$results = mysqli_query($dbc,$sql);
 $matches = array();
 $sort = array();
 $rast = array();
 foreach($foods as $code){$matches[$code] = 1;}
-while(list($code,$description) =  mysql_fetch_array($results, MYSQL_NUM)){$sort[] = $code; $rast[$code] = $description; $matches[$code] = 0;}
+while(list($code,$description) =  mysqli_fetch_array($results, MYSQLI_NUM)){$sort[] = $code; $rast[$code] = $description; $matches[$code] = 0;}
 $sort = array_flip($sort);
 $amxpanels = array('900' => 'Food, Comprehensive','900-5' => 'Food, Comprehensive IgE','900-6' => 'Food, Comprehensive IgG4','950' => 'Food, Standard','950-3' => 'Food, Standard IgE','950-4' => 'Food, Standard IgG4','950-1' => 'Food, Mini','950-5' => 'Food, Mini IgE','950-6' => 'Food, Mini IgG4','255' => 'IBS','255-2' => 'IBS IgE','255-1' => 'IBS IgG4','253' => 'Hidden Foods ','253-1' => 'Hidden Foods IgE','253-2' => 'Hidden Foods IgG4');
 $yn = array('No','Yes');
@@ -55,8 +55,8 @@ $foods = array('F027','F083','F245','F026','F284','F376','F081','F411','F379','F
 foreach($foods as $code){$matches[$code] = 1;}
 $pdx = 100;
 $sql = "SELECT `description`,`panel` FROM `clientPanels` WHERE  `include` = 1 AND `client` = 888888";
-$result = mysql_query($sql);
-while(list($pDescription,$pName) =  mysql_fetch_array($result, MYSQL_NUM)){$pSort[$pdx][$pDescription] = $pName;$pdx++;}
+$result = mysqli_query($dbc,$sql);
+while(list($pDescription,$pName) =  mysqli_fetch_array($result, MYSQLI_NUM)){$pSort[$pdx][$pDescription] = $pName;$pdx++;}
 $pdx = 200;
 foreach($amxpanels as $pName => $pDescription){$pSort[$pdx][$pDescription] = $pName;$pdx++;}
 $clientPanels = 'var expButtons = {';
@@ -71,12 +71,12 @@ $clientPanels .= "$pdx:[null,null],";
   $panels[$pdx][3] = array();
   $clientPanels .= "$pdx:[null,null],";
   $sql = "SELECT `code`, `type` FROM `PanelTests` WHERE `number` = '$pName'";
-  $results = mysql_query($sql);
+  $results = mysqli_query($dbc,$sql);
   $typeCount = array(0,0,0,0);
   $totalIgE = 0;
   $pmatches=array();
   $types=array();
-  while(list($code,$type) =  mysql_fetch_array($results, MYSQL_NUM)){
+  while(list($code,$type) =  mysqli_fetch_array($results, MYSQLI_NUM)){
     if(substr($code,0,3) == '100'){$totalIgE = 1;continue;}
     $type = intval($type);
     $sortedFoods[$sort[$code]] = $code;

@@ -186,11 +186,11 @@ array(1=>'',2=>'',3=>''),
 );
 echo '<form action="#" method="post"><div>' . "\n$section[0]\n";
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx_allermetrix',$data);
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix',$data);
+mysqli_select_db($dbc,'amx_portal');
 $sql = "SELECT `id`,`question`, `check1`, `check2`, `check3` FROM `Survey` WHERE 1 ORDER BY `id`";
-$results = mysql_query($sql);
-while(list($id,$question,$check1,$check2,$check3) = mysql_fetch_array($results, MYSQL_NUM)){
+$results = mysqli_query($dbc,$sql);
+while(list($id,$question,$check1,$check2,$check3) = mysqli_fetch_array($results, MYSQLI_NUM)){
 $s1 = $script[$id][1] ;
 $s2 = $script[$id][2] ;
 echo <<<EOT

@@ -24,7 +24,7 @@ if ( $ip== '70.171.4.227' || $ip== '173.162.23.21' ||  $ip == '173.169.76.167'){
       $rows = mysqli_num_rows($results);
       $validID = false;
       if (strlen($error) == 0 && $rows == 1) {
-        $row = mysqli_fetch_array($results, MYSQL_NUM);
+        $row = mysqli_fetch_array($results, MYSQLI_NUM);
         $validID = true;
         $email = $row[9];
 

@@ -106,20 +106,20 @@ exit;
 
 
 /*
-$dbc=mysql_connect('localhost','amx_amx','xD1GkuK7a7DK82');
+$dbc=mysqli_connect('localhost','amx_amx','xD1GkuK7a7DK82');
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx_allermetrix',$data);
-echo  mysql_errno() . ', ' . mysql_error() . "\n<br>\n";
-mysql_select_db('amx_test');
-echo  mysql_errno() . ', <br>' . mysql_error() . "\n<br>\n";
+$dbc=mysqli_connect('localhost','amx_allermetrix',$data);
+echo  mysqli_errno($dbc) . ', ' . mysql_error() . "\n<br>\n";
+mysqli_select_db($dbc,'amx_test');
+echo  mysqli_errno($dbc) . ', <br>' . mysql_error() . "\n<br>\n";
 
 $sql = "SELECT `patient`,`code`, `type`,COUNT(*) as cnt, GROUP_CONCAT(`patient`,`code`,`type`) AS ids
 FROM test
 GROUP BY `patient`, `code`, `type`
 HAVING cnt > 1";
-$results = mysql_query($sql);
-echo 'query: ' . mysql_errno() . ', ' . mysql_error();
-while(list($patient,$code,$type) =  mysql_fetch_array($results, MYSQL_NUM)){
+$results = mysqli_query($dbc,$sql);
+echo 'query: ' . mysqli_errno($dbc) . ', ' . mysql_error();
+while(list($patient,$code,$type) =  mysqli_fetch_array($results, MYSQLI_NUM)){
 echo "$patient,$code,$type<br>";
 }
 */

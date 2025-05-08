@@ -1,7 +1,7 @@
 <?php ob_start("ob_gzhandler");
 
-$dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510');
-@mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
+@mysqli_select_db($dbc,'amx_portal');
 echo <<<EOT
 <!DOCTYPE html>
 <html lang="en"><head>
@@ -68,7 +68,7 @@ if (isset($_GET['sub'])){
   }
   foreach ($row as $k => $v){
   $sql = "UPDATE `Foods` SET  `Day`= '$v[0]',`Birch`='$v[1]', `Sycamore`='$v[2]', `Mugwort`='$v[3]', `Grasses`='$v[4]', `Latex`='$v[5]' WHERE `id`=$k";
-    @mysql_unbuffered_query($sql);
+    @mysqli_query($dbc,$sql);
 	$error = mysql_error();
 	if (strlen($error) > 0){echo "$error<br>$sql";break;}
   }
@@ -93,11 +93,11 @@ $bg = 1;
 $id = 0;
 //                                                         5         6           7          8          9
 $sql = "SELECT `id`,`Family`, `Type`, `Description`,`Day`,`Birch`, `Sycamore`, `Mugwort`, `Grasses`, `Latex`,`alpha` FROM `Foods` WHERE `alpha` > 0 ORDER BY `alpha` ASC, `Group` ASC,`Type` ASC, `Description` ASC";
-        $results = @mysql_query($sql);
+        $results = @mysqli_query($dbc,$sql);
 //		if (mysql_errno > 0){echo mysql_error() . '<br/>' . $sql;}
 //		echo $sql;
 
-        while($row = mysql_fetch_array($results, MYSQL_NUM)){
+        while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
 		  $group = $row[10]; 
 		  if ($saveGroup != $group){
 		    

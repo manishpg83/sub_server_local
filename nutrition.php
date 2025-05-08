@@ -17,13 +17,13 @@ button{margin:.1em 30%;}
 </style></head><body>
 EOT;
 ob_flush();
-$dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510');
-@mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
+@mysqli_select_db($dbc,'amx_portal');
 echo mysql_error();
 $sql ="SELECT `alpha` ,`Description` FROM `Foods` ORDER BY `alpha` ASC, `Description` ASC ";
-$results = mysql_query($sql);
+$results = mysqli_query($dbc,$sql);
 echo mysql_error();
-while ($row = mysql_fetch_array($results, MYSQL_NUM)){
+while ($row = mysqli_fetch_array($results, MYSQLI_NUM)){
   echo "<form action=\"food.php\" method=\"post\"><input name=\"s\" value=\"$row[1]\" type=\"hidden\"><button><div class=\"button\"> $row[1] </div></button></form>";
 }
 ob_end_flush();

@@ -28,12 +28,12 @@ input[type=checkbox] {transform: scale(1.3);}
 
 EOT;
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx',$data);
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx',$data);
+mysqli_select_db($dbc,'amx_portal');
 echo "<div id=\"yp\"><h2>Your Panels</h2>";
 $sql = "SELECT `panel`,`description` FROM `clientPanels` WHERE `client` = 200005 ORDER BY `description` ASC";
-$results = mysql_query($sql);
-while (list($code,$description) = @mysql_fetch_array($results, MYSQL_NUM)) {
+$results = mysqli_query($dbc,$sql);
+while (list($code,$description) = @mysqli_fetch_array($results, MYSQLI_NUM)) {
   echo "<div class=\"chks\"><input id=\"$panel\" name=\"$panel\" class=\"ckbx\" type=\"checkbox\" /> $description</div>\n";
 }
 echo '<div id="ap"><h2>Allermetrix Panels</h2>';

@@ -1,7 +1,7 @@
 <?php ob_start(NULL,11,PHP_OUTPUT_HANDLER_FLUSHABLE);
 header('Content-Type: text/plain; charset=utf-8');
-$dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510');
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
+mysqli_select_db($dbc,'amx_portal');
 include('/home/amx/php/class.pdf2text.php');
 $a = new PDF2Text();
 $ndx = 0;
@@ -9,8 +9,8 @@ $checked = 0;
 $missingPDF = 0;
 $checkPDF = 0;
  $sql = "SELECT `Client`,`Patient` FROM `Patient` WHERE `Patient` > 145000 AND `Status` = 'C' AND `PDF` = 0 ORDER BY `Patient` ASC";
- $results = @mysql_query($sql);
-while ($row = mysql_fetch_array($results , MYSQL_NUM)){
+ $results = @mysqli_query($dbc,$sql);
+while ($row = mysqli_fetch_array($results , MYSQLI_NUM)){
   set_time_limit ( 65535 );
   $search = $row[1];
   if ($row[0] > 199999) { 
@@ -35,7 +35,7 @@ while ($row = mysql_fetch_array($results , MYSQL_NUM)){
     if (pos){
        $checked++;
 	   $sql = "UPDATE `Patient` SET `PDF`= 1 WHERE `Patient`= $row[1]";
-	   mysql_query($sql);
+	   mysqli_query($dbc,$sql);
 	   
      }
      else{

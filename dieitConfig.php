@@ -38,17 +38,17 @@ h1{align-text:center;}
 <h2>Rotation Diet Tests</h2><pre>
 EOT;
 ob_flush();
-$dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510');
-@mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
+@mysqli_select_db($dbc,'amx_portal');
 //if (isset($_GET['p'])){
   $sql = "SELECT COUNT(*),`Client`  FROM `Patient` WHERE `Patient` = 156624 LIMIT 1";
-  $results = @mysql_query($sql);
-  $row = mysql_fetch_array($results, MYSQL_NUM);
+  $results = @mysqli_query($dbc,$sql);
+  $row = mysqli_fetch_array($results, MYSQLI_NUM);
   $sql = "SELECT `Code`,`Type`,`Score`,`Description`  FROM `Test` WHERE `Patient` =  156624 ORDER BY `Score` ASC ";
-  $results = @mysql_query($sql);
+  $results = @mysqli_query($dbc,$sql);
   $cutoff = $_GET['cutOff'];
   $cutoff = '0/1';
-  while ($row = mysql_fetch_array($results, MYSQL_NUM)) {
+  while ($row = mysqli_fetch_array($results, MYSQLI_NUM)) {
 	$data[$row[1]][$row[0]] = $row[2];
 	$cat = substr($row[0],0,1);
 	if ($row[2] >= $cutoff){$poz[] = array($row[1],$cat,$row[3],$row[2],$row[0]);};
@@ -148,8 +148,8 @@ $bg = 1;
 
 
 $sql = "SELECT `id`, `Family`, `Type`, `Description` FROM `Allergens` ORDER BY `Family` ASC";
-        $results = @mysql_query($sql);
-        while($row = mysql_fetch_array($results, MYSQL_NUM)){
+        $results = @mysqli_query($dbc,$sql);
+        while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
 		$group = ($row[1] & 0x3CFF0000)/ 67108864;
 		if ($saveGroup != $group){
 		  $saveGroup = $group;

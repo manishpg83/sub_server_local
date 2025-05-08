@@ -122,8 +122,8 @@ EOT;
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
 $link = mysqli_connect('localhost','amx',$data,'amx_portal');
 
-//$dbc=mysql_connect('localhost','isl_isl','yes12yes');
-//mysql_select_db('isl_portal');
+//$dbc=mysqli_connect('localhost','isl_isl','yes12yes');
+//mysqli_select_db($dbc,'isl_portal');
 $sub = intval($_GET['sub']);
 if($sub == 20){
   $rec = intval($_POST['rec']);
@@ -208,7 +208,7 @@ EOT;
 </tr>
 EOT;
 
-  while (list($rec,$date,$last,$first,$dob,$gender) = mysqli_fetch_array($results, MYSQL_NUM)) {
+  while (list($rec,$date,$last,$first,$dob,$gender) = mysqli_fetch_array($results, MYSQLI_NUM)) {
     $dob = date('M j, Y',strtotime($dob));
     $date = date('M j, Y',strtotime($date));
     $diff = date_diff(date_create(),date_create($dob),true);

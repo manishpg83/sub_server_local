@@ -16,13 +16,13 @@ header('Connection: Keep-Alive');
 header('Keep-Alive: timeout=5, max=100');
 header('Cache-Control: max-age=120');
 echo "<!DOCTYPE html><html lang=\"en\"><head><title>Food Panels</title><style></style></head><body>";
-$dbc=mysql_connect('localhost','amx','xD1GkuK7a7DK8!');
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx','xD1GkuK7a7DK8!');
+mysqli_select_db($dbc,'amx_portal');
 $id = intval($_POST['id']);
 $c = strtoupper($_POST['c']);
 if(strlen($c) == 4 && $id > 99999){
   $sql = "UPDATE `Client` SET `passcode` = '$c' WHERE `Number` = $id";
-  $result = mysql_query($sql);
+  $result = mysqli_query($dbc,$sql);
   $err = mysql_error();
   $show .= "$c\n$id\n$sql\n$err";
 }
@@ -34,22 +34,22 @@ if($rec > 0){
   if(intval($_POST['sub']) == 2){
     $description = $_POST['description'];
     $sql = "UPDATE `clientPanels` SET `description` ='$description' WHERE `rec` = $rec";
-    $result = mysql_query($sql);
+    $result = mysqli_query($dbc,$sql);
   }
   elseif(intval($_POST['sub']) == 3){
     $sql = "DELETE FROM `clientPanels` WHERE `rec`=$rec";
-    $result = mysql_query($sql);
+    $result = mysqli_query($dbc,$sql);
   }
   else{
     $include = intval($_POST['include']) ^ 1;
     $sql = "UPDATE `amx_portal`.`clientPanels` SET `include` = '$include' WHERE `clientPanels`.`rec` =$rec;";
-    $result = mysql_query($sql);
+    $result = mysqli_query($dbc,$sql);
   }
 }
 if($id > 99999){
   $sql = "SELECT `Name`,`City`,`State`,`passcode`   FROM `Client` WHERE `Number` = $id ";
-  $result = mysql_query($sql);
-  list($name,$city,$state,$c) =  mysql_fetch_array($result, MYSQL_NUM);
+  $result = mysqli_query($dbc,$sql);
+  list($name,$city,$state,$c) =  mysqli_fetch_array($result, MYSQLI_NUM);
 }
 echo <<<EOT
 <!DOCTYPE html>
@@ -79,8 +79,8 @@ form{display:inline;}
 EOT;
 
 $sql = "SELECT `client`,COUNT(*) FROM `history` WHERE 1 GROUP BY `client`ORDER BY `client` ";
-$results = mysql_query($sql);
-while(list($client,$count) =  mysql_fetch_array($results, MYSQL_NUM)){
+$results = mysqli_query($dbc,$sql);
+while(list($client,$count) =  mysqli_fetch_array($results, MYSQLI_NUM)){
   $buttons[] = $client;
   $counts[$client] = $count;
 }
@@ -117,32 +117,32 @@ $sub = intval($_POST['sub']);
 if($sub == 4){
   foreach($_POST as $k => $v){
     if(substr($k,0,1) == 'r'){
-      mysql_query("DELETE FROM `history` WHERE `id` =$v");
+      mysqli_query($dbc,"DELETE FROM `history` WHERE `id` =$v");
     }
   }
 }
 elseif($sub == 7){
   $panel = $_POST['panel'];
   $sql = "SELECT `description`  FROM `importPanels` WHERE `number` LIKE '$panel' LIMIT 1";
-  $results = mysql_query($sql);
-  $rows =  mysql_num_rows($results);
+  $results = mysqli_query($dbc,$sql);
+  $rows =  mysqli_num_rows($results);
   echo "<p>$description Rows=$rows</p>";
   if($rows == 1){
-    list($description) = mysql_fetch_array($results, MYSQL_NUM);
+    list($description) = mysqli_fetch_array($results, MYSQLI_NUM);
     $sql = "SELECT `code`,`type`  FROM `importPanelTest` WHERE `number` LIKE '$panel'";
-    $results = mysql_query($sql);
-    while( list($code,$type) =  mysql_fetch_array($results, MYSQL_NUM)){$tests[$code][$type] = $type;}
+    $results = mysqli_query($dbc,$sql);
+    while( list($code,$type) =  mysqli_fetch_array($results, MYSQLI_NUM)){$tests[$code][$type] = $type;}
     $sql = "INSERT INTO `amx_portal`.`clientPanels` (`rec`, `include`, `client`, `panel`, `number`, `description`, `fee`) VALUES (NULL, '0', '$id', '$panel', '$pnum', '$description', '0') ";
-    $results = mysql_query($sql);
+    $results = mysqli_query($dbc,$sql);
     $sql = "INSERT INTO `amx_portal`.`Panels` (`rec`, `number`, `description`, `fee`, `tests`, `ige`, `igg4`) VALUES (NULL, '$panel', '$description', '0', '0', '0', '0');";
-    $results = mysql_query($sql);
+    $results = mysqli_query($dbc,$sql);
 	$sql = "DELETE FROM `PanelTests` WHERE `number` = '$panel'";
-	$results = mysql_query($sql);
+	$results = mysqli_query($dbc,$sql);
     foreach($tests as $code => $array){
 	  foreach($array as $key => $type){
 	    $show .= ", $type ";
         $sql = "INSERT INTO `amx_portal`.`PanelTests` (`rec`, `number`, `code`, `type`) VALUES (NULL, '$panel', '$code', '$type');";
-        mysql_query($sql);
+        mysqli_query($dbc,$sql);
         echo mysql_error(). "<br>\n";
 	  }
 	} 
@@ -158,18 +158,18 @@ echo "<h3>$name<br/>$city, $state</h3><p>Any panel below will be included in the
 $inv = array('Not In Food Panel List','In Food Panel List','No Foods In This Panel','Standard Food Panel');
 
 $sql = "SELECT `rec`,`client`,`include`,`panel`,`description` FROM `clientPanels` WHERE `client` = $id";
-$results = mysql_query($sql);
-while(list($rec,$client,$include,$panel,$description) =  mysql_fetch_array($results, MYSQL_NUM)){
+$results = mysqli_query($dbc,$sql);
+while(list($rec,$client,$include,$panel,$description) =  mysqli_fetch_array($results, MYSQLI_NUM)){
 	//  echo "<p>$rec,$client,$include,$panel,$description";
   if($include == 1 AND in_array($panel,$standard)){
     $sql = "UPDATE `amx_portal`.`clientPanels` SET `include` = 0 WHERE `clientPanels`.`rec` =$rec;";
-    $result = mysql_query($sql);
+    $result = mysqli_query($dbc,$sql);
   }
   $TestTypeCount = array(0,0,0,0);
   $foods = 0;
   $sql = "SELECT `code`, `type` FROM `PanelTests` WHERE `number` = '$panel'";
-  $result = mysql_query($sql);
-  while(list($code,$type) =  mysql_fetch_array($result, MYSQL_NUM)){
+  $result = mysqli_query($dbc,$sql);
+  while(list($code,$type) =  mysqli_fetch_array($result, MYSQLI_NUM)){
     if(substr($code,0,3) == '100'){$total = '1';continue;}
     if(substr($code,0,1) == 'F'){$foods++;}
     $TestTypeCount[$type]++;
@@ -223,11 +223,11 @@ echo '</table>';
 EOT;
   $cnt = 0;
   $sql = "SELECT `id`,`date`, `last`, `first`, `dob`, `gender`,`foods` FROM `history` WHERE `client` = $id ORDER BY `client` ASC,`last` ASC, `first` ASC";
-  $results = mysql_query($sql);
-  $rows =  mysql_num_rows($results);
+  $results = mysqli_query($dbc,$sql);
+  $rows =  mysqli_num_rows($results);
   if($rows > 0){
   echo '<hr/><div id="del"><h2>Delete Checked Patients in History</h2><form action="#" method="post"><input type="hidden" name="id" value="' . $id . '" /><input type="hidden" name="sub" value="86" /></form><table>';
-  while($row = @mysql_fetch_array($results, MYSQL_NUM)) {
+  while($row = @mysqli_fetch_array($results, MYSQLI_NUM)) {
     list($rec,$date, $last, $first, $dob, $gender,$jsn) = $row;
 
     $cnt++;
@@ -261,7 +261,7 @@ if($sub == 28){
     foreach($types as $k => $v){
 	  if ($v == 0){continue;}
       $sql = "INSERT INTO `amx_portal`.`PanelTests` (`id`, `number`, `code`, `type`) VALUES (NULL, '$panel', '$code', '$v');";
-	  mysql_query($sql);
+	  mysqli_query($dbc,$sql);
 	}
   }
   $sub = 21;
@@ -273,8 +273,8 @@ if($sub == 21){
   $desc = trim($_POST['desc']);
   if(strlen($panel) > 1 && strlen($desc) > 5){
     $sql = "INSERT INTO `amx_portal`.`Panels` (`rec`, `number`, `description`, `fee`, `tests`) VALUES (NULL, '$panel', '$desc', '0', '0');";
-    mysql_query($sql);
-    if(mysql_errno() == 0){
+    mysqli_query($dbc,$sql);
+    if(mysqli_errno($dbc) == 0){
 	  echo <<<EOT
 <form action="#" method="post" >$panel, <input style="width:16em;" id="desc" type="text" name="desc" value="$desc" /><br/>
 <input type="hidden" name="panel" value="$panel" />
@@ -287,8 +287,8 @@ EOT;
 $checked = array('',' checked = "checked" ',' checked = "checked" ',' checked = "checked" ');
       $tests = array();
       $sql = "SELECT `code` , `type` FROM `PanelTests` WHERE `number` LIKE '$panel'";
-      $results = mysql_query($sql);
-      while( list($code,$type) =  mysql_fetch_array($results, MYSQL_NUM)){$tests[$code][$type] = $type;}
+      $results = mysqli_query($dbc,$sql);
+      while( list($code,$type) =  mysqli_fetch_array($results, MYSQLI_NUM)){$tests[$code][$type] = $type;}
 	  foreach($tests as $k => $codes){
 	    echo 'Test# <input style="width:4em;" id="pnl" type="text" name="t' . $i . '" value="' . $k . '" size="4" />&#x2002;E <input type="checkbox" name="E' . $k . '" value="1"' .  $checked[$codes[1]] . ' />&#x2002;G4 <input type="checkbox" name="G4' . $k . '" value="3"' . $checked[$codes[3]] . '/>&#x2002;G <input type="checkbox" name="G' . $k . '" value="2"' . $checked[$codes[2]] . '/><br/>';
 	  }

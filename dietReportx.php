@@ -61,8 +61,8 @@ fieldset{width:22em;}
 <div id="header" onclick="hideHeader()" ><img src="amxlogo.jpg" alt="logo" /></div>
 <div id="content">
 EOT;
-$dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510');
-@mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
+@mysqli_select_db($dbc,'amx_portal');
 $mode = 1;
 $exclude = array(0,0,0,0);
 $cx=array(0,1,0,0);
@@ -104,12 +104,12 @@ if (isset($_GET['sub'])){
     }
     elseif ($k == 'desc' && strlen($v) > 0){
       $sql = "SELECT `id`,`Code`,`Description` FROM `Allergens` WHERE `Description` LIKE '%$v%' GROUP BY `Description`";
-      $results = @mysql_query($sql);
-      $rows = mysql_num_rows($results);
+      $results = @mysqli_query($dbc,$sql);
+      $rows = mysqli_num_rows($results);
       if ($rows == 1){
-        $row = mysql_fetch_array($results, MYSQL_NUM);
+        $row = mysqli_fetch_array($results, MYSQLI_NUM);
         $sql = "INSERT INTO `amx_portal`.`Test` (`Patient`, `Code`, `Type`, `Score`, `Description`) VALUES ('$pat', '$row[1]', 0, 9, '$row[2]')";
-        mysql_unbuffered_query($sql);
+        mysqli_query($dbc,$sql);
         if (mysql_error() == 0){
            $add = "<h2><br>$v Added</h2>";
         }
@@ -119,7 +119,7 @@ if (isset($_GET['sub'])){
       }
       elseif  ($rows > 0){
         $add = '<table>';
-        while ($row = mysql_fetch_array($results, MYSQL_NUM)) {
+        while ($row = mysqli_fetch_array($results, MYSQLI_NUM)) {
 
         $add .= <<< EOR
 <tr><td>
@@ -137,7 +137,7 @@ EOR;
     }
     elseif (substr($k,0,1) == 'a'){
       $sql = "INSERT INTO `amx_portal`.`Test` (`Patient`, `Code`, `Type`, `Score`, `Description`) VALUES ('$pat', '$code', 0, 9, '$v')";
-      mysql_unbuffered_query($sql);
+      mysqli_query($dbc,$sql);
       if (mysql_error() == 0){
         $add = "<h2><br>$v Added</h2>";
       }
@@ -215,12 +215,12 @@ $type = array('Added','IgE','IgG','IgG4');
   $score = array('0' => '-','0/1' => '+','1' => '+','2' => '+','3' => '+','4' => '+','5' => '+');  
   
 //  $sql = "SELECT COUNT(*),`Client`  FROM `Patient` WHERE `Patient` = $pat LIMIT 1";
-//  $results = @mysql_query($sql);
-//  $row = mysql_fetch_array($results, MYSQL_NUM);
+//  $results = @mysqli_query($dbc,$sql);
+//  $row = mysqli_fetch_array($results, MYSQLI_NUM);
 if (strlen($pat) == 6){
   $sql = "SELECT `Code`,`Type`,`Score`,`Description`  FROM `Test` WHERE `Patient` =  $pat ORDER BY `Type` ASC,`Score` ASC ";
-  $results = @mysql_query($sql);
-  while ($row = mysql_fetch_array($results, MYSQL_NUM)) {
+  $results = @mysqli_query($dbc,$sql);
+  while ($row = mysqli_fetch_array($results, MYSQLI_NUM)) {
     if ($row[2] >= $cutoff){
       if ($epos[$row[0]]){continue;}
       $epos[$row[0]] = true;      
@@ -292,8 +292,8 @@ while (true){
   $day++;
   echo "</div><h3 class=\"day\">Day $day</h3><br><div class=\"col\">\n";
   $sql = "SELECT `id`, `Family`, `Type`, `Description`,`Day`,`Code`,`Group` FROM `Allergens` WHERE `Day` = $day   ORDER BY `alpha` ASC , `Description` ASC";
-        $results = @mysql_query($sql);
-        while($row = mysql_fetch_array($results, MYSQL_NUM)){
+        $results = @mysqli_query($dbc,$sql);
+        while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
         //  if ($epos[$row[5]]){continue;}
           $group = ($row[1] & 0x3CFF0000)/ 67108864;
           if ($saveGroup != $group){
@@ -335,13 +335,13 @@ EOT;
 ob_end_flush();
 /*
 $sql = "SELECT `Group`, COUNT(*) FROM Allergens WHERE `Day` = 1 AND `Type` = 1 GROUP BY `Group`;";
-$results = @mysql_query($sql);
-while($row = mysql_fetch_array($results, MYSQL_NUM)){
+$results = @mysqli_query($dbc,$sql);
+while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
   $skip[$row[0]] = false ;
 }
 $sql = "SELECT `Group`, COUNT(*) FROM Allergens WHERE `Day` = 1 AND `Type` != 1 GROUP BY `Group`;";
-$results = @mysql_query($sql);
-while($row = mysql_fetch_array($results, MYSQL_NUM)){
+$results = @mysqli_query($dbc,$sql);
+while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
   $skip[$row[0]] = false ;
 }
 */

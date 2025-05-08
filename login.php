@@ -203,8 +203,8 @@ if (!$pass) {
 $timeMin = 999999;
 $timeMax = 0;
   $sql = "SELECT COUNT(*)  FROM `access` WHERE `ip` LIKE '$ip' AND `Attributes` = 1'";
-  $results = @mysql_query($sql);
-  $row = @mysql_fetch_array($results, MYSQL_NUM);
+  $results = @mysqli_query($dbc,$sql);
+  $row = @mysqli_fetch_array($results, MYSQLI_NUM);
   if ($row[0] > 0) {
     $isClient = true;
   }
@@ -217,31 +217,31 @@ $timeMax = 0;
     $timeMin = $time;
     $timeMax = $time;
   }
-  $row = @mysql_fetch_array($results, MYSQL_NUM);
+  $row = @mysqli_fetch_array($results, MYSQLI_NUM);
   if ($rowCount > 1) {
   }
 
 //  $sql = "SELECT COUNT(*),`ip`,`TimeStamp` FROM `access` WHERE `ip` LIKE '$ip' AND `Pass` = 0 AND `TimeStamp` > CURRENT_TIMESTAMP ORDER BY `TimeStamp`";
   $sql = "SELECT `ip`,`TimeStamp` FROM `access` WHERE `ip` LIKE '$ip' AND `TimeStamp` > SUBTIME(CURRENT_TIMESTAMP, '24:00:00') order by `TimeStamp` ASC";
-  $results = @mysql_query($sql);
+  $results = @mysqli_query($dbc,$sql);
  // echo mysql_error() . $sql;
-  $rows = mysql_num_rows($results);
+  $rows = mysqli_num_rows($results);
 
   $sql = "SELECT `ip`,`TimeStamp`  FROM `access` WHERE `ip` LIKE '$ip'  AND `TimeStamp`  > CURRENT_TIMESTAMP order by `TimeStamp` ASC";
-  $results = @mysql_query($sql);
+  $results = @mysqli_query($dbc,$sql);
  // echo mysql_error() . $sql;
-  $rows = mysql_num_rows($results);
+  $rows = mysqli_num_rows($results);
   if ($rows == 1) {
     $ipCount = 1;
     $timeCount = abs(strtotime($row[1]) - time());
     $timeMin = $time;
     $timeMax = $time;
   }
-  $row = @mysql_fetch_array($results, MYSQL_NUM);
+  $row = @mysqli_fetch_array($results, MYSQLI_NUM);
   if ($rowCount > 1) {
     $saveIP[$ipCount++] = $row[0];
     $saveTime[$timeCount++] = strtotime($row[1]);
-    while ($row = mysql_fetch_array($results, MYSQL_NUM)) {
+    while ($row = mysqli_fetch_array($results, MYSQLI_NUM)) {
       $saveTime[$timeCount] = strtotime($row[1]);
       $time = $saveTime[$timeCount] - $saveTime[$timeCount - 1];
       if ($time > $timeMax){
@@ -330,11 +330,11 @@ settype($strike3,double);
   $strike3++;
  // $SAVE_ID = nl2br($SAVE_ID);
  // $sql = "INSERT INTO `amx_portal`.`access` (`Client`, `TimeStamp`, `ip`, `Attributes`, `Strike3`, `Value`, `Text`) VALUES ($id, CURRENT_TIMESTAMP, '$ip', 2, '0', $pass, '$SAVE_ID');";
- // @mysql_query($sql);
+ // @mysqli_query($dbc,$sql);
  // $sql = sprintf("INSERT INTO `amx_portal`.`access` (`Client`, `TimeStamp`, `ip`,`Strike3`,`Pass`) VALUES (%d, CURRENT_TIMESTAMP, '$ip',$strike3,$rows)",$id);
- // mysql_unbuffered_query($sql);
+ // mysqli_query($dbc,$sql);
  // echo mysql_error();echo '<p>' . $sql;
- // mysql_unbuffered_query(sprintf("INSERT INTO `amx_portal`.`access` (`Client`, `TimeStamp`, `ip`,`Strike3`,`Pass`) VALUES (%d,ADDTIME(CURRENT_TIMESTAMP , '0:0:06') , '$ip',$strike3,$rows)",$id));
+ // mysqli_query($dbc,sprintf("INSERT INTO `amx_portal`.`access` (`Client`, `TimeStamp`, `ip`,`Strike3`,`Pass`) VALUES (%d,ADDTIME(CURRENT_TIMESTAMP , '0:0:06') , '$ip',$strike3,$rows)",$id));
   // echo '<br>'.$sql .'<br>' . mysql_error();
 
  $find = preg_match_all('/[\x21-\x2F]|[\x3A-\x40]|[\x5B-\x60]|[\x7B-\x7F]/',$SAVE_ID,$matches, PREG_SET_ORDER);
@@ -343,7 +343,7 @@ if ($find > 0) {
   $find = preg_match_all('/select|delete|drop|insert|do|call|replace|update|infile|lock|set|show|table|kill|reset/',$SAVE_ID,$matches, PREG_SET_ORDER);
   settype($find,int);
   if ($find > 0) {
-    @mysql_unbuffered_query("INSERT INTO `amx_portal`.`Banned` (`ip`, `TimeStamp`,`Strike3`, `Attributes`) VALUES ('$ip', CURRENT_TIMESTAMP, $alert);");
+    @mysqli_query($dbc,"INSERT INTO `amx_portal`.`Banned` (`ip`, `TimeStamp`,`Strike3`, `Attributes`) VALUES ('$ip', CURRENT_TIMESTAMP, $alert);");
   }
 }
 
@@ -381,7 +381,7 @@ traffic to identify unauthorized attempts to access, upload, or change informati
 ';
 if ($pass) {
   $sql = "UPDATE `Client` SET  `Session`='$sid' ,`LastVisit` = CURRENT_TIMESTAMP, `ip` = '" . $ip . "' WHERE `Number` = $id";
-  @mysql_unbuffered_query($sql);
+  @mysqli_query($dbc,$sql);
 
 }
 
@@ -392,16 +392,16 @@ function ipwhere($ip) {
   $numbers = preg_split( "/\./", $ip);   
   $code=($numbers[0] * 16777216) + ($numbers[1] * 65536) + ($numbers[2] * 256) + ($numbers[3]);  
   $sql = "SELECT `id` FROM `ipLocations` WHERE `ipHigh` >=$code LIMIT 1";
-  $results = @mysql_query($sql);
+  $results = @mysqli_query($dbc,$sql);
   $error = mysql_error();
   if (strlen($error) == 0){
-    $row = mysql_fetch_array($results, MYSQL_NUM);
+    $row = mysqli_fetch_array($results, MYSQLI_NUM);
 	// echo "<p>ROWS= $row[0] and $row[1]</p>";
     $sql = "SELECT * FROM `cities` WHERE `id` = $row[0] LIMIT 1";
-	$results = @mysql_query($sql);
+	$results = @mysqli_query($dbc,$sql);
     $error = mysql_error();
     if (strlen($error) == 0){
-      $row = mysql_fetch_array($results, MYSQL_NUM);
+      $row = mysqli_fetch_array($results, MYSQLI_NUM);
       $location = " $row[3]  $row[2]  $row[4]   $row[1]";
 	  return $location;
     }
@@ -417,34 +417,34 @@ global $admin;
 global $ip;
 global $data;
 global $hash;
-   $dbc=mysql_connect('localhost','amx_allermetrix',$data);
-   mysql_select_db('amx_portal');
+   $dbc=mysqli_connect('localhost','amx_allermetrix',$data);
+   mysqli_select_db($dbc,'amx_portal');
    $sql = "SELECT COUNT(*)  FROM `Banned` WHERE `ip` LIKE 'ip'";
-   $results = @mysql_query($sql);
-   $rows = @mysql_num_rows($results);
+   $results = @mysqli_query($dbc,$sql);
+   $rows = @mysqli_num_rows($results);
    $pass = false;
    $error = 1;
    $hash = hash('ripemd320',$passcode);
       $sql =  sprintf("SELECT *  FROM `Client` WHERE `Number` = %d", $id);
-      $results = @mysql_query($sql);
+      $results = @mysqli_query($dbc,$sql);
       $error = mysql_error();
-      $rows = mysql_num_rows($results);
+      $rows = mysqli_num_rows($results);
       $validID = false;
       if (strlen($error) == 0 && $rows == 1) {
-        $row = mysql_fetch_array($results, MYSQL_NUM);
+        $row = mysqli_fetch_array($results, MYSQLI_NUM);
         $validID = true;
         if ($row[12] == $hash || $admin === true) {
           $pass = true;
           if (!$admin) {
             $sql = "INSERT INTO `amx_portal`.`access` (`Client`, `TimeStamp`, `ip`, `Attributes`, `Strike3`, `Value`, `Text`) VALUES ($id, CURRENT_TIMESTAMP, '$ip', 1, 0, 1, '');";
-            @mysql_query($sql);
+            @mysqli_query($dbc,$sql);
           }
           
         }
         else {
           $txt = $id . ' - ' . $passcode;
           $sql = "INSERT INTO `amx_portal`.`access` (`Client`, `TimeStamp`, `ip`, `Attributes`, `Strike3`, `Value`, `Text`) VALUES ($id, CURRENT_TIMESTAMP, '$ip', 1, 0, 0, '$txt');";
-          @mysql_query($sql);
+          @mysqli_query($dbc,$sql);
           $pass = false;
           $error = 4;
           $f = 1;

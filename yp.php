@@ -19,8 +19,8 @@ button{overflow:hidden;background:#333;color:#0ff;text-align:left;}
 </style></head><body><pre>
 EOH;
 ob_flush();
-$dbc=mysql_connect('localhost','isl','yes12yes');
-@mysql_select_db('isl_contact');
+$dbc=mysqli_connect('localhost','isl','yes12yes');
+@mysqli_select_db($dbc,'isl_contact');
 
 $cat[] = rawurlencode('Packing & Crating');
 $cat[] = rawurlencode('Palletize Service');
@@ -136,7 +136,7 @@ else{
 }
 echo "<p>$cat-$num) $name $address  $city $state $zip $phone $web</p>";
 $sql = "INSERT INTO `isl_contact`.`moving` (`id`, `cat`, `name`, `address`, `city`, `state`, `zip`, `phone`, `web`) VALUES (NULL,$k, '$name', '$address ', '$city', '$state', '$zip', '$phone', '$web')";
-mysql_query($sql);
+mysqli_query($dbc,$sql);
 
 
 $name = '';
@@ -262,8 +262,8 @@ $exp = array();
     $web = mysql_escape_string($web);
 	
 	$sql = "INSERT INTO `isl_contact`.`Profile` (`number`, `TimeStamp`, `ip`, `business`, `addr`, `city`, `email`, `exp`, `web`, `name`, `note`, `link`, `contact`, `source`, `id`, `mobile`, `state`, `attributes`, `fuDate`, `fuTime`) VALUES ($phone, CURRENT_TIMESTAMP, '', '$name', '$address', '$city $state $zip', '', '', '$web', '', '', '', '', '', NULL, '', '0', '0', NULL, NULL);";
-//	mysql_query($sql);
-	if (mysql_errno() > 0 && mysql_errno() != 1062) {echo "<h3>" . mysql_error() . "<br/>$sql</h3>";}
+//	mysqli_query($dbc,$sql);
+	if (mysqli_errno($dbc) > 0 && mysqli_errno($dbc) != 1062) {echo "<h3>" . mysql_error() . "<br/>$sql</h3>";}
 	fwrite($fp,$data);
 	echo $data;
 	if (!$end){break;}

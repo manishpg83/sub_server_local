@@ -53,11 +53,11 @@ foreach ($files as $id => $filenames){//var_export($filenames);continue;
     $sql = "SELECT  COUNT(*) FROM `cplTest` WHERE `ClientID`='$id'";  
     $results = mysqli_query($link,$sql);
     if(mysqli_errno($link)){ echo "$sql\nerr1: " . mysqli_error($link) . "\n$sql\n";}
-    list($records) = mysqli_fetch_array($results, MYSQL_NUM);
+    list($records) = mysqli_fetch_array($results, MYSQLI_NUM);
     $sql = "SELECT `Patient`,`Lastname` FROM `cplPatient` WHERE `ClientID`='$id'";
     $results = mysqli_query($link,$sql);
     if(mysqli_errno($link)){ echo "$sql<br>\nerr1: " . mysqli_error($link) . "<br>\n$sql<br>\n";}
-    list($accession,$Lastname) = mysqli_fetch_array($results, MYSQL_NUM);
+    list($accession,$Lastname) = mysqli_fetch_array($results, MYSQLI_NUM);
     if($accession > 1024 | strlen($Lastname > 0)){
       $patientRecord = 1;
     }  
@@ -121,7 +121,7 @@ exit;
         $sql = "SELECT `Code`,`Type`,`filename` FROM `cplTest` WHERE `ClientID`='$id' AND `Code`='$Code' AND `Type`= '$Type'";
         $result = mysqli_query($link,$sql);
         if(mysqli_errno($link)){ echo "<br>\nerr2: " . mysqli_error($link) . "\n$sql<br>\n";}
-        list($Code,$Type,$filename) = mysqli_fetch_array($result, MYSQL_NUM);
+        list($Code,$Type,$filename) = mysqli_fetch_array($result, MYSQLI_NUM);
         if(mysqli_errno($link)){ echo "<br>\nerr3: " . mysqli_error($link) . "\n$sql<br>\n";}
         $filelist .= "$Code $types[$Type].........$filename <br>\n";
       }

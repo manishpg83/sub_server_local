@@ -149,15 +149,15 @@ $labels = array("","","g",
 "g",
 "mg");
 date_default_timezone_set ('America/New_York');
-$dbc=mysql_connect('localhost','ps',"Yes12yeS");
-mysql_select_db('ps_mobile');
+$dbc=mysqli_connect('localhost','ps',"Yes12yeS");
+mysqli_select_db($dbc,'ps_mobile');
 $sql = "SET time_zone = '-4:00';";
-@mysql_unbuffered_query($sql);
+@mysqli_query($dbc,$sql);
 
 $sql = "SELECT * FROM `EAR` WHERE `id` = 8 LIMIT 1"; 
-$results = @mysql_query($sql);
+$results = @mysqli_query($dbc,$sql);
 echo mysql_error();
-$ear = mysql_fetch_array($results, MYSQL_NUM) ;
+$ear = mysqli_fetch_array($results, MYSQLI_NUM) ;
 //echo '</div></div><div class="pgBrk"></div><br/>TPL<br/><pre>' . var_export($ear,true)  . '</pre><br/>';
 $EAR[32] = $ear[4] ;
 $EAR[20] = $ear[5] ;
@@ -176,7 +176,7 @@ $v = array_fill(0,53,'');
 
 
 $sql = "SELECT * FROM `NDB` WHERE `ID` = $id LIMIT 1";
-$results = @mysql_query($sql);
+$results = @mysqli_query($dbc,$sql);
 
 if (strlen(mysql_error()) > 0){
   echo mysql_error() . '<br>'; 
@@ -191,7 +191,7 @@ echo '<p><form action="https://dev.amxemr.com/food.php" method="post">
 <input type="hidden" name="n" value="' . $n . '" />
 <input class="btn" type="submit" value="&emsp;Back&emsp;" />
 </form><p>Nutrients per 100 grams</p><table>';
-  $row = mysql_fetch_array($results, MYSQL_NUM) ;
+  $row = mysqli_fetch_array($results, MYSQLI_NUM) ;
   $factor = 2000 / $row[3] ; 
   echo "<h3>Factor:$factor</h3>";
   $percent[20] = $row[20] / $EAR[20];
@@ -243,7 +243,7 @@ return;
 
 
 
-$results = @mysql_query($sql);
+$results = @mysqli_query($dbc,$sql);
 if (strlen(mysql_error()) > 0){
   echo $sql;
 }
@@ -252,7 +252,7 @@ if (strlen(mysql_error()) > 0){
 echo '<pre>';
 $ndx = 0;
 
-  $row = mysql_fetch_array($results, MYSQL_NUM) ;
+  $row = mysqli_fetch_array($results, MYSQLI_NUM) ;
 
 
 

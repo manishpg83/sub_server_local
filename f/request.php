@@ -2,8 +2,8 @@
 $startTime = microtime(true);
 $ip = $_SERVER['REMOTE_ADDR'];
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx','xD1GkuK7a7DK8!');
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx','xD1GkuK7a7DK8!');
+mysqli_select_db($dbc,'amx_portal');
 $sub = intval($_POST['sub']);
 
 
@@ -15,8 +15,8 @@ $rec = intval($_POST['rec']);
 
 if($sub == 4){
   $sqlf = "SELECT `client`, `date`, `last`, `first`, `dob`, `gender`, `foods` FROM `history` WHERE `id` = $rec";
-  $results = mysql_query($sqlf);
-  list($id,$date,$last,$first,$dob,$gender,$jsn) = @mysql_fetch_array($results, MYSQL_NUM);
+  $results = mysqli_query($dbc,$sqlf);
+  list($id,$date,$last,$first,$dob,$gender,$jsn) = @mysqli_fetch_array($results, MYSQLI_NUM);
   $strdob = date('M j, Y',strtotime($dob));
   $date = date('M j, Y',strtotime($date));
   $food = json_decode($jsn,true);
@@ -46,12 +46,12 @@ else{
 
 if($id > 199999 && $id < 300000){
 $sql = "SELECT `Name` FROM `Client` WHERE `Number`='$client' ";
-$results = mysql_query($sql);
-list($clientName) = @mysql_fetch_array($results, MYSQL_NUM);	
+$results = mysqli_query($dbc,$sql);
+list($clientName) = @mysqli_fetch_array($results, MYSQLI_NUM);	
   $sql = "SELECT `Name`  FROM `Client` WHERE `Number` = $id LIMIT 1";
-  $results = mysql_query($sql);
-  if(mysql_errno() == 0 && mysql_num_rows($results) == 1){
-    list($name) = mysql_fetch_array($results, MYSQL_NUM);
+  $results = mysqli_query($dbc,$sql);
+  if(mysqli_errno($dbc) == 0 && mysqli_num_rows($results) == 1){
+    list($name) = mysqli_fetch_array($results, MYSQLI_NUM);
     $client = "<h3 class=\"client\">$id $name</h3><input type=\"hidden\" name=\"id\" value=\"$id\" />";
   }
   else{$client = mysql_error() . '<br>' . $sql ;}
@@ -372,13 +372,13 @@ Bill Insurance</div><br><br><div id="s007"></div>
 EOT;
 ob_flush();
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx_allermetrix',$data);
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix',$data);
+mysqli_select_db($dbc,'amx_portal');
 $types = array('','IgE','IgG','IgG4');
 
 $sql = "SELECT `panel`, `description` FROM `clientPanels` WHERE `client` = $client";
-$results = mysql_query($sql);
-while(list($panel,$description) =  mysql_fetch_array($results, MYSQL_NUM)){
+$results = mysqli_query($dbc,$sql);
+while(list($panel,$description) =  mysqli_fetch_array($results, MYSQLI_NUM)){
   $panels[$panel] = $description;
 }
 $fp = fopen("/home/amx/public_html/f/amxpanels.txt", "r");
@@ -392,8 +392,8 @@ while (($text= fgets($fp , 72)) !== false) {
 
 $ordered = array();
 $sql = "SELECT `Code`, `description` FROM `Rast` WHERE  1 ORDER BY `description`";  
-$results = mysql_query($sql);
-while(list($code,$description) =  mysql_fetch_array($results, MYSQL_NUM)){$sort[] = $code;$desc[$code] = $description;$descriptions[$code][1] = 0;$matches[$code] = 0;$rank[10][$code] = $num;$num++;}
+$results = mysqli_query($dbc,$sql);
+while(list($code,$description) =  mysqli_fetch_array($results, MYSQLI_NUM)){$sort[] = $code;$desc[$code] = $description;$descriptions[$code][1] = 0;$matches[$code] = 0;$rank[10][$code] = $num;$num++;}
 $sort = array_flip($sort);
 $cnt = 0;
 

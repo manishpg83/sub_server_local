@@ -1,11 +1,11 @@
-<?php 
-set_time_limit (30);
+<?php
+set_time_limit(30);
 ini_set('max_execution_time', '30');
 $t = microtime(true);
 if (!$update) {
-header('Content-Type: text/html; charset=utf-8');
-header('Cache-Control:max-age=0');
-echo <<<EOT
+  header('Content-Type: text/html; charset=utf-8');
+  header('Cache-Control:max-age=0');
+  echo <<<EOT
 <!DOCTYPE html>
 <html lang="en">
 <head><title>Update PreCheck</title>
@@ -33,17 +33,17 @@ EOT;
 }
 
 
-  $dbc=mysql_connect('localhost','amx','xD1GkuK7a7DK8!');
-  $error = mysql_error();
-  if (strlen($error) > 0){
-    print "DBC: $error <br/>";
-  }
-  mysql_select_db('amx_portal');
-  $error = mysql_error();
-  if (strlen($error) > 0){
-    print "</pre>\n<h3>SEL: $error </h3><pre>\n";
-  }
-  $clients = array();
+$dbc = mysqli_connect('localhost', 'amx', 'xD1GkuK7a7DK8!');
+$error = mysqli_error($dbc);
+if (strlen($error) > 0) {
+  print "DBC: $error <br/>";
+}
+mysqli_select_db($dbc, 'amx_portal');
+$error = mysqli_error($dbc);
+if (strlen($error) > 0) {
+  print "</pre>\n<h3>SEL: $error </h3><pre>\n";
+}
+$clients = array();
 $checked = 0;
 $missingPDF = 0;
 $checkPDF = 0;
@@ -51,55 +51,66 @@ $skipped = 0;
 $copy = array();
 $times['PDF loop begins'] = microtime(true) - $t;
 //echo $times['PDF loop begins'] . " P first= $first<br>";
- $sql = "SELECT `Client` , `Patient`, `Date`,`PDF`  FROM `Patient` WHERE `Patient` > 110000 AND `Status` = 'C' ORDER BY `Patient` DESC";
- $results = @mysql_query($sql);
- $num = 0;
- if (mysql_errno() > 0){echo mysql_error() . "<h4>$sql</h4>";}
-  while ($row = mysql_fetch_array($results , MYSQL_NUM)) {
-	if ($row[0] == 999999){continue;}
-	$date = strtotime($row[2]);
+$sql = "SELECT `Client` , `Patient`, `Date`,`PDF`  FROM `Patient` WHERE `Patient` > 110000 AND `Status` = 'C' ORDER BY `Patient` DESC";
+$results = @mysqli_query($dbc, $sql);
+if (!$results) {
+  die("Query failed: " . mysqli_error($dbc));
+}
+$num = 0;
+if (mysqli_errno($dbc) > 0) {
+  echo mysqli_error($dbc) . "<h4>$sql</h4>";
+}
+while ($row = mysqli_fetch_array($results, MYSQLI_NUM)) {
+  if ($row[0] == 999999) {
+    continue;
+  }
+  //$date = strtotime($row[2]);
   $num++;
-  if ($num > 50000 - 1){break;}
-    $date = strtotime($row[2]);
-     $p = $row[1];
-    if ($row[0] > 199999) {
-      $pdf = "/home/amx/Z/ResultsNoEncrypt/$row[0]/$row[1]e.PDF";
-    }
-    else {
-      $pdf = "/home/amx/Z/ResultsNoEncrypt/$row[0]/$row[1]s.PDF";
-    }
-
-    if (!file_exists ($pdf)){
-      $date = date('m-d-y',strtotime($row[2]));
-       $missingPDF += 1;
-	   $copy[$row[1]] = $row[0];
-      echo "\n<p>$row[1],$row[0],$date</p>";
-	  $clients[$row[0]] = $clients[$row[0]] + 1;
-    }
-
+  if ($num >= 50000) {
+    break;
   }
-  $times['PDF loop ends'] = intval(microtime(true) - $t);
+
+  $date = strtotime($row[2]);
+  $p = $row[1];
+  if ($row[0] > 199999) {
+    $pdf = "/home/amx/Z/ResultsNoEncrypt/$row[0]/$row[1]e.PDF";
+  } else {
+    $pdf = "/home/amx/Z/ResultsNoEncrypt/$row[0]/$row[1]s.PDF";
+  }
+
+  if (!file_exists($pdf)) {
+    $date = date('m-d-y', strtotime($row[2]));
+    $missingPDF += 1;
+    $copy[$row[1]] = $row[0];
+    echo "\n<p>$row[1],$row[0],$date</p>";
+    $clients[$row[0]] = $clients[$row[0]] + 1;
+  }
+
+}
+$times['PDF loop ends'] = intval(microtime(true) - $t);
 //  echo $times['PDF loop ends'] . " PE<br>";
-  echo "<pre>Missing $missingPDF of $num<br>";
- // var_export($copy);
-  echo '</pre>';
-  foreach ($copy  as $patient => $client){
-	$sql = "SELECT `Client` FROM `Patient` WHERE `Patient` = $patient";
-$results = @mysql_query($sql);
-$found = mysql_num_rows($results);
-  if($found == 2){
-    while (list($clients) = mysql_fetch_array($results , MYSQL_NUM)) {
-      if($clients != $client){
-		  copy("/home/amx/Z/ResultsNoEncrypt/$clients/$patient" . "e.PDF","/home/amx/Z/ResultsNoEncrypt/$client/$patient" . "e.PDF");
-		  echo "$patient $client $clients<br>";
-		  break;
-	  }
-  } }
-  
+echo "<pre>Missing $missingPDF of $num<br>";
+// var_export($copy);
+echo '</pre>';
+foreach ($copy as $patient => $client) {
+  $sql = "SELECT `Client` FROM `Patient` WHERE `Patient` = $patient";
+  $results = @mysqli_query($dbc, $sql);
+  $found = mysqli_num_rows($results);
+  if ($found == 2) {
+    while (list($clients) = mysqli_fetch_array($results, MYSQLI_NUM)) {
+      if ($clients != $client) {
+        copy("/home/amx/Z/ResultsNoEncrypt/$clients/$patient" . "e.PDF", "/home/amx/Z/ResultsNoEncrypt/$client/$patient" . "e.PDF");
+        echo "$patient $client $clients<br>";
+        break;
+      }
+    }
   }
- 
+
+}
+
 ?>
 </pre>
 
-</body></html>
+</body>
 
+</html>

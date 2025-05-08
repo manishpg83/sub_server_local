@@ -119,7 +119,7 @@ if (isset($_POST['daysOn'])){
 else{
    $date = '2006-03-03';
 }
-  $dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510'); @mysql_select_db('amx_portal');
+  $dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510'); @mysqli_select_db($dbc,'amx_portal');
  if (strlen($name) > 0 ) {
   $where = " `Client` = $client AND `last` LIKE '$name%' AND  `Date` > '$date' ORDER BY `Last` ASC LIMIT 200 ";
   $searchType = 1;
@@ -139,9 +139,9 @@ else{
 }
 echo "<h4>$where</h4>";
 $sql = "SELECT COUNT(`ClientID`),`ClientID` FROM `Patient` WHERE $where ";
-$results = @mysql_query($sql);
-$rows = @mysql_num_rows($results);
-$row = mysql_fetch_array($results, MYSQL_NUM);
+$results = @mysqli_query($dbc,$sql);
+$rows = @mysqli_num_rows($results);
+$row = mysqli_fetch_array($results, MYSQLI_NUM);
 $len = strlen(trim($row[1]));
 $cntID = $row[1];
 if ($rows == 1 && (strlen(trim($row[1])) < 1)){$cid = 0;}else{$cid = 1;}
@@ -149,13 +149,13 @@ echo $hid[$cid];
 //  $sql = "SELECT `Client`, `Patient`, `Date`, `Status`, `Link`, `ClientID`, `Last`, `First`,`Attributes` FROM `Patient` WHERE `Client` = $client AND `Date` > '$date' ORDER BY `Last` ASC, `First` ASC  ";
 $sql = "SELECT `Client`, `Patient`, `Date`, `Status`, `Link`, `ClientID`, `Last`, `First`,`Attributes` FROM `Patient` WHERE $where";
 
-$results = @mysql_query($sql);
-  while ($row = mysql_fetch_array($results, MYSQL_NUM)) {
+$results = @mysqli_query($dbc,$sql);
+  while ($row = mysqli_fetch_array($results, MYSQLI_NUM)) {
     $time = strtotime($row[2]);
 	$date = date('M j, Y',$time );
     $sql = "SELECT COUNT(*) FROM `Test` WHERE `Patient` = $row[1]  AND (`Code` LIKE 'F%' || `Code` LIKE 'T%' || `Code` LIKE 'G%' || `Code` LIKE 'W%')";
-    $result = mysql_query($sql);
-    $cnt = mysql_fetch_array($result, MYSQL_NUM);
+    $result = mysqli_query($dbc,$sql);
+    $cnt = mysqli_fetch_array($result, MYSQLI_NUM);
 	$i = $row[8];
     if ($cnt[0] > 0 ){$i++; if ($row[4] > 0){$i++;}}
     $dow = intval(date('N',$time ));
@@ -194,6 +194,6 @@ function mouseOutFGTW(){document.getElementById('fgtw').style.display='none';}
 </script></body></html>
 EOT;
 $days /= 86400;
-@mysql_unbuffered_query("UPDATE `Client` SET `days` = $days WHERE `Number`=$client ");
+@mysqli_query($dbc,"UPDATE `Client` SET `days` = $days WHERE `Number`=$client ");
 
 ?>

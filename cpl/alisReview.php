@@ -40,10 +40,10 @@ $assession = $_POST['assession'];
 $id = $_POST['id'];
 $sql = "SELECT `Client`,`Last`,`First`,`DoB`,`Age`,`Sex`,`ClientID` FROM `Patient` WHERE `Patient`=$assession";
 $results = mysqli_query($link,$sql);
-list($Client,$Last,$First,$DoB,$Age,$gender,$ClientID) = mysqli_fetch_array($results, MYSQL_NUM);
+list($Client,$Last,$First,$DoB,$Age,$gender,$ClientID) = mysqli_fetch_array($results, MYSQLI_NUM);
 $sql = "SELECT `Name`,`City`,`State` FROM `Client` WHERE `Number`=$Client";
 $results = mysqli_query($link,$sql);
-list($ClientName,$City,$State) = mysqli_fetch_array($results, MYSQL_NUM);
+list($ClientName,$City,$State) = mysqli_fetch_array($results, MYSQLI_NUM);
 
 echo "Client: $Client, $ClientName<br>$City, $State<br>Patient: $First $Last $assession<br>\nDate of Birth: $DoB Age: $Age $gender<br>\n";
 foreach($tests as $values){
@@ -73,7 +73,7 @@ $sql = "SELECT `description` FROM `Rast` WHERE `code`='$Code'";
 }
 */
 $results = mysqli_query($link,$sql);
-list($description) = mysqli_fetch_array($results, MYSQL_NUM);
+list($description) = mysqli_fetch_array($results, MYSQLI_NUM);
 
   echo "<tr class=\"c" . $Score . "\"><td>$Code</td><td>$types[$Type]</td><td class=\"left\">$description</td><td>$Conc $units[$Type]</td><td> $Score </td><td>" . $ranges[$Type]["$Score"] . "</td></tr>\n";
 }

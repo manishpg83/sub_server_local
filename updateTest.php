@@ -29,15 +29,15 @@ pre {margin-top:0;}
 $fp = fopen("/home/amx/Z/buData/updateTest.sql","r");
 $fpe = fopen("error.txt","a");
 if ($fp ) {
-  $dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510');
-  mysql_select_db('amx_portal');
-  $error = mysql_error();
+  $dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
+  mysqli_select_db($dbc, 'amx_portal');
+  $error = mysqli_error($dbc);
   $sql = "SET time_zone = '-5:00';";
-  @mysql_unbuffered_query($sql);
+  @mysqli_query($dbc,$sql);
   echo mysql_error();
   while (($text= fgets($fp , 4096)) !== false) {
     $sql = $text;
-    $results = @mysql_query($sql);
+    $results = @mysqli_query($dbc,$sql);
     $error = mysql_error(); 
     if (strlen($error) > 0 ){
       if (substr($text,0,1) == 'I') {

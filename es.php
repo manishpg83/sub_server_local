@@ -5,12 +5,12 @@ header('Keep-Alive: timeout=5, max=100');
 header('Cache-Control: max-age=0');
 $startTime = microtime(true);
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx_allermetrix',$data);
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix',$data);
+mysqli_select_db($dbc,'amx_portal');
 $sub = intval($_POST['sub']);
 if ($sub == 9){
   $id = intval($_POST['id']);
-  mysql_query("UPDATE `Patient` SET `Attributes`=0,`Link`=0 WHERE `Client` = $id");
+  mysqli_query($dbc,"UPDATE `Patient` SET `Attributes`=0,`Link`=0 WHERE `Client` = $id");
   $sub = 0;
 }
 if ($sub == 0){
@@ -37,28 +37,28 @@ if ($sub == 0){
     $clear = ''; //<div id="sc"><form action="es.php" method="post"><input type="hidden" name="id" value="' . $SAVE_ID . '"><input type="hidden" name="sub" value="9"><button id="clear">Reset Diet Icons</button></form></div>';  
   }
   $sql = "SELECT COUNT(*)  FROM `Banned` WHERE `ip` LIKE '$ip'";
-  $results = mysql_query($sql);
-  $row = mysql_fetch_array($results, MYSQL_NUM);
+  $results = mysqli_query($dbc,$sql);
+  $row = mysqli_fetch_array($results, MYSQLI_NUM);
   if ($row[0] > 0){include '404.shtml';return;}
   $pass = false;
   $error = 1;
   $hash = hash('ripemd320',$passcode);
   $sql =  "SELECT *  FROM `Client` WHERE `Number` = $id LIMIT 1";
-  $results = mysql_query($sql);
+  $results = mysqli_query($dbc,$sql);
   $error = mysql_error();
-  $rows = mysql_num_rows($results);
+  $rows = mysqli_num_rows($results);
   if (strlen($error) == 0 && $rows == 1) {
     $clientNumber = $id;
-    $cli = mysql_fetch_array($results, MYSQL_NUM);
+    $cli = mysqli_fetch_array($results, MYSQLI_NUM);
     if ($cli[12] == $hash || $admin === true || ($id == 888887  && ($passcode = 'allermetrix' || $passcode = 'allermetrics'))) {
       $pass = true;
       $sql = "INSERT INTO `amx_portal`.`access` (`Client`, `TimeStamp`, `ip`, `Attributes`, `Strike3`, `Value`, `Text`) VALUES ($id, CURRENT_TIMESTAMP, '$ip', 1, 0, 1, '');";
-      @mysql_unbuffered_query($sql);
+      @mysqli_query($dbc,$sql);
     }
     else {
       $txt = $id . ' - ' . $passcode;
       $sql = "INSERT INTO `amx_portal`.`access` (`Client`, `TimeStamp`, `ip`, `Attributes`, `Strike3`, `Value`, `Text`) VALUES ($id, CURRENT_TIMESTAMP, '$ip', 1, 0, 0, '$txt');";
-      @mysql_unbuffered_query($sql);
+      @mysqli_query($dbc,$sql);
       $pass = false;
       $error = 4;
       $f = 1;
@@ -153,18 +153,18 @@ else{
     $exStatus['V'] = $exStatus['R'];
     $statusSort = intval($_POST['ss']);
     $sortVal = intval($_POST['s']);
-    @mysql_unbuffered_query("UPDATE `Client` SET `days` = $days, `Sort`=$sortVal, `StatusSort`=$exVal WHERE `Number`=$id ");
+    @mysqli_query($dbc,"UPDATE `Client` SET `days` = $days, `Sort`=$sortVal, `StatusSort`=$exVal WHERE `Number`=$id ");
   }
   $sql =  "SELECT *  FROM `Client` WHERE `Number` = $id LIMIT 1";
-  $results = mysql_query($sql);
+  $results = mysqli_query($dbc,$sql);
   $error = mysql_error();
-  $rows = mysql_num_rows($results);
+  $rows = mysqli_num_rows($results);
   if (strlen($error) == 0 && $rows == 1) {
-    $cli = mysql_fetch_array($results, MYSQL_NUM);
+    $cli = mysqli_fetch_array($results, MYSQLI_NUM);
 	$history = ' class="nothidden" ';
 	$sql = "SELECT `id` FROM `history` WHERE `client` = $id";
-    $results = mysql_query($sql);
-    if(mysql_errno() == 0 && mysql_num_rows($results) == 0){$history = ' class="hide" ';}
+    $results = mysqli_query($dbc,$sql);
+    if(mysqli_errno($dbc) == 0 && mysqli_num_rows($results) == 0){$history = ' class="hide" ';}
   }
 }
 
@@ -389,9 +389,9 @@ else{
 /*
 $idRow[0] = "";
 $SQL = "SELECT COUNT(`ClientID`),`ClientID` FROM `Patient` WHERE $where ";
-$results = @mysql_query($SQL);
-$rows = @mysql_num_rows($results);
-$row = mysql_fetch_array($results, MYSQL_NUM);
+$results = @mysqli_query($dbc,$SQL);
+$rows = @mysqli_num_rows($results);
+$row = mysqli_fetch_array($results, MYSQLI_NUM);
 $len = strlen(trim($row[1]));
 $cntID = $row[1];
 if ($rows == 1 && (strlen(trim($row[1])) < 1)){$cid = 0;}else{$cid = 1;}
@@ -399,19 +399,19 @@ if ($rows == 1 && (strlen(trim($row[1])) < 1)){$cid = 0;}else{$cid = 1;}
 */
 $cid = 1;
 $SQL = "SELECT COUNT(`Status`),`Status` FROM `Patient` WHERE $where GROUP BY `Status` ";
-$results = @mysql_query($SQL);
+$results = @mysqli_query($dbc,$SQL);
 $error = mysql_error();
-while ($row = @mysql_fetch_array($results, MYSQL_NUM)) {$statusCnt[$row[1]] = $row[0];}
+while ($row = @mysqli_fetch_array($results, MYSQLI_NUM)) {$statusCnt[$row[1]] = $row[0];}
 $statusCnt['R'] = $statusCnt['L'] + $statusCnt['V'];
 $statusCnt['T'] = $statusCnt['W'] + $statusCnt['I'];
 $sql = "SELECT SQL_CALC_FOUND_ROWS `Client`, `Patient`, `Date`, `Status`, `Link`, `ClientID`, `Last`, `First`,`Attributes`, `DoB`,`Done` FROM `Patient` WHERE $where $sort";
-$results = @mysql_query($sql);
+$results = @mysqli_query($dbc,$sql);
 $error = mysql_error();
-$rows = @mysql_num_rows($results);
-$more = @mysql_query("SELECT FOUND_ROWS()");
+$rows = @mysqli_num_rows($results);
+$more = @mysqli_query($dbc,"SELECT FOUND_ROWS()");
 if ($rows == 0){echo "<h4>No $type</h4></div>";}
 else {
-  $moreRows = mysql_fetch_array($more, MYSQL_NUM);
+  $moreRows = mysqli_fetch_array($more, MYSQLI_NUM);
   $show = ''; //"<h4>Today: $today<br/>$type<br/>$moreRows[0] Patients Found: " . $statusCnt['C'] . ' Complete, '  . $statusCnt['T'] . ' Testing, '  . $statusCnt['R'] . ' Received' ;
   if ($rows == 200) {
     $moreRows[0] -= 200;
@@ -424,14 +424,14 @@ else {
   $checked = array('',' checked="checked"');
   $bg = array(' class="divNoCheck" ',' class="divCheck" ');
   $exStatus['X'] = true;
-  while ($row = @mysql_fetch_array($results, MYSQL_NUM)) {
+  while ($row = @mysqli_fetch_array($results, MYSQLI_NUM)) {
     if ($exStatus[$row[3]]){continue;}
     $time = strtotime($row[2]);
 //	$age = date_diff(date_create($row[9]), date_create('today'))->y;
     $date = date('M j, Y',$time );
     $sql = "SELECT COUNT(*) FROM `Test` WHERE `Patient` = $row[1]  AND `Code` LIKE 'F%' ";
-    $result = mysql_query($sql);
-    $cnt = @mysql_fetch_array($result, MYSQL_NUM);
+    $result = mysqli_query($dbc,$sql);
+    $cnt = @mysqli_fetch_array($result, MYSQLI_NUM);
     $i = $row[8];
     if ($cnt[0] > 0 ){$i++; if ($row[4] > 0){$i++;}}
     $dow = intval(date('N',$time ));

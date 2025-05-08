@@ -146,10 +146,10 @@ $order = array("1 ORDER BY `Description` ASC ",
 " `Magnesium` > .001 ORDER BY `Magnesium` DESC ");
 
 date_default_timezone_set ('America/New_York');
-$dbc=mysql_connect('localhost','ps',"Yes12yeS");
-mysql_select_db('ps_mobile');
+$dbc=mysqli_connect('localhost','ps',"Yes12yeS");
+mysqli_select_db($dbc,'ps_mobile');
 $sql = "SET time_zone = '-4:00';";
-@mysql_unbuffered_query($sql);
+@mysqli_query($dbc,$sql);
 if (isset($_POST['sort']) && strlen($_POST['sort']) > 0){
   $sort = intval($_POST['sort']);
   $transort = array(53,15,8,10,11,20,25,31,32,40,41,27,14,36,45,47,12);
@@ -207,12 +207,12 @@ else {
   $sql = "SELECT SQL_CALC_FOUND_ROWS `ID`, `Description`, `$srt` FROM `NDB` WHERE  $order[$sort] LIMIT $n, $rows";
 }
 $er = "<h4>$sql</h4>";
-$results = @mysql_query($sql);
+$results = @mysqli_query($dbc,$sql);
 if (strlen(mysql_error()) > 0){
   echo mysql_error() . "<br> $sql<br>";
 }
 $sql = "SELECT FOUND_ROWS()";
-$count = @mysql_query($sql);
+$count = @mysqli_query($dbc,$sql);
 $count = mysql_result($count,0);
 $next = $n + $rows;
 $last = $count - $rows;
@@ -276,7 +276,7 @@ echo <<<EOF
 </form>$er<br>$srt<table>
 EOF;
 
-while ($row = mysql_fetch_array($results, MYSQL_NUM)) {
+while ($row = mysqli_fetch_array($results, MYSQLI_NUM)) {
 ++$line ;
 echo <<<EOR
 <tr><td><form action="https://dev.amxemr.com/detail.php" method="post">

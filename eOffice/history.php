@@ -86,7 +86,7 @@ foreach($data as $code => $num){
   $jsn = json_encode($foods);
   $jsn = mysql_real_escape_string($jsn);
   $sqlf = "UPDATE `history` SET `foods`='$jsn' WHERE `id` = $rec";
-  mysql_query($sqlf);
+  mysqli_query($dbc,$sqlf);
   if(mysql_errno > 0){$err = "$sqlf\n" . mysql_error();}
 }
 */

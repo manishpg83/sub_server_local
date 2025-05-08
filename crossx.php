@@ -11,15 +11,15 @@ $codes[]=array('F356','F301','F302','F303','F015','F288','F007','F008','F304','F
 $codes[]=array('F049','F096','F092','F031','F085','F103','F153','F087','F305','F329','F127','F035','F025');
 
 $ndx = 0;
-$dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510'); @mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510'); @mysqli_select_db($dbc, 'amx_portal');
 $crossSQL = array('`Birch`','`Sycamore`','`Grasses`','`Latex`');
   $fp = fopen("/home/amx/public_html/crossx.txt","w");
   while(true){
     $sql = "SELECT `id`FROM `Foods` WHERE $crossSQL[$ndx] = 1  ORDER BY `Description` ASC";
-    $results = @mysql_query($sql);
-    $error = mysql_error();
+    $results = @mysqli_query($dbc,$sql);
+    $error = mysqli_error($dbc);
     $data = $crossSQL[$ndx] . ' = array(';
-    while($row = mysql_fetch_array($results, MYSQL_NUM)){
+    while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
       $data .= "$row[0],";
     }
 	$data .= "\n";
@@ -28,11 +28,11 @@ $crossSQL = array('`Birch`','`Sycamore`','`Grasses`','`Latex`');
     $ndx++;
   }
     $sql = "SELECT `id`,`Code`,`Description` FROM `Foods` WHERE `Code` LIKE 'G%' ORDER BY `Description` ";
-    $results = @mysql_query($sql);
-    $error = mysql_error();
+    $results = @mysqli_query($dbc,$sql);
+    $error = mysqli_error($dbc);
     $data = 'grass = array(';
 	$desc = 'grassCodes = array(';
-    while($row = mysql_fetch_array($results, MYSQL_NUM)){
+    while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
       $data .= "$row[0],";
       $desc .= "'$row[2]',";
     }
@@ -55,14 +55,14 @@ $trans = array(1,1,1,1,1,1,1,1,1,1,1,1);
     }
 	$ndx = 1;
 	foreach ($SQL as $sql){
-      $results = @mysql_query($sql);
-	  $rows = mysql_num_rows($results);
-      $error = mysql_error();
+      $results = @mysqli_query($dbc,$sql);
+	  $rows = mysqli_num_rows($results);
+      $error = mysqli_error($dbc);
 	  $data = "$sql\n";
 	  fwrite($fp,$data);
       $data ="$rows codes[$ndx] ";
 	  $desc = "$rows  desc[$ndx] ";
-      while($row = mysql_fetch_array($results, MYSQL_NUM)){
+      while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
         $data .= "$row[0],";
         $desc .= "'$row[1]',";
       }

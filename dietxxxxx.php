@@ -117,10 +117,10 @@ if ($ip == '99.3.150.55'){$rows = 1;}
 /*
 if ($clientNum > 99999 && $clientNum < 1000000) {
   $sql = "SELECT COUNT(*) FROM `access` WHERE `ip` = '$ip' AND `Client`= $clientNum AND `Value` = 1";
-  $results = @mysql_query($sql);
+  $results = @mysqli_query($dbc,$sql);
   $error = mysql_error();
   $cliErr =  "<h4>$error <br/>$sql</h4>";
-  $rows = @mysql_num_rows($results); 
+  $rows = @mysqli_num_rows($results); 
 }
   if ($rows < 1) { // https://dev.amxemr.com/fbi.gov?cybercrime
     echo <<<EOT
@@ -161,14 +161,14 @@ $err .= "<br/>Patient:  $patient<br/>";
 //   ######################          
 
 if (strlen($patient) == 6){
-  $dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510');
-  @mysql_select_db('amx_portal');
+  $dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
+  @mysqli_select_db($dbc,'amx_portal');
   $sql = "SELECT `Client`,`Last`, `First`, `ClientID`,`Attributes` FROM `Patient` WHERE `Patient` = $patient";
-  $results = @mysql_query($sql);
+  $results = @mysqli_query($dbc,$sql);
   $error = mysql_error();
-  $rows = @mysql_num_rows($results);
+  $rows = @mysqli_num_rows($results);
   if (strlen($error) == 0 AND $rows == 1){
-    $pat = mysql_fetch_array($results, MYSQL_BOTH);
+    $pat = mysqli_fetch_array($results, MYSQL_BOTH);
     $patState = $pat[4];
     $client = $pat[0] ;
     $clientErr = $client;
@@ -176,12 +176,12 @@ if (strlen($patient) == 6){
     $err .= "<br/>$name<br/>";
     $patID = $pat[3];
     $sql = "SELECT `Name`, `RecordsCRC`, `Session`,`Phone`,`Fax`,`Address`,`Address2`,`City`,`State`,`PostalCode` FROM `Client`  WHERE `Number` = $client LIMIT 1";
-    $results = @mysql_query($sql);
+    $results = @mysqli_query($dbc,$sql);
     $error = mysql_error();
     $cliErr =  "<h4>$error <br/>$sql</h4>";
-    $rows = @mysql_num_rows($results);
+    $rows = @mysqli_num_rows($results);
     if (strlen($error) == 0 AND $rows == 1){
-      $cli = mysql_fetch_array($results, MYSQL_BOTH);
+      $cli = mysqli_fetch_array($results, MYSQL_BOTH);
       $clientName = htmlspecialchars($cli[0]);
       $clientAddress = $cli[5];
       if (strlen($cli[6]) > 0){$clientAddress .= '<br/>' . $cli[6];}
@@ -189,32 +189,32 @@ if (strlen($patient) == 6){
       
       $err .= "<br/>Client Name: $clientName<br/>";
       $sql = "SELECT * FROM `template` WHERE `Client` = 0 AND `Patient` = $patient LIMIT 1"; 
-      $results = @mysql_query($sql);
+      $results = @mysqli_query($dbc,$sql);
       $error = mysql_error();
-      $rows = @mysql_num_rows($results);
+      $rows = @mysqli_num_rows($results);
       if (strlen($error) != 0 || $rows != 1){
         $err .= "<br/>SEL #1 PAT TPL: $error<br/>$sql<br/>";
         $sql = "SELECT * FROM `template` WHERE `Client` = $client AND `Patient` = 0 LIMIT 1"; 
-        $results = @mysql_query($sql);
+        $results = @mysqli_query($dbc,$sql);
         $error = mysql_error();
-        $rows = @mysql_num_rows($results);
+        $rows = @mysqli_num_rows($results);
         if (strlen($error) != 0 || $rows != 1){
           $sql = "SELECT * FROM `template` WHERE `Client` = 999999 AND `Patient` = 0 LIMIT 1"; 
-          $results = @mysql_query($sql);
-          $tpl = mysql_fetch_array($results, MYSQL_BOTH);
+          $results = @mysqli_query($dbc,$sql);
+          $tpl = mysqli_fetch_array($results, MYSQL_BOTH);
           $template[3] = $tpl;
           $sql = "INSERT INTO `amx_portal`.`template` (`Client`, `Patient`, `CutOff`, `excludeMethod`, `CrossreactivityGrocery`, `CrossreactivityDiet`, `CrossreactivityPhycian`, `CrossreactivityPatient`, `HiddenFoodPhysician`, `HiddenFoodPatient`, `ExcludeIgE`, `ExcludeIgG`, `ExcludeIgG4`) VALUES ('$client', '0','$tpl[2]', '$tpl[3]', '$tpl[4]', '$tpl[5]', '$tpl[6]', '$tpl[7]', '$tpl[8]', '$tpl[1]', '$tpl[10]', '$tpl[11]', '$tpl[12]')";
           
         }
         else{
-          $tpl = mysql_fetch_array($results, MYSQL_BOTH);
+          $tpl = mysqli_fetch_array($results, MYSQL_BOTH);
           $template[1] = $tpl;
         }
         $sql = "INSERT INTO `amx_portal`.`template` (`Client`, `Patient`, `CutOff`, `excludeMethod`, `CrossreactivityGrocery`, `CrossreactivityDiet`, `CrossreactivityPhycian`, `CrossreactivityPatient`, `HiddenFoodPhysician`, `HiddenFoodPatient`, `ExcludeIgE`, `ExcludeIgG`, `ExcludeIgG4`) VALUES (0, $patient, '$tpl[2]', '$tpl[3]', '$tpl[4]', '$tpl[5]', '$tpl[6]', '$tpl[7]', '$tpl[8]', '$tpl[1]', '$tpl[10]', '$tpl[11]', '$tpl[12]')";
-        $results = @mysql_unbuffered_query($sql);
+        $results = @mysqli_query($dbc,$sql);
       }
       else{
-        $tpl = mysql_fetch_array($results, MYSQL_BOTH);
+        $tpl = mysqli_fetch_array($results, MYSQL_BOTH);
         $template[0] = $tpl;
       }
     }
@@ -242,7 +242,7 @@ if (strlen($patient) == 6){
 `CrossreactivityPatient` = $tpl[7],
 `HiddenFoodPhysician` = $tpl[8],
 `HiddenFoodPatient` = $tpl[9] WHERE `Client` = 0 AND `Patient` = $patient";
-    $results = @mysql_query($sql);
+    $results = @mysqli_query($dbc,$sql);
     $error = mysql_error();
     if (strlen($error) > 0){
       $err .= "<br/>UPDATE ERROR PAT TPL: $error<br/>$sql<br/>";
@@ -257,7 +257,7 @@ if (strlen($patient) == 6){
       $checked[11] = $check[$tpl[11]]; 
       $checked[12] = $check[$tpl[12]]; 
     $sql = "UPDATE `template` SET`ExcludeIgE` = $tpl[10],`ExcludeIgG` = $tpl[11],`ExcludeIgG4` = $tpl[12]  WHERE `Client` = 0 AND `Patient` = $patient";
-    $results = @mysql_query($sql);
+    $results = @mysqli_query($dbc,$sql);
     $error = mysql_error();
     if (strlen($error) > 0){
       $err .= "<br/>UPDATE ERROR PAT TPL: $error<br/>$sql<br/>";
@@ -334,17 +334,17 @@ $type[9] = 'Added';
   $foods = array();
 //                 0       1 v0         2 v6   3 v7  4 v8    5 v9
   $sql = "SELECT `Code`,`Description`,`alpha`,`Day`,`Group`,`Type` FROM `Allergens` WHERE 1 ORDER BY `alpha` ASC , `Description` ASC";
-  $results = mysql_query($sql);
-  while ($fd = mysql_fetch_array($results, MYSQL_BOTH)){
+  $results = mysqli_query($dbc,$sql);
+  while ($fd = mysqli_fetch_array($results, MYSQL_BOTH)){
     if (isset($foods[$fd[0]])){continue;}
     $foods[$fd[0]] = array($fd[1],0,0,0,0,0,$fd[2],$fd[3],$fd[4],$fd[5],'','','');
   }
  // echo '<div id="tbl"><table>'; foreach ($foods as $k => $v ) {echo '<tr><td style=\"width:2em;text-align:right;\">' . ++$line . "&#x2003;</td><td style=\"width:3em;\">$k</td><td style=\"width:8em;\">$v[0]</td><td style=\"width:1em;\">$v[1]</td><td style=\"width:1em;\">$v[2]</td><td style=\"width:1em;\">$v[3]</td><td style=\"width:1em;\">$v[4]</td><td style=\"width:4em;\">$v[5]</td><td style=\"width:3em;\">$row[2] - $v[6]</td><td style=\"width:1em;\">$v[7]</td><td style=\"width:1em;\">$v[8]</td><td>$v[9]</td><td style=\"width:1em;\">$v[10]</td><td style=\"width:1em;\">$v[11]</td><td style=\"width:1em;\">$v[12]</td></tr>\n";} echo '</table></div>';
 
   $sql = "SELECT `Code`,`Type`,`Score`,`Exclude`,`Description` FROM `Test` WHERE `Patient` =  $patient ";
-  $results = @mysql_query($sql);
+  $results = @mysqli_query($dbc,$sql);
   $coScores = array();
-  while ($row = @mysql_fetch_array($results, MYSQL_NUM)){
+  while ($row = @mysqli_fetch_array($results, MYSQLI_NUM)){
     if (!isset($foods[$row[0]][0])){
       $foods[$row[0]] = array($row[4],0,0,0,0,0,0,9,0,0,'','','');
     }
@@ -484,15 +484,15 @@ ob_flush();
 //$err .= '<br/>mode<pre>' . var_export($mode,true) . '</pre><br/>';
   $hideHdr = "hd.style.display = 'none';";
   $sql = "SELECT `Code`,`Description` FROM `Allergens` WHERE `Day` > 0 ORDER BY `alpha` ASC , `Description` ASC";
-  $results = @mysql_query($sql);
+  $results = @mysqli_query($dbc,$sql);
   $error = mysql_error();
   if (strlen($error) > 0){
     $err .= "<br/>SEL Allergens: $error<br/>$sql<br/>";
   }
-  $rows = mysql_num_rows($results);
+  $rows = mysqli_num_rows($results);
   $err .= "<br/>SEL Allergens Rows= $rows<br/>";
   $exI = array();
-  while($row = mysql_fetch_array($results, MYSQL_NUM)){
+  while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
     $desc[$row[0]] = htmlspecialchars($row[1]);
     $exI[$row[0]] = 3;
   }
@@ -510,7 +510,7 @@ $display[0][NULL] = 'blank';
   foreach ($_GET as $k => $v){
     if (substr($k,0,1) == 'a'){
       $sql = "INSERT INTO `amx_portal`.`Test` (`Patient`, `Code`, `Type`, `Score`, `Description`,`Attributes`) VALUES ('$patient', '$code', 0, 9, '$v',0)";
-      mysql_unbuffered_query($sql);
+      mysqli_query($dbc,$sql);
       if (mysql_error() == 0){
         $add = "<h2><br/>$v Added</h2>";
       }
@@ -527,12 +527,12 @@ $display[0][NULL] = 'blank';
       if ($k == 'desc'){
         if (strlen($v) > 0){
           $sql = "SELECT `id`,`Code`,`Description` FROM `Allergens` WHERE `Type`=1 AND `Description` LIKE '%$v%' GROUP BY `Description`";
-          $results = @mysql_query($sql);
-          $rows = mysql_num_rows($results);
+          $results = @mysqli_query($dbc,$sql);
+          $rows = mysqli_num_rows($results);
           if ($rows == 1){
-            $row = mysql_fetch_array($results, MYSQL_NUM);
+            $row = mysqli_fetch_array($results, MYSQLI_NUM);
             $sql = "INSERT INTO `amx_portal`.`Test` (`Patient`, `Code`, `Type`, `Score`, `Description`,`Attributes`) VALUES ('$patient', '$row[1]', 9, 9, '$row[2]',0)";
-            mysql_unbuffered_query($sql);
+            mysqli_query($dbc,$sql);
             if (mysql_error() == 0){
                $add = "<h2><br/>$v Added</h2>";
             }
@@ -542,7 +542,7 @@ $display[0][NULL] = 'blank';
           }
           elseif  ($rows > 0){
             $add = '<table>';
-            while ($row = mysql_fetch_array($results, MYSQL_NUM)) {
+            while ($row = mysqli_fetch_array($results, MYSQLI_NUM)) {
             $add .= <<< EOR
 <tr><td>
 <div class="divNoCheck"><input id="a$row[0]" class="nocheck" name="a$row[0]" value="$row[1]" onclick="chkDay('$row[0]',0)" type="checkbox" />&#160;add&#160;&#160;&#160;</div></td>
@@ -559,7 +559,7 @@ EOR;
       else{
         $val = preg_split('/-/',$k);
         $sql = "DELETE FROM `Test` WHERE `Patient` = '$patient' AND `Code` = '$val[1]' AND `Type`='0' ";
-        @mysql_unbuffered_query($sql);
+        @mysqli_query($dbc,$sql);
       }
     }
     elseif ($k == 'l'){
@@ -586,8 +586,8 @@ $excludeChkClass = array('noCheck','check','noCheck','noCheck');
 /*
 
   $sql = "SELECT `Code`,`Type`,`Score`,`Description`,`Attributes`  FROM `Test` WHERE `Patient` =  $patient ORDER BY `Type` DESC,`Score` DESC ";
-  $results = @mysql_query($sql);
-  while ($row = @mysql_fetch_array($results, MYSQL_NUM)){
+  $results = @mysqli_query($dbc,$sql);
+  while ($row = @mysqli_fetch_array($results, MYSQLI_NUM)){
     $t = $row[1];
     $E = intval($exData[$row[0]][1]);
     $G4 = intval($exData[$row[0]][3]);
@@ -752,8 +752,8 @@ $icon[0][2] = $plus[0];
 
 /*
 $sql = "SELECT `id`, `Family`,`alpha`,`Description`,`Day`,`Code`,`Group` FROM `Allergens` WHERE `day` < 5 AND `Type` > 0   ORDER BY `alpha` ASC , `Description` ASC";
-$results = @mysql_query($sql);
-while($row = mysql_fetch_array($results, MYSQL_NUM)){
+$results = @mysqli_query($dbc,$sql);
+while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
   $grp = ($row[1] & 0x3CFF0000)/ 67108864;
   if ($savGrp != $grp){
     $savGrp = $grp;
@@ -795,8 +795,8 @@ $pgInc = array(1,0,0,1,0,0,1,0);
   // ob_flush();
 $savGrp = 99;
 $sql = "SELECT `id`, `Family`,`alpha`,`Description`,`Day`,`Code`,`Group`,`Type` FROM `Allergens` WHERE  `Type`< 4  ORDER BY `Allergens`.`Family` ASC";
-$results = @mysql_query($sql);
-while($row = mysql_fetch_array($results, MYSQL_NUM)){
+$results = @mysqli_query($dbc,$sql);
+while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
   $grp = $row[2] ;
   if ($savGrp != $grp){
     $savGrp = $grp;
@@ -1132,9 +1132,9 @@ EOT;
   }
   echo '<div class="col">';
   $sql = "SELECT `id`, `Family`,`alpha`,`Description`,`Day`,`Code`,`Group`,`Type` FROM `Allergens` WHERE $crossSQL[$ndx] = 1  ORDER BY `Allergens`.`Description` ASC";
-  $results = @mysql_query($sql);
+  $results = @mysqli_query($dbc,$sql);
   $error = mysql_error();
-  while($row = mysql_fetch_array($results, MYSQL_NUM)){
+  while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
     echo $icon[0][$foods[$row[5]][5]] . $foods[$row[5]][0] . "</p><br/>\n";
     
   }
@@ -1194,9 +1194,9 @@ EOT;
 flush();
 ob_end_flush();
 if ($sub == 2){
-  @mysql_unbuffered_query("UPDATE `Test` SET `Exclude` = 0 WHERE `Patient` = $patient");
+  @mysqli_query($dbc,"UPDATE `Test` SET `Exclude` = 0 WHERE `Patient` = $patient");
   foreach ($flip as $code ) {
-    @mysql_unbuffered_query("UPDATE `Test` SET `Exclude` = 1 WHERE `Patient` = $patient AND `Code` = '$code' ");
+    @mysqli_query($dbc,"UPDATE `Test` SET `Exclude` = 1 WHERE `Patient` = $patient AND `Code` = '$code' ");
   }
 }
 

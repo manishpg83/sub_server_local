@@ -33,12 +33,12 @@ input[type=checkbox] {transform: scale(1.3);}
 
 EOT;
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx',$data);
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx',$data);
+mysqli_select_db($dbc,'amx_portal');
 echo "<h2>Food</h2>\n";
 $sql = "SELECT `code`,`description` FROM `rast` WHERE `type` LIKE 'F%' ORDER BY `rast`.`description` ASC";
-$results = mysql_query($sql);
-while (list($code,$description) = @mysql_fetch_array($results, MYSQL_NUM)) {
+$results = mysqli_query($dbc,$sql);
+while (list($code,$description) = @mysqli_fetch_array($results, MYSQLI_NUM)) {
   echo "<div class=\"chks\"><div class=\"e\"><input id=\"$code-1\" name=\"$code-1\" class=\"ckbx\" type=\"checkbox\" /></div><div class=\"g4\"><input id=\"$code-3\" name=\"$code-3\" class=\"ckbx\" type=\"checkbox\" /></div><div class=\"g\"><input id=\"$code-2\" name=\"$code-2\" class=\"ckbx\" type=\"checkbox\" /></div> $description</div>\n";
 }
 

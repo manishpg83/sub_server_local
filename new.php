@@ -247,19 +247,19 @@ else{
 
 $cid = 1;
 $SQL = "SELECT COUNT(`Status`),`Status` FROM `Patient` WHERE $where GROUP BY `Status` ";
-$results = @mysql_query($SQL);
+$results = @mysqli_query($dbc,$SQL);
 $error = mysql_error();
-while ($row = @mysql_fetch_array($results, MYSQL_NUM)) {$statusCnt[$row[1]] = $row[0];}
+while ($row = @mysqli_fetch_array($results, MYSQLI_NUM)) {$statusCnt[$row[1]] = $row[0];}
 $statusCnt['R'] = $statusCnt['L'] + $statusCnt['V'];
 $statusCnt['T'] = $statusCnt['W'] + $statusCnt['I'];
 $sql = "SELECT SQL_CALC_FOUND_ROWS `Client`, `Patient`, `Date`, `Status`, `Link`, `ClientID`, `Last`, `First`,`Attributes`, `DoB`,`Done` FROM `Patient` WHERE $where $sort";
-$results = @mysql_query($sql);
+$results = @mysqli_query($dbc,$sql);
 $error = mysql_error();
-$rows = @mysql_num_rows($results);
-$more = @mysql_query("SELECT FOUND_ROWS()");
+$rows = @mysqli_num_rows($results);
+$more = @mysqli_query($dbc,"SELECT FOUND_ROWS()");
 if ($rows == 0){echo "<h4>No $type</h4></div>";}
 else {
-  $moreRows = mysql_fetch_array($more, MYSQL_NUM);
+  $moreRows = mysqli_fetch_array($more, MYSQLI_NUM);
   $show = '';//"<p>$type<br/>$moreRows[0] Patients Found: " . $statusCnt['C'] . ' Complete, '  . $statusCnt['T'] . ' Testing, '  . $statusCnt['R'] . ' Received' ;
   if ($rows == 200) {
     $moreRows[0] -= 200;
@@ -271,16 +271,16 @@ else {
   $checked = array('',' checked="checked"');
   $bg = array(' class="divNoCheck" ',' class="divCheck" ');
   $exStatus['X'] = true;
-  while ($row = @mysql_fetch_array($results, MYSQL_NUM)) {//list($Client, $Patient, $Date, $Status, $Link, $ClientID, $Last, $First, $Attributes, $DoB, $Done) = $row;
+  while ($row = @mysqli_fetch_array($results, MYSQLI_NUM)) {//list($Client, $Patient, $Date, $Status, $Link, $ClientID, $Last, $First, $Attributes, $DoB, $Done) = $row;
     if ($exStatus[$row[3]]){continue;}
     $time = strtotime($row[2]);
     $date = date('M j, Y',$time );
     $sql = "SELECT COUNT(*) FROM `Test` WHERE `Patient` = $row[1] AND (`Type` = 7 OR `Type` = 8)  ";
-    $result = mysql_query($sql);
-    list($covid) = @mysql_fetch_array($result, MYSQL_NUM);
+    $result = mysqli_query($dbc,$sql);
+    list($covid) = @mysqli_fetch_array($result, MYSQLI_NUM);
     $sql = "SELECT COUNT(*) FROM `Test` WHERE `Patient` = $row[1]  AND `Code` LIKE 'F%' ";
-    $result = mysql_query($sql);
-    $cnt = @mysql_fetch_array($result, MYSQL_NUM);
+    $result = mysqli_query($dbc,$sql);
+    $cnt = @mysqli_fetch_array($result, MYSQLI_NUM);
     $i = $row[8];
     if ($cnt[0] > 0 ){$i++; if ($row[4] > 0){$i++;}}
     $dow = intval(date('N',$time ));

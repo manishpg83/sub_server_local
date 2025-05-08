@@ -30,16 +30,16 @@ if(count($files)==0){
     $sql = "SELECT  COUNT(*) FROM `cplTest` WHERE `ClientID`='$id'";
     $results = mysqli_query($link,$sql);
     if(mysqli_errno($link)){ echo "$sql\nerr1: " . mysqli_error($link) . "\n$sql\n";}
-    list($records) = mysqli_fetch_array($results, MYSQL_NUM);
+    list($records) = mysqli_fetch_array($results, MYSQLI_NUM);
 	echo "$records Test Records\n";
 	$sql = "SELECT `Patient` FROM `Patient` WHERE `ClientID`='$id'";
 	$results = mysqli_query($link,$sql);
     if(mysqli_errno($link)){ echo "$sql\nerr2: " . mysqli_error($link) . "\n$sql\n";}
-    list($Patient) = mysqli_fetch_array($results, MYSQL_NUM);
+    list($Patient) = mysqli_fetch_array($results, MYSQLI_NUM);
     $sql = "SELECT  COUNT(*) FROM `Test` WHERE `Patient`='$Patient'";
     $results = mysqli_query($link,$sql);
     if(mysqli_errno($link)){ echo "$sql\nerr3: " . mysqli_error($link) . "\n$sql\n";}
-    list($records) = mysqli_fetch_array($results, MYSQL_NUM);
+    list($records) = mysqli_fetch_array($results, MYSQLI_NUM);
 	echo "$records Patient Test Records\n";
     $data = file_get_contents("login/$id.txt");
     $data = trim($data);
@@ -111,7 +111,7 @@ foreach ($files as $ndx => $file){
 $sql = "SELECT `Code`, `Type` FROM `cplTest` WHERE `ClientID`='$id'";
 $results = mysqli_query($link,$sql);
 if(mysqli_errno($link)){ echo "$sql\nerr3: " . mysqli_error($link) . "\n$sql\n";}
-while (list($Code,$Type) = mysqli_fetch_array($results, MYSQL_NUM)) {
+while (list($Code,$Type) = mysqli_fetch_array($results, MYSQLI_NUM)) {
   file_put_contents("login/$id.txt","$Code$Type\r\n", FILE_APPEND);
 }
   //echo "$pid\n";
@@ -135,7 +135,7 @@ echo "\nRetreive from database\n";
 $sql = "SELECT  `Code`, `Type`, Rast.Description, `obr` FROM `cplTest` JOIN `Rast` USING (`Code`) WHERE `ClientID`='$id'";
 $results = mysqli_query($link,$sql);
 if(mysqli_errno($link)){ echo "$sql\nerr3: " . mysqli_error($link) . "\n$sql\n";}
-while (list($Code,$Type,$description,$obr) = mysqli_fetch_array($results, MYSQL_NUM)) {
+while (list($Code,$Type,$description,$obr) = mysqli_fetch_array($results, MYSQLI_NUM)) {
   echo "$Code,$types[$Type],$description => $obr\n";
 }
 
@@ -160,7 +160,7 @@ $orders = count($_POST['files']);
 $sql = "SELECT  COUNT(*) FROM `cplTest` WHERE `ClientID`='$id'";
 $results = mysqli_query($link,$sql);
 if(mysqli_errno($link)){ echo "$sql\nerr3: " . mysqli_error($link) . "\n$sql\n";}
-list($records) = mysqli_fetch_array($results, MYSQL_NUM);
+list($records) = mysqli_fetch_array($results, MYSQLI_NUM);
 echo "\nHL7 Processed:$orders\nTest Records:$records\nRecords to Import:$logins\nHL7s Archived:$backed\n\nLogin:\n$data";
 
 $t = microtime(true) - $startTime;
@@ -218,18 +218,18 @@ echo "ORC|1|$id|$accession\n";
 //echo "$sql\n";
   $results = mysqli_query($link,$sql);
   if(mysqli_errno($link)){ echo  "err6: " . mysqli_error($link) . "\n$sql\n";}
-  while (list($Patient,$Code,$Type,$Conc,$Score) = mysqli_fetch_array($results, MYSQL_NUM)) {
+  while (list($Patient,$Code,$Type,$Conc,$Score) = mysqli_fetch_array($results, MYSQLI_NUM)) {
     if(mysqli_errno($link)){ echo  "err7: " . mysqli_error($link) . "\n";}
     $sql = "SELECT `description` FROM `Rast` WHERE `Code` LIKE '$Code'";
     $result = mysqli_query($link,$sql);
     if(mysqli_errno($link)){ echo  "err8: " . mysqli_error($link) . "\n$sql\n";}
-    list($description) = mysqli_fetch_array($result, MYSQL_NUM);
+    list($description) = mysqli_fetch_array($result, MYSQLI_NUM);
     if(mysqli_errno($link)){ echo  "err9: " . mysqli_error($link) . "\n";}
     $sql = "SELECT  `obr` FROM `cpl` WHERE `ClientID`='$id' AND `Code` = '$Code' AND `Type` = $Type";
 //echo "$sql\n";    
     $result = mysqli_query($link,$sql);
     if(mysqli_errno($link)){ echo  "err10: " . mysqli_error($link) . "\n$sql\n";}
-    list($obr) = mysqli_fetch_array($result, MYSQL_NUM);
+    list($obr) = mysqli_fetch_array($result, MYSQLI_NUM);
     if(mysqli_errno($link)){ echo  "err11: " . mysqli_error($link) . "\n$sql\n";} 
 //echo "\np=$Patient,c=$Code,t=$Type,r=$Conc,s=$Score, d=$description\n";
     echo "$obr\n";

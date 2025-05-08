@@ -82,7 +82,7 @@ $hid[1] = '<td><button class="h5"  type="button" name="sn6" onclick="stNum(6)" >
 $dbc=mysqli_connect('localhost','amx','xD1GkuK7a7DK8!'); @mysqli_select_db($dbc, 'amx_portal');
   $lnk = intval(preg_replace("[^0-9]", "", $_POST['link']));
   if ($lnk > 0){
-    @mysqli_unbuffered_query("UPDATE `Patient` SET `Link`=0, `Attributes`=0 WHERE `Link`= $lnk");
+    @mysqli_query($dbc, "UPDATE `Patient` SET `Link`=0, `Attributes`=0 WHERE `Link`= $lnk");
   }
 $sql = "SELECT `Patient`, `Last`, `First` FROM `Patient` WHERE `Patient` = $patient LIMIT 1";
 $results = @mysqli_query($dbc,$sql);

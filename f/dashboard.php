@@ -6,11 +6,11 @@ header('Connection: Keep-Alive');
 header('Keep-Alive: timeout=50, max=100');
 
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx',$data);
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx',$data);
+mysqli_select_db($dbc,'amx_portal');
 $ip = $_SERVER['REMOTE_ADDR'];
-//$dbc=mysql_connect('localhost','isl_isl','yes12yes');
-//mysql_select_db('isl_portal');
+//$dbc=mysqli_connect('localhost','isl_isl','yes12yes');
+//mysqli_select_db($dbc,'isl_portal');
 
 $startTime = microtime(true);
 $checkbox = array();
@@ -126,9 +126,9 @@ if($sub == 0 && $rec == 0){$sub = 4;$rec = 198;}
 
 if($ip == '70.171.10.12' && $sub == 0){$bw = 'fff';$comment = '';$sub = 99;$rec = 198;}else{$bw = 'fff';$comment = '';}
   $sqlf = "SELECT `client`, `date`, `last`, `first`, `dob`,`state`, `gender`, `history` FROM `history` WHERE `id` = $rec";
-  $results = mysql_query($sqlf);
+  $results = mysqli_query($dbc,$sqlf);
   $sqlf .= "\n" . mysql_error();
-  list($client,$date,$last,$first,$dob,$state,$gender,$jsn) = @mysql_fetch_array($results, MYSQL_NUM);
+  list($client,$date,$last,$first,$dob,$state,$gender,$jsn) = @mysqli_fetch_array($results, MYSQLI_NUM);
   $strdob = date('M j, Y',strtotime($dob));
   $date = date('M j, Y',strtotime($date));
   $history = json_decode($jsn,true);

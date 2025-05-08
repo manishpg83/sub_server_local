@@ -1,16 +1,16 @@
 <?php ob_start("ob_gzhandler");
 $startTime = microtime(true);
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx_allermetrix',$data);
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix',$data);
+mysqli_select_db($dbc,'amx_portal');
 header('Content-Type: text/plain; charset=utf-8');
 
 $sql = "SELECT `rec`,`panel`, `description` FROM `clientPanels` WHERE `number` =0";
-$results = mysql_query($sql);
-while(list($rec,$panel,$description) =  mysql_fetch_array($results, MYSQL_NUM)){
+$results = mysqli_query($dbc,$sql);
+while(list($rec,$panel,$description) =  mysqli_fetch_array($results, MYSQLI_NUM)){
   $sql = "UPDATE `PanelTests` SET `number` = $rec WHERE `panel`='$panel'";
-  $result = mysql_query($sql);
-  if(mysql_errno() != 0){echo mysql_errno() . "<br/>\n$sql";break;}
+  $result = mysqli_query($dbc,$sql);
+  if(mysqli_errno($dbc) != 0){echo mysqli_errno($dbc) . "<br/>\n$sql";break;}
 }
 
 exit;
@@ -25,8 +25,8 @@ $rec = intval($_POST['rec']);
 if($sub == 4){
  // $rec = intval($_POST['rec']);
   $sqlf = "SELECT `client`, `date`, `last`, `first`, `dob`, `gender`, `foods` FROM `history` WHERE `id` = $rec";
-  $results = mysql_query($sqlf);
-  list($id,$date,$last,$first,$dob,$gender,$jsn) = @mysql_fetch_array($results, MYSQL_NUM);
+  $results = mysqli_query($dbc,$sqlf);
+  list($id,$date,$last,$first,$dob,$gender,$jsn) = @mysqli_fetch_array($results, MYSQLI_NUM);
   $strdob = date('M j, Y',strtotime($dob));
   $date = date('M j, Y',strtotime($date));
   $food = json_decode($jsn,true);
@@ -58,9 +58,9 @@ else{
 }
 if($id > 199999 && $id < 300000){
   $sql = "SELECT `Name`  FROM `Client` WHERE `Number` = $id LIMIT 1";
-  $results = mysql_query($sql);
-  if(mysql_errno() == 0 && mysql_num_rows($results) == 1){
-    list($name) = mysql_fetch_array($results, MYSQL_NUM);
+  $results = mysqli_query($dbc,$sql);
+  if(mysqli_errno($dbc) == 0 && mysqli_num_rows($results) == 1){
+    list($name) = mysqli_fetch_array($results, MYSQLI_NUM);
     $client = "<h3 class=\"client\">$name</h3><input type=\"hidden\" name=\"id\" value=\"$id\" />";
   }
   else{$client = mysql_error() . '<br/>' . $sql ;}
@@ -248,13 +248,13 @@ Enclose a copy of the insurance card and complete Insurance Billing and Credit C
 EOT;
 ob_flush();
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysql_connect('localhost','amx_allermetrix',$data);
-mysql_select_db('amx_portal');
+$dbc=mysqli_connect('localhost','amx_allermetrix',$data);
+mysqli_select_db($dbc,'amx_portal');
 $types = array('','IgE','IgG','IgG4');
 
 $sql = "SELECT `panel`, `description` FROM `clientPanels` WHERE `client` = $id";
-$results = mysql_query($sql);
-while(list($panel,$description) =  mysql_fetch_array($results, MYSQL_NUM)){
+$results = mysqli_query($dbc,$sql);
+while(list($panel,$description) =  mysqli_fetch_array($results, MYSQLI_NUM)){
   $panels[$panel] = $description;
 }
 $fp = fopen("/home/amx/public_html/f/panels.txt", "r");
@@ -285,8 +285,8 @@ $types[8] = 'IgG4';
 $types[10] = 'IgE IgG4';
 $ordered = array();
 $sql = "SELECT `Code`, `shortdescription` FROM `Rast` WHERE `Code` LIKE'F%' ORDER BY `Code`";  
-$results = mysql_query($sql);
-while(list($code,$description) =  mysql_fetch_array($results, MYSQL_NUM)){$desc[$code] = $description;$descriptions[$code][1] = 0;$matches[$code] = 0;$rank[10][$code] = $num;$num++;}
+$results = mysqli_query($dbc,$sql);
+while(list($code,$description) =  mysqli_fetch_array($results, MYSQLI_NUM)){$desc[$code] = $description;$descriptions[$code][1] = 0;$matches[$code] = 0;$rank[10][$code] = $num;$num++;}
 foreach($_POST as $key => $code){$post = substr($key,0,1);
   if($post == 'G'){
     $class[$code] = intval($class[$code]) + pow(2,3);
@@ -320,13 +320,13 @@ $types = array('','IgE','IgG','IgG4');
 $jsp .= 'var panelCodes = {';
 $panels = array();
 $sqlcp = "SELECT `number`, `description` FROM `clientPanels` WHERE `client` = $id";
-$results = mysql_query($sqlcp);
-while(list($panel,$description) =  mysql_fetch_array($results, MYSQL_NUM)){
+$results = mysqli_query($dbc,$sqlcp);
+while(list($panel,$description) =  mysqli_fetch_array($results, MYSQLI_NUM)){
   $TestTypeCount = array(0,0,0,0,0,0,0);
   $codes = '';
   $sql = "SELECT `code`, `type` FROM `PanelTests` WHERE `panel` = '$panel'";
-  $result = mysql_query($sql);
-  while(list($code,$type) =  mysql_fetch_array($result, MYSQL_NUM)){
+  $result = mysqli_query($dbc,$sql);
+  while(list($code,$type) =  mysqli_fetch_array($result, MYSQLI_NUM)){
  //   if(substr($code,0,1) != 'F'){continue;}
     if(substr($code,0,3) == '100'){$total = '1';continue;}
     if($type > 0){$tests[$panel][$code] = array($desc[$code],intval($tests[$panel][$code][1]) + pow(2,$type));}

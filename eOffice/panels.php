@@ -123,13 +123,13 @@ if($sub == 7){
   $panel = $_POST['panel'];
   $sql = "SELECT `description`  FROM `importPanels` WHERE `number` LIKE '$panel' LIMIT 1";
   $results = mysqli_query($link,$sql);
-  $rows =  MYSQLI_NUM_rows($results);
+  $rows =  mysqli_num_rows($results);
   echo "<p>$description Rows=$rows</p>";
   if($rows == 1){
-    list($description) = mysql_fetch_array($results, MYSQLI_NUM);
+    list($description) = mysqli_fetch_array($results, MYSQLI_NUM);
     $sql = "SELECT `code`,`type`  FROM `importPanelTest` WHERE `number` LIKE '$panel'";
     $results = mysqli_query($link,$sql);
-    while( list($code,$type) =  mysql_fetch_array($results, MYSQLI_NUM)){$tests[$code][$type] = $type;}
+    while( list($code,$type) =  mysqli_fetch_array($results, MYSQLI_NUM)){$tests[$code][$type] = $type;}
     $sql = "INSERT INTO `amx_portal`.`clientPanels` (`rec`, `include`, `client`, `panel`, `number`, `description`, `fee`) VALUES (NULL, '0', '$id', '$panel', '$pnum', '$description', '0') ";
     $results = mysqli_query($link,$sql);
     $sql = "INSERT INTO `amx_portal`.`Panels` (`rec`, `number`, `description`, `fee`, `tests`, `ige`, `igg4`) VALUES (NULL, '$panel', '$description', '0', '0', '0', '0');";
@@ -271,7 +271,7 @@ if($sub == 21){
   if(strlen($panel) > 1 && strlen($desc) > 5){
     $sql = "INSERT INTO `amx_portal`.`Panels` (`rec`, `number`, `description`, `fee`, `tests`) VALUES (NULL, '$panel', '$desc', '0', '0');";
     mysqli_query($link,$sql);
-    if(mysql_errno() == 0){
+    if(mysqli_errno($dbc) == 0){
 	  echo <<<EOT
 <form action="#" method="post" >$panel, <input style="width:16em;" id="desc" type="text" name="desc" value="$desc" /><br/>
 <input type="hidden" name="panel" value="$panel" />

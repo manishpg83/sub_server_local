@@ -29,15 +29,15 @@ ob_flush();
 
 
 /******
-$dbc=mysql_connect('localhost','isl','yes12yes');
-mysql_select_db('isl_search');
+$dbc=mysqli_connect('localhost','isl','yes12yes');
+mysqli_select_db($dbc,'isl_search');
 
 $sql = "SELECT `CATEGORY` FROM `Industries` WHERE `USED` = 0 LIMIT 0, 1 ";
-$results = @mysql_query($sql);
-$row = mysql_fetch_array($results, MYSQL_NUM); 
+$results = @mysqli_query($dbc,$sql);
+$row = mysqli_fetch_array($results, MYSQLI_NUM); 
 $term = $row[0];
 $sql = "UPDATE `Industries` SET `USED`= `USED` + 1 WHERE `CATEGORY` = '$term'";
-@mysql_unbuffered_query($sql);
+@mysqli_query($dbc,$sql);
 $term = 'COMPUTER REPAIR FORT LAUDERDALE';
 $term = urlencode($term);
 *****/
@@ -90,14 +90,14 @@ echo "<h2>term=$term</h2>";
         $host = $urlparts['host'];
         
         $sql = "INSERT INTO `isl_search`.`links` (`Timestamp`, `link`, `host`, `Rec`,`Hits`) VALUES (CURRENT_TIMESTAMP, '$link', '$host',NULL,0)";
-        @mysql_unbuffered_query($sql);
+        @mysqli_query($dbc,$sql);
         $rec = mysql_insert_id() ;
         ++$line;
         echo "<p class=\"hit\">$rec of $line.) $host</p>";
         ob_flush();
         if ($rec == 0){
           $sql = "UPDATE `links` SET `Hits`= `Hits` + 1 WHERE `host` = '$host'";
-          @mysql_unbuffered_query($sql);
+          @mysqli_query($dbc,$sql);
 
 /****
           $page = getFileContents($link);
@@ -185,14 +185,14 @@ return;
                     echo "$host\n-------------------------------------------------------------\n";
                     $rank++;
                     $sql = "INSERT INTO `ft_search`.`Rank` (`Term`, `Rank`, `Host`) VALUES ('$term', $rank, '$host');";
-                    $results = @mysql_unbuffered_query($sql);
+                    $results = @mysqli_query($dbc,$sql);
                     break 4;
                   }
  
 
        //  if ($host == 'www.pointofsuccess.com') {
               $sql = "INSERT INTO `ft_search`.`LinkQueue` (`TimeStamp`, `Link`, `Host`) VALUES (CURRENT_TIMESTAMP, '$link4', '$host')";
-              @mysql_unbuffered_query($sql);
+              @mysqli_query($dbc,$sql);
 
                 }
                 
@@ -220,7 +220,7 @@ echo $next;
 echo "\n###################################\n";
 print_r($start);
 $sql = "INSERT INTO `ft_search`.`LinkQueue` (`TimeStamp`, `Link`, `Host`) VALUES (CURRENT_TIMESTAMP, '$next', 'start=$start')";
-@mysql_unbuffered_query($sql);
+@mysqli_query($dbc,$sql);
 
 ?>
 

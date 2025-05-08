@@ -19,12 +19,12 @@ $c = $_GET['c'];
 $b = $_GET['p'];
   settype($c,"integer");
 if ($c < 100000) $c = 999999 ;
-$dbc=mysql_connect('localhost','amx','xD1GkuK7a7DK8!');
+$dbc=mysqli_connect('localhost','amx','xD1GkuK7a7DK8!');
 $error = mysql_error();
 if (strlen($error) > 0){
   print "DBC: $error <br/>";
 }
-mysql_select_db('amx_portal');
+mysqli_select_db($dbc,'amx_portal');
 $error = mysql_error();
   if (strlen($error) > 0){
     print "<h2>SEL: $error </h2>";
@@ -42,7 +42,7 @@ $error = mysql_error();
 $loops = 16;
 while ($loops--) {
 $sql = "SELECT *  FROM `Words` WHERE 1";
-$results = @mysql_query($sql);
+$results = @mysqli_query($dbc,$sql);
 $error = mysql_error();
 if (strlen($error > 0)) {
 echo "<p>$error</p>";
@@ -51,7 +51,7 @@ $p=0;
 $count=0;
 $w1=rand(1,711);
 $w2=rand(1,711);
-WHILE ($row = mysql_fetch_array($results, MYSQL_NUM)) {
+WHILE ($row = mysqli_fetch_array($results, MYSQLI_NUM)) {
   if (++$count == $w1 || $count == $w2){
      $r = rand(1,2);
      $pw= $row[0][0] . strtolower($row[0][1] . $row[0][2]);
@@ -88,16 +88,16 @@ function ipwhere($ip) {
   $numbers = preg_split( "/\./", $ip);   
   $code=($numbers[0] * 16777216) + ($numbers[1] * 65536) + ($numbers[2] * 256) + ($numbers[3]);  
   $sql = "SELECT `id` FROM `ipLocations` WHERE `ipHigh` >=$code LIMIT 1";
-  $results = @mysql_query($sql);
+  $results = @mysqli_query($dbc,$sql);
   $error = mysql_error();
   if (strlen($error) == 0){
-    $row = mysql_fetch_array($results, MYSQL_NUM);
+    $row = mysqli_fetch_array($results, MYSQLI_NUM);
 	// echo "<p>ROWS= $row[0] and $row[1]</p>";
     $sql = "SELECT * FROM `cities` WHERE `id` = $row[0] LIMIT 1";
-	$results = @mysql_query($sql);
+	$results = @mysqli_query($dbc,$sql);
     $error = mysql_error();
     if (strlen($error) == 0){
-      $row = mysql_fetch_array($results, MYSQL_NUM);
+      $row = mysqli_fetch_array($results, MYSQLI_NUM);
       $location = " $row[3]  $row[2]  $row[4]   $row[1]";
 	  return $location;
     }

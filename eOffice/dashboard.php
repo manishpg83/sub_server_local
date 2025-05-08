@@ -5,8 +5,8 @@ header('Content-Type: text/html;charset=utf-8');
 header('Connection: Keep-Alive');
 header('Keep-Alive: timeout=50, max=100');
 $ip = $_SERVER['REMOTE_ADDR'];
-//$dbc=mysql_connect('localhost','isl_isl','yes12yes');
-//mysql_select_db('isl_portal');
+//$dbc=mysqli_connect('localhost','isl_isl','yes12yes');
+//mysqli_select_db($dbc,'isl_portal');
 
 $startTime = microtime(true);
 $checkbox = array();

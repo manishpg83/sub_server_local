@@ -19,12 +19,12 @@ print "<p>$current_time</p><p>Client: $Client</p>";
 settype($Client,"integer");
 
 
-$dbc=mysql_connect('localhost','amx_allermetrix','allermetrix510');
+$dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
 $error = mysql_error();
 if (strlen($error) > 0){
   print "DBC: $error <br/>";
 }
-mysql_select_db('amx_portal');
+mysqli_select_db($dbc,'amx_portal');
 $error = mysql_error();
 if (strlen($error) > 0){
   print "SEL: $error <br/>";
@@ -34,12 +34,12 @@ if (strlen($error) > 0){
 
 
 $sql = "SELECT *  FROM `Patient` WHERE `Client` = $Client AND DATE_SUB( CURDATE( ) , INTERVAL $days DAY ) <= `Date` ORDER BY `Date` LIMIT 0 , 50";
-$results = @mysql_query($sql);
+$results = @mysqli_query($dbc,$sql);
 $error = mysql_error();
 if (strlen($error) > 0){
   print "FETCH: $error <br/>";
 }
-WHILE ($row = mysql_fetch_array($results, MYSQL_NUM)) {
+WHILE ($row = mysqli_fetch_array($results, MYSQLI_NUM)) {
   if ($interval) {
     $bgcolor="#b7ffdb";
     $interval = 0;
