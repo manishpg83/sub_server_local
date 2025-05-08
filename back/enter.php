@@ -1,124 +1,140 @@
-<?php 
+<?php
 $startTime = microtime(true);
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
-$dbc=mysqli_connect('localhost','amx',$data);
-mysqli_select_db($dbc,'amx_portal');
+$dbc = mysqli_connect('localhost', 'amx', $data);
+mysqli_select_db($dbc, 'amx_portal');
 $error = mysqli_error($dbc);
 
 $sub = intval($_POST['sub']);
-if ($sub == 9){
+if ($sub == 9) {
   $id = intval($_POST['id']);
-  mysqli_query($dbc,"UPDATE `Patient` SET `Attributes`=0,`Link`=0 WHERE `Client` = $id");
+  mysqli_query($dbc, "UPDATE `Patient` SET `Attributes`=0,`Link`=0 WHERE `Client` = $id");
   $sub = 0;
 }
-if ($sub == 0){
+if ($sub == 0) {
   $passcode = trim($_GET['p']);
   $passcodeh = trim($_POST['pwh']);
   $passcode = trim($_POST['pw']);
-  if (strlen($passcodeh) > strlen($passcode)){
+  if (strlen($passcodeh) > strlen($passcode)) {
     $passcode = $passcodeh;
   }
   $SAVE_ID = intval($_POST['id']);
-  if ($SAVE_ID == 0 && strlen($passcode) == 12  ) {
-    $id = substr($passcode,3,6);
-  }
-  else {
+  if ($SAVE_ID == 0 && strlen($passcode) == 12) {
+    $id = substr($passcode, 3, 6);
+  } else {
     $id = $SAVE_ID;
   }
-  $ip =  $_SERVER['REMOTE_ADDR'];
-  if ((hash('ripemd320',$passcode) == '6732f3c024fe3c3c1ccd7dbe5d0fa7d4a53c516f800707bb86a9017c1e1646d9d4a2d7adc56a505d') ){ //&& (substr($ip,0,11)  == '128.30.52.7' || $ip == '99.3.150.55' || $ip == '173.162.23.21' || $ip == '70.197.160.30')){
+  $ip = $_SERVER['REMOTE_ADDR'];
+  if ((hash('ripemd320', $passcode) == '6732f3c024fe3c3c1ccd7dbe5d0fa7d4a53c516f800707bb86a9017c1e1646d9d4a2d7adc56a505d')) { //&& (substr($ip,0,11)  == '128.30.52.7' || $ip == '99.3.150.55' || $ip == '173.162.23.21' || $ip == '70.197.160.30')){
     $admin = true;
-    $clear = '<div id="sc"><form action="enter.php" method="post"><input type="hidden" name="id" value="' . $SAVE_ID . '"><input type="hidden" name="sub" value="9"><button id="clear">Reset Diet Icons</button></form></div>';  
+    $clear = '<div id="sc"><form action="enter.php" method="post"><input type="hidden" name="id" value="' . $SAVE_ID . '"><input type="hidden" name="sub" value="9"><button id="clear">Reset Diet Icons</button></form></div>';
   }
-  if ((hash('ripemd320',$passcode) == '437bf7176d5a94fc47b4b04d39fe431a5fba023647eb982c51d7b3bdba8289478877004a0c136a0a') ){ //&& (substr($ip,0,11)  == '128.30.52.7' || $ip == '99.3.150.55' || $ip == '173.162.23.21' || $ip == '70.197.160.30')){
+  if ((hash('ripemd320', $passcode) == '437bf7176d5a94fc47b4b04d39fe431a5fba023647eb982c51d7b3bdba8289478877004a0c136a0a')) { //&& (substr($ip,0,11)  == '128.30.52.7' || $ip == '99.3.150.55' || $ip == '173.162.23.21' || $ip == '70.197.160.30')){
     $admin = true;
-    $clear = '<div id="sc"><form action="enter.php" method="post"><input type="hidden" name="id" value="' . $SAVE_ID . '"><input type="hidden" name="sub" value="9"><button id="clear">Reset Diet Icons</button></form></div>';  
+    $clear = '<div id="sc"><form action="enter.php" method="post"><input type="hidden" name="id" value="' . $SAVE_ID . '"><input type="hidden" name="sub" value="9"><button id="clear">Reset Diet Icons</button></form></div>';
   }
   $sql = "SELECT COUNT(*)  FROM `Banned` WHERE `ip` LIKE '$ip'";
-  $results = mysqli_query($dbc,$sql);
+  $results = mysqli_query($dbc, $sql);
   $row = mysqli_fetch_array($results, MYSQLI_NUM);
-  if ($row[0] > 0){include '404.shtml';return;}
+  if ($row[0] > 0) {
+    include '404.shtml';
+    return;
+  }
   $pass = false;
   $error = 1;
-  $hash = hash('ripemd320',$passcode);
-  $sql =  "SELECT *  FROM `Client` WHERE `Number` = $id LIMIT 1";
-  $results = mysqli_query($dbc,$sql);
+  $hash = hash('ripemd320', $passcode);
+  $sql = "SELECT *  FROM `Client` WHERE `Number` = $id LIMIT 1";
+  $results = mysqli_query($dbc, $sql);
   $error = mysqli_error($dbc);
   $rows = mysqli_num_rows($results);
   if (strlen($error) == 0 && $rows == 1) {
     $clientNumber = $id;
     $cli = mysqli_fetch_array($results, MYSQLI_NUM);
-    if ($cli[12] == $hash || $admin === true || ($id == 888887  && ($passcode = 'allermetrix' || $passcode = 'allermetrics'))) {
+    if ($cli[12] == $hash || $admin === true || ($id == 888887 && ($passcode = 'allermetrix' || $passcode = 'allermetrics'))) {
       $pass = true;
       $sql = "INSERT INTO `amx_portal`.`access` (`Client`, `TimeStamp`, `ip`, `Attributes`, `Strike3`, `Value`, `Text`) VALUES ($id, CURRENT_TIMESTAMP, '$ip', 1, 0, 1, '');";
-      @mysqli_query($dbc,$sql);
-    }
-    else {
+      @mysqli_query($dbc, $sql);
+    } else {
       $txt = $id . ' - ' . $passcode;
       $sql = "INSERT INTO `amx_portal`.`access` (`Client`, `TimeStamp`, `ip`, `Attributes`, `Strike3`, `Value`, `Text`) VALUES ($id, CURRENT_TIMESTAMP, '$ip', 1, 0, 0, '$txt');";
-      @mysqli_query($dbc,$sql);
+      @mysqli_query($dbc, $sql);
       $pass = false;
       $error = 4;
       $f = 1;
       $p = $passcode;
       $db = $cli[12];
     }
-  }
-  else{
+  } else {
     $pass = false;
     $error = 2;
     $f = 2;
     $cli[1] = "ERROR 1: $rows E=$error";
   }
   if ($admin === true) {
-    $pass = true ;
+    $pass = true;
   }
   if ($pass === true) {
     $terms = 'true';
-    $d =  date('DMjYHisa') .  microtime(true);
+    $d = date('DMjYHisa') . microtime(true);
     $seed = $_SERVER['REMOTE_ADDR'] . $d;
-    $sid = substr(hash('ripemd320',$seed),1,16);
+    $sid = substr(hash('ripemd320', $seed), 1, 16);
     session_cache_limiter('private');
     session_cache_expire(5);
     session_name('amxs');
     session_id($sid);
-    session_start( );
-    setcookie("amxc", $id,time()+3600,'/');
+    session_start();
+    setcookie("amxc", $id, time() + 3600, '/');
     setcookie(session_name('amxs'), '', time() + 3600);
     $link = "logout.php";
     $action = "Log Out";
     $days = intval($cli[13]);
-    if ($days == 0) {$days = 5;}
+    if ($days == 0) {
+      $days = 5;
+    }
     $sortVal = $cli[19];
     $statusSort = $cli[20];
     $chkStatus[0] = $statusSort;
-    if (($statusSort & 2) > 0){$chkStatus[1] = ' checked="checked"';}
-    if (($statusSort & 4) > 0){$chkStatus[2] = ' checked="checked"';}
-    if (($statusSort & 8) > 0){$chkStatus[3] = ' checked="checked"';}
+    if (($statusSort & 2) > 0) {
+      $chkStatus[1] = ' checked="checked"';
+    }
+    if (($statusSort & 4) > 0) {
+      $chkStatus[2] = ' checked="checked"';
+    }
+    if (($statusSort & 8) > 0) {
+      $chkStatus[3] = ' checked="checked"';
+    }
+  } else {
+    header("Location: https://dev.amxemr.com");
+    exit;
   }
-  else {
-     header("Location: https://dev.amxemr.com");exit; 
-  }
-}
-else{
+} else {
 
   $id = intval($_COOKIE['amxc']);
-  if ($id < 100000){header("Location: https://dev.amxemr.com");exit;} 
-  setcookie("amxc", $id,time()+3600,'/');
-  if ($sub == 4){
-    $name = $_POST['name'];
+  if ($id < 100000) {
+    header("Location: https://dev.amxemr.com");
+    exit;
   }
-  elseif ($sub == 2){
+  setcookie("amxc", $id, time() + 3600, '/');
+  if ($sub == 4) {
+    $name = $_POST['name'];
+  } elseif ($sub == 2) {
     $sortVal = $cli[19];
     $statusSort = $cli[20];
     $chkStatus[0] = $statusSort;
-    if (($statusSort & 2) > 0){$chkStatus[1] = ' checked="checked"';}
-    if (($statusSort & 4) > 0){$chkStatus[2] = ' checked="checked"';}
-    if (($statusSort & 8) > 0){$chkStatus[3] = ' checked="checked"';}
- }
-  else{
+    if (($statusSort & 2) > 0) {
+      $chkStatus[1] = ' checked="checked"';
+    }
+    if (($statusSort & 4) > 0) {
+      $chkStatus[2] = ' checked="checked"';
+    }
+    if (($statusSort & 8) > 0) {
+      $chkStatus[3] = ' checked="checked"';
+    }
+  } else {
     $days = intval($_POST['d']);
-    if ($days == 0) {$days = 5;}
+    if ($days == 0) {
+      $days = 5;
+    }
     $exStatus['R'] = true;
     $exStatus['L'] = true;
     $exStatus['V'] = true;
@@ -126,19 +142,19 @@ else{
     $exStatus['W'] = true;
     $exStatus['I'] = true;
     $exStatus['Q'] = false;
-    
+
     $exStatus['H'] = false;
     $exStatus['C'] = true;
     $chkTrans['R'] = 1;
     $chkTrans['T'] = 2;
     $chkTrans['C'] = 3;
     $exVal = 0;
-    foreach($_POST as $k => $v){
-      if (substr($k,0,1)=='x'){
-        $ndx = substr($k,1,1);
+    foreach ($_POST as $k => $v) {
+      if (substr($k, 0, 1) == 'x') {
+        $ndx = substr($k, 1, 1);
         $exStatus[$ndx] = false;
-        $chkStatus[$chkTrans[$ndx]] = 'checked="checked"' ;
-        $exVal += pow(2,$chkTrans[$ndx]);
+        $chkStatus[$chkTrans[$ndx]] = 'checked="checked"';
+        $exVal += pow(2, $chkTrans[$ndx]);
       }
     }
     $exStatus['W'] = $exStatus['T'];
@@ -147,47 +163,61 @@ else{
     $exStatus['V'] = $exStatus['R'];
     $statusSort = intval($_POST['ss']);
     $sortVal = intval($_POST['s']);
-    @mysqli_query($dbc,"UPDATE `Client` SET `days` = $days, `Sort`=$sortVal, `StatusSort`=$exVal WHERE `Number`=$id ");
+    @mysqli_query($dbc, "UPDATE `Client` SET `days` = $days, `Sort`=$sortVal, `StatusSort`=$exVal WHERE `Number`=$id ");
   }
-  
-  $sql =  "SELECT *  FROM `Client` WHERE `Number` = $id LIMIT 1";
-  $results = mysqli_query($dbc,$sql);
+
+  $sql = "SELECT *  FROM `Client` WHERE `Number` = $id LIMIT 1";
+  $results = mysqli_query($dbc, $sql);
   $error = mysqli_error($dbc);
   $rows = mysqli_num_rows($results);
   if (strlen($error) == 0 && $rows == 1) {
     $cli = mysqli_fetch_array($results, MYSQLI_NUM);
-	$history = ' class="nothidden" ';
-	$sql = "SELECT `id` FROM `history` WHERE `client` = $id";
-    $results = mysqli_query($dbc,$sql);
-    if(mysqli_errno($dbc) == 0 && mysqli_num_rows($results) == 0){$history = ' class="hide" ';}
+    $history = ' class="nothidden" ';
+    $sql = "SELECT `id` FROM `history` WHERE `client` = $id";
+    $results = mysqli_query($dbc, $sql);
+    if (mysqli_errno($dbc) == 0 && mysqli_num_rows($results) == 0) {
+      $history = ' class="hide" ';
+    }
   }
 
 }
 ob_start("ob_gzhandler");
-  $loginButton = '';
-  $login = intval($cli[23]);
-  if($login == 1){$loginButton = '<form action="./login" method="post"><input type="hidden" name="client" value='. $id . '/><button id="order" type="submit" > Place New Order</button></form>';}
+$loginButton = '';
+$login = intval($cli[23]);
+if ($login == 1) {
+  $loginButton = '<form action="./login" method="post"><input type="hidden" name="client" value=' . $id . '/><button id="order" type="submit" > Place New Order</button></form>';
+}
 
 
 header('Content-Type: text/html; charset=utf-8');
 header('Connection: Keep-Alive');
 header('Keep-Alive: timeout=5, max=100');
 header('Cache-Control: max-age=0');
-$address= trim($cli[3]);
-if (strlen($address) > 3){ $address .= ' ';}
-$address .=  trim($cli[4]) . ' ' . trim($cli[5]) . ' ' . trim($cli[6]);
+$address = trim($cli[3]);
+if (strlen($address) > 3) {
+  $address .= ' ';
+}
+$address .= trim($cli[4]) . ' ' . trim($cli[5]) . ' ' . trim($cli[6]);
 $client = "$cli[1] $cli[2] $address</p>";
 $days = intval($cli[13]);
-if ($days == 0) {$days = 5;}
+if ($days == 0) {
+  $days = 5;
+}
 $sortVal = $cli[19];
 $statusSort = $cli[20];
 $chkStatus[0] = $statusSort;
-if (($statusSort & 2) > 0){$chkStatus[1] = ' checked="checked"';}
-if (($statusSort & 4) > 0){$chkStatus[2] = ' checked="checked"';}
-if (($statusSort & 8) > 0){$chkStatus[3] = ' checked="checked"';}
-$chkSort = array_fill(1,5,'');
+if (($statusSort & 2) > 0) {
+  $chkStatus[1] = ' checked="checked"';
+}
+if (($statusSort & 4) > 0) {
+  $chkStatus[2] = ' checked="checked"';
+}
+if (($statusSort & 8) > 0) {
+  $chkStatus[3] = ' checked="checked"';
+}
+$chkSort = array_fill(1, 5, '');
 $chkSort[$sortVal] = 'checked="checked"';
-$today = date('l, F j, Y',time());
+$today = date('l, F j, Y', time());
 header('Cache-Control: max-age=120');
 
 echo <<<EOT
@@ -309,9 +339,9 @@ EOT;
 flush();
 
 ob_flush();
-readfile ('/home/amx/public_html/announce.html');
+readfile('/home/amx/public_html/announce.html');
 $sort[1] = ' ORDER BY `Last` ASC, `First` ASC ';
-$sort[2] = ' ORDER BY `Date` DESC,`Last` ASC, `First` ASC' ;
+$sort[2] = ' ORDER BY `Date` DESC,`Last` ASC, `First` ASC';
 $sort[3] = ' ORDER BY `Status` ASC, `Last` ASC, `First` ASC ';
 $sort[4] = ' ORDER BY  `Patient` DESC ';
 $sort[5] = ' ORDER BY `ClientID` ASC ';
@@ -358,59 +388,63 @@ $addDays['H'] = 0;
 $addDays['C'] = 0;
 $addDays['I'] = 604800;
 $addDays['W'] = 172800;
-$covday = array(3,2,1,2,1,5,4);
-$icon = array('class="none"','class="dietblack"','class="dietblue"','class="dietred"','class="none"');
-$dietLink = array('','link.php','d.php','d.php','');
+$covday = array(3, 2, 1, 2, 1, 5, 4);
+$icon = array('class="none"', 'class="dietblack"', 'class="dietblue"', 'class="dietred"', 'class="none"');
+$dietLink = array('', 'link.php', 'd.php', 'd.php', '');
 $diet[0] = '<td class="c6"><button ' . $icon[0] . ' type="submit"></button></td>';
-$dueDate = array('','');
+$dueDate = array('', '');
 $name = trim($_POST['name']);
 $code = trim($_POST['code']);
-$adjust['W'] = array(0,0,0,0,172800,172800,0,0);
-$adjDays = array(0,0,0,0,0,0,86400,172800);
-$weeks = intval(($days / 5) ) ;
+$adjust['W'] = array(0, 0, 0, 0, 172800, 172800, 0, 0);
+$adjDays = array(0, 0, 0, 0, 0, 0, 86400, 172800);
+$weeks = intval(($days / 5));
 $days += ($weeks * 2);
 $minutes = $days * 86400;
 $date = time() - $minutes;
-$dow = intval(date('N',$date ));
+$dow = intval(date('N', $date));
 $adj = $adjDays[$dow];
 $date -= $adjDays[$dow];
-if (strlen($name) == 0){$date = date('Y-m-d',$date);}else{$date = '2006-03-03';}
-if (strlen($name) > 0 ) {
+if (strlen($name) == 0) {
+  $date = date('Y-m-d', $date);
+} else {
+  $date = '2006-03-03';
+}
+if (strlen($name) > 0) {
   $where = " `Client` = $id AND `last` LIKE '$name%' AND  `Date` > '2006-03-03'";
   $type = "Patient Last Name: \"$name\" ";
   $sort = ' ORDER BY `Last` ASC, `First` ASC, `DoB` DESC';
-}
-elseif (strlen($code) > 0) {
-  if (is_numeric($code) && $code > 100000 && $code < 999999 ){
+} elseif (strlen($code) > 0) {
+  if (is_numeric($code) && $code > 100000 && $code < 999999) {
     $where = " `Client` = $id  AND  `Date` > '2006-03-03'  AND (`ClientID` LIKE '$code%' || `Patient` = $code) ";
-  }
-  else{
+  } else {
     $where = " `Client` = $id  AND  `Date` > '2006-03-03'  AND `ClientID` LIKE '$code%' ";
   }
   $type = "Patient ID: \"$code\" ";
-}
-else{
+} else {
   $where = " `Client` = $id AND `Date` > '$date' ";
   $notFound = "<h2>No patients Found between Today and $date</h2>";
-  $type = 'Patients between Today and ' . date('l, F j, Y',strtotime($date));
+  $type = 'Patients between Today and ' . date('l, F j, Y', strtotime($date));
 }
 
 $cid = 1;
 $SQL = "SELECT COUNT(`Status`),`Status` FROM `Patient` WHERE $where GROUP BY `Status` ";
-$results = @mysqli_query($dbc,$SQL);
+$results = @mysqli_query($dbc, $SQL);
 $error = mysqli_error($dbc);
-while ($row = @mysqli_fetch_array($results, MYSQLI_NUM)) {$statusCnt[$row[1]] = $row[0];}
+while ($row = @mysqli_fetch_array($results, MYSQLI_NUM)) {
+  $statusCnt[$row[1]] = $row[0];
+}
 $statusCnt['R'] = $statusCnt['L'] + $statusCnt['V'];
 $statusCnt['T'] = $statusCnt['W'] + $statusCnt['I'];
 $sql = "SELECT SQL_CALC_FOUND_ROWS `Client`, `Patient`, `Date`, `Status`, `Link`, `ClientID`, `Last`, `First`,`Attributes`, `DoB`,`Done` FROM `Patient` WHERE $where $sort";
-$results = @mysqli_query($dbc,$sql);
+$results = @mysqli_query($dbc, $sql);
 $error = mysqli_error($dbc);
 $rows = @mysqli_num_rows($results);
-$more = @mysqli_query($dbc,"SELECT FOUND_ROWS()");
-if ($rows == 0){echo "<h4>No $type</h4></div>";}
-else {
+$more = @mysqli_query($dbc, "SELECT FOUND_ROWS()");
+if ($rows == 0) {
+  echo "<h4>No $type</h4></div>";
+} else {
   $moreRows = mysqli_fetch_array($more, MYSQLI_NUM);
-  $show = "<h4>Today: $today<br/>$type<br/>$moreRows[0] Patients Found: " . $statusCnt['C'] . ' Complete, '  . $statusCnt['T'] . ' Testing, '  . $statusCnt['R'] . ' Received' ;
+  $show = "<h4>Today: $today<br/>$type<br/>$moreRows[0] Patients Found: " . $statusCnt['C'] . ' Complete, ' . $statusCnt['T'] . ' Testing, ' . $statusCnt['R'] . ' Received';
   if ($rows == 200) {
     $moreRows[0] -= 200;
     $show .= "<br/>200 Patients Shown";
@@ -419,39 +453,44 @@ else {
   echo '<div id="note"><p id="fgtw"><span class="bold">FGTW</span> is the number of tested <span class="bold">F</span>ood, <span class="bold">G</span>rass, <span class="bold">T</span>ree, and <span class="bold">W</span>eed allergens.  Used by Diet&#x2003;</p></div><div id="diet"><div class="dietblack"></div><p class="inline"> &#x2003;Black: diet report not generated.</p><br/><div class="dietblue"></div><p class="inline"> &#x2003;Blue: Diet Report previously generated</p><br/><div class="dietred"></div><p class="inline"> &#x2003;Red: Multiple result reports linked</p><br/><div class="none"></div><p class="inline"> &#x2003; No Food, Grass, Tree, or Weed found for diet</p></div><table id="tbl">' . $hid[$cid];
   flush();
   ob_flush();
-  $checked = array('',' checked="checked"');
-  $bg = array(' class="divNoCheck" ',' class="divCheck" ');
+  $checked = array('', ' checked="checked"');
+  $bg = array(' class="divNoCheck" ', ' class="divCheck" ');
   $exStatus['X'] = true;
   while ($row = @mysqli_fetch_array($results, MYSQLI_NUM)) {
-    if ($exStatus[$row[3]]){continue;}
+    if ($exStatus[$row[3]]) {
+      continue;
+    }
     $time = strtotime($row[2]);
-//	$age = date_diff(date_create($row[9]), date_create('today'))->y;
-    $date = date('M j, Y',$time );
+    //	$age = date_diff(date_create($row[9]), date_create('today'))->y;
+    $date = date('M j, Y', $time);
     $sql = "SELECT COUNT(*) FROM `Test` WHERE `Patient` = $row[1] AND (`Type` = 7 OR `Type` = 8)  ";
-    $result = mysqli_query($dbc,$sql);
+    $result = mysqli_query($dbc, $sql);
     list($covid) = @mysqli_fetch_array($result, MYSQLI_NUM);
     $sql = "SELECT COUNT(*) FROM `Test` WHERE `Patient` = $row[1]  AND `Code` LIKE 'F%' ";
-    $result = mysql_query($sql);
-    $cnt = @mysql_fetch_array($result, MYSQLI_NUM);
+    $result = mysqli_query($dbc, $sql);
+    $cnt = @mysqli_fetch_array( $result, MYSQLI_NUM);
     $i = $row[8];
-    if ($cnt[0] > 0 ){$i++; if ($row[4] > 0){$i++;}}
-    $dow = intval(date('N',$time ));
-	if ($covid > 0){
-	  $due = strtotime(date("Y-m-d",strtotime(date('Y-m-d',$time) . ' + '. $covday[intval(date('w',$time))] . 'days')));
-	}
-	else{
+    if ($cnt[0] > 0) {
+      $i++;
+      if ($row[4] > 0) {
+        $i++;
+      }
+    }
+    $dow = intval(date('N', $time));
+    if ($covid > 0) {
+      $due = strtotime(date("Y-m-d", strtotime(date('Y-m-d', $time) . ' + ' . $covday[intval(date('w', $time))] . 'days')));
+    } else {
       $due = $time + $addDays[$row[3]] + intval($adjust[$row[3]][$dow]);
-	}
-    $dueDate[1] = date('M j, Y ( D )',$due );
+    }
+    $dueDate[1] = date('M j, Y ( D )', $due);
     $pdf['C'][2] = $row[1] . '" /></form></td>';
     $id = $row[5];
     $check = $checked[$row[10]];
     $idRow[1] = '<td><button class="c2"  type="button" name="sn2" onclick="stNum(2)" >' . $id . '</button></td>';
-    if ( $row[2] < '2009-07-27'){
+    if ($row[2] < '2009-07-27') {
       $status[0] = '<td><button class="q5"  type="button">Call Allermetrix';
-    }
-    else{
-      $status[0] =  $pdf[$row[3]][1] . $dueDate[$dueNeeded[$row[3]]] .  $pdf[$row[3]][2];
+    } else {
+      $status[0] = $pdf[$row[3]][1] . $dueDate[$dueNeeded[$row[3]]] . $pdf[$row[3]][2];
     }
     $dietColumn = '<td><form action="' . $dietLink[$i] . '" method="post" target="_blank"><input type="hidden" name="sub" value="1" /><input type="hidden" name="p" value="' . $row[1] . '" /><input type="hidden" name="link" value="' . $row[4] . '" /> <button ' . $icon[$i] . ' type="submit"></button></form></td>';
     $class = $bg[$row[10]];
@@ -471,7 +510,7 @@ EOT;
   echo '</table>';
 
 }
- $t = number_format((microtime(true) - $startTime),3);
+$t = number_format((microtime(true) - $startTime), 3);
 
 echo <<<EOT
 </div><span class="sm">$t</span></div>

@@ -57,7 +57,7 @@ if ($fp ) {
       }
     }  // end if error
     elseif (substr($text,0,1) == 'U') {  // no error on update
-      if (mysql_affected_rows() == 1) {
+      if (mysqli_affected_rows($dbc) == 1) {
          $recUpdate++;
       }
       else {

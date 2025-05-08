@@ -184,22 +184,22 @@ elseif($sub == 7){
   if($addPanel){
     $sql = "INSERT INTO `amx_portal`.`clientPanels` (`rec`, `include`, `client`, `panel`, `number`, `description`, `fee`) VALUES (NULL, '0', '$id', '$panel', '$pnum', '$description', '0') ON DUPLICATE KEY UPDATE `number`='$pnum';";
     $results = mysqli_query($dbc,$sql);
-    $rows =  mysql_affected_rows($results);
-    if($rows == 1){$pnum = mysql_insert_id($results);}
+    $rows =  mysqli_affected_rows($dbc,$results);
+    if($rows == 1){$pnum = mysqli_insert_id($results);}
     $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysqli_error($dbc);
     $sql = "INSERT INTO `amx_portal`.`Panels` (`id`, `number`, `description`, `fee`, `tests`, `ige`, `igg4`) VALUES (NULL, '$panel', '$description', '0', '0', '0', '0');";
     $results = mysqli_query($dbc,$sql);
-    $rows =  mysql_affected_rows($results);
+    $rows =  mysqli_affected_rows($dbc,$results);
     $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysqli_error($dbc);
     $sql = "INSERT INTO `amx_portal`.`clientPanels` (`rec`, `include`, `client`, `panel`, `number`, `description`, `fee`) VALUES (NULL, '0', '$id', '$panel', '0', '$description', '0');";
     $results = mysqli_query($dbc,$sql);
-    $rows =  mysql_affected_rows($results);
-    if($rows == 1){$pnum = mysql_insert_id($results);}
+    $rows =  mysqli_affected_rows($dbc,$results);
+    if($rows == 1){$pnum = mysqli_insert_id($results);}
     $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysqli_error($dbc);
   }
   $sql = "UPDATE `clientPanels` SET `number`='$pnum',`description`='$description' WHERE `client`='$id' AND `panel`='$panel'";
   $results = mysqli_query($dbc,$sql);
-  $rows =  mysql_affected_rows($results);
+  $rows =  mysqli_affected_rows($dbc,$results);
   $show .= "\n202->Rows=$rows, number=$pnum, $sql\n" .  mysqli_error($dbc);
   $sql = "SELECT `code`,`type`  FROM `importpaneltests` WHERE `number` LIKE '$panel'";
   $results = mysqli_query($dbc,$sql);

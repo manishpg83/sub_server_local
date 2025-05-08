@@ -90,8 +90,8 @@ echo "<h2>term=$term</h2>";
         $host = $urlparts['host'];
         
         $sql = "INSERT INTO `isl_search`.`links` (`Timestamp`, `link`, `host`, `Rec`,`Hits`) VALUES (CURRENT_TIMESTAMP, '$link', '$host',NULL,0)";
-        @mysqli_query($dbc,$sql);
-        $rec = mysql_insert_id() ;
+        mysqli_query($dbc,$sql);
+        $rec = mysqli_insert_id($dbc) ;
         ++$line;
         echo "<p class=\"hit\">$rec of $line.) $host</p>";
         ob_flush();

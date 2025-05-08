@@ -366,7 +366,7 @@ if (false){ //$checkPDF > 0){
   $in = substr($in,0,-1) . ')';
  // $sql = "UPDATE `Patient` SET `PDF`=1 WHERE $in";
   $result = mysqli_query($dbc,$sql);
-  $count = mysql_affected_rows();
+  $count = mysqli_affected_rows($dbc);
   if (mysqli_errno($dbc) > 0 || $count != $checked ){echo mysqli_error($dbc) . "<h4>$sql</h4>";}
   echo "<span class='bold red'>$checkPDF PDFs checked, $checked OK, $count Updated</span></div><hr/><pre>";
 }

@@ -212,8 +212,10 @@ if (strlen(mysqli_error($dbc)) > 0){
   echo mysqli_error($dbc) . "<br> $sql<br>";
 }
 $sql = "SELECT FOUND_ROWS()";
-$count = @mysqli_query($dbc,$sql);
-$count = mysql_result($count,0);
+$result = mysqli_query($dbc, $sql);
+
+$count = ($result !== false) ? (int) $result->fetch_column() : 0;
+
 $next = $n + $rows;
 $last = $count - $rows;
 

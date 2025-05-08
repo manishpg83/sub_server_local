@@ -107,7 +107,7 @@ if($sub == 0 && $match && $dobOK && $stateOK && $lastOK){
   $sql = "INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`, `gender`) VALUES (NULL, $client, '$today', '$last', '$first', '$dob','$address','$city','$state','$zip', '$gender')";
   mysqli_query($link,$sql);
   if(mysqli_errno($link) > 0){$err = "$sqlf\n" . mysqli_error($link);}
-  $ndx = intval(mysql_insert_id());
+  $ndx = mysqli_insert_id($link);
   if($ndx > 0){$rec = $ndx;}
   $err = $sqlf . "\n" . mysqli_error($link);
   file_put_contents('history.log',"$ip $time $err\n\n",FILE_APPEND);
