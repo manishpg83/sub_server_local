@@ -75,7 +75,7 @@ if($sub == 32){  // Done with History, Save
   $history = mysqli_real_escape_string($dbc,$jsn);
   $sqlf = "UPDATE `history` SET `history`='$history' WHERE `id` = '$rec' ";
   mysqli_query($dbc,$sqlf);
-  if(mysql_errno > 0){$err = "$sqlf\n" . mysqli_error($dbc);echo $err;}
+  if(mysqli_errno($dbc) > 0){$err = "$sqlf\n" . mysqli_error($dbc);echo $err;}
   file_put_contents('history.log',"$ip $sqlf\n$err\n$jsn\n\n",FILE_APPEND);
 
 }
@@ -125,7 +125,7 @@ if($sub == 0 && $match && $gender > 0  && $dobOK && $stateOK && $lastOK){
   $time = date('Y-m-d g:i a');
   $sqlf = "INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`, `gender`) VALUES (NULL, $client, '$today', '$last', '$first', '$dob','$address','$city','$state','$zip', '$gender')";
   mysqli_query($dbc,$sqlf);
-  if(mysql_errno > 0){$err = "$sqlf\n" . mysqli_error($dbc);}
+  if(mysqli_errno($dbc) > 0){$err = "$sqlf\n" . mysqli_error($dbc);}
   $ndx = intval(mysql_insert_id());
   if($ndx > 0){$rec = $ndx;}
   $err = $sqlf . "\n" . mysqli_error($dbc);
@@ -196,7 +196,7 @@ if( $sub == 64){   // PATIENT DONE WITH FOODS, SAVE
   $foods = mysqli_real_escape_string($dbc,$jsn);
   $sqlf = "UPDATE `history` SET `foods`='$foods' WHERE `id` = '$rec' ";
   mysqli_query($dbc,$sqlf);
-  if(mysql_errno > 0){$err = "$sqlf\n" . mysqli_error($dbc);}
+  if(mysqli_errno($dbc) > 0){$err = "$sqlf\n" . mysqli_error($dbc);}
   file_put_contents('food.log',"$ip $sqlf\n$err\n$jsn\n",FILE_APPEND);
   include('/home/amx/public_html/h/dashboard.php');
   exit;

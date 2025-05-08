@@ -47,7 +47,7 @@ $match = false; //passcode match
 if(strlen($c)== 4){
   $sql = "SELECT `Name`,`passcode`,`Number`  FROM `Client` WHERE `passcode` LIKE '$c' LIMIT 1";
   $results = mysqli_query($link,$sql);
-  if(mysqli_errno($dbc) == 0 && mysqli_num_rows($results) == 1){
+  if(mysqli_errno($link) == 0 && mysqli_num_rows($results) == 1){
     list($name,$passcode,$client) = mysqli_fetch_array($results, MYSQLI_NUM);
     if($passcode == $c){$match = true;}
   }
@@ -68,7 +68,7 @@ else{
   list($client,$date,$last,$first,$dob,$address,$city,$state,$zip,$gender,$history,$foods ) = @mysqli_fetch_array($results, MYSQLI_NUM);  
   $sql = "SELECT `Name`,`passcode`  FROM `Client` WHERE `Number` LIKE '$client' LIMIT 1";
   $results = mysqli_query($link,$sql);
-  if(mysqli_errno($dbc) == 0 && mysqli_num_rows($results) == 1){
+  if(mysqli_errno($link) == 0 && mysqli_num_rows($results) == 1){
     list($name,$passcode) = mysqli_fetch_array($results, MYSQLI_NUM);
     if($passcode == $c){$match = true;}
   }
@@ -97,7 +97,7 @@ if($sub == 32){  // Done with History, Save
   $history = mysqli_real_escape_string($jsn);
   $sql = "UPDATE `history` SET `history`='$history' WHERE `id` = '$rec' ";
   mysqli_query($link,$sql);
-  if(mysql_errno > 0){$err = "$sqlf\n" . mysqli_error($link);echo $err;}
+  if(mysqli_errno($link) > 0){$err = "$sqlf\n" . mysqli_error($link);echo $err;}
   file_put_contents('history.log',"$ip $sqlf\n$err\n$jsn\n\n",FILE_APPEND);
 }
 if($sub == 0 && $match && $dobOK && $stateOK && $lastOK){
@@ -106,7 +106,7 @@ if($sub == 0 && $match && $dobOK && $stateOK && $lastOK){
   $time = date('Y-m-d g:i a');
   $sql = "INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`, `gender`) VALUES (NULL, $client, '$today', '$last', '$first', '$dob','$address','$city','$state','$zip', '$gender')";
   mysqli_query($link,$sql);
-  if(mysql_errno > 0){$err = "$sqlf\n" . mysqli_error($link);}
+  if(mysqli_errno($link) > 0){$err = "$sqlf\n" . mysqli_error($link);}
   $ndx = intval(mysql_insert_id());
   if($ndx > 0){$rec = $ndx;}
   $err = $sqlf . "\n" . mysqli_error($link);
@@ -215,7 +215,7 @@ if( $sub == 64){   // PATIENT DONE WITH FOODS, SAVE
   $foods = mysqli_real_escape_string($link,$jsn);
   $sql = "UPDATE `history` SET `foods`='$foods' WHERE `id` = '$rec' ";
   mysqli_query($link,$sql);
-  if(mysql_errno > 0){$err = "$sql\n" . mysqli_error($link);}
+  if(mysqli_errno($link) > 0){$err = "$sql\n" . mysqli_error($link);}
   include('/home/amx/public_html/h/dashboard.php');
   exit;
 }

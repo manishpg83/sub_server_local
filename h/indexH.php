@@ -207,7 +207,7 @@ $sub == 2){  // SAVE FOODS
   $jsn = mysqli_real_escape_string($dbc,$jsn);
   $sqlf = "UPDATE `history` SET `foods`='$jsn' WHERE `id` = $rec";
   mysqli_query($dbc,$sqlf);
-  if(mysql_errno > 0){$err = "$sqlf\n" . mysqli_error($dbc);}
+  if(mysqli_errno($dbc) > 0){$err = "$sqlf\n" . mysqli_error($dbc);}
 }
 if(true){  // hide array init
 $checkbox = array();
