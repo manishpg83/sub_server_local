@@ -154,7 +154,7 @@ else{
 }
   $sql = "SELECT `id`,`date`, `last`, `first`, `dob`, `gender`,`client` FROM `history` WHERE `client` = $id AND `status` = 'C' ORDER BY `client` ASC,`last` ASC, `first` ASC";
   $results = mysqli_query($dbc,$sql);
-  if(mysqli_errno($dbc) > 0){echo mysql_error() . "<br/>\n$sql";}
+  if(mysqli_errno($dbc) > 0){echo mysqli_error($dbc) . "<br/>\n$sql";}
   
   if(mysqli_num_rows($results) > 0){
   $js .= "completed = true;\n";

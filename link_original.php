@@ -90,7 +90,7 @@ $x = 0;
 $idRow[0] = "";
 $SQL = "SELECT COUNT(`ClientID`),`ClientID` FROM `Patient` WHERE `Date` > '2006-3-3' AND `Client` = $client AND `Last` LIKE '$pat[1]' AND `First` LIKE '$pat[2]' ";
 $results = @mysqli_query($dbc,$SQL);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 $rows = @mysqli_num_rows($results);
 $row = mysqli_fetch_array($results, MYSQLI_NUM);
 $len = strlen(trim($row[1]));

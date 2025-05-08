@@ -109,16 +109,16 @@ exit;
 $dbc=mysqli_connect('localhost','amx_amx','xD1GkuK7a7DK82');
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
 $dbc=mysqli_connect('localhost','amx_allermetrix',$data);
-echo  mysqli_errno($dbc) . ', ' . mysql_error() . "\n<br>\n";
+echo  mysqli_errno($dbc) . ', ' . mysqli_error($dbc) . "\n<br>\n";
 mysqli_select_db($dbc,'amx_test');
-echo  mysqli_errno($dbc) . ', <br>' . mysql_error() . "\n<br>\n";
+echo  mysqli_errno($dbc) . ', <br>' . mysqli_error($dbc) . "\n<br>\n";
 
 $sql = "SELECT `patient`,`code`, `type`,COUNT(*) as cnt, GROUP_CONCAT(`patient`,`code`,`type`) AS ids
 FROM test
 GROUP BY `patient`, `code`, `type`
 HAVING cnt > 1";
 $results = mysqli_query($dbc,$sql);
-echo 'query: ' . mysqli_errno($dbc) . ', ' . mysql_error();
+echo 'query: ' . mysqli_errno($dbc) . ', ' . mysqli_error($dbc);
 while(list($patient,$code,$type) =  mysqli_fetch_array($results, MYSQLI_NUM)){
 echo "$patient,$code,$type<br>";
 }

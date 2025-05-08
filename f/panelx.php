@@ -74,7 +74,7 @@ $c = strtoupper($_POST['c']);
 if(strlen($c) == 4 && $id > 99999){
   $sql = "UPDATE `Client` SET `passcode` = '$c' WHERE `Number` = $id";
   $result = mysqli_query($dbc,$sql);
-  $err = mysql_error();
+  $err = mysqli_error($dbc);
   $show .= "$c\n$id\n$sql\n$err";
 }
 $rec = intval($_POST['rec']);
@@ -166,18 +166,18 @@ elseif($sub == 7){
       $pnum = $rec;
     }
   }
-  $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysql_error();
+  $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysqli_error($dbc);
   if(strlen($description) < 4){
     $sql = "SELECT `description`  FROM `Panels` WHERE `number` LIKE '$panel' LIMIT 1";
     $results = mysqli_query($dbc,$sql);
     $rows =  mysqli_num_rows($results);
-    $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysql_error();
+    $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysqli_error($dbc);
     if($rows == 1){list($description) = mysqli_fetch_array($results, MYSQLI_NUM);}
     else{
       $sql = "SELECT `description`  FROM `importpanels` WHERE `number` LIKE '$panel' LIMIT 1";
       $results = mysqli_query($dbc,$sql);
       $rows =  mysqli_num_rows($results);
-      $show .= "\nRows=$rows, $sql\n" .  mysql_error();
+      $show .= "\nRows=$rows, $sql\n" .  mysqli_error($dbc);
       if($rows == 1){list($description) = mysqli_fetch_array($results, MYSQLI_NUM);}
     }
   }
@@ -186,25 +186,25 @@ elseif($sub == 7){
     $results = mysqli_query($dbc,$sql);
     $rows =  mysql_affected_rows($results);
     if($rows == 1){$pnum = mysql_insert_id($results);}
-    $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysql_error();
+    $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysqli_error($dbc);
     $sql = "INSERT INTO `amx_portal`.`Panels` (`id`, `number`, `description`, `fee`, `tests`, `ige`, `igg4`) VALUES (NULL, '$panel', '$description', '0', '0', '0', '0');";
     $results = mysqli_query($dbc,$sql);
     $rows =  mysql_affected_rows($results);
-    $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysql_error();
+    $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysqli_error($dbc);
     $sql = "INSERT INTO `amx_portal`.`clientPanels` (`rec`, `include`, `client`, `panel`, `number`, `description`, `fee`) VALUES (NULL, '0', '$id', '$panel', '0', '$description', '0');";
     $results = mysqli_query($dbc,$sql);
     $rows =  mysql_affected_rows($results);
     if($rows == 1){$pnum = mysql_insert_id($results);}
-    $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysql_error();
+    $show .= "\nRows=$rows, number=$pnum, $sql\n" .  mysqli_error($dbc);
   }
   $sql = "UPDATE `clientPanels` SET `number`='$pnum',`description`='$description' WHERE `client`='$id' AND `panel`='$panel'";
   $results = mysqli_query($dbc,$sql);
   $rows =  mysql_affected_rows($results);
-  $show .= "\n202->Rows=$rows, number=$pnum, $sql\n" .  mysql_error();
+  $show .= "\n202->Rows=$rows, number=$pnum, $sql\n" .  mysqli_error($dbc);
   $sql = "SELECT `code`,`type`  FROM `importpaneltests` WHERE `number` LIKE '$panel'";
   $results = mysqli_query($dbc,$sql);
   $rows =  mysqli_num_rows($results);
-  $show .= "\n206->Rows=$rows, number=$pnum, $sql\n" .  mysql_error();
+  $show .= "\n206->Rows=$rows, number=$pnum, $sql\n" .  mysqli_error($dbc);
   while(list($code,$type) =  mysqli_fetch_array($results, MYSQLI_NUM)){
     $ptests[$code][$type] = $type;
   }

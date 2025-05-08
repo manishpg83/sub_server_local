@@ -34,11 +34,11 @@ if ($fp ) {
   $error = mysqli_error($dbc);
   $sql = "SET time_zone = '-5:00';";
   @mysqli_query($dbc,$sql);
-  echo mysql_error();
+  echo mysqli_error($dbc);
   while (($text= fgets($fp , 4096)) !== false) {
     $sql = $text;
     $results = @mysqli_query($dbc,$sql);
-    $error = mysql_error(); 
+    $error = mysqli_error($dbc); 
     if (strlen($error) > 0 ){
       if (substr($text,0,1) == 'I') {
         $insert = true;
@@ -51,7 +51,7 @@ if ($fp ) {
         print "</pre>\n<h3 class=\"err\"> Error: $error </h3><pre>";
         echo "<pre class=\"red\">$text</pre>";
         fwrite($fpe,$txt);
-        $error = mysql_error(); 
+        $error = mysqli_error($dbc); 
         if (strlen($error) > 0){
         }
       }

@@ -263,7 +263,7 @@ $exp = array();
 	
 	$sql = "INSERT INTO `isl_contact`.`Profile` (`number`, `TimeStamp`, `ip`, `business`, `addr`, `city`, `email`, `exp`, `web`, `name`, `note`, `link`, `contact`, `source`, `id`, `mobile`, `state`, `attributes`, `fuDate`, `fuTime`) VALUES ($phone, CURRENT_TIMESTAMP, '', '$name', '$address', '$city $state $zip', '', '', '$web', '', '', '', '', '', NULL, '', '0', '0', NULL, NULL);";
 //	mysqli_query($dbc,$sql);
-	if (mysqli_errno($dbc) > 0 && mysqli_errno($dbc) != 1062) {echo "<h3>" . mysql_error() . "<br/>$sql</h3>";}
+	if (mysqli_errno($dbc) > 0 && mysqli_errno($dbc) != 1062) {echo "<h3>" . mysqli_error($dbc) . "<br/>$sql</h3>";}
 	fwrite($fp,$data);
 	echo $data;
 	if (!$end){break;}

@@ -8,12 +8,12 @@ $dbc=mysqli_connect('localhost','amx',$data);
 $client = intval($_GET['c']);
 $sql = "SELECT `Name`, `RecordsCRC`, `Session`,`Phone`,`Fax`,`Address`,`Address2`,`City`,`State`,`PostalCode` FROM `Client`  WHERE `Number` = $client LIMIT 1";
 $results = @mysqli_query($dbc,$sql);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 $cliErr =  "<h4>$error <br/>$sql</h4>";
 $rows = @mysqli_num_rows($results);
 if (strlen($error) == 0 AND $rows == 1){
   $foodsTable = "`Foods$client`";
-  $cli = mysqli_fetch_array($results, MYSQL_BOTH);
+  $cli = mysqli_fetch_array($results, MYSQLI_BOTH);
   $clientName = htmlspecialchars($cli[0]);
   $clientAddress = $cli[5];
   if (strlen($cli[6]) > 0){$clientAddress .= '<br/>' . $cli[6];}
@@ -88,7 +88,7 @@ if (isset($_GET['sub'])){
   foreach ($row as $k => $v){
   $sql = "UPDATE Foods$client SET  `Day`= '$v[0]',`Birch`='$v[1]', `Sycamore`='$v[2]', `Mugwort`='$v[3]', `Grasses`='$v[4]', `Latex`='$v[5]' WHERE `id`=$k";
     @mysqli_query($dbc,$sql);
-	$error = mysql_error();
+	$error = mysqli_error($dbc);
 	if (strlen($error) > 0){echo "$error<br>$sql";break;}
   }
 }
@@ -117,7 +117,7 @@ $bg = 1;
 $sql = "SELECT `id`,`Family`, `Type`, `Description`,`Day`,`Birch`, `Sycamore`, `Mugwort`, `Grasses`, `Latex`,`alpha`,`Code` FROM $foodsTable WHERE `alpha` > 0 ORDER BY `alpha` ASC, `Group` ASC,`Type` ASC, `Description` ASC";
 
         $results = @mysqli_query($dbc,$sql);
-//		if (mysql_errno > 0){echo mysql_error() . '<br/>' . $sql;}
+//		if (mysql_errno > 0){echo mysqli_error($dbc) . '<br/>' . $sql;}
 //		echo $sql;
         while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
 		  $group = $row[10]; 

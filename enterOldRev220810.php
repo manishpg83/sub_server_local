@@ -21,7 +21,7 @@ if($code == $accession){
 //echo "$code == $accession, client: $client\n";exit;
 
 
-$error = mysql_error();
+$error = mysqli_error($dbc);
 
 if ($sub == 9){
   $id = intval($_POST['id']);
@@ -60,7 +60,7 @@ if ($sub == 0){
   $hash = hash('ripemd320',$passcode);
   $sql =  "SELECT *  FROM `Client` WHERE `Number` = $id LIMIT 1";
   $results = mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   $rows = mysqli_num_rows($results);
   if (strlen($error) == 0 && $rows == 1) {
     $clientNumber = $id;
@@ -170,7 +170,7 @@ else{
   }
   $sql =  "SELECT *  FROM `Client` WHERE `Number` = $id LIMIT 1";
   $results = mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   $rows = mysqli_num_rows($results);
   if (strlen($error) == 0 && $rows == 1) {
     $cli = mysqli_fetch_array($results, MYSQLI_NUM);
@@ -425,13 +425,13 @@ $cid = 1;
 //if($sortVal == 5){$cid = 1;}
 $SQL = "SELECT COUNT(`Status`),`Status` FROM `Patient` WHERE $where GROUP BY `Status` ";
 $results = @mysqli_query($dbc,$SQL);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 while ($row = @mysqli_fetch_array($results, MYSQLI_NUM)) {$statusCnt[$row[1]] = $row[0];}
 $statusCnt['R'] = $statusCnt['L'] + $statusCnt['V'];
 $statusCnt['T'] = $statusCnt['W'] + $statusCnt['I'];
 $sql = "SELECT SQL_CALC_FOUND_ROWS `Client`, `Patient`, `Date`, `Status`, `Link`, `ClientID`, `Last`, `First`,`Attributes`, `DoB`,`Done` FROM `Patient` WHERE $where $sort";
 $results = @mysqli_query($dbc,$sql);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 $rows = @mysqli_num_rows($results);
 $more = @mysqli_query($dbc,"SELECT FOUND_ROWS()");
 if ($rows == 0){echo "<h4>No $type</h4></div>";}

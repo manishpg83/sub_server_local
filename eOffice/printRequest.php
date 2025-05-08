@@ -277,7 +277,7 @@ Bill Patient</div><br/>
 
 EOT;
 $sql = "SELECT `Code`, `description` FROM `Rast` WHERE  1 ORDER BY `description`";  
-$results = mysqli_query($link,$sql);
+$results = mysqli_query($dbc,$sql);
 while(list($code,$description) =  mysqli_fetch_array($results, MYSQLI_NUM)){$sort[] = $code;$desc[$code] = $description;$descriptions[$code][1] = 0;$matches[$code] = 0;$rank[10][$code] = $num;$num++;}
 $sort = array_flip($sort);
 $cnt = 0;
@@ -421,12 +421,12 @@ window.onload = init;
 </script>
 EOT;
 }
-$specimen = mysql_real_escape_string($specimen);
-$physician = mysql_real_escape_string($physician);
-$request = mysql_real_escape_string(json_encode($ordered));
+$specimen = mysqli_real_escape_string($dbc,$specimen);
+$physician = mysqli_real_escape_string($dbc,$physician);
+$request = mysqli_real_escape_string($dbc,json_encode($ordered));
 $sql = "UPDATE `history` SET `specimen`='$specimen', `collection` = '$collection',`physician` = '$physician',`idc` = '$idc', `request` = '$request' WHERE `id` = '$rec'";
 mysqli_query($dbc,$sql);
-if(mysqli_errno($dbc) > 0){echo mysql_error() . "<br/>\n$sql";}
+if(mysqli_errno($dbc) > 0){echo mysqli_error($dbc) . "<br/>\n$sql";}
 
 echo '</body></html>';
 ?>

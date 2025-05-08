@@ -19,10 +19,10 @@ EOT;
 ob_flush();
 $dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
 @mysqli_select_db($dbc,'amx_portal');
-echo mysql_error();
+echo mysqli_error($dbc);
 $sql ="SELECT `alpha` ,`Description` FROM `Foods` ORDER BY `alpha` ASC, `Description` ASC ";
 $results = mysqli_query($dbc,$sql);
-echo mysql_error();
+echo mysqli_error($dbc);
 while ($row = mysqli_fetch_array($results, MYSQLI_NUM)){
   echo "<form action=\"food.php\" method=\"post\"><input name=\"s\" value=\"$row[1]\" type=\"hidden\"><button><div class=\"button\"> $row[1] </div></button></form>";
 }

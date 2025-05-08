@@ -84,10 +84,10 @@ foreach($data as $code => $num){
   $foods['limit'] = $limit;
   $today = date('Y-m-d');
   $jsn = json_encode($foods);
-  $jsn = mysql_real_escape_string($jsn);
+  $jsn = mysqli_real_escape_string($dbc,$jsn);
   $sqlf = "UPDATE `history` SET `foods`='$jsn' WHERE `id` = $rec";
   mysqli_query($dbc,$sqlf);
-  if(mysql_errno > 0){$err = "$sqlf\n" . mysql_error();}
+  if(mysql_errno > 0){$err = "$sqlf\n" . mysqli_error($dbc);}
 }
 */
 if(true){  // hide array init

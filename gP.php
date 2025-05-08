@@ -20,12 +20,12 @@ $b = $_GET['p'];
   settype($c,"integer");
 if ($c < 100000) $c = 999999 ;
 $dbc=mysqli_connect('localhost','amx','xD1GkuK7a7DK8!');
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if (strlen($error) > 0){
   print "DBC: $error <br/>";
 }
 mysqli_select_db($dbc,'amx_portal');
-$error = mysql_error();
+$error = mysqli_error($dbc);
   if (strlen($error) > 0){
     print "<h2>SEL: $error </h2>";
   }
@@ -43,7 +43,7 @@ $loops = 16;
 while ($loops--) {
 $sql = "SELECT *  FROM `Words` WHERE 1";
 $results = @mysqli_query($dbc,$sql);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if (strlen($error > 0)) {
 echo "<p>$error</p>";
 }
@@ -89,13 +89,13 @@ function ipwhere($ip) {
   $code=($numbers[0] * 16777216) + ($numbers[1] * 65536) + ($numbers[2] * 256) + ($numbers[3]);  
   $sql = "SELECT `id` FROM `ipLocations` WHERE `ipHigh` >=$code LIMIT 1";
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   if (strlen($error) == 0){
     $row = mysqli_fetch_array($results, MYSQLI_NUM);
 	// echo "<p>ROWS= $row[0] and $row[1]</p>";
     $sql = "SELECT * FROM `cities` WHERE `id` = $row[0] LIMIT 1";
 	$results = @mysqli_query($dbc,$sql);
-    $error = mysql_error();
+    $error = mysqli_error($dbc);
     if (strlen($error) == 0){
       $row = mysqli_fetch_array($results, MYSQLI_NUM);
       $location = " $row[3]  $row[2]  $row[4]   $row[1]";

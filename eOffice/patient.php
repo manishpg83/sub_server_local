@@ -24,7 +24,7 @@ settype($Client,"integer");
 
 $sql = "SELECT *  FROM `Patient` WHERE `Client` = $Client AND DATE_SUB( CURDATE( ) , INTERVAL $days DAY ) <= `Date` ORDER BY `Date` LIMIT 0 , 50";
 $results = mysqli_query($link,$sql);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if (strlen($error) > 0){
   print "FETCH: $error <br/>";
 }

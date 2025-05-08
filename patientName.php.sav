@@ -21,12 +21,12 @@ settype($Client,"integer");
 $Last = "'" . strtoupper(trim($Last)) . "%'";
 
 $dbc=mysqli_connect('localhost','amx','yes12yes');
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if (strlen($error) > 0){
   print "DBC: $error <br/>";
 }
 mysqli_select_db($dbc,'amx_portal');
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if (strlen($error) > 0){
   print "SEL: $error <br/>";
 }
@@ -35,7 +35,7 @@ print "<p>Last Name=$Last</p>";
 
 $sql = "SELECT *  FROM `Patient` WHERE `Client` = $Client  AND `Last` LIKE $Last AND DATE_SUB( CURDATE( ) , INTERVAL $days DAY ) <= `Date`ORDER BY `Last` LIMIT 0 , 1000";
 $results = @mysqli_query($dbc,$sql);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if (strlen($error) > 0){
   print "FETCH: $error <br/>";
 }

@@ -412,7 +412,7 @@ $animal = array('dog','cat','bird','horse',' hamster ','rabbit','goat','pig','ch
 if($sub == 4){
   $sqlf = "SELECT `client`, `date`, `last`, `first`, `dob`,`state`, `gender`, `history` FROM `history` WHERE `id` = $rec";
   $results = mysqli_query($dbc,$sqlf);
-  $sqlf .= "\n" . mysql_error();
+  $sqlf .= "\n" . mysqli_error($dbc);
   list($client,$date,$last,$first,$dob,$state,$gender,$jsn) = @mysqli_fetch_array($results, MYSQLI_NUM);
 
   $strdob = date('M j, Y',strtotime($dob));
@@ -462,7 +462,7 @@ $exit = "<form class=\"inline\" action=\"https://dev.amxemr.com/requestForm.php\
 elseif($sub == 1 || $sub == 99){
   $sqlf = "SELECT `client`, `date`, `last`, `first`, `dob`,`state`,`zip` `gender` FROM `history` WHERE `id` = $rec";
   $results = mysqli_query($dbc,$sqlf);
-  $sqlf .= "\n" . mysql_error();
+  $sqlf .= "\n" . mysqli_error($dbc);
   list($client,$date,$last,$first,$dob,$state,$zip,$gender) = @mysqli_fetch_array($results, MYSQLI_NUM);
 
   
@@ -497,7 +497,7 @@ if(isset($_POST['c92'])){$animals[] = $animal[15];}
 if(isset($_POST['c93'])){$animals[] = $animal[16];}
 //$zip = intval($_POST['zip']);
 //
-//echo mysql_error();
+//echo mysqli_error($dbc);
 
 
 if(isset($_POST['c1'])){$mother = '<circle cx="114.141" cy="421.263" r="36.305"/><path d="m 109.114,154.839 0,-126.2304 c -0.19,-22.93453 -34.3281,-22.93453 -34.6296,0 l 0,126.2304 -44.6836,0 48.0349,168.679 -7.8198,0 -27.927,-96.069 C 35.0288,206.202 6.29761,214.804 13.0444,237.503 L 44.323,341.392 c 3.5969,11.93 18.6331,32.997 44.6836,33.512 l 50.2694,0 c 25.3,-0.515 40.398,-21.761 44.683,-33.512 l 42.15062,-107.36792 c 6.345,-22.587 -22.159,-31.859 -29.045,-10.054 L 158.266,323.518 l -8.937,0 49.152,-168.679 -45.8,0 0,-126.2304 c 0.357,-22.93453 -33.647,-22.82198 -33.513,0 l 0,126.2304 z"/>';}
@@ -815,10 +815,10 @@ echo "\n==============\n$show";
 }
 if($sub == 1){
   $jsn = json_encode($posted);
-  $jsn = mysql_real_escape_string($jsn);
+  $jsn = mysqli_real_escape_string($dbc,$jsn);
   $sqlf = "UPDATE `history` SET `history`='$jsn' WHERE `date` = '$today' AND `last` = '$last' AND `first`= '$first'";
   mysqli_query($dbc,$sqlf);
-  if(mysql_errno > 0){$err = "$sqlf\n" . mysql_error();echo $err;}
+  if(mysqli_errno($dbc) > 0){$err = "$sqlf\n" . mysqli_error($dbc);echo $err;}
 }
 //var_export($inhalantFoods);
 //var_export($history);

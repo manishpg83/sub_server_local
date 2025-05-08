@@ -30,7 +30,7 @@ if($id > 199999 && $id < 300000){
     list($name) = mysqli_fetch_array($results, MYSQLI_NUM);
     $client = "<h3>$name</h3><input type=\"hidden\" name=\"id\" value=\"$id\" />";
   }
-  else{$client = mysql_error() . '<br/>' . $sql ;}
+  else{$client = mysqli_error($dbc) . '<br/>' . $sql ;}
 }
 $ratedCount = 0;
 

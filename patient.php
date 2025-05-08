@@ -20,12 +20,12 @@ settype($Client,"integer");
 
 
 $dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if (strlen($error) > 0){
   print "DBC: $error <br/>";
 }
 mysqli_select_db($dbc,'amx_portal');
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if (strlen($error) > 0){
   print "SEL: $error <br/>";
 }
@@ -35,7 +35,7 @@ if (strlen($error) > 0){
 
 $sql = "SELECT *  FROM `Patient` WHERE `Client` = $Client AND DATE_SUB( CURDATE( ) , INTERVAL $days DAY ) <= `Date` ORDER BY `Date` LIMIT 0 , 50";
 $results = @mysqli_query($dbc,$sql);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if (strlen($error) > 0){
   print "FETCH: $error <br/>";
 }

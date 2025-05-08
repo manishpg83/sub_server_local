@@ -64,7 +64,7 @@ else{
 
   $sql = "SELECT `client`,`date`,`last`,`first`,`dob`,`address`,`city`,`state`,`zip`,`gender`,`history`,`foods` FROM `history` WHERE `id` = $rec";
   $results = mysqli_query($link,$sql);
-  $sqlf .= "\n" . mysql_error();
+  $sqlf .= "\n" . mysqli_error($link);
   list($client,$date,$last,$first,$dob,$address,$city,$state,$zip,$gender,$history,$foods ) = @mysqli_fetch_array($results, MYSQLI_NUM);  
   $sql = "SELECT `Name`,`passcode`  FROM `Client` WHERE `Number` LIKE '$client' LIMIT 1";
   $results = mysqli_query($link,$sql);
@@ -97,7 +97,7 @@ if($sub == 32){  // Done with History, Save
   $history = mysqli_real_escape_string($jsn);
   $sql = "UPDATE `history` SET `history`='$history' WHERE `id` = '$rec' ";
   mysqli_query($link,$sql);
-  if(mysql_errno > 0){$err = "$sqlf\n" . mysql_error();echo $err;}
+  if(mysql_errno > 0){$err = "$sqlf\n" . mysqli_error($link);echo $err;}
   file_put_contents('history.log',"$ip $sqlf\n$err\n$jsn\n\n",FILE_APPEND);
 }
 if($sub == 0 && $match && $dobOK && $stateOK && $lastOK){
@@ -106,10 +106,10 @@ if($sub == 0 && $match && $dobOK && $stateOK && $lastOK){
   $time = date('Y-m-d g:i a');
   $sql = "INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`, `gender`) VALUES (NULL, $client, '$today', '$last', '$first', '$dob','$address','$city','$state','$zip', '$gender')";
   mysqli_query($link,$sql);
-  if(mysql_errno > 0){$err = "$sqlf\n" . mysql_error();}
+  if(mysql_errno > 0){$err = "$sqlf\n" . mysqli_error($link);}
   $ndx = intval(mysql_insert_id());
   if($ndx > 0){$rec = $ndx;}
-  $err = $sqlf . "\n" . mysql_error();
+  $err = $sqlf . "\n" . mysqli_error($link);
   file_put_contents('history.log',"$ip $time $err\n\n",FILE_APPEND);
 
   include('/home/amx/public_html/h/index.php');
@@ -212,10 +212,10 @@ if( $sub == 64){   // PATIENT DONE WITH FOODS, SAVE
   }
   $jsnFood = json_decode($jsn,1);
   $save = var_export($jsnFood,TRUE);
-  $foods = mysql_real_escape_string($jsn);
+  $foods = mysqli_real_escape_string($link,$jsn);
   $sql = "UPDATE `history` SET `foods`='$foods' WHERE `id` = '$rec' ";
   mysqli_query($link,$sql);
-  if(mysql_errno > 0){$err = "$sql\n" . mysql_error();}
+  if(mysql_errno > 0){$err = "$sql\n" . mysqli_error($link);}
   include('/home/amx/public_html/h/dashboard.php');
   exit;
 }

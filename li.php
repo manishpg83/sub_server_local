@@ -28,7 +28,7 @@ if ((hash('ripemd320',$passcode) == '6732f3c024fe3c3c1ccd7dbe5d0fa7d4a53c516f800
    $hash = hash('ripemd320',$passcode);
       $sql =  "SELECT *  FROM `Client` WHERE `Number` = $id LIMIT 1";
       $results = mysqli_query($dbc,$sql);
-      $error = mysql_error();
+      $error = mysqli_error($dbc);
       $rows = mysqli_num_rows($results);
       $validID = false;
       if (strlen($error) == 0 && $rows == 1) {
@@ -252,12 +252,12 @@ $timeMax = 0;
 //  $sql = "SELECT COUNT(*),`ip`,`TimeStamp` FROM `access` WHERE `ip` LIKE '$ip' AND `Pass` = 0 AND `TimeStamp` > CURRENT_TIMESTAMP ORDER BY `TimeStamp`";
   $sql = "SELECT `ip`,`TimeStamp` FROM `access` WHERE `ip` LIKE '$ip' AND `TimeStamp` > SUBTIME(CURRENT_TIMESTAMP, '24:00:00') order by `TimeStamp` ASC";
   $results = @mysqli_query($dbc,$sql);
- // echo mysql_error() . $sql;
+ // echo mysqli_error($dbc) . $sql;
   $rows = mysqli_num_rows($results);
 
   $sql = "SELECT `ip`,`TimeStamp`  FROM `access` WHERE `ip` LIKE '$ip'  AND `TimeStamp`  > CURRENT_TIMESTAMP order by `TimeStamp` ASC";
   $results = @mysqli_query($dbc,$sql);
- // echo mysql_error() . $sql;
+ // echo mysqli_error($dbc) . $sql;
   $rows = mysqli_num_rows($results);
   if ($rows == 1) {
     $ipCount = 1;
@@ -361,9 +361,9 @@ settype($strike3,double);
  // @mysqli_query($dbc,$sql);
  // $sql = sprintf("INSERT INTO `amx_portal`.`access` (`Client`, `TimeStamp`, `ip`,`Strike3`,`Pass`) VALUES (%d, CURRENT_TIMESTAMP, '$ip',$strike3,$rows)",$id);
  // mysqli_query($dbc,$sql);
- // echo mysql_error();echo '<p>' . $sql;
+ // echo mysqli_error($dbc);echo '<p>' . $sql;
  // mysqli_query($dbc,sprintf("INSERT INTO `amx_portal`.`access` (`Client`, `TimeStamp`, `ip`,`Strike3`,`Pass`) VALUES (%d,ADDTIME(CURRENT_TIMESTAMP , '0:0:06') , '$ip',$strike3,$rows)",$id));
-  // echo '<br>'.$sql .'<br>' . mysql_error();
+  // echo '<br>'.$sql .'<br>' . mysqli_error($dbc);
 
  $find = preg_match_all('/[\x21-\x2F]|[\x3A-\x40]|[\x5B-\x60]|[\x7B-\x7F]/',$SAVE_ID,$matches, PREG_SET_ORDER);
 settype($find,int);
@@ -420,13 +420,13 @@ function ipwhere($ip) {
   $code=($numbers[0] * 16777216) + ($numbers[1] * 65536) + ($numbers[2] * 256) + ($numbers[3]);  
   $sql = "SELECT `id` FROM `ipLocations` WHERE `ipHigh` >=$code LIMIT 1";
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   if (strlen($error) == 0){
     $row = mysqli_fetch_array($results, MYSQLI_NUM);
 	// echo "<p>ROWS= $row[0] and $row[1]</p>";
     $sql = "SELECT * FROM `cities` WHERE `id` = $row[0] LIMIT 1";
 	$results = @mysqli_query($dbc,$sql);
-    $error = mysql_error();
+    $error = mysqli_error($dbc);
     if (strlen($error) == 0){
       $row = mysqli_fetch_array($results, MYSQLI_NUM);
       $location = " $row[3]  $row[2]  $row[4]   $row[1]";

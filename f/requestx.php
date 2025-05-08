@@ -63,7 +63,7 @@ if($id > 199999 && $id < 300000){
     list($name) = mysqli_fetch_array($results, MYSQLI_NUM);
     $client = "<h3 class=\"client\">$name</h3><input type=\"hidden\" name=\"id\" value=\"$id\" />";
   }
-  else{$client = mysql_error() . '<br/>' . $sql ;}
+  else{$client = mysqli_error($dbc) . '<br/>' . $sql ;}
 }
 $checked = array_fill(1,5,0);
 header('Content-Type: text/html; charset=utf-8');

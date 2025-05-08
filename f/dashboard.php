@@ -127,7 +127,7 @@ if($sub == 0 && $rec == 0){$sub = 4;$rec = 198;}
 if($ip == '70.171.10.12' && $sub == 0){$bw = 'fff';$comment = '';$sub = 99;$rec = 198;}else{$bw = 'fff';$comment = '';}
   $sqlf = "SELECT `client`, `date`, `last`, `first`, `dob`,`state`, `gender`, `history` FROM `history` WHERE `id` = $rec";
   $results = mysqli_query($dbc,$sqlf);
-  $sqlf .= "\n" . mysql_error();
+  $sqlf .= "\n" . mysqli_error($dbc);
   list($client,$date,$last,$first,$dob,$state,$gender,$jsn) = @mysqli_fetch_array($results, MYSQLI_NUM);
   $strdob = date('M j, Y',strtotime($dob));
   $date = date('M j, Y',strtotime($date));

@@ -8,17 +8,17 @@
 
 if ( $_SERVER['REMOTE_ADDR'] == '99.3.148.16' || $_SERVER['REMOTE_ADDR'] == '173.162.23.21' ){
 $dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if (strlen($error) > 0){
   print "DBC: $error <br/>";
 }
 mysqli_select_db($dbc,'amx_portal');
-$error = mysql_error();
+$error = mysqli_error($dbc);
 
 $fp = fopen('Patients035x.csv',"w");
 $sql = "SELECT `Patient`, `Last`,`First`,`Date` FROM `Patient` WHERE `Client` = 200035";
 $results = @mysqli_query($dbc,$sql);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if (strlen($error > 0)) {
 echo "<p>$error</p>";
 }

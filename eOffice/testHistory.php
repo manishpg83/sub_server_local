@@ -128,7 +128,7 @@ $first = 'john';
   $history0 = mysqli_real_escape_string($link,$jsn);
   $sql = "INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`,`history`) VALUES (NULL, $client, '$today', '$last', '$first', '$dob','$address','$city','$state','$zip','$history0')";
   mysqli_query($link,$sql);
-  if(mysql_errno > 0){$err = "$sql\n" . mysql_error();}
+  if(mysql_errno > 0){$err = "$sql\n" . mysqli_error($dbc);}
   $ndx = intval(mysqli_insert_id($link));
 */
 $categories = array(9,1,1,2,2,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9);

@@ -183,11 +183,11 @@ ob_flush();
     $foods = $food;
     $foods['limit'] = $limit;
     $fp = fopen($id . 'food.jsn','w');
-	$jsn = mysql_real_escape_string(json_encode($foods));
+	$jsn = mysqli_real_escape_string($dbc,json_encode($foods));
     fwrite($fp,$jsn);
 	$sqlf = "INSERT INTO `amx_portal`.`history` (`id`, `client`, `date`, `last`, `first`, `dob`, `gender`, `foods`) VALUES (NULL, $id, '$today', '$last', '$first', '$dob', '$gender', '$jsn');";
 	mysqli_query($dbc,$sqlf);
-	$sqlf .= "\n" . mysql_error() . "\nEnd";
+	$sqlf .= "\n" . mysqli_error($dbc) . "\nEnd";
   }
 
 $checkbox = array();

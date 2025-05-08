@@ -20,14 +20,14 @@ if (is_numeric($id) && $id > 99999 && $id < 1000000) {
   $passcode = $_POST['pw'];
   $passcode = stripcslashes($passcode);
   $dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   if (strlen($error) == 0) {
     mysqli_select_db($dbc,'amx_portal');
-    $error = mysql_error();
+    $error = mysqli_error($dbc);
     if (strlen($error) == 0){
       $sql = "SELECT `ip`, `Session`,`Updated`,`Name`,`Session`  FROM `Client` WHERE `Number` = $id ";
       $results = @mysqli_query($dbc,$sql);
-      $error = mysql_error();
+      $error = mysqli_error($dbc);
       $rows = mysqli_num_rows($results);
       $validID = false ;
       if (strlen($error == 0 && $rows == 1)) {
@@ -255,7 +255,7 @@ else {
 }
 $results = array(); 
 $results = @mysqli_query($dbc,$sql);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 $el = strlen($error);
 $rows = @mysqli_num_rows($results);
 
@@ -413,7 +413,7 @@ else { echo'
 if (false) {
   $sql="SELECT COUNT(*) AS `ROWS`, `Test`.`Score`,  SUBSTR( `Test`.`Code`,1,1) FROM Patient, Test WHERE ((`Patient`.`Client` =$id) AND (`Patient`.`Date` > DATE_SUB( CURDATE( ) , INTERVAL $days DAY) AND (`Patient`. `Status` = 'C')) AND (`Test`.`Assession` =`Patient`.`Patient`) AND   (`Test`.`Type` = 1 ) AND (`Test`.`Score`  BETWEEN '1' AND '6')) GROUP BY SUBSTR( `Test`.`Code`,1,1) ,  `Test`.`Score` ORDER BY  `ROWS`  DESC LIMIT 20";
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   if (strlen($error) == 0){
     echo '</div><div class="main"><h2>Past Year IgE Results</h2><h2> with Score 1+</h2><table class="cntr"><tr ><th># = Score</th><th  class="cntr">Score</th><th  class="status">Allergen</th></tr>';
     while ($row = mysqli_fetch_array($results, MYSQLI_NUM) AND $row[0] > 3) {
@@ -424,7 +424,7 @@ if (false) {
 //}
 //  $sql="SELECT COUNT(*) AS `ROWS`, `Test`.`Score`,  SUBSTR( `Test`.`Code`,1,1) FROM Patient, Test WHERE ((`Patient`.`Client` =$id) AND (`Patient`.`Date` > DATE_SUB( CURDATE( ) , INTERVAL 333 DAY) AND (`Patient`. `Status` = 'C')) AND (`Test`.`Assession` =`Patient`.`Patient`) AND   (`Test`.`Type` = 1 ) AND (`Test`.`Score`  BETWEEN '1' AND '6')) GROUP BY SUBSTR( `Test`.`Code`,1,1) ,  `Test`.`Score` ORDER BY  `ROWS`  DESC LIMIT 20";
 //  $results = @mysqli_query($dbc,$sql);
-//  $error = mysql_error();
+//  $error = mysqli_error($dbc);
 //  if (strlen($error) == 0){
 //    echo '</div><div class="main"><h2>Past Year IgE Results</h2><h2> with Score 1+</h2><table class="cntr"><tr ><th># = Score</th><th  class="cntr">Score</th><th  class="status">Allergen</th></tr>';
 //    WHILE ($row = mysqli_fetch_array($results, MYSQLI_NUM) AND $row[0] > 3) {

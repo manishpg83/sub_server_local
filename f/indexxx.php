@@ -79,7 +79,7 @@ if($sub == 4){
   if($rec == 0){$rec = intval($_GET['rec']);}
   $sqlf = "SELECT `client`, `date`, `last`, `first`, `dob`, `gender`, `foods` FROM `history` WHERE `id` = $rec";
   $results = mysqli_query($dbc,$sqlf);
-  $sqlf .= "\n" . mysql_error();
+  $sqlf .= "\n" . mysqli_error($dbc);
   list($client,$date,$last,$first,$dob,$gender,$jsn) = @mysqli_fetch_array($results, MYSQLI_NUM);
   $strdob = date('M j, Y',strtotime($dob));
   $date = date('M j, Y',strtotime($date));
@@ -141,10 +141,10 @@ header('Cache-Control: max-age=120');
   $today = date('Y-m-d');
   $dob = date('Y-m-d',strtotime($strdob));
   $jsn = json_encode($foods);
-  $jsn = mysql_real_escape_string($jsn);
+  $jsn = mysqli_real_escape_string($dbc,$jsn);
   $sqlf = "INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`, `gender`, `foods`) VALUES (NULL, $client, '$today', '$last', '$first', '$dob','$address','$city`\','$state','$zip', '$gender', '$jsn');";
   mysqli_query($dbc,$sqlf);
-  if(mysql_errno > 0){$err = "$sqlf\n" . mysql_error();}}
+  if(mysql_errno > 0){$err = "$sqlf\n" . mysqli_error($dbc);}}
   
   $ndx = intval(mysql_insert_id());
   if($ndx > 0){$rec = $ndx;}
@@ -436,7 +436,7 @@ if($sub == 1 && $dobOK){
   if(mysql_errno == 0){$rec = mysql_insert_id();}
   $sqlf = "UPDATE `history` SET `dob`='$dob',`address`='$address',`city`='$city',`state`='$state',`zip`='$zip',`gender`='$gender' WHERE `date` = '$today' AND `last` = '$last' AND `first`= '$first'";
   mysqli_query($dbc,$sqlf);
-  if(mysql_errno > 0){$err .= "$sqlf \n" . mysql_error();}
+  if(mysql_errno > 0){$err .= "$sqlf \n" . mysqli_error($dbc);}
 
 
 echo <<<EOT
@@ -717,11 +717,11 @@ elseif($sub == 4){
     $foods = $food;
     $foods['limit'] = $limit;
     $fp = fopen($client . 'food.jsn','w');
-	$jsn = mysql_real_escape_string(json_encode($foods));
+	$jsn = mysqli_real_escape_string($dbc,json_encode($foods));
     fwrite($fp,$jsn);
     $sqlf = "INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`, `gender`, `foods`) VALUES (NULL, $client, '$today', '$last', '$first', '$dob','$address','$city`\','$state','$zip', '$gender', '$jsn');";
 	mysqli_query($dbc,$sqlf);
-	if(mysql_errno > 0){$err = "$sqlf\n" . mysql_error();echo $err;}
+	if(mysql_errno > 0){$err = "$sqlf\n" . mysqli_error($dbc);echo $err;}
 	$rec = mysql_insert_id();
   }
 echo <<<EOT

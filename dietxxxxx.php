@@ -118,7 +118,7 @@ if ($ip == '99.3.150.55'){$rows = 1;}
 if ($clientNum > 99999 && $clientNum < 1000000) {
   $sql = "SELECT COUNT(*) FROM `access` WHERE `ip` = '$ip' AND `Client`= $clientNum AND `Value` = 1";
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   $cliErr =  "<h4>$error <br/>$sql</h4>";
   $rows = @mysqli_num_rows($results); 
 }
@@ -165,10 +165,10 @@ if (strlen($patient) == 6){
   @mysqli_select_db($dbc,'amx_portal');
   $sql = "SELECT `Client`,`Last`, `First`, `ClientID`,`Attributes` FROM `Patient` WHERE `Patient` = $patient";
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   $rows = @mysqli_num_rows($results);
   if (strlen($error) == 0 AND $rows == 1){
-    $pat = mysqli_fetch_array($results, MYSQL_BOTH);
+    $pat = mysqli_fetch_array($results, MYSQLI_BOTH);
     $patState = $pat[4];
     $client = $pat[0] ;
     $clientErr = $client;
@@ -177,11 +177,11 @@ if (strlen($patient) == 6){
     $patID = $pat[3];
     $sql = "SELECT `Name`, `RecordsCRC`, `Session`,`Phone`,`Fax`,`Address`,`Address2`,`City`,`State`,`PostalCode` FROM `Client`  WHERE `Number` = $client LIMIT 1";
     $results = @mysqli_query($dbc,$sql);
-    $error = mysql_error();
+    $error = mysqli_error($dbc);
     $cliErr =  "<h4>$error <br/>$sql</h4>";
     $rows = @mysqli_num_rows($results);
     if (strlen($error) == 0 AND $rows == 1){
-      $cli = mysqli_fetch_array($results, MYSQL_BOTH);
+      $cli = mysqli_fetch_array($results, MYSQLI_BOTH);
       $clientName = htmlspecialchars($cli[0]);
       $clientAddress = $cli[5];
       if (strlen($cli[6]) > 0){$clientAddress .= '<br/>' . $cli[6];}
@@ -190,31 +190,31 @@ if (strlen($patient) == 6){
       $err .= "<br/>Client Name: $clientName<br/>";
       $sql = "SELECT * FROM `template` WHERE `Client` = 0 AND `Patient` = $patient LIMIT 1"; 
       $results = @mysqli_query($dbc,$sql);
-      $error = mysql_error();
+      $error = mysqli_error($dbc);
       $rows = @mysqli_num_rows($results);
       if (strlen($error) != 0 || $rows != 1){
         $err .= "<br/>SEL #1 PAT TPL: $error<br/>$sql<br/>";
         $sql = "SELECT * FROM `template` WHERE `Client` = $client AND `Patient` = 0 LIMIT 1"; 
         $results = @mysqli_query($dbc,$sql);
-        $error = mysql_error();
+        $error = mysqli_error($dbc);
         $rows = @mysqli_num_rows($results);
         if (strlen($error) != 0 || $rows != 1){
           $sql = "SELECT * FROM `template` WHERE `Client` = 999999 AND `Patient` = 0 LIMIT 1"; 
           $results = @mysqli_query($dbc,$sql);
-          $tpl = mysqli_fetch_array($results, MYSQL_BOTH);
+          $tpl = mysqli_fetch_array($results, MYSQLI_BOTH);
           $template[3] = $tpl;
           $sql = "INSERT INTO `amx_portal`.`template` (`Client`, `Patient`, `CutOff`, `excludeMethod`, `CrossreactivityGrocery`, `CrossreactivityDiet`, `CrossreactivityPhycian`, `CrossreactivityPatient`, `HiddenFoodPhysician`, `HiddenFoodPatient`, `ExcludeIgE`, `ExcludeIgG`, `ExcludeIgG4`) VALUES ('$client', '0','$tpl[2]', '$tpl[3]', '$tpl[4]', '$tpl[5]', '$tpl[6]', '$tpl[7]', '$tpl[8]', '$tpl[1]', '$tpl[10]', '$tpl[11]', '$tpl[12]')";
           
         }
         else{
-          $tpl = mysqli_fetch_array($results, MYSQL_BOTH);
+          $tpl = mysqli_fetch_array($results, MYSQLI_BOTH);
           $template[1] = $tpl;
         }
         $sql = "INSERT INTO `amx_portal`.`template` (`Client`, `Patient`, `CutOff`, `excludeMethod`, `CrossreactivityGrocery`, `CrossreactivityDiet`, `CrossreactivityPhycian`, `CrossreactivityPatient`, `HiddenFoodPhysician`, `HiddenFoodPatient`, `ExcludeIgE`, `ExcludeIgG`, `ExcludeIgG4`) VALUES (0, $patient, '$tpl[2]', '$tpl[3]', '$tpl[4]', '$tpl[5]', '$tpl[6]', '$tpl[7]', '$tpl[8]', '$tpl[1]', '$tpl[10]', '$tpl[11]', '$tpl[12]')";
         $results = @mysqli_query($dbc,$sql);
       }
       else{
-        $tpl = mysqli_fetch_array($results, MYSQL_BOTH);
+        $tpl = mysqli_fetch_array($results, MYSQLI_BOTH);
         $template[0] = $tpl;
       }
     }
@@ -243,7 +243,7 @@ if (strlen($patient) == 6){
 `HiddenFoodPhysician` = $tpl[8],
 `HiddenFoodPatient` = $tpl[9] WHERE `Client` = 0 AND `Patient` = $patient";
     $results = @mysqli_query($dbc,$sql);
-    $error = mysql_error();
+    $error = mysqli_error($dbc);
     if (strlen($error) > 0){
       $err .= "<br/>UPDATE ERROR PAT TPL: $error<br/>$sql<br/>";
     }
@@ -258,7 +258,7 @@ if (strlen($patient) == 6){
       $checked[12] = $check[$tpl[12]]; 
     $sql = "UPDATE `template` SET`ExcludeIgE` = $tpl[10],`ExcludeIgG` = $tpl[11],`ExcludeIgG4` = $tpl[12]  WHERE `Client` = 0 AND `Patient` = $patient";
     $results = @mysqli_query($dbc,$sql);
-    $error = mysql_error();
+    $error = mysqli_error($dbc);
     if (strlen($error) > 0){
       $err .= "<br/>UPDATE ERROR PAT TPL: $error<br/>$sql<br/>";
     }
@@ -335,7 +335,7 @@ $type[9] = 'Added';
 //                 0       1 v0         2 v6   3 v7  4 v8    5 v9
   $sql = "SELECT `Code`,`Description`,`alpha`,`Day`,`Group`,`Type` FROM `Allergens` WHERE 1 ORDER BY `alpha` ASC , `Description` ASC";
   $results = mysqli_query($dbc,$sql);
-  while ($fd = mysqli_fetch_array($results, MYSQL_BOTH)){
+  while ($fd = mysqli_fetch_array($results, MYSQLI_BOTH)){
     if (isset($foods[$fd[0]])){continue;}
     $foods[$fd[0]] = array($fd[1],0,0,0,0,0,$fd[2],$fd[3],$fd[4],$fd[5],'','','');
   }
@@ -485,7 +485,7 @@ ob_flush();
   $hideHdr = "hd.style.display = 'none';";
   $sql = "SELECT `Code`,`Description` FROM `Allergens` WHERE `Day` > 0 ORDER BY `alpha` ASC , `Description` ASC";
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   if (strlen($error) > 0){
     $err .= "<br/>SEL Allergens: $error<br/>$sql<br/>";
   }
@@ -511,7 +511,7 @@ $display[0][NULL] = 'blank';
     if (substr($k,0,1) == 'a'){
       $sql = "INSERT INTO `amx_portal`.`Test` (`Patient`, `Code`, `Type`, `Score`, `Description`,`Attributes`) VALUES ('$patient', '$code', 0, 9, '$v',0)";
       mysqli_query($dbc,$sql);
-      if (mysql_error() == 0){
+      if (mysqli_error($dbc) == 0){
         $add = "<h2><br/>$v Added</h2>";
       }
       else {
@@ -533,7 +533,7 @@ $display[0][NULL] = 'blank';
             $row = mysqli_fetch_array($results, MYSQLI_NUM);
             $sql = "INSERT INTO `amx_portal`.`Test` (`Patient`, `Code`, `Type`, `Score`, `Description`,`Attributes`) VALUES ('$patient', '$row[1]', 9, 9, '$row[2]',0)";
             mysqli_query($dbc,$sql);
-            if (mysql_error() == 0){
+            if (mysqli_error($dbc) == 0){
                $add = "<h2><br/>$v Added</h2>";
             }
             else {
@@ -1133,7 +1133,7 @@ EOT;
   echo '<div class="col">';
   $sql = "SELECT `id`, `Family`,`alpha`,`Description`,`Day`,`Code`,`Group`,`Type` FROM `Allergens` WHERE $crossSQL[$ndx] = 1  ORDER BY `Allergens`.`Description` ASC";
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   while($row = mysqli_fetch_array($results, MYSQLI_NUM)){
     echo $icon[0][$foods[$row[5]][5]] . $foods[$row[5]][0] . "</p><br/>\n";
     

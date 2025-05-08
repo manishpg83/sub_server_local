@@ -44,12 +44,12 @@ echo "<p$match[0]> test.tps:  " . date ("F d Y H:i ( g:ia ) ", filemtime($filena
 
 
   $dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   if (strlen($error) > 0){
     print "DBC: $error <br/>";
   }
   mysqli_select_db($dbc,'amx_portal');
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   if (strlen($error) > 0){
     print "</pre>\n<h3>SEL: $error </h3><pre>\n";
   }
@@ -57,7 +57,7 @@ echo "<p$match[0]> test.tps:  " . date ("F d Y H:i ( g:ia ) ", filemtime($filena
   @mysqli_query($dbc,$sql);
   $sql = "SELECT * FROM `Updates` WHERE 1 ORDER BY `TimeStamp` DESC LIMIT 1";
   $results = @mysqli_query($dbc,$sql);
-  echo mysql_error(); 
+  echo mysqli_error($dbc); 
 $row = mysqli_fetch_array($results , MYSQLI_NUM);
 if ($update){
 echo $row[1] . '<hr/>';
@@ -221,7 +221,7 @@ $missingPDF = 0;
 $checkPDF = 0;
  $sql = "SELECT `Client` , `Patient`, `Date`,`PDF`  FROM `Patient` WHERE `Patient` > $first AND `Status` = 'C' ORDER BY `Patient` DESC";
  $results = @mysqli_query($dbc,$sql);
- if (mysqli_errno($dbc) > 0){echo mysql_error() . "<h4>$sql</h4>";}
+ if (mysqli_errno($dbc) > 0){echo mysqli_error($dbc) . "<h4>$sql</h4>";}
   while ($row = mysqli_fetch_array($results , MYSQLI_NUM)) {
     $date = strtotime($row[2]);
     if ($row[0] > 199999) { 
@@ -283,7 +283,7 @@ if ($update){
 
 $sql = "SELECT `Client`, `TimeStamp`, `ip`, `Value` FROM `access` ORDER BY `TimeStamp` DESC LIMIT 0, 32";
 $results = @mysqli_query($dbc,$sql);
-if (mysqli_errno($dbc) > 0){echo mysql_error() . "<h4>$sql</h4>";}
+if (mysqli_errno($dbc) > 0){echo mysqli_error($dbc) . "<h4>$sql</h4>";}
 
 
 echo "<h3>Client Log In</h3>";
@@ -300,8 +300,8 @@ if ($checkPDF > 0){
   $in = substr($in,0,-1) . ')';
   $sql = "UPDATE `Patient` SET `PDF`=1 WHERE $in";
   mysqli_query($dbc,$sql);
-  echo mysql_error() . "<h4>$sql</h4>";
-  if (mysqli_errno($dbc) > 0){echo mysql_error() . "<h4>$sql</h4>";}
+  echo mysqli_error($dbc) . "<h4>$sql</h4>";
+  if (mysqli_errno($dbc) > 0){echo mysqli_error($dbc) . "<h4>$sql</h4>";}
   echo "<span class='bold red'>$checkPDF PDFs checked, $checked OK</span></div><hr/><pre>";
 }
 

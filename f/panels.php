@@ -23,7 +23,7 @@ $c = strtoupper($_POST['c']);
 if(strlen($c) == 4 && $id > 99999){
   $sql = "UPDATE `Client` SET `passcode` = '$c' WHERE `Number` = $id";
   $result = mysqli_query($dbc,$sql);
-  $err = mysql_error();
+  $err = mysqli_error($dbc);
   $show .= "$c\n$id\n$sql\n$err";
 }
 $rec = intval($_POST['rec']);
@@ -143,11 +143,11 @@ elseif($sub == 7){
 	    $show .= ", $type ";
         $sql = "INSERT INTO `amx_portal`.`PanelTests` (`rec`, `number`, `code`, `type`) VALUES (NULL, '$panel', '$code', '$type');";
         mysqli_query($dbc,$sql);
-        echo mysql_error(). "<br>\n";
+        echo mysqli_error($dbc). "<br>\n";
 	  }
 	} 
   }
-  else{echo "<p>$panel Rows=$rows " . mysql_error() . '</p>'; }
+  else{echo "<p>$panel Rows=$rows " . mysqli_error($dbc) . '</p>'; }
 }
 $actions = array('Include','Exclude','Include','');
 $classes = array(' class="grn" ', ' class="red" ',' class="grn"',' class="hide"');

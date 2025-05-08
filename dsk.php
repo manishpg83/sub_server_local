@@ -50,12 +50,12 @@ echo "<p$match[0]> test.tps:  " . date ("F d Y H:i ( g:ia ) ", filemtime($filena
 
 
   $dbc=mysqli_connect('localhost','amx','xD1GkuK7a7DK8!');
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   if (strlen($error) > 0){
     print "DBC: $error <br/>";
   }
   mysqli_select_db($dbc,'amx_portal');
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   if (strlen($error) > 0){
     print "</pre>\n<h3>SEL: $error </h3><pre>\n";
   }
@@ -63,7 +63,7 @@ echo "<p$match[0]> test.tps:  " . date ("F d Y H:i ( g:ia ) ", filemtime($filena
   @mysqli_query($dbc,$sql);
   $sql = "SELECT * FROM `Updates` WHERE 1 ORDER BY `TimeStamp` DESC LIMIT 1";
   $results = @mysqli_query($dbc,$sql);
-  echo mysql_error(); 
+  echo mysqli_error($dbc); 
 $row = mysqli_fetch_array($results , MYSQLI_NUM);
 if ($update){
   echo $row[1] . '<hr/>';
@@ -270,7 +270,7 @@ $times['PDF loop begins'] = microtime(true) - $t;
  $sql = "SELECT `Client` , `Patient`, `Date`,`PDF`  FROM `Patient` WHERE `Patient` > $first AND `Status` = 'C' ORDER BY `Patient` DESC";
  $results = @mysqli_query($dbc,$sql);
  $num = 0;
- if (mysqli_errno($dbc) > 0){echo mysql_error() . "<h4>$sql</h4>";}
+ if (mysqli_errno($dbc) > 0){echo mysqli_error($dbc) . "<h4>$sql</h4>";}
   while ($row = mysqli_fetch_array($results , MYSQLI_NUM)) {
   $num++;
   if ($num > 500){break;}
@@ -300,7 +300,7 @@ $times['PDF loop begins'] = microtime(true) - $t;
 	  echo date('g:i:s') . " => $elapsed....$row[1]....$skipped/$checkPDF<br>";
       $sql = "UPDATE `Patient` SET `PDF`=1 WHERE `Patient`=$p";
       @mysqli_query($dbc,$sql);
-//      if (mysqli_errno($dbc) > 0){echo mysql_error() . "<br>";}
+//      if (mysqli_errno($dbc) > 0){echo mysqli_error($dbc) . "<br>";}
 //      $a->setFilename($pdf);
 //      $a->decodePDF();
 //      $data = $a->output();
@@ -348,7 +348,7 @@ if ($update){
 
 $sql = "SELECT `Client`, `TimeStamp`, `ip`, `Value` FROM `access` ORDER BY `TimeStamp` DESC LIMIT 0, 98";
 $results = @mysqli_query($dbc,$sql);
-if (mysqli_errno($dbc) > 0){echo mysql_error() . "<h4>$sql</h4>";}
+if (mysqli_errno($dbc) > 0){echo mysqli_error($dbc) . "<h4>$sql</h4>";}
 
 
 echo "<h3>Client Log In</h3><table>";
@@ -367,7 +367,7 @@ if (false){ //$checkPDF > 0){
  // $sql = "UPDATE `Patient` SET `PDF`=1 WHERE $in";
   $result = mysqli_query($dbc,$sql);
   $count = mysql_affected_rows();
-  if (mysqli_errno($dbc) > 0 || $count != $checked ){echo mysql_error() . "<h4>$sql</h4>";}
+  if (mysqli_errno($dbc) > 0 || $count != $checked ){echo mysqli_error($dbc) . "<h4>$sql</h4>";}
   echo "<span class='bold red'>$checkPDF PDFs checked, $checked OK, $count Updated</span></div><hr/><pre>";
 }
 

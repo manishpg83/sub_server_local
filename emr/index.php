@@ -41,7 +41,7 @@ if ($sub == 0){
   $hash = hash('ripemd320',$passcode);
   $sql =  "SELECT *  FROM `Client` WHERE `Number` = $id LIMIT 1";
   $results = mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   $rows = mysqli_num_rows($results);
   if (strlen($error) == 0 && $rows == 1) {
     $cli = mysqli_fetch_array($results, MYSQLI_NUM);
@@ -138,7 +138,7 @@ else{
   }
   $sql =  "SELECT *  FROM `Client` WHERE `Number` = $id LIMIT 1";
   $results = mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   $rows = mysqli_num_rows($results);
   if (strlen($error) == 0 && $rows == 1) {
     $cli = mysqli_fetch_array($results, MYSQLI_NUM);
@@ -374,13 +374,13 @@ $cntID = $row[1];
 if ($rows == 1 && (strlen(trim($row[1])) < 1)){$cid = 0;}else{$cid = 1;}
 $SQL = "SELECT COUNT(`Status`),`Status` FROM `Patient` WHERE $where GROUP BY `Status` ";
 $results = @mysqli_query($dbc,$SQL);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 while ($row = @mysqli_fetch_array($results, MYSQLI_NUM)) {$statusCnt[$row[1]] = $row[0];}
 $statusCnt['R'] = $statusCnt['L'] + $statusCnt['V'];
 $statusCnt['T'] = $statusCnt['W'] + $statusCnt['I'];
 $sql = "SELECT SQL_CALC_FOUND_ROWS `Client`, `Patient`, `Date`, `Status`, `Link`, `ClientID`, `Last`, `First`,`Attributes`, `DoB` FROM `Patient` WHERE $where $sort";
 $results = @mysqli_query($dbc,$sql);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 $rows = @mysqli_num_rows($results);
 $more = @mysqli_query($dbc,"SELECT FOUND_ROWS()");
 if ($rows == 0){echo "<h2 id=\"msg\"><br/> &#X2003; No $type<br/>&#x2002;</h2></div>";$showSearch = 'block';}

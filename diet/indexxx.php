@@ -109,41 +109,41 @@ $err .= "<br>Patient:  $patient<br/>";
 if (strlen($patient) == 6){
   $sql = "SELECT `Client`,`Last`, `First`, `ClientID` FROM `Patient` WHERE `Patient` = $patient";
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   $rows = @mysqli_num_rows($results);
   if (strlen($error) == 0 AND $rows == 1){
-    $pat = mysqli_fetch_array($results, MYSQL_BOTH);
+    $pat = mysqli_fetch_array($results, MYSQLI_BOTH);
     $client = $pat[0] ;
     $err .= "<br/>Patient Name: " . trim($pat[2]) . ", $pat[1]<br>";
 	$patID = $pat[3];
     $sql = "SELECT `Name`, `RecordsCRC`, `Session` FROM `Client`  WHERE `Number` = $client LIMIT 1";
     $results = @mysqli_query($dbc,$sql);
-    $error = mysql_error();
+    $error = mysqli_error($dbc);
     $rows = @mysqli_num_rows($results);
     if (strlen($error) == 0 AND $rows == 1){
-      $cli = mysqli_fetch_array($results, MYSQL_BOTH);
+      $cli = mysqli_fetch_array($results, MYSQLI_BOTH);
       $clientName = $cli[0];
       $err .= "<br/>Client Name: $clientName<br>";
       $sql = "SELECT * FROM `template` WHERE `Client` = 0 AND `Patient` = $patient LIMIT 1"; 
       $results = @mysqli_query($dbc,$sql);
-      $error = mysql_error();
+      $error = mysqli_error($dbc);
       $rows = @mysqli_num_rows($results);
       if (strlen($error) != 0 || $rows != 1){
         $err .= "<br>SEL #1 PAT TPL: $error<br>$sql<br>";
         $sql = "SELECT * FROM `template` WHERE `Client` = $client AND `Patient` = 0 LIMIT 1"; 
         $results = @mysqli_query($dbc,$sql);
-        $error = mysql_error();
+        $error = mysqli_error($dbc);
         $rows = @mysqli_num_rows($results);
         if (strlen($error) != 0 || $rows != 1){
           $sql = "SELECT * FROM `template` WHERE `Client` = 999999 AND `Patient` = 0 LIMIT 1"; 
           $results = @mysqli_query($dbc,$sql);
-          $tpl = mysqli_fetch_array($results, MYSQL_BOTH);
+          $tpl = mysqli_fetch_array($results, MYSQLI_BOTH);
 		  $template[3] = $tpl;
           $sql = "INSERT INTO `amx_portal`.`template` (`Client`, `Patient`, `CutOff`, `excludeMethod`, `CrossreactivityGrocery`, `CrossreactivityDiet`, `CrossreactivityPhycian`, `CrossreactivityPatient`, `HiddenFoodPhysician`, `HiddenFoodPatient`, `ExcludeIgE`, `ExcludeIgG`, `ExcludeIgG4`) VALUES ('$client', '0','$tpl[2]', '$tpl[3]', '$tpl[4]', '$tpl[5]', '$tpl[6]', '$tpl[7]', '$tpl[8]', '$tpl[1]', '$tpl[10]', '$tpl[11]', '$tpl[12]')";
           $results = @mysqli_query($dbc,$sql);
         }
         else{
-          $tpl = mysqli_fetch_array($results, MYSQL_BOTH);
+          $tpl = mysqli_fetch_array($results, MYSQLI_BOTH);
 		  $template[1] = $tpl;
         }
 		
@@ -151,7 +151,7 @@ if (strlen($patient) == 6){
         $results = @mysqli_query($dbc,$sql);
       }
       else{
-        $tpl = mysqli_fetch_array($results, MYSQL_BOTH);
+        $tpl = mysqli_fetch_array($results, MYSQLI_BOTH);
 		$template[0] = $tpl;
       }
     }
@@ -189,7 +189,7 @@ if (strlen($client) == 6 AND strlen($patient) == 6){
 `ExcludeIgG` = $tpl[11],
 `ExcludeIgG4` = $tpl[12]  WHERE `Client` = 0 AND `Patient` = $patient";
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   if (strlen($error) > 0){
     $err .= "<br>UPDATE ERROR PAT TPL: $error<br>$sql<br>";
   }
@@ -264,7 +264,7 @@ $chk = 15;
   $hideHeader = "hd.style.display = 'none';";
   $sql = "SELECT `Code` FROM `Allergens` WHERE `Day` > 0 ORDER BY `alpha` ASC , `Description` ASC";
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   if (strlen($error) > 0){
     $err .= "<br>SEL Allergens: $error<br>$sql<br>";
   }
@@ -310,7 +310,7 @@ $chk = 15;
     if (substr($k,0,1) == 'a'){
       $sql = "INSERT INTO `amx_portal`.`Test` (`Patient`, `Code`, `Type`, `Score`, `Description`,`Attributes`) VALUES ('$patient', '$code', 0, 9, '$v',0)";
       mysqli_query($dbc,$sql);
-      if (mysql_error() == 0){
+      if (mysqli_error($dbc) == 0){
         $add = "<h2><br>$v Added</h2>";
       }
       else {
@@ -331,7 +331,7 @@ $chk = 15;
             $row = mysqli_fetch_array($results, MYSQLI_NUM);
             $sql = "INSERT INTO `amx_portal`.`Test` (`Patient`, `Code`, `Type`, `Score`, `Description`,`Attributes`) VALUES ('$patient', '$row[1]', 9, 9, '$row[2]',0)";
             mysqli_query($dbc,$sql);
-            if (mysql_error() == 0){
+            if (mysqli_error($dbc) == 0){
                $add = "<h2><br>$v Added</h2>";
             }
             else {
@@ -396,7 +396,7 @@ if ($sub > 1){
       foreach ($v as $type => $x){
         $sql = "UPDATE `Test` SET `Attributes`= 1 WHERE `Patient`=$patient AND  `Code` = '$k' AND `Type` = $type";
         $results = @mysqli_query($dbc,$sql);
-        $error = mysql_error();
+        $error = mysqli_error($dbc);
         $rows = @mysqli_num_rows($results);
         if (strlen($error) > 0 ){
           $err .= "<br>UPDATE TEST ERROR: $error<br>$sql<br>";
@@ -439,7 +439,7 @@ $type = array('Added','IgE','IgG','IgG4');
 
   $sql = "SELECT `Code`,`Type`,`Score`,`Description`,`Attributes`  FROM `Test` WHERE `Patient` =  $patient ORDER BY `Type` ASC,`Score` ASC ";
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   $rows = @mysqli_num_rows($results);
   if (strlen($error) > 0){
     $err .= "<br>Rows:$rows<br>SEL TST: $error<br>$sql<br>";

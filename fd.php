@@ -532,7 +532,7 @@ $show = '';
   //$sql = "SELECT `Code`,`Type`,`Patient` FROM `Test` WHERE`Code` LIKE 'F%' AND `Score` NOT LIKE '%0%'  AND `Patient` > 146997 AND `Patient` < 155389";
   $sql = "SELECT `Code`,`Type`,`Score` FROM `Test` WHERE `Code` LIKE 'F%' AND `Patient` > 155389 AND `Patient` < 163401";
   $results = mysqli_query($dbc,$sql);
-  if (mysqli_errno($dbc) > 0){echo "<p>$sql<br/>" . mysql_error();}
+  if (mysqli_errno($dbc) > 0){echo "<p>$sql<br/>" . mysqli_error($dbc);}
   while ($row = mysqli_fetch_array($results, MYSQLI_NUM)){
     $food[$row[1]][$row[0]][$row[2]] = intval($food[$row[1]][$row[0]][$row[2]]) + 1;
   }

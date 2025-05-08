@@ -110,7 +110,7 @@ if (isset($_GET['sub'])){
         $row = mysqli_fetch_array($results, MYSQLI_NUM);
         $sql = "INSERT INTO `amx_portal`.`Test` (`Patient`, `Code`, `Type`, `Score`, `Description`) VALUES ('$pat', '$row[1]', 0, 9, '$row[2]')";
         mysqli_query($dbc,$sql);
-        if (mysql_error() == 0){
+        if (mysqli_error($dbc) == 0){
            $add = "<h2><br>$v Added</h2>";
         }
         else {
@@ -138,7 +138,7 @@ EOR;
     elseif (substr($k,0,1) == 'a'){
       $sql = "INSERT INTO `amx_portal`.`Test` (`Patient`, `Code`, `Type`, `Score`, `Description`) VALUES ('$pat', '$code', 0, 9, '$v')";
       mysqli_query($dbc,$sql);
-      if (mysql_error() == 0){
+      if (mysqli_error($dbc) == 0){
         $add = "<h2><br>$v Added</h2>";
       }
       else {

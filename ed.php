@@ -69,7 +69,7 @@ if (isset($_GET['sub'])){
   foreach ($row as $k => $v){
   $sql = "UPDATE `Foods` SET  `Day`= '$v[0]',`Birch`='$v[1]', `Sycamore`='$v[2]', `Mugwort`='$v[3]', `Grasses`='$v[4]', `Latex`='$v[5]' WHERE `id`=$k";
     @mysqli_query($dbc,$sql);
-	$error = mysql_error();
+	$error = mysqli_error($dbc);
 	if (strlen($error) > 0){echo "$error<br>$sql";break;}
   }
 }
@@ -94,7 +94,7 @@ $id = 0;
 //                                                         5         6           7          8          9
 $sql = "SELECT `id`,`Family`, `Type`, `Description`,`Day`,`Birch`, `Sycamore`, `Mugwort`, `Grasses`, `Latex`,`alpha` FROM `Foods` WHERE `alpha` > 0 ORDER BY `alpha` ASC, `Group` ASC,`Type` ASC, `Description` ASC";
         $results = @mysqli_query($dbc,$sql);
-//		if (mysql_errno > 0){echo mysql_error() . '<br/>' . $sql;}
+//		if (mysql_errno > 0){echo mysqli_error($dbc) . '<br/>' . $sql;}
 //		echo $sql;
 
         while($row = mysqli_fetch_array($results, MYSQLI_NUM)){

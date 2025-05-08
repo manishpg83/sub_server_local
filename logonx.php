@@ -1,12 +1,12 @@
 <?php
 
 $dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if (strlen($error) > 0){
   print "DBC: $error <br/>";
 }
 mysqli_select_db($dbc,'amx_portal');
-$error = mysql_error();
+$error = mysqli_error($dbc);
   if (strlen($error) > 0){
     print "<2>SEL: $error </h2>";
   }
@@ -23,7 +23,7 @@ else {
 
 $sql = "SELECT *  FROM `Client` WHERE `Number` = $id ";
 $results = @mysqli_query($dbc,$sql);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 $row = mysqli_fetch_array($results, MYSQLI_NUM);
 if (strlen($error) > 0 or $row[12] <> $passcode ){
   $ch = curl_init();
@@ -184,7 +184,7 @@ fieldset{border:0;margin:0;padding:0; }
   $sql = "SELECT *  FROM `Patient` WHERE `Client` = $id AND DATE_SUB( CURDATE( ) , INTERVAL $adays DAY ) <= `Date` ORDER BY `Last` LIMIT 0 , 20 ";
 
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   if (strlen($error) > 0){
     print "FETCH: $error <br/>";
   }
@@ -217,7 +217,7 @@ fieldset{border:0;margin:0;padding:0; }
   echo '</table><p><br/></p></div>';
   $sql="SELECT COUNT(*) AS `ROWS`, `Test`.`Score`,  SUBSTR( `Test`.`Code`,1,1) FROM Patient, Test WHERE ((`Patient`.`Client` =$id) AND (`Patient`.`Date` > DATE_SUB( CURDATE( ) , INTERVAL 333 DAY) AND (`Patient`. `Status` = 'C')) AND (`Test`.`Assession` =`Patient`.`Patient`) AND   (`Test`.`Type` = 1 ) AND (`Test`.`Score`  BETWEEN '1' AND '6')) GROUP BY SUBSTR( `Test`.`Code`,1,1) ,  `Test`.`Score` ORDER BY  `ROWS`  DESC LIMIT 20";
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   if (strlen($error) == 0){
     echo '</div><div class="main"><h2>Past Year IgE Results</h2><h2> with Score 1+</h2><table class="cntr"><tr ><th># = Score</th><th  class="cntr">Score</th><th  class="status">Allergen</th></tr>';
     WHILE ($row = mysqli_fetch_array($results, MYSQLI_NUM) AND $row[0] > 3) {
@@ -227,7 +227,7 @@ fieldset{border:0;margin:0;padding:0; }
   $sql = "UPDATE `Client` SET `LastVisit` = CURRENT_TIMESTAMP, `ip` = '" . $_SERVER['REMOTE_ADDR'] . "' WHERE `Number` = $id";
   $results = @mysqli_query($dbc,$sql);
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   echo '</div></body></html>';
 }
 ?>

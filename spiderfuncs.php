@@ -492,13 +492,13 @@ function save_keywords($wordarray, $link_id, $domain) {
                 mysqli_query($dbc,"insert into ".$mysql_table_prefix."keywords (keyword) values ('$word')");
 				if (mysqli_errno($dbc) == 1062) { 
 					$result = mysqli_query($dbc,"select keyword_ID from ".$mysql_table_prefix."keywords where keyword='$word'");
-					echo mysql_error();
+					echo mysqli_error($dbc);
 					$row = mysql_fetch_row($result);
 					$keyword_id = $row[0];
 				} else{
 				$keyword_id = mysql_insert_id();
 				$all_keywords[$word] = $keyword_id;
-				echo mysql_error();
+				echo mysqli_error($dbc);
 			} 
 			} 
 			$inserts[$wordmd5] .= ",($link_id, $keyword_id, $weight, $domain)"; 
@@ -511,7 +511,7 @@ function save_keywords($wordarray, $link_id, $domain) {
 		if ($values!="") {
 			$query = "insert into ".$mysql_table_prefix."link_keyword$char (link_id, keyword_id, weight, domain) values $values";
 			mysqli_query($dbc,$query);
-			echo mysql_error();
+			echo mysqli_error($dbc);
 		}
 		
 	
@@ -692,7 +692,7 @@ function calc_weights($wordarray, $title, $host, $path, $keywords) {
 function isDuplicateMD5($md5sum) {
 	global $mysql_table_prefix;
 	$result = mysqli_query($dbc,"select link_id from ".$mysql_table_prefix."links where md5sum='$md5sum'");
-	echo mysql_error();
+	echo mysqli_error($dbc);
 	if (mysqli_num_rows($result) > 0) {
 		return true;
 	}
@@ -753,7 +753,7 @@ function check_for_removal($url) {
 	global $mysql_table_prefix;
 	global $command_line;
 	$result = mysqli_query($dbc,"select link_id, visible from ".$mysql_table_prefix."links"." where url='$url'");
-	echo mysql_error();
+	echo mysqli_error($dbc);
 	if (mysqli_num_rows($result) > 0) {
 		$row = mysql_fetch_row($result);
 		$link_id = $row[0];
@@ -761,14 +761,14 @@ function check_for_removal($url) {
 		if ($visible > 0) {
 			$visible --;
 			mysqli_query($dbc,"update ".$mysql_table_prefix."links set visible=$visible where link_id=$link_id");
-			echo mysql_error();
+			echo mysqli_error($dbc);
 		} else {
 			mysqli_query($dbc,"delete from ".$mysql_table_prefix."links where link_id=$link_id");
-			echo mysql_error();
+			echo mysqli_error($dbc);
 			for ($i=0;$i<=15; $i++) {
 				$char = dechex($i);
 				mysqli_query($dbc,"delete from ".$mysql_table_prefix."link_keyword$char where link_id=$link_id");
-				echo mysql_error();
+				echo mysqli_error($dbc);
 			}
 			printStandardReport('pageRemoved',$command_line);
 		}

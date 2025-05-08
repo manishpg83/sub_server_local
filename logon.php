@@ -1,11 +1,11 @@
 <?php
 $dbc=mysqli_connect('localhost','amx_allermetrix','allermetrix510');
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if (strlen($error) > 0){
   print "DBC: $error <br/>";
 }
 mysqli_select_db($dbc,'amx_portal');
-$error = mysql_error();
+$error = mysqli_error($dbc);
   if (strlen($error) > 0){
     print "<2>SEL: $error </h2>";
   }
@@ -23,7 +23,7 @@ else {
 $sql = "SELECT *  FROM `iClient` WHERE `Number` = $id ";
 print "<p>$sql</p>";
 $results = @mysqli_query($dbc,$sql);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if (strlen($error > 0)) {
 echo "<p>$error</p>";
 }
@@ -130,7 +130,7 @@ print "\n";
 $sql = 'SELECT *  FROM `iPatient` WHERE `Client` = ' . "$id" . ' AND  DATE_SUB( CURDATE( ) , INTERVAL ' . "$adays" . ' DAY ) <= `Date`ORDER BY `Last` ASC, `First` ASC, `Date` ASC ';
 $results = @mysqli_query($dbc,$sql);
 $rows = mysqli_num_rows($results);
-$error = mysql_error();
+$error = mysqli_error($dbc);
 if ($rows == 0){
    echo '<h2>No Activity in the Past ' . $adays . ' Days</h2>';
 }
@@ -180,7 +180,7 @@ echo '<div data-role="controlgroup" data-type="horizontal"  class="para">
   echo '</table><p><br/></p></div>';
   $sql="SELECT COUNT(*) AS `ROWS`, `Test`.`Score`,  SUBSTR( `Test`.`Code`,1,1) FROM Patient, Test WHERE ((`Patient`.`Client` =$id) AND (`Patient`.`Date` > DATE_SUB( CURDATE( ) , INTERVAL 333 DAY) AND (`Patient`. `Status` = 'C')) AND (`Test`.`Assession` =`Patient`.`Patient`) AND   (`Test`.`Type` = 1 ) AND (`Test`.`Score`  BETWEEN '1' AND '6')) GROUP BY SUBSTR( `Test`.`Code`,1,1) ,  `Test`.`Score` ORDER BY  `ROWS`  DESC LIMIT 20";
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   if (strlen($error) == 0){
     echo '</div><div class="main"><h2>Past Year IgE Results</h2><h2> with Score 1+</h2><table class="cntr"><tr ><th># = Score</th><th  class="cntr">Score</th><th  class="status">Allergen</th></tr>';
     WHILE ($row = mysqli_fetch_array($results, MYSQLI_NUM) AND $row[0] > 3) {
@@ -192,7 +192,7 @@ echo '<div data-role="controlgroup" data-type="horizontal"  class="para">
 }  
 //  $sql="SELECT COUNT(*) AS `ROWS`, `Test`.`Score`,  SUBSTR( `Test`.`Code`,1,1) FROM Patient, Test WHERE ((`Patient`.`Client` =$id) AND (`Patient`.`Date` > DATE_SUB( CURDATE( ) , INTERVAL 333 DAY) AND (`Patient`. `Status` = 'C')) AND (`Test`.`Assession` =`Patient`.`Patient`) AND   (`Test`.`Type` = 1 ) AND (`Test`.`Score`  BETWEEN '1' AND '6')) GROUP BY SUBSTR( `Test`.`Code`,1,1) ,  `Test`.`Score` ORDER BY  `ROWS`  DESC LIMIT 20";
 //  $results = @mysqli_query($dbc,$sql);
-//  $error = mysql_error();
+//  $error = mysqli_error($dbc);
 //  if (strlen($error) == 0){
 //    echo '</div><div class="main"><h2>Past Year IgE Results</h2><h2> with Score 1+</h2><table class="cntr"><tr ><th># = Score</th><th  class="cntr">Score</th><th  class="status">Allergen</th></tr>';
 //    WHILE ($row = mysqli_fetch_array($results, MYSQLI_NUM) AND $row[0] > 3) {
@@ -204,7 +204,7 @@ echo '<div data-role="controlgroup" data-type="horizontal"  class="para">
   
   $sql = "UPDATE `Client` SET `LastVisit` = CURRENT_TIMESTAMP, `ip` = '" . $_SERVER['REMOTE_ADDR'] . "' WHERE `Number` = $id";
   $results = @mysqli_query($dbc,$sql);
-  $error = mysql_error();
+  $error = mysqli_error($dbc);
   echo '</div></body></html>';
 
 ?>

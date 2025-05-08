@@ -156,7 +156,7 @@ $sql = "SET time_zone = '-4:00';";
 
 $sql = "SELECT * FROM `EAR` WHERE `id` = 8 LIMIT 1"; 
 $results = @mysqli_query($dbc,$sql);
-echo mysql_error();
+echo mysqli_error($dbc);
 $ear = mysqli_fetch_array($results, MYSQLI_NUM) ;
 //echo '</div></div><div class="pgBrk"></div><br/>TPL<br/><pre>' . var_export($ear,true)  . '</pre><br/>';
 $EAR[32] = $ear[4] ;
@@ -178,8 +178,8 @@ $v = array_fill(0,53,'');
 $sql = "SELECT * FROM `NDB` WHERE `ID` = $id LIMIT 1";
 $results = @mysqli_query($dbc,$sql);
 
-if (strlen(mysql_error()) > 0){
-  echo mysql_error() . '<br>'; 
+if (strlen(mysqli_error($dbc)) > 0){
+  echo mysqli_error($dbc) . '<br>'; 
   echo $sql . '<br>'; 
 }
 
@@ -244,7 +244,7 @@ return;
 
 
 $results = @mysqli_query($dbc,$sql);
-if (strlen(mysql_error()) > 0){
+if (strlen(mysqli_error($dbc)) > 0){
   echo $sql;
 }
 

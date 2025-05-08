@@ -208,8 +208,8 @@ else {
 }
 $er = "<h4>$sql</h4>";
 $results = @mysqli_query($dbc,$sql);
-if (strlen(mysql_error()) > 0){
-  echo mysql_error() . "<br> $sql<br>";
+if (strlen(mysqli_error($dbc)) > 0){
+  echo mysqli_error($dbc) . "<br> $sql<br>";
 }
 $sql = "SELECT FOUND_ROWS()";
 $count = @mysqli_query($dbc,$sql);

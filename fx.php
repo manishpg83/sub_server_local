@@ -28,9 +28,9 @@ $sql = "SELECT `code`  FROM `PanelTests` WHERE `panel` LIKE '9503' AND `type` = 
 $results = mysqli_query($dbc,$sql);
 while(list($code) =  mysqli_fetch_array($results, MYSQLI_NUM)){
 //mysqli_query($dbc,"INSERT INTO `PanelTests`(`panel`, `code`, `type`) VALUES (9505,'$code',1);");
-//if (mysqli_errno($dbc) > 0){echo "<p>$sql<br/>" . mysql_error();}
+//if (mysqli_errno($dbc) > 0){echo "<p>$sql<br/>" . mysqli_error($dbc);}
 mysqli_query($dbc,"INSERT INTO `PanelTests`(`panel`, `code`, `type`) VALUES (9504,'$code',3);");
-if (mysqli_errno($dbc) > 0){echo "<p>$sql<br/>" . mysql_error();}
+if (mysqli_errno($dbc) > 0){echo "<p>$sql<br/>" . mysqli_error($dbc);}
 }
 exit;
 $rankE = unserialize(file_get_contents('/home/amx/public_html/IgE.ser'));
@@ -46,7 +46,7 @@ $startTime = microtime(true) ;
 $sql = "SELECT COUNT(*) AS `cnt`,`Code`,`Type` FROM `Test` WHERE `Type`= 1 AND `Client` < 888880 AND `Patient` > 146996 AND `Patient` < 155389 AND `Code` LIKE 'F%'  GROUP BY`Type`, `Code` ORDER BY `Type` ASC,`cnt` DESC";
 echo $sql ."\n";
   $results = mysqli_query($dbc,$sql);
-  if (mysqli_errno($dbc) > 0){echo "<p>$sql<br/>" . mysql_error();}
+  if (mysqli_errno($dbc) > 0){echo "<p>$sql<br/>" . mysqli_error($dbc);}
   while ($row = mysqli_fetch_array($results, MYSQLI_NUM)){
     list($count,$code,$type) = $row;
   //  $code = substr($code,1);
@@ -57,7 +57,7 @@ echo $sql ."\n";
 $sql = "SELECT COUNT(*) AS `cnt`,`Code`,`Type` FROM `Test` WHERE `Type`= 1 AND `Patient` > 146996 AND `Patient` < 155389 AND `Client` < 888880 AND `Code` LIKE 'F%' AND `Score` NOT LIKE '%0%'   GROUP BY `Type`, `Code` ORDER BY `Type` ASC,`cnt` DESC";
 echo $sql ."\n";
 $results = mysqli_query($dbc,$sql);
-if (mysqli_errno($dbc) > 0){echo "<p>$sql<br/>" . mysql_error();}
+if (mysqli_errno($dbc) > 0){echo "<p>$sql<br/>" . mysqli_error($dbc);}
 while ($row = mysqli_fetch_array($results, MYSQLI_NUM)){
   list($count,$code,$type) = $row;
   if($count < 21){continue;}

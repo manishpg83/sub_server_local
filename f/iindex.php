@@ -50,7 +50,7 @@ else{
 if($rec > 0){
   $sqlf = "SELECT `client`,`date`,`last`,`first`,`dob`,`address`,`city`,`state`,`zip`,`gender`,`history`,`foods` FROM `history` WHERE `id` = $rec";
   $results = mysqli_query($dbc,$sqlf);
-  $sqlf .= "\n" . mysql_error();
+  $sqlf .= "\n" . mysqli_error($dbc);
   list($client,$date,$last,$first,$dob,$address,$city,$state,$zip,$gender,$history,$foods ) = @mysqli_fetch_array($results, MYSQLI_NUM);  
 }
 
@@ -72,10 +72,10 @@ if($sub == 32){  // Done with History, Save
   $cnt = count($posted);
   $posted['cnt'] = $cnt;
   $jsn = json_encode($posted);
-  $history = mysql_real_escape_string($jsn);
+  $history = mysqli_real_escape_string($dbc,$jsn);
   $sqlf = "UPDATE `history` SET `history`='$history' WHERE `id` = '$rec' ";
   mysqli_query($dbc,$sqlf);
-  if(mysql_errno > 0){$err = "$sqlf\n" . mysql_error();echo $err;}
+  if(mysql_errno > 0){$err = "$sqlf\n" . mysqli_error($dbc);echo $err;}
   file_put_contents('history.log',"$ip $sqlf\n$err\n$jsn\n\n",FILE_APPEND);
 
 }
@@ -125,10 +125,10 @@ if($sub == 0 && $match && $gender > 0  && $dobOK && $stateOK && $lastOK){
   $time = date('Y-m-d g:i a');
   $sqlf = "INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`, `gender`) VALUES (NULL, $client, '$today', '$last', '$first', '$dob','$address','$city','$state','$zip', '$gender')";
   mysqli_query($dbc,$sqlf);
-  if(mysql_errno > 0){$err = "$sqlf\n" . mysql_error();}
+  if(mysql_errno > 0){$err = "$sqlf\n" . mysqli_error($dbc);}
   $ndx = intval(mysql_insert_id());
   if($ndx > 0){$rec = $ndx;}
-  $err = $sqlf . "\n" . mysql_error();
+  $err = $sqlf . "\n" . mysqli_error($dbc);
   file_put_contents('history.log',"$ip $time $err\n\n",FILE_APPEND);
 
   include('/home/amx/public_html/h/index.php');
@@ -193,10 +193,10 @@ if( $sub == 64){   // PATIENT DONE WITH FOODS, SAVE
   $today = date('Y-m-d');
   $jsn = json_encode($foods);
   
-  $foods = mysql_real_escape_string($jsn);
+  $foods = mysqli_real_escape_string($dbc,$jsn);
   $sqlf = "UPDATE `history` SET `foods`='$foods' WHERE `id` = '$rec' ";
   mysqli_query($dbc,$sqlf);
-  if(mysql_errno > 0){$err = "$sqlf\n" . mysql_error();}
+  if(mysql_errno > 0){$err = "$sqlf\n" . mysqli_error($dbc);}
   file_put_contents('food.log',"$ip $sqlf\n$err\n$jsn\n",FILE_APPEND);
   include('/home/amx/public_html/h/dashboard.php');
   exit;
@@ -701,7 +701,7 @@ elseif($sub == 4){        // DOCS SELECT TESTS
 
     $foods['limit'] = $limit;
     $fp = fopen($client . 'food.jsn','w');
-	$jsn = mysql_real_escape_string(json_encode($foods));
+	$jsn = mysqli_real_escape_string($dbc,json_encode($foods));
     fwrite($fp,$jsn);
   }
 */
