@@ -1,5 +1,7 @@
 <?php 
-error_reporting(0);  
+/* ini_set('display_startup_errors', 1);
+ini_set('display_errors', 1);
+error_reporting(-1); */
 $ip = $_SERVER["REMOTE_ADDR"];
 ob_start();
 $startTime = microtime(true);
@@ -114,7 +116,8 @@ ob_flush();
 $dbc=mysqli_connect('localhost','amx','xD1GkuK7a7DK8!'); @mysqli_select_db($dbc,'amx_portal');
 $tdx = 0;
 $t[$tdx] = microtime(true);
- $lnk = intval(preg_replace("[^0-9]", "", $_POST['lnk']));
+$lnk = intval(preg_replace("[^0-9]", "", $_POST['lnk'.$_POST['p']]));
+ //$lnk = intval(preg_replace("[^0-9]", "", $_POST['lnk'])); Changed by manish Briskbrain Team
  if ($lnk > 0){
   @mysqli_query($dbc,"UPDATE `Patient` SET `Link`=0, `Attributes`=0 WHERE `Link`= $lnk");
  }
@@ -295,13 +298,13 @@ if (strlen($patient) == 6){
           $results = @mysqli_query($dbc,$sql);
           $tpl = mysqli_fetch_array($results, MYSQLI_BOTH);
           $template[3] = $tpl;
-          $sql = "INSERT INTO `amx_portal`.`template` (`Client`, `Patient`, `CutOff`, `excludeMethod`, `CrossreactivityGrocery`, `CrossreactivityDiet`, `CrossreactivityPhycian`, `CrossreactivityPatient`, `HiddenFoodPhysician`, `HiddenFoodPatient`, `ExcludeIgE`, `ExcludeIgG`, `ExcludeIgG4`) VALUES ('$client', '0','$tpl[2]', '$tpl[3]', '$tpl[4]', '$tpl[5]', '$tpl[6]', '$tpl[7]', '$tpl[8]', '$tpl[1]', '$tpl[10]', '$tpl[11]', '$tpl[12]', '$tpl[13]')";
+          $sql = "INSERT INTO `amx_portal`.`template` (`Client`, `Patient`, `CutOff`, `excludeMethod`, `CrossreactivityGrocery`, `CrossreactivityDiet`, `CrossreactivityPhycian`, `CrossreactivityPatient`, `HiddenFoodPhysician`, `HiddenFoodPatient`, `ExcludeIgE`, `ExcludeIgG`, `ExcludeIgG4`, `cutOffG`) VALUES ('$client', '0','$tpl[2]', '$tpl[3]', '$tpl[4]', '$tpl[5]', '$tpl[6]', '$tpl[7]', '$tpl[8]', '$tpl[1]', '$tpl[10]', '$tpl[11]', '$tpl[12]', '$tpl[13]')"; // cutOffG Added By Mansih Briskbrain Team
         }
         else{
           $tpl = mysqli_fetch_array($results, MYSQLI_BOTH);
           $template[1] = $tpl;
-        }
-        $sql = "INSERT INTO `amx_portal`.`template` (`Client`, `Patient`, `CutOff`, `excludeMethod`, `CrossreactivityGrocery`, `CrossreactivityDiet`, `CrossreactivityPhycian`, `CrossreactivityPatient`, `HiddenFoodPhysician`, `HiddenFoodPatient`, `ExcludeIgE`, `ExcludeIgG`, `ExcludeIgG4`) VALUES (0, $patient, '$tpl[2]', '$tpl[3]', '$tpl[4]', '$tpl[5]', '$tpl[6]', '$tpl[7]', '$tpl[8]', '$tpl[1]', '$tpl[10]', '$tpl[11]', '$tpl[12]', '$tpl[13]')";
+        }       
+        $sql = "INSERT INTO `amx_portal`.`template` (`Client`, `Patient`, `CutOff`, `excludeMethod`, `CrossreactivityGrocery`, `CrossreactivityDiet`, `CrossreactivityPhycian`, `CrossreactivityPatient`, `HiddenFoodPhysician`, `HiddenFoodPatient`, `ExcludeIgE`, `ExcludeIgG`, `ExcludeIgG4`, `cutOffG`) VALUES (0, $patient, '$tpl[2]', '$tpl[3]', '$tpl[4]', '$tpl[5]', '$tpl[6]', '$tpl[7]', '$tpl[8]', '$tpl[1]', '$tpl[10]', '$tpl[11]', '$tpl[12]', '$tpl[13]')"; // cutOffG Added By Mansih Briskbrain Team
         $results = @mysqli_query($dbc,$sql);
       }
       else{
@@ -486,7 +489,7 @@ if (strlen($patient) == 6){
        $results = @mysqli_query($dbc,$sql);
        while ($row = @mysqli_fetch_array($results, MYSQLI_NUM)){
          list($Code,$Type,$Score,$Exclude) = $row;
-         if (count($code2id[$Code]) == 0){
+         if (isset($code2id[$Code]) && count($code2id[$Code]) == 0){  // Changed  by Manish Briskbrain Tean
            $foods[$next] = array(0,0,0,0,0,0,0,9,0,0,'','','');
            $code2id[$Code][] = $next;
            $next++;
@@ -597,7 +600,7 @@ if (strlen($patient) == 6){
       }
     }
  
-    if (count($flip) > 0){
+    if (isset($flip) && count($flip) > 0){ // Added isset condition by Manish Briskbrain Team
       foreach ($flip as $k=> $v){
         if($k == 0){continue;}
         $foods[$k][4] |= 4;

@@ -1,9 +1,0 @@
-[04-Jan-2016 16:14:45 America/Menominee] PHP Parse error:  syntax error, unexpected '>>' (T_SR) in /home/amx/public_html/survey/index.php on line 144
-[04-Jan-2016 16:27:27 America/Menominee] PHP Parse error:  syntax error, unexpected '<' in /home/amx/public_html/survey/index.php on line 140
-[04-Jan-2016 16:28:39 America/Menominee] PHP Warning:  mysql_query(): Access denied for user 'amx'@'localhost' (using password: NO) in /home/amx/public_html/survey/index.php on line 138
-[04-Jan-2016 16:28:39 America/Menominee] PHP Warning:  mysql_query(): A link to the server could not be established in /home/amx/public_html/survey/index.php on line 138
-[04-Jan-2016 16:28:39 America/Menominee] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/amx/public_html/survey/index.php on line 139
-[04-Jan-2016 16:29:41 America/Menominee] PHP Warning:  mysql_fetch_array() expects parameter 2 to be long, string given in /home/amx/public_html/survey/index.php on line 141
-[04-Jan-2016 16:34:46 America/Menominee] PHP Parse error:  syntax error, unexpected '{' in /home/amx/public_html/survey/index.php on line 148
-[04-Jan-2016 16:52:08 America/Menominee] PHP Parse error:  syntax error, unexpected '}' in /home/amx/public_html/survey/index.php on line 178
-[04-Jan-2016 19:24:16 America/Menominee] PHP Parse error:  syntax error, unexpected 'r' (T_STRING), expecting ',' or ';' in /home/amx/public_html/survey/index.php on line 201
