@@ -12,7 +12,10 @@ header('Cache-Control: max-age=120');
 $client = intval($_COOKIE['amxc']);
 //var_export($_COOKIE);exit;
 setcookie("amxc", $client,time()+86400);
-$patient = preg_replace("/\D/", "", $_POST['p']);
+if($_POST['p']){
+  $patient = preg_replace("/\D/", "", $_POST['p']);
+}
+  
 $key = intval($_GET['k']);
 if($key > 0){$_GET['p'] = 100005;}
       
@@ -116,8 +119,19 @@ ob_flush();
 $dbc=mysqli_connect('localhost','amx','xD1GkuK7a7DK8!'); @mysqli_select_db($dbc,'amx_portal');
 $tdx = 0;
 $t[$tdx] = microtime(true);
-$lnk = intval(preg_replace("[^0-9]", "", $_POST['lnk'.$_POST['p']]));
- //$lnk = intval(preg_replace("[^0-9]", "", $_POST['lnk'])); Changed by manish Briskbrain Team
+//$lnk = intval(preg_replace("[^0-9]", "", $_POST['lnk'])); //Changed by Developer Team Old code
+if($_POST['lnk'])
+  $lnk = preg_replace("/\D/", "", $_POST['lnk']);
+
+ // DEveloper code for check value isset then execute code
+/* if (isset($_POST['link'])) {
+    $lnk = intval(preg_replace("[^0-9]", "", $_POST['link']));
+} else if (isset($_POST['p']) && isset($_POST['lnk' . $_POST['p']])) {
+    $lnk = intval(preg_replace("[^0-9]", "", $_POST['lnk'.$_POST['p']]));
+} else if (isset($_POST['lnk'])) {
+    $lnk = intval(preg_replace("[^0-9]", "", $_POST['lnk'])); 
+} */
+
  if ($lnk > 0){
   @mysqli_query($dbc,"UPDATE `Patient` SET `Link`=0, `Attributes`=0 WHERE `Link`= $lnk");
  }
@@ -131,7 +145,7 @@ if ($sub == 1) {
       $labids .= "<br/>Linked: $labid" ;
     }
   }
-  $cnt = count($links);
+  $cnt = isset($links) ? count($links):0;
 //    echo $client.' - ' . $patient . '<br><br><pre>LINKS<br/>' . var_export($links,true) . '</pre><br/>';
   if ($cnt == 1){
     mysqli_query($dbc,"UPDATE `Patient` SET `Link`=0 WHERE `Link`= $links[0]");
@@ -215,8 +229,8 @@ $err .= "<br/>Patient: $patient<br/>";
 //  ###################### 
 
 
-if (strlen($patient) == 6){
-  if (strlen($lnk) == 6){
+if (isset($patient) && strlen($patient) == 6){
+  if (isset($lnk) && strlen($lnk) == 6){
     @mysqli_query($dbc,"UPDATE `Patient` SET `Link`=0 WHERE `Link`= $lnk");
   }
   $sql = "SELECT `Client`,`Last`, `First`, `ClientID`,`Attributes`,`Link` FROM `Patient` WHERE `Patient` = $patient AND `Client`=$clientNum";
@@ -236,7 +250,7 @@ if (strlen($patient) == 6){
     $name = '<h3>' . htmlspecialchars($pat[2]) . ', ' . htmlspecialchars($pat[1]);
     $name .= "<br/>Lab ID: $patient $labids";
     
-    if (strlen($pat[3]) > 0){
+    if (isset($pat) && strlen($pat[3]) > 0){
       $name .= '<br/>Client ID: ' . htmlspecialchars($pat[3]);
     }
     $name .= '</h3>';
@@ -729,7 +743,7 @@ EOT;
         $pozChk[$v[0]] = "<fieldset class=\"pozCheck\">&#x2003;<div class=\"desc\">$v[0]</div><div id=\"d$chk\" class=\"divCheck\" ><input id=\"c$chk\" class=\"check\" type=\"checkbox\" name=\"$pf\" value=\"2\" onclick=\"check('$chk')\" checked=\"checked\" />&#x2003;Include in Diet</div>&#x2003;&#x45;&#x2009;" . $icons[$v[1]] . "&#x2009;<div class=\"pozIcon\">$v[10]</div>&#x2003;&#x2003;&#x47;&#x34;&#x2009;" . $icons[$v[3]] . "&#x2009;<div class=\"pozIcon\">$v[12]</div>&#x2003;&#x47;&#x2009;" . $icons[$v[2]] . "&#x2009;<div class=\"pozIcon\">$v[11]</div>&#x2003;</fieldset>\n"; 
       }
       else{
-        if (strlen($v[0]) < 2){$errNoDesc[] = $v;}
+        if (isset($v) && strlen($v[0]) < 2){$errNoDesc[] = $v;}
         $pozChk[$v[0]] = "<fieldset class=\"pozCheck\">&#x2003;<div class=\"desc\">$v[0]</div><div id=\"d$chk\" class=\"divNoCheck\" ><input id=\"c$chk\" class=\"noCheck\" type=\"checkbox\" name=\"$pf\" value=\"2\" onclick=\"check('$chk')\"  />&#x2003;Include in Diet</div>&#x2003;&#x45;&#x2009;" . $icons[$v[1]] . "&#x2009;<div class=\"pozIcon\">$v[10]</div>&#x2003;&#x2003;&#x47;&#x34;&#x2009;" . $icons[$v[3]] . "&#x2009;<div class=\"pozIcon\">$v[12]</div>&#x2003;&#x47;&#x2009;" . $icons[$v[2]] . "&#x2009;<div class=\"pozIcon\">$v[11]</div>&#x2003;</fieldset>\n"; 
       }
     }
@@ -1392,7 +1406,7 @@ EOT;
     
     $counts = array(8,0,0,0,0,19,0);
     do{
-      $counts[$ndx] = count($codes[$ndx]);
+      $counts[$ndx] = isset($codes) ? count($codes[$ndx]):0;
       echo <<<EOT
 <p class="title">&#x2003;$cross[$ndx]</p><div class="box">
 <table summary="Cross-reactivity Allergens $ndx"><tr><td>

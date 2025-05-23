@@ -1,4 +1,7 @@
 <?php
+/* ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);  */
 $data = file_get_contents('/home/amx/Z/portal/PgAvfHpU.php');
 $link = mysqli_connect('localhost','amx',$data,'amx_portal');
 date_default_timezone_set('America/Chicago');
@@ -55,13 +58,21 @@ if($sub == 11){
 if($sub == 12){// coming from profile, going to history
   $last = $_POST['last'];
   $first = $_POST['first'];
-  $dob = $_POST['dob'];
+  //$dob = $_POST['dob'];
   $address = $_POST['address'];
   $city = $_POST['city'];
   $state = strtoupper($_POST['state']);
   $zip = $_POST['zip'];
   $today = date('Y-m-d');
   $time = date('Y-m-d g:i a');
+
+  $raw_date = $_POST['dob'];  // Changed By Mansih Briskbrain team // $dob = $_POST['dob'];
+  $dob = date('Y-m-d', strtotime($raw_date));
+  if($zip == '')
+    $zip = 0;
+  if($gender == '')
+    $gender = 0;
+
   $sql = "INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`) VALUES (NULL, $client, '$today', '$last', '$first', '$dob','$address','$city','$state','$zip')";
   mysqli_query($link,$sql);
   if(mysqli_errno($link) > 0){$err = "$sql\n" . mysqli_error($link);}
@@ -207,6 +218,11 @@ if($sub == 0 && $match && $dobOK && $stateOK && $lastOK){
   $today = date('Y-m-d');
   $time = date('Y-m-d g:i a');
   $state = strtoupper($state); 
+  if($zip == '')
+    $zip = 0;
+  if($gender == '')
+    $gender = 0;
+
   $sql = "INSERT INTO `history` (`id`, `client`, `date`, `last`, `first`, `dob`,`address`,`city`,`state`,`zip`, `gender`) VALUES (NULL, $client, '$today', '$last', '$first', '$dob','$address','$city','$state','$zip', '$gender')";
   mysqli_query($link,$sql);
   if(mysqli_errno($link) > 0){$err = "$sqlf\n" . mysqli_error($link);}

@@ -6,7 +6,9 @@ header('Keep-Alive: timeout=5, max=100');
 header('Cache-Control: max-age=120');
 $client = intval($_COOKIE['amxc']);
 setcookie("amxc", $client,time()+86400);
-$patient = preg_replace("/\D/", "", $_POST['p']);
+if($_POST['p'])
+  $patient = preg_replace("/\D/", "", $_POST['p']);
+
 if($_GET['t'] = 1360){$client= 888887; $patient = 100005;}
 $sub = intval($_POST['sub']);
 $client = intval($_POST['client']);

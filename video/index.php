@@ -3,18 +3,18 @@ $video = $_POST['playVideo'];
 $video = $_GET['playVideo'];
 if ($video < 1){$video = 3;}
 if ($video == 1){
-  $play = "http://amxemr.com/video/diet.mp4";
+  $play = "https://dev.amxemr.com/video/diet.mp4";
 }
 if ($video == 2){
-  $play = "http://amxemr.com/video/ordering.mp4";
+  $play = "https://dev.amxemr.com/video/ordering.mp4";
 }
 if ($video == 3){
-  $play = "http://amxemr.com/video/eOffice.mp4";
+  $play = "https://dev.amxemr.com/video/eOffice.mp4";
 }
 if ($video == 4){
-  $play = "http://amxemr.com/video/request.mp4";
+  $play = "https://dev.amxemr.com/video/request.mp4";
 }
-//$play = "http://amxemr.com/video/request.mp4";
+//$play = "https://dev.amxemr.com/video/request.mp4";
 echo <<<EOT
 <!DOCTYPE html>
 <html><head><title>Allermetrix Client Portal</title><style>
