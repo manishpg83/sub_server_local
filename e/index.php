@@ -471,7 +471,8 @@ foreach($panels as $pdx => $panel){
   }
   echo "</table>\n</div>\n";
 }
-ob_flush;
+ob_flush();
+flush();
 
 
 echo <<<EOT
@@ -534,7 +535,8 @@ foreach($foodE as $key => $code){
 <div class="dchk"><label class="g4 chk"><input  type="checkbox" id="c3' .  substr($foodG[$key],1) . '" class="chk" name="G' . $foodG[$key] .'" value="3" /><span></span></label></div><div class="text">&nbsp;' . $rast[$foodG[$key]] . '</div>
 </div></div>';
 }
-ob_flush;
+ob_flush();
+flush();
 $Echecks = substr($Echecks,0,-1) . "};";
 $Gchecks = substr($Gchecks,0,-1) . "};";
 $g = substr($g,0,-1) . "];";

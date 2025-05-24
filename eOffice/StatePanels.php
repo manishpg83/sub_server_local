@@ -137,7 +137,8 @@ foreach($panels as $pdx => $panel){
     echo $typeE[$types[1]] . $typeG4[$types[3]] . $typeG[$types[2]] . "<td class=\"ptext\">$rast[$code]</td></tr>\n";
   }
   echo "</table>\n</div>\n";
-  ob_flush;
+  ob_flush();
+flush();
 }
 echo <<<EOT
 

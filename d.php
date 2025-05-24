@@ -1406,7 +1406,12 @@ EOT;
     
     $counts = array(8,0,0,0,0,19,0);
     do{
-      $counts[$ndx] = isset($codes) ? count($codes[$ndx]):0;
+      //$counts[$ndx] = isset($codes) ? count($codes[$ndx]):0; // Changed by Manish BriskBrain Team
+      if (!empty($codes[$ndx]) && is_array($codes[$ndx])) {
+          $counts[$ndx] = count($codes[$ndx]);
+      } else {
+          $counts[$ndx] = 0;
+      }
       echo <<<EOT
 <p class="title">&#x2003;$cross[$ndx]</p><div class="box">
 <table summary="Cross-reactivity Allergens $ndx"><tr><td>

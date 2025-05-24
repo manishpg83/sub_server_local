@@ -437,7 +437,8 @@ foreach($foodE as $key => $code){
 <div class="colWidthE"><div class="dchk"><label class="e chk"> <input  type="checkbox" id="c1' . substr($code,1) .  '" class="chk" name="aE' . $code . '" value="1" /><span></span></label></div><div class="text">&nbsp;' . $rast[$code] . '</div>  </div>
 <div class="colWidthG"><div class="dchk"><label class="g4 chk"><input  type="checkbox" id="c3' . substr($foodG[$key],1) . '" class="chk" name="a4' . $foodG[$key] .'" value="3" /><span></span></label></div><div class="text">&nbsp;' . $rast[$foodG[$key]] . '</div></div></div>';
 }
-ob_flush;
+ob_flush();
+flush();
 if(strlen($g) > 13){
   $Echecks = substr($Echecks,0,-1) . "};";
   $Gchecks = substr($Gchecks,0,-1) . "};";

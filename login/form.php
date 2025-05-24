@@ -9,7 +9,8 @@ echo <<<EOT
 <style type="text/css">
 </style</head><body>
 EOT;
-ob_flush;
+ob_flush();
+flush();
 $sql = "SELECT  `Date`,`Last`,`First`,`DoB`,`address`,`city`,`state`,`zip`,`phone`,`email` FROM `customer` WHERE `id` = $id";
 $results = mysqli_query($link,$sql);
 list($id,$date,$last,$first,$dob,$address,$city,$state,$zip,$phone,$email) = mysqli_fetch_array($results, MYSQLI_NUM);

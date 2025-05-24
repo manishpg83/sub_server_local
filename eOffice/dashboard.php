@@ -154,7 +154,7 @@ elseif($sub == 64 || $sub == 99){
 
 }
 if($sub == 14){
-$exit = "<form class=\"inline\" action=\"https://www.allermetrix.com/patient.html\" method=\"post\"><button>Done</button></form>";
+$exit = "<form class=\"inline\" action=\"https://dev.allermetrix.com/patient.html\" method=\"post\"><button>Done</button></form>";
 }
 if($sub == 30){
   $exit = "<button  onclick=\"history.back()\" >Done</button>";

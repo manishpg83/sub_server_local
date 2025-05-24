@@ -297,7 +297,8 @@ foreach($panels as $pdx => $panel){
     echo $typeE[$types[1]] . $typeG4[$types[3]] . $typeG[$types[2]] . $match[$types[0]] . "<td class=\"ptext\">$rast[$code]</td></tr>\n";
   }
   echo "</table>\n</div>\n";
-  ob_flush;
+  ob_flush();
+flush();
 }
 
 
@@ -350,7 +351,8 @@ foreach($foodE as $key => $code){
   echo '<div class="row"  ><div class="colWidthE"><div class="dchk"><label class="e chk"><input  type="checkbox" id="c1' . substr($code,1) .  '" class="chk" name="E' . $code . '" value="1" /><span></span></label></div><div class="text">&nbsp;' . $rast[$code] . '</div>  </div>
 <div class="colWidthG"><div class="dchk"><label class="g4 chk"><input  type="checkbox" id="c3' .  substr($foodG[$key],1) . '" class="chk" name="G' . $foodG[$key] .'" value="3" /><span></span></label></div><div class="text">&nbsp;' . $rast[$foodG[$key]] . '</div></div></div>';
 }
-ob_flush;
+ob_flush();
+flush();
 $Echecks = substr($Echecks,0,-1) . "};";
 $Gchecks = substr($Gchecks,0,-1) . "};";
 $g = substr($g,0,-1) . "];";

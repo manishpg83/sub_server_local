@@ -5,6 +5,6 @@ if($sub == 14){
   header("Location: https://dev.amxemr.com/requestForm.php?id=$id&sub=4");
 }
 else{
-  header("Location: http://allermetrix.com/patient.html");
+  header("Location: https://dev.allermetrix.com/patient.html");
 }
 ?>
